@@ -15,7 +15,7 @@ We as members, contributors, and maintainers pledge to make participation in our
 - Unwanted sexual attention or advances.
 
 ## Reporting Violations
-If you witness or experience behavior that violates this Code of Conduct, please report it to [jason.brain@hotmail.com]. We will take appropriate action to address any violations.
+If you witness or experience behavior that violates this Code of Conduct, please report it to <a href="https://jasonbrain.com/contact/">Jason Brain</a>. We will take appropriate action to address any violations.
 
 ## Acknowledgment
 This Code of Conduct is based on the Contributor Covenant, version 2.1.
