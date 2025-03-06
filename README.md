@@ -15,5 +15,6 @@ Welcome to my GitHub profile! I'm a **DJ, multimedia professional, and tech enth
 - **Geometric & Cosmic Observations**: Exploring patterns in nature and the universe ✨
 
 ## 📬 Connect With Me
-- 🌍 [My Website](https://jasonbrain.com)
+- 🌍 <a href="https://jasonbrain.com" target="_blank" rel="noopener noreferrer">My Website</a>
+
 Feel free to explore my repos and reach out if you want to collaborate! 🚀
