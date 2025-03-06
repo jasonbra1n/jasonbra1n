@@ -1,16 +1,19 @@
-## Hi there 👋
+# Hi there, I'm Jason Brain (jasonbra1n) 👋
 
-<!--
-**jasonbra1n/jasonbra1n** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Welcome to my GitHub profile! I'm a **DJ, multimedia professional, and tech enthusiast** with over 30 years of experience in music, event entertainment, and creative productions. 
 
-Here are some ideas to get you started:
+## 🎵 About Me
+- 🎧 **DJ & Interactive Entertainment** – I specialize in private events, weddings, and corporate gatherings, bringing high-energy performances with music, visuals, and projection mapping.
+- 📸 **Multimedia Creator** – I develop websites, produce music, edit videos, and work with photography.
+- 🛠️ **Tech Enthusiast** – I enjoy working on **Raspberry Pi**, **Arduino**, and **Home Assistant** projects, as well as programming in **Python**.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 🚀 Projects & Interests
+- **Music & DJing**: Live mixes, remixes, and soundscapes 🎶
+- **Web Development**: WordPress, Astra, SEO, and interactive sites 🌐
+- **Home Automation**: Smart home setups using Home Assistant 🏡
+- **DIY & Electronics**: Raspberry Pi, ESP32, Arduino, and laser engraving ⚡
+- **Geometric & Cosmic Observations**: Exploring patterns in nature and the universe ✨
+
+## 📬 Connect With Me
+- 🌍 [My Website](https://jasonbrain.com)
+Feel free to explore my repos and reach out if you want to collaborate! 🚀
