@@ -16,5 +16,7 @@ Welcome to my GitHub profile! I'm a **DJ, multimedia professional, and tech enth
 
 ## 📬 Connect With Me
 - 🌍 <a href="https://jasonbrain.com" target="_blank" rel="noopener noreferrer">My Website</a>
+- 🌍 <a href="https://jasonbra1n.github.io/" target="_blank" rel="noopener noreferrer">My Github Blog</a>
+
 
 Feel free to explore my repos and reach out if you want to collaborate! 🚀
