@@ -1,9 +1,11 @@
+
+text/css styles.css ( ASCII text )
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Arial', sans-serif; background: linear-gradient(180deg, #291259, #8146ff); color: #333; overflow-x: hidden; }
 
 /* Header */
 header { position: relative; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; }
-.header-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('https://weddingdj.jasonbrain.com/images/mixer-board.jpg') no-repeat center/cover; background-attachment: fixed; z-index: -3; }
+.header-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('/images/mixer-board.webp') no-repeat center/cover; background-attachment: fixed; z-index: -3; }
 .header-gradient { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(3, 3, 130, 0.12) 0%, rgba(41, 18, 89, 0.76) 100%); z-index: -1; }
 .lights { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; mix-blend-mode: overlay; }
 .header-content { position: relative; z-index: 1; }
