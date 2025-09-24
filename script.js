@@ -1,6 +1,3 @@
-// Set dynamic booking year
-document.getElementById('booking-year').textContent = new Date().getFullYear() + 1;
-
 const canvas = document.querySelector('.lights');
 const ctx = canvas.getContext('2d');
 const header = document.querySelector('header');
