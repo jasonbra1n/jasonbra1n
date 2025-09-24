@@ -141,3 +141,21 @@ function selectPackage(selectedElement) {
   });
   selectedElement.classList.add('popular'); // Add 'popular' class to the clicked card
 }
+
+// Iframe lazy-loading
+document.addEventListener('DOMContentLoaded', () => {
+  const placeholders = document.querySelectorAll('.iframe-placeholder');
+  placeholders.forEach(placeholder => {
+    placeholder.addEventListener('click', () => {
+      const iframe = document.createElement('iframe');
+      iframe.src = placeholder.dataset.src;
+      iframe.setAttribute('frameborder', '0');
+      iframe.setAttribute('allowtransparency', 'true');
+      iframe.setAttribute('allow', 'autoplay');
+      iframe.width = '100%';
+      iframe.height = '150';
+      iframe.style.borderRadius = '10px';
+      placeholder.parentNode.replaceChild(iframe, placeholder);
+    });
+  });
+});
