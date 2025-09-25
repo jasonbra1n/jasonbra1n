@@ -43,7 +43,7 @@ hr { display: block; border: 0; height: 3px; background: linear-gradient(to righ
 .mix-player .mixcloud-link:hover { text-decoration: underline; }
 
 /* Scroll to Top Button */
-.scroll-to-top { position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px; background: #ff6f61; color: white; border: none; border-radius: 50%; font-size: 1.5rem; cursor: pointer; display: none; z-index: 10; transition: opacity 0.3s ease, transform 0.3s ease; opacity: 0.8; }
+.scroll-to-top { position: fixed; bottom: 20px; left: 20px; width: 50px; height: 50px; background: #ff6f61; color: white; border: none; border-radius: 50%; font-size: 1.5rem; cursor: pointer; display: none; z-index: 10; transition: opacity 0.3s ease, transform 0.3s ease; opacity: 0.8; }
 .scroll-to-top:hover { opacity: 1; transform: scale(1.1); box-shadow: 0 0 10px rgba(255, 111, 97, 0.7); }
 
 /* Footer */
