@@ -158,8 +158,8 @@ hr { display: block; border: 0; height: 3px; background: linear-gradient(to righ
 
 /* Venues Section */
 .venues { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
-.venue-card { background: #f9f1f1; border-radius: 10px; padding: 1rem; width: 200px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease; }
-.venue-card:hover { transform: translateY(-5px); }
+.venue-card { background: #f9f1f1; border-radius: 10px; padding: 1rem; width: 200px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease; cursor: pointer; text-decoration: none; color: inherit; display: block; }
+.venue-card:hover { transform: translateY(-5px); box-shadow: 0 4px 15px rgba(0,0,0,0.15); }
 .venue-card img { width: 100%; border-radius: 5px; border: 2px solid #291259; }
 
 /* Gallery Section */
@@ -192,11 +192,11 @@ footer a:hover { text-decoration: underline; }
   .venue-card { width: 150px; }
   hr { width: 80%; }
   .scroll-to-top { width: 40px; height: 40px; font-size: 1.2rem; }
-  .visual-production .visual-grid {
+  .visual-production-section .visual-grid {
     grid-template-columns: 1fr !important; /* Override inline grid for mobile */
     display: block !important; /* Ensure block display for single column */
   }
-  .visual-production .visual-grid > div:first-child {
+  .visual-production-section .visual-grid > div:first-child {
     margin-bottom: 2rem;
   }
 }

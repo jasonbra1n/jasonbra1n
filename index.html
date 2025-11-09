@@ -54,8 +54,6 @@
             <a href="#corporate-events">Corporate Events</a>
           </div>
         </li>
-        <li><a href="#music">Music</a></li>
-        <li><a href="#web-dev">Web Dev</a></li>
         <li class="dropdown">
           <a href="#blogs" class="dropbtn">Blogs</a>
           <div class="dropdown-content">
@@ -65,7 +63,7 @@
         </li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button class="hamburger">
+      <button class="hamburger" aria-label="Toggle navigation menu">
         <span></span>
         <span></span>
         <span></span>
@@ -149,22 +147,22 @@
 
     <section class="venues" id="services">
       <h2>Creative Services</h2>
-      <div class="venue-card" onclick="window.open('https://weddingdj.jasonbrain.com', '_blank')">
-        <img src="images/wedding-dj-service_tn.webp" alt="Wedding DJ Services - Premium celebration experiences" loading="lazy">
-        <p><strong>Wedding DJ Services</strong><br>Premium celebration experiences</p>
-      </div>
-      <div class="venue-card" onclick="window.open('https://musicproducer.jasonbrain.com', '_blank')">
+      <a href="https://weddingdj.jasonbrain.com" target="_blank" class="venue-card">
+        <img src="images/wedding-dj-service_tn.webp" alt="Wedding DJ Services - Premium celebration experiences" loading="lazy" />
+        <p><strong>Wedding DJ Services</strong><br />Premium celebration experiences</p>
+      </a>
+      <a href="https://musicproducer.jasonbrain.com" target="_blank" class="venue-card">
         <img src="images/music-production-service_tn.webp" alt="Music Production - Custom beats, remixes, original productions" loading="lazy">
         <p><strong>Music Production</strong><br>Custom beats, remixes & originals</p>
-      </div>
-      <div class="venue-card" onclick="window.open('#web-dev', '_self')">
-        <img src="images/web-development-service_tn.webp" alt="Web Development - AI-powered digital solutions" loading="lazy">
-        <p><strong>Web Development</strong><br>AI-powered digital solutions</p>
-      </div>
-      <div class="venue-card" onclick="window.open('#corporate-events', '_self')">
+      </a>
+      <a href="#web-dev" class="venue-card">
+        <img src="images/web-development-service_tn.webp" alt="Web Development - From simple sites to AI-powered solutions" loading="lazy">
+        <p><strong>Web Development</strong><br>From simple to AI-powered solutions</p>
+      </a>
+      <a href="#corporate-events" class="venue-card">
         <img src="images/corporate-events-service_tn.webp" alt="Corporate Events - Professional DJ and AV production" loading="lazy">
         <p><strong>Corporate Events</strong><br>Professional DJ & AV production</p>
-      </div>
+      </a>
     </section>
     <hr>
     
@@ -541,6 +539,10 @@
               <input type="email" id="email" name="email" required placeholder="Your Email" class="form-input">
             </div>
             <div class="form-group">
+              <label for="phone" class="form-label">Phone Number (Optional)</label>
+              <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" class="form-input">
+            </div>
+            <div class="form-group">
               <label for="service-interest" class="form-label">Service Interest</label>
               <select id="service-interest" name="service-interest" class="form-input">
                 <option value="">Select Primary Interest</option>
@@ -573,13 +575,25 @@
                style="display: block; padding: 1rem; background: #f8f4ff; border-radius: 10px; text-decoration: none; color: #291259; border: 2px solid #8146ff;">
               <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">💒</div>
               <div style="font-weight: bold;">Wedding DJ Services</div>
-              <div style="font-size: 0.9rem; color: #666;">weddingdj.jasonbrain.com</div>
+              <div style="font-size: 0.9rem; color: #666;">Premium celebration experiences</div>
             </a>
             <a href="https://musicproducer.jasonbrain.com" target="_blank" 
                style="display: block; padding: 1rem; background: #f8f4ff; border-radius: 10px; text-decoration: none; color: #291259; border: 2px solid #8146ff;">
               <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🎵</div>
               <div style="font-weight: bold;">Music Production</div>
-              <div style="font-size: 0.9rem; color: #666;">musicproducer.jasonbrain.com</div>
+              <div style="font-size: 0.9rem; color: #666;">Custom beats, remixes & originals</div>
+            </a>
+            <a href="#web-dev" 
+               style="display: block; padding: 1rem; background: #f8f4ff; border-radius: 10px; text-decoration: none; color: #291259; border: 2px solid #8146ff;">
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">💻</div>
+              <div style="font-weight: bold;">Web Development</div>
+              <div style="font-size: 0.9rem; color: #666;">From simple to AI-powered...</div>
+            </a>
+            <a href="#corporate-events" 
+               style="display: block; padding: 1rem; background: #f8f4ff; border-radius: 10px; text-decoration: none; color: #291259; border: 2px solid #8146ff;">
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🎤</div>
+              <div style="font-weight: bold;">Corporate AV/DJ</div>
+              <div style="font-size: 0.9rem; color: #666;">Professional Event Production</div>
             </a>
           </div>
           <div class="map-info-box">
@@ -595,13 +609,13 @@
   </div> <!-- Close container div HERE -->
   
   <footer>
-    <p>© 2025 Jason Brain | Creative Professional - Music, Technology & Innovation</p>
+    <p>© <span id="copyright-year"></span> Jason Brain | Creative Professional - Music, Technology & Innovation</p>
     <p class="footer-italic-text">
       ΙΑΣΩΝ is the Greek origin of Jason, meaning healer. Jason Brain brings healing and joy through creative expression.
     </p>
   </footer>
   
-  <button class="scroll-to-top">↑</button>
+  <button class="scroll-to-top" aria-label="Scroll to top">↑</button>
   <script src="script.js"></script>
 </body>
 </html>

@@ -236,3 +236,7 @@ window.addEventListener('scroll', () => {
   }
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
 });
+
+// Dynamic Copyright Year
+const copyrightYear = document.getElementById('copyright-year');
+if (copyrightYear) copyrightYear.textContent = new Date().getFullYear();
