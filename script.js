@@ -165,6 +165,31 @@ hamburger.addEventListener('click', () => {
   navMenu.classList.toggle('active');
 });
 
+// Dropdown Menu
+const dropdowns = document.querySelectorAll('.dropdown');
+
+dropdowns.forEach(dropdown => {
+  const dropbtn = dropdown.querySelector('.dropbtn');
+  const dropdownContent = dropdown.querySelector('.dropdown-content');
+
+  dropbtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    dropdownContent.classList.toggle('show');
+  });
+});
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    const dropdowns = document.querySelectorAll('.dropdown-content');
+    dropdowns.forEach(dropdown => {
+      if (dropdown.classList.contains('show')) {
+        dropdown.classList.remove('show');
+      }
+    });
+  }
+}
+
+
 // Smooth scrolling for nav menu
 document.querySelectorAll('.nav-menu a').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
