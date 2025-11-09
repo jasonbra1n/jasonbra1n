@@ -156,3 +156,51 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// Hamburger Menu
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
+
+// Smooth scrolling for nav menu
+document.querySelectorAll('.nav-menu a').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute('href');
+
+    if (targetId === '#') {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    } else {
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    }
+    navMenu.classList.remove('active');
+  });
+});
+
+// Navbar scroll behavior
+let lastScrollTop = 0;
+const topNav = document.querySelector('.top-nav');
+
+window.addEventListener('scroll', () => {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > lastScrollTop) {
+    // Downscroll
+    topNav.style.top = '-100px';
+  } else {
+    // Upscroll
+    topNav.style.top = '0';
+  }
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+});
