@@ -1,5 +1,89 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Arial', sans-serif; background: linear-gradient(180deg, #291259, #8146ff); color: #333; overflow-x: hidden; }
+html {
+  scroll-behavior: smooth;
+}
+
+/* Top Navigation */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(41, 18, 89, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  transition: top 0.3s;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.nav-logo {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #ff6f61;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #007bff; /* Changed to blue */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white; /* Changed to white for better contrast on blue background */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background-color: #007bff; /* Blue background */
+}
+
+.dropdown-content a:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
 
 /* Header */
 header { position: relative; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; }
@@ -50,24 +134,6 @@ hr { display: block; border: 0; height: 3px; background: linear-gradient(to righ
 footer { background: #291259; color: white; text-align: center; padding: 1rem; }
 footer a { color: #ff6f61; text-decoration: none; }
 footer a:hover { text-decoration: underline; }
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  header h1 { font-size: 2rem; }
-  header p { font-size: 1rem; }
-  .container { padding: 1rem; gap: 2rem; }
-  h2 { font-size: 1.8rem; }
-  .venue-card { width: 150px; }
-  hr { width: 80%; }
-  .scroll-to-top { width: 40px; height: 40px; font-size: 1.2rem; }
-  .visual-production .visual-grid {
-    grid-template-columns: 1fr !important; /* Override inline grid for mobile */
-    display: block !important; /* Ensure block display for single column */
-  }
-  .visual-production .visual-grid > div:first-child {
-    margin-bottom: 2rem;
-  }
-}
 
 /* Google Maps iframe specific styles */
 iframe[src*="google.com/maps"] {
@@ -512,10 +578,19 @@ iframe[src*="google.com/maps"]:hover {
 }
 .packages-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
   margin: 2rem 0;
 }
+
+/* Force 4 columns on larger screens */
+@media (min-width: 1200px) {
+  .packages-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+
 .package-card {
   background: white;
   border-radius: 15px;
@@ -538,6 +613,9 @@ iframe[src*="google.com/maps"]:hover {
   font-size: 0.9rem;
   font-weight: bold;
 }
+.package-badge.budget {
+  background: #28a745;
+}
 .package-badge.essential {
   background: #8146ff;
 }
@@ -546,6 +624,9 @@ iframe[src*="google.com/maps"]:hover {
 }
 .package-badge.luxury {
   background: #291259;
+}
+.package-badge.ceremony {
+  background: #6f42c1;
 }
 .package-card h3 {
   color: #291259;
@@ -784,7 +865,94 @@ iframe[src*="google.com/maps"]:hover {
   font-style: italic;
 }
 
-/* Testimonials Section */
+/* Ceremony Only Section */
+.ceremony-only-section {
+  margin: 3rem 0 2rem 0;
+  padding: 2rem 0;
+  border-top: 3px solid #6f42c1;
+  background: linear-gradient(135deg, #f8f4ff, #fff);
+}
+
+.ceremony-only-section h3 {
+  color: #6f42c1;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.ceremony-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.ceremony-package-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.ceremony-card {
+  max-width: 400px;
+  border: 3px solid #6f42c1;
+  box-shadow: 0 12px 32px rgba(111, 66, 193, 0.15);
+}
+
+.ceremony-note-box {
+  background: rgba(111, 66, 193, 0.1);
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin: 2rem auto;
+  max-width: 600px;
+  text-align: center;
+  border-left: 4px solid #6f42c1;
+}
+
+.ceremony-note-box p {
+  margin-bottom: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.ceremony-note-box p:last-child {
+  margin-bottom: 0;
+}
+
+.ceremony-note-box strong {
+  color: #6f42c1;
+}
+
+.ceremony-note-box .small-text {
+  font-size: 0.95rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* Mobile ceremony section */
+@media (max-width: 768px) {
+  .ceremony-only-section {
+    margin: 2rem 0 1rem 0;
+    padding: 1.5rem 0;
+  }
+  
+  .ceremony-only-section h3 {
+    font-size: 1.6rem;
+  }
+  
+  .ceremony-card {
+    max-width: 100%;
+  }
+  
+  .ceremony-note-box {
+    margin: 1.5rem 0;
+    padding: 1.25rem;
+  }
+}
 .testimonials {
   margin: 3rem 0;
   text-align: center;
@@ -844,7 +1012,7 @@ iframe[src*="google.com/maps"]:hover {
 /* Add quotation marks */
 .testimonial-quote p::before {
   content: '"';
-  font-size: 2em;
+  font-size: 1rem;
   color: #8146ff;
   position: absolute;
   left: -0.5em;
@@ -854,10 +1022,11 @@ iframe[src*="google.com/maps"]:hover {
 
 .testimonial-quote p::after {
   content: '"';
-  font-size: 2em;
+  font-size: 1rem;
   color: #8146ff;
   font-family: serif;
-}
+} 
+
 
 .testimonial-author {
   border-top: 2px solid #f0f0f0;
@@ -920,8 +1089,38 @@ iframe[src*="google.com/maps"]:hover {
   box-shadow: 0 8px 25px rgba(255, 111, 97, 0.6);
 }
 
-/* Mobile responsiveness for testimonials */
+/* Footer specific style */
+.footer-italic-text {
+  font-size: 0.95rem;
+  color: #888;
+  font-style: italic;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
+  header h1 { font-size: 2rem; }
+  header p { font-size: 1rem; }
+  .container { padding: 1rem; gap: 2rem; }
+  h2 { font-size: 1.8rem; }
+  .venue-card { width: 150px; }
+  hr { width: 80%; }
+  .scroll-to-top { width: 40px; height: 40px; font-size: 1.2rem; }
+  .visual-production .visual-grid {
+    grid-template-columns: 1fr !important; /* Override inline grid for mobile */
+    display: block !important; /* Ensure block display for single column */
+  }
+  .visual-production .visual-grid > div:first-child {
+    margin-bottom: 2rem;
+  }
+  /* Mobile packages styling */
+  .packages-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .package-card.popular {
+    transform: none; /* Remove scaling on mobile to prevent layout issues */
+  }
+  /* Mobile testimonials responsiveness */
   .testimonials-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -939,17 +1138,59 @@ iframe[src*="google.com/maps"]:hover {
   .testimonials-cta-box h4 {
     font-size: 1.3rem;
   }
-}
 
-/* Footer specific style */
-.footer-italic-text {
-  font-size:0.95rem;
-  color:#888;
-  font-style:italic;
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background: rgba(41, 18, 89, 0.95);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .dropdown {
+    display: block;
+    width: 100%;
+  }
+
+  .dropdown-content {
+    position: static;
+    display: block; /* Make submenu visible by default on mobile */
+    background-color: transparent;
+    box-shadow: none;
+    width: 100%;
+    padding-left: 2rem; /* Indent submenu items */
+  }
 }
 
 @media (max-width: 600px) {
   .contact-card {
     padding: 1.5rem;
   }
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: white;
 }
