@@ -172,17 +172,21 @@ dropdowns.forEach(dropdown => {
   const dropbtn = dropdown.querySelector('.dropbtn');
   const dropdownContent = dropdown.querySelector('.dropdown-content');
 
-  dropbtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    dropdownContent.classList.toggle('show');
-  });
+  if (dropbtn) {
+    dropbtn.addEventListener('click', (e) => {
+      // On mobile, the link will just work. On desktop, this click is for hover fallback.
+      // We no longer need to prevent default or toggle classes for mobile.
+    });
+  }
 });
 
+// Close dropdowns if clicking outside
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
     const dropdowns = document.querySelectorAll('.dropdown-content');
     dropdowns.forEach(dropdown => {
       if (dropdown.classList.contains('show')) {
+        // This logic is for desktop hover-fallback, so it can be simplified.
         dropdown.classList.remove('show');
       }
     });
@@ -193,21 +197,24 @@ window.onclick = function(event) {
 // Smooth scrolling for nav menu
 document.querySelectorAll('.nav-menu a').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-
     const targetId = this.getAttribute('href');
 
-    if (targetId === '#') {
+    // Only do smooth scrolling for internal links (that start with #)
+    if (targetId && targetId.startsWith('#')) {
+      e.preventDefault();
+
+      if (targetId === '#') {
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
       });
-    } else {
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: 'smooth'
-        });
+      } else {
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
       }
     }
     navMenu.classList.remove('active');

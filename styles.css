@@ -114,6 +114,20 @@
   .hamburger {
     display: flex;
   }
+
+  .dropdown {
+    display: block;
+    width: 100%;
+  }
+
+  .dropdown-content {
+    position: static;
+    display: block; /* Make submenu visible by default on mobile */
+    background-color: transparent;
+    box-shadow: none;
+    width: 100%;
+    padding-left: 2rem; /* Indent submenu items */
+  }
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
