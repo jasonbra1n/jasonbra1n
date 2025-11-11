@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateVersion='1.3.0' expr:dir='data:blog.languageDirection' lang='en'>
+<head>
+  <meta charset='UTF-8'/>
+  <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+  <title><data:blog.pageTitle/></title>
+  <b:include data='blog' name='all-head-content'/>
+
+  <!-- Google Fonts -->
+  <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;family=Roboto:wght@400;700&amp;display=swap' rel='stylesheet'/>
+
+  <b:skin><![CDATA[
+    /* Reset and Base Styles */
+    :root {
+      --primary-color: #291259;
+      --secondary-color: #8146ff;
+      --text-color: #333;
+      --light-text-color: #666;
+      --bg-color: #fff;
+      --header-bg: #1a1a1a;
+      --footer-bg: #f4f4f4;
+      --border-color: #eee;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--primary-color);
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    a {
+      color: var(--secondary-color);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Navigation Bar */
+    .top-nav {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: top 0.3s;
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 70px;
+    }
+    .nav-logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-menu li {
+      margin-left: 20px;
+    }
+    .nav-menu a {
+      color: var(--primary-color);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+    .hamburger { display: none; }
+
+    /* Header */
+    header {
+      background: var(--header-bg);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .header-background {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: url('https://jasonbrain.com/images/header-bg.jpg') no-repeat center center/cover;
+      opacity: 0.3;
+    }
+    .header-gradient {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(circle, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.8) 100%);
+    }
+    .header-content {
+      position: relative;
+      z-index: 2;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0 0 10px 0;
+      color: white;
+    }
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    /* Main Content & Posts */
+    .main-content {
+      display: flex;
+      gap: 30px;
+      margin-top: 2rem;
+    }
+    .blog-posts {
+      flex: 3;
+    }
+    .post {
+      background: #fff;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .post-header {
+      padding: 20px 30px 0;
+    }
+    .post-title {
+      font-size: 2rem;
+      margin: 0;
+    }
+    .post-title a {
+      color: var(--primary-color);
+    }
+    .post-meta {
+      font-size: 0.9rem;
+      color: var(--light-text-color);
+      margin-top: 5px;
+    }
+    .post-body {
+      padding: 20px 30px;
+    }
+    .post-body img {
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+    .post-footer {
+      padding: 10px 30px;
+      background: #fafafa;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.9rem;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      flex: 1;
+    }
+    .widget {
+      background: #f9f9f9;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 1.5rem;
+    }
+    .widget h2 {
+      font-size: 1.2rem;
+      margin-top: 0;
+      border-bottom: 2px solid var(--secondary-color);
+      padding-bottom: 10px;
+    }
+    .widget ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .widget li a {
+      display: block;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .widget li:last-child a {
+      border-bottom: none;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--footer-bg);
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 2rem;
+      border-top: 1px solid var(--border-color);
+      color: var(--light-text-color);
+    }
+    .footer-italic-text {
+      font-style: italic;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+      .nav-menu.active {
+        display: flex;
+      }
+      .nav-menu li {
+        margin: 0;
+        border-bottom: 1px solid var(--border-color);
+      }
+      .nav-menu a {
+        display: block;
+        padding: 1rem;
+      }
+      .hamburger {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+      .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: var(--primary-color);
+        margin: 5px 0;
+        transition: 0.3s;
+      }
+      .main-content {
+        flex-direction: column;
+      }
+      header h1 { font-size: 2rem; }
+      .post-title { font-size: 1.5rem; }
+    }
+  ]]></b:skin>
+
+  <b:template-skin>
+    <b:variable default='1100px' name='content.width' type='length' value='1100px'/>
+  </b:template-skin>
+</head>
+<body>
+  <div id='outer-wrapper'>
+    <b:section class='top-nav' id='navigation' maxwidgets='1' name='Navigation' showaddelement='yes'>
+      <b:widget id='LinkList1' locked='false' title='Main Navigation' type='LinkList' version='2' visible='true'>
+        <b:includable id='main'>
+          <div class='nav-container'>
+            <a class='nav-logo' href='https://jasonbrain.com'>Jason Brain</a>
+            <ul class='nav-menu'>
+              <b:loop values='data:links' var='link'>
+                <li><a expr:href='data:link.target'><data:link.name/></a></li>
+              </b:loop>
+            </ul>
+            <button aria-label='Toggle navigation menu' class='hamburger'>
+              <span/>
+              <span/>
+              <span/>
+            </button>
+          </div>
+        </b:includable>
+      </b:widget>
+    </b:section>
+
+    <b:section class='header' id='header' maxwidgets='1' name='Header' showaddelement='yes'>
+      <b:widget id='Header1' locked='true' title='Blog Title' type='Header' version='2' visible='true'>
+        <b:includable id='main'>
+          <div class='header-background'/>
+          <div class='header-gradient'/>
+          <div class='header-content'>
+            <b:if cond='data:blog.pageType == &quot;index&quot;'>
+              <h1><data:title/></h1>
+              <p><data:description/></p>
+            <b:else/>
+              <h1><data:blog.title/></h1>
+            </b:if>
+          </div>
+        </b:includable>
+      </b:widget>
+    </b:section>
+
+    <div class='container'>
+      <div class='main-content'>
+        <b:section class='blog-posts' id='main' maxwidgets='1' name='Main' showaddelement='no'>
+          <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
+            <b:includable id='main' var='this'>
+              <b:if cond='data:posts'>
+                <b:loop values='data:posts' var='post'>
+                  <b:include data='post' name='post'/>
+                </b:loop>
+              </b:if>
+            </b:includable>
+
+            <b:includable id='post' var='post'>
+              <div class='post'>
+                <b:include name='postHeader'/>
+                <b:include name='postBody'/>
+                <b:include name='postFooter'/>
+              </div>
+            </b:includable>
+
+            <b:includable id='postHeader' var='post'>
+              <div class='post-header'>
+                <h2 class='post-title'>
+                  <b:if cond='data:post.link or (data:post.url and data:blog.url != data:post.url)'>
+                    <a expr:href='data:post.link ?: data:post.url'><data:post.title/></a>
+                  <b:else/>
+                    <a expr:href='data:post.url'><data:post.title/></a>
+                  </b:if>
+                </h2>
+                <div class='post-meta'>
+                  <b:include name='postTimestamp'/>
+                  <b:if cond='data:top.showAuthor'>
+                     | <b:include name='postAuthor'/>
+                  </b:if>
+                </div>
+              </div>
+            </b:includable>
+
+            <b:includable id='postBody' var='post'>
+              <div class='post-body'>
+                <b:eval expr='data:post.body'/>
+              </div>
+            </b:includable>
+
+            <b:includable id='postFooter' var='post'>
+              <div class='post-footer'>
+                 <b:if cond='data:post.labels'>
+                   <b:include name='postLabels'/>
+                 </b:if>
+                 <b:if cond='data:blog.pageType == &quot;item&quot;'>
+                   <b:include name='postComments'/>
+                 </b:if>
+              </div>
+            </b:includable>
+
+            <b:includable id='postTimestamp' var='post'>
+              <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'>
+                <data:post.timestamp/>
+              </a>
+            </b:includable>
+
+            <b:includable id='postAuthor' var='post'>
+              <span class='post-author'>
+                <data:post.author/>
+              </span>
+            </b:includable>
+
+            <b:includable id='postLabels' var='post'>
+              <span class='post-labels'>
+                Labels:
+                <b:loop values='data:post.labels' var='label'>
+                  <a expr:href='data:label.url' rel='tag'><data:label.name/></a><b:if cond='not data:label.isLast'>,</b:if>
+                </b:loop>
+              </span>
+            </b:includable>
+
+            <b:includable id='postComments' var='post'>
+              <b:if cond='data:post.allowComments'>
+                <a class='comment-link' expr:href='data:post.commentsUrl' expr:onclick='data:post.commentsUrlOnclick'>
+                  <b:if cond='data:post.numComments == 1'>
+                    1 Comment
+                  <b:else/>
+                    <data:post.numComments/> Comments
+                  </b:if>
+                </a>
+              </b:if>
+            </b:includable>
+
+            <!-- Default includables that are not heavily customized but needed for the widget to work -->
+            <b:includable id='nextprev'/>
+            <b:includable id='feedLinks'>
+              <b:if cond='data:feedLinks'>
+                <div class='blog-feeds'>
+                  <b:include data='feedLinks' name='feedLinksBody'/>
+                </div>
+              </b:if>
+            </b:includable>
+            <b:includable id='feedLinksBody' var='links'>
+              <b:loop values='data:links' var='f'>
+                <a class='feed-link' expr:href='data:f.url' expr:type='data:f.mimeType' target='_blank'><data:f.name/> (<data:f.feedType/>)</a>
+              </b:loop>
+            </b:includable>
+          </b:widget>
+        </b:section>
+
+        <b:section class='sidebar' id='sidebar' maxwidgets='5' name='Sidebar' showaddelement='yes'>
+          <b:widget id='FollowByEmail1' locked='false' title='Subscribe' type='FollowByEmail' version='2' visible='true'/>
+          <b:widget id='Label1' locked='false' title='Categories' type='Label' version='2' visible='true'/>
+          <b:widget id='PopularPosts1' locked='false' title='Popular Posts' type='PopularPosts' version='2' visible='true'/>
+        </b:section>
+      </div>
+    </div>
+
+    <b:section class='footer' id='footer' maxwidgets='1' name='Footer' showaddelement='yes'>
+      <b:widget id='Text1' locked='false' title='' type='Text' version='2' visible='true'>
+        <b:includable id='main'>
+          <p>&#169; <b:eval expr='(new Date()).getFullYear()'/> Jason Brain | Creative Professional | <a href='https://jasonbrain.com'>More Services</a></p>
+          <p class='footer-italic-text'>
+            ΙΑΣΩΝ is the Greek origin of Jason, meaning healer. I bring a healing sense of calm and professionalism to your event planning.
+          </p>
+        </b:includable>
+      </b:widget>
+    </b:section>
+  </div>
+
+  <script>
+    // Hamburger Menu
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    if (hamburger) {
+      hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+      });
+    }
+
+    // Navbar scroll behavior
+    let lastScrollTop = 0;
+    const topNav = document.querySelector('.top-nav');
+    window.addEventListener('scroll', () => {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop &amp;&amp; scrollTop > 70) {
+        // Downscroll
+        topNav.style.top = '-80px';
+      } else {
+        // Upscroll
+        topNav.style.top = '0';
+      }
+      lastScrollTop = scrollTop &lt;= 0 ? 0 : scrollTop;
+    });
+  </script>
+</body>
+</html>

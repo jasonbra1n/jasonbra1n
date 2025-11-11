@@ -1,9 +1,3 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Arial', sans-serif; background: linear-gradient(180deg, #291259, #8146ff); color: #333; overflow-x: hidden; }
-html {
-  scroll-behavior: smooth;
-}
-
 /* Top Navigation */
 .top-nav {
   position: fixed;
@@ -31,6 +25,7 @@ html {
   font-size: 1.5rem;
   font-weight: bold;
 }
+
 
 .nav-menu {
   list-style: none;
@@ -100,10 +95,47 @@ html {
   background: white;
 }
 
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background: rgba(41, 18, 89, 0.95);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .dropdown {
+    display: block;
+    width: 100%;
+  }
+
+  .dropdown-content {
+    position: static;
+    display: block; /* Make submenu visible by default on mobile */
+    background-color: transparent;
+    box-shadow: none;
+    width: 100%;
+    padding-left: 2rem; /* Indent submenu items */
+  }
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Arial', sans-serif; background: linear-gradient(180deg, #291259, #8146ff); color: #333; overflow-x: hidden; }
 
 /* Header */
 header { position: relative; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; }
-.header-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('https://weddingdj.jasonbrain.com/images/mixer-board.jpg') no-repeat center/cover; background-attachment: fixed; z-index: -3; }
+.header-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('/images/mixer-board.webp') no-repeat center/cover; background-attachment: fixed; z-index: -3; }
 .header-gradient { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(3, 3, 130, 0.12) 0%, rgba(41, 18, 89, 0.76) 100%); z-index: -1; }
 .lights { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; mix-blend-mode: overlay; }
 .header-content { position: relative; z-index: 1; }
@@ -126,8 +158,8 @@ hr { display: block; border: 0; height: 3px; background: linear-gradient(to righ
 
 /* Venues Section */
 .venues { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
-.venue-card { background: #f9f1f1; border-radius: 10px; padding: 1rem; width: 200px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease; }
-.venue-card:hover { transform: translateY(-5px); }
+.venue-card { background: #f9f1f1; border-radius: 10px; padding: 1rem; width: 200px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease; cursor: pointer; text-decoration: none; color: inherit; display: block; }
+.venue-card:hover { transform: translateY(-5px); box-shadow: 0 4px 15px rgba(0,0,0,0.15); }
 .venue-card img { width: 100%; border-radius: 5px; border: 2px solid #291259; }
 
 /* Gallery Section */
@@ -143,13 +175,31 @@ hr { display: block; border: 0; height: 3px; background: linear-gradient(to righ
 .mix-player .mixcloud-link:hover { text-decoration: underline; }
 
 /* Scroll to Top Button */
-.scroll-to-top { position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px; background: #ff6f61; color: white; border: none; border-radius: 50%; font-size: 1.5rem; cursor: pointer; display: none; z-index: 10; transition: opacity 0.3s ease, transform 0.3s ease; opacity: 0.8; }
+.scroll-to-top { position: fixed; bottom: 20px; left: 20px; width: 50px; height: 50px; background: #ff6f61; color: white; border: none; border-radius: 50%; font-size: 1.5rem; cursor: pointer; display: none; z-index: 10; transition: opacity 0.3s ease, transform 0.3s ease; opacity: 0.8; }
 .scroll-to-top:hover { opacity: 1; transform: scale(1.1); box-shadow: 0 0 10px rgba(255, 111, 97, 0.7); }
 
 /* Footer */
 footer { background: #291259; color: white; text-align: center; padding: 1rem; }
 footer a { color: #ff6f61; text-decoration: none; }
 footer a:hover { text-decoration: underline; }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  header h1 { font-size: 2rem; }
+  header p { font-size: 1rem; }
+  .container { padding: 1rem; gap: 2rem; }
+  h2 { font-size: 1.8rem; }
+  .venue-card { width: 150px; }
+  hr { width: 80%; }
+  .scroll-to-top { width: 40px; height: 40px; font-size: 1.2rem; }
+  .visual-production-section .visual-grid {
+    grid-template-columns: 1fr !important; /* Override inline grid for mobile */
+    display: block !important; /* Ensure block display for single column */
+  }
+  .visual-production-section .visual-grid > div:first-child {
+    margin-bottom: 2rem;
+  }
+}
 
 /* Google Maps iframe specific styles */
 iframe[src*="google.com/maps"] {
@@ -420,6 +470,52 @@ iframe[src*="google.com/maps"]:hover {
 .mix-item iframe {
   border-radius: 10px;
 }
+
+.iframe-placeholder {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid #291259;
+}
+
+.iframe-placeholder-content {
+  text-align: center;
+  color: #291259;
+}
+
+.iframe-placeholder .play-button {
+  width: 50px;
+  height: 50px;
+  background-color: #ff6f61;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto 10px;
+  transition: background-color 0.3s ease;
+}
+
+.iframe-placeholder .play-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 20px solid white;
+}
+
+.iframe-placeholder:hover .play-button {
+  background-color: #e65a50;
+}
 .mix-item .mix-description {
   font-size: 0.9rem;
   color: #666;
@@ -594,19 +690,10 @@ iframe[src*="google.com/maps"]:hover {
 }
 .packages-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
   margin: 2rem 0;
 }
-
-/* Force 4 columns on larger screens */
-@media (min-width: 1200px) {
-  .packages-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-  }
-}
-
 .package-card {
   background: white;
   border-radius: 15px;
@@ -629,9 +716,6 @@ iframe[src*="google.com/maps"]:hover {
   font-size: 0.9rem;
   font-weight: bold;
 }
-.package-badge.budget {
-  background: #28a745;
-}
 .package-badge.essential {
   background: #8146ff;
 }
@@ -640,9 +724,6 @@ iframe[src*="google.com/maps"]:hover {
 }
 .package-badge.luxury {
   background: #291259;
-}
-.package-badge.ceremony {
-  background: #6f42c1;
 }
 .package-card h3 {
   color: #291259;
@@ -881,316 +962,43 @@ iframe[src*="google.com/maps"]:hover {
   font-style: italic;
 }
 
-/* Ceremony Only Section */
-.ceremony-only-section {
-  margin: 3rem 0 2rem 0;
-  padding: 2rem 0;
-  border-top: 3px solid #6f42c1;
-  background: linear-gradient(135deg, #f8f4ff, #fff);
-}
-
-.ceremony-only-section h3 {
-  color: #6f42c1;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.ceremony-intro {
-  text-align: center;
-  font-size: 1.1rem;
-  color: #666;
-  margin-bottom: 2rem;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.6;
-}
-
-.ceremony-package-container {
-  display: flex;
-  justify-content: center;
-  margin: 2rem 0;
-}
-
-.ceremony-card {
-  max-width: 400px;
-  border: 3px solid #6f42c1;
-  box-shadow: 0 12px 32px rgba(111, 66, 193, 0.15);
-}
-
-.ceremony-note-box {
-  background: rgba(111, 66, 193, 0.1);
-  padding: 1.5rem;
-  border-radius: 15px;
-  margin: 2rem auto;
-  max-width: 600px;
-  text-align: center;
-  border-left: 4px solid #6f42c1;
-}
-
-.ceremony-note-box p {
-  margin-bottom: 1rem;
-  color: #444;
-  line-height: 1.6;
-}
-
-.ceremony-note-box p:last-child {
-  margin-bottom: 0;
-}
-
-.ceremony-note-box strong {
-  color: #6f42c1;
-}
-
-.ceremony-note-box .small-text {
-  font-size: 0.95rem;
-  color: #666;
-  font-style: italic;
-}
-
-/* Mobile ceremony section */
-@media (max-width: 768px) {
-  .ceremony-only-section {
-    margin: 2rem 0 1rem 0;
-    padding: 1.5rem 0;
-  }
-  
-  .ceremony-only-section h3 {
-    font-size: 1.6rem;
-  }
-  
-  .ceremony-card {
-    max-width: 100%;
-  }
-  
-  .ceremony-note-box {
-    margin: 1.5rem 0;
-    padding: 1.25rem;
-  }
-}
-.testimonials {
-  margin: 3rem 0;
-  text-align: center;
-}
-
-.testimonials .intro-paragraph {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  color: #666;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Testimonials Grid */
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-  margin: 3rem 0;
-}
-
-.testimonial-card {
-  background: white;
-  border-radius: 15px;
-  padding: 2rem;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-  border: 2px solid #f0f0f0;
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.testimonial-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
-}
-
-/* Special styling for vendor testimonials */
-.testimonial-card.vendor-testimonial {
-  border-left: 4px solid #8146ff;
-  background: #f8f4ff;
-}
-
-.testimonial-quote {
-  margin-bottom: 1.5rem;
-}
-
-.testimonial-quote p {
-  font-style: italic;
-  color: #444;
-  line-height: 1.6;
-  font-size: 1rem;
-  margin: 0;
-  position: relative;
-}
-
-/* Add quotation marks */
-.testimonial-quote p::before {
-  content: '"';
-  font-size: 1rem;
-  color: #8146ff;
-  position: absolute;
-  left: -0.5em;
-  top: -0.2em;
-  font-family: serif;
-}
-
-.testimonial-quote p::after {
-  content: '"';
-  font-size: 1rem;
-  color: #8146ff;
-  font-family: serif;
-} 
-
-
-.testimonial-author {
-  border-top: 2px solid #f0f0f0;
-  padding-top: 1rem;
-}
-
-.testimonial-author strong {
-  display: block;
-  color: #291259;
-  font-size: 1.1rem;
-  margin-bottom: 0.25rem;
-}
-
-.testimonial-location {
-  color: #666;
-  font-size: 0.9rem;
-  font-style: italic;
-}
-
-/* Testimonials CTA Box */
-.testimonials-cta-box {
-  background: linear-gradient(135deg, #291259, #8146ff);
-  color: white;
-  padding: 2.5rem;
-  border-radius: 20px;
-  margin: 3rem auto 2rem auto;
-  max-width: 600px;
-  text-align: center;
-}
-
-.testimonials-cta-box h4 {
-  color: white;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.testimonials-cta-box p {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  opacity: 0.95;
-  line-height: 1.6;
-}
-
-.testimonials-cta-button {
-  background: #ff6f61;
-  color: white;
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 25px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(255, 111, 97, 0.4);
-}
-
-.testimonials-cta-button:hover {
-  background: #ff5a4a;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 111, 97, 0.6);
-}
-
 /* Footer specific style */
 .footer-italic-text {
-  font-size: 0.95rem;
-  color: #888;
-  font-style: italic;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  header h1 { font-size: 2rem; }
-  header p { font-size: 1rem; }
-  .container { padding: 1rem; gap: 2rem; }
-  h2 { font-size: 1.8rem; }
-  .venue-card { width: 150px; }
-  hr { width: 80%; }
-  .scroll-to-top { width: 40px; height: 40px; font-size: 1.2rem; }
-  .visual-production .visual-grid {
-    grid-template-columns: 1fr !important; /* Override inline grid for mobile */
-    display: block !important; /* Ensure block display for single column */
-  }
-  .visual-production .visual-grid > div:first-child {
-    margin-bottom: 2rem;
-  }
-  /* Mobile packages styling */
-  .packages-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  .package-card.popular {
-    transform: none; /* Remove scaling on mobile to prevent layout issues */
-  }
-  /* Mobile testimonials responsiveness */
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .testimonial-card {
-    padding: 1.5rem;
-  }
-  
-  .testimonials-cta-box {
-    padding: 2rem;
-    margin: 2rem auto 1rem auto;
-  }
-  
-  .testimonials-cta-box h4 {
-    font-size: 1.3rem;
-  }
-
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    background: rgba(41, 18, 89, 0.95);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    padding: 1rem 0;
-  }
-
-  .nav-menu.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .dropdown {
-    display: block;
-    width: 100%;
-  }
-
-  .dropdown-content {
-    position: static;
-    display: block; /* Make submenu visible by default on mobile */
-    background-color: transparent;
-    box-shadow: none;
-    width: 100%;
-    padding-left: 2rem; /* Indent submenu items */
-  }
+  font-size:0.95rem;
+  color:#888;
+  font-style:italic;
 }
 
 @media (max-width: 600px) {
   .contact-card {
     padding: 1.5rem;
   }
+}
+
+/* Web Developer Page Specifics */
+.platforms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.platform-link {
+  background: #f8f4ff;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  border: 2px solid #8146ff;
+}
+.platform-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.platform-name {
+  font-weight: bold;
+  color: #291259;
+}
+.platform-description {
+  font-size: 0.85rem;
+  color: #666;
 }

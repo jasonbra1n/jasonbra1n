@@ -129,7 +129,6 @@
     padding-left: 2rem; /* Indent submenu items */
   }
 }
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Arial', sans-serif; background: linear-gradient(180deg, #291259, #8146ff); color: #333; overflow-x: hidden; }
 
