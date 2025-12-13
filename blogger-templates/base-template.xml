@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+  <meta content='width=device-width, initial-scale=1' name='viewport'/>
+  <b:include data='blog' name='all-head-content'/>
+  <title><data:blog.pageTitle/></title>
+
+  <b:skin>
+    <![CDATA[
+    /*-----------------------------------------------------------------------------------
+      Blogger Template Base for jasonbrain.com
+      Version: 1.0
+      Author: Jason Brain
+      Description: A base template to be adapted for the Music and Tech blogs,
+                   ensuring brand consistency with the main site.
+    -----------------------------------------------------------------------------------*/
+
+    /* >> Base Variables from STYLE_GUIDE.md
+    ----------------------------------------------- */
+    :root {
+      /* Primary Colors */
+      --color-primary-bg: #291259;
+      --color-accent-purple: #8146ff;
+
+      /* Accent Colors */
+      --color-accent-coral: #ff6f61;
+      --color-accent-cyan: #00ffff;
+
+      /* Neutral Colors */
+      --color-neutral-white: #ffffff;
+      --color-neutral-light-gray: #f8f4ff;
+      --color-text-dark: #333;
+      --color-text-medium: #666;
+      --color-text-light: #888;
+
+      /* Typography */
+      --font-family-main: 'Arial', sans-serif;
+    }
+
+    /* >> Basic Styling
+    ----------------------------------------------- */
+    body {
+      font-family: var(--font-family-main);
+      background-color: var(--color-neutral-white);
+      color: var(--color-text-dark);
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--color-accent-purple);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--color-accent-coral);
+      text-decoration: underline;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--color-primary-bg);
+    }
+
+    .main-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    /* >> Header
+    ----------------------------------------------- */
+    .header-widget {
+      background-color: var(--color-primary-bg);
+      color: var(--color-neutral-white);
+      padding: 2rem;
+      text-align: center;
+    }
+    .header-widget h1 a {
+      color: var(--color-neutral-white);
+    }
+
+    /* >> Posts
+    ----------------------------------------------- */
+    .post {
+      margin-bottom: 3rem;
+    }
+
+    ]]>
+  </b:skin>
+</head>
+<body>
+  <div class='main-wrapper'>
+    <!-- Header Section -->
+    <b:section class='header' id='header' maxwidgets='1' showaddelement='yes'>
+      <b:widget id='Header1' locked='true' title='Blog Title' type='Header'/>
+    </b'section>
+
+    <!-- Main Content Section -->
+    <b:section class='main' id='main' showaddelement='yes'>
+      <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'/>
+    </b:section>
+  </div>
+</body>
+</html>

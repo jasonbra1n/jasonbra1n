@@ -15,10 +15,11 @@ Welcome to my GitHub profile! I'm a **professional wedding DJ, multimedia produc
 - **Local Legend Status**: Trusted by Haliburton Highlands Secondary School for consecutive proms
 
 ## 🚀 Projects & Services
-- **Wedding DJ Services**: [weddingdj.jasonbrain.com](https://weddingdj.jasonbrain.com) – Professional packages from intimate celebrations to legendary experiences
-- **Music Production**: Live mixes, remixes, and curated soundscapes across multiple genres 🎶
+- **Wedding DJ Services**: [jasonbrain.com/wedding-dj/](https://jasonbrain.com/wedding-dj/) – Crafting unforgettable wedding celebrations.
+- **Music Production**: [jasonbrain.com/music-production/](https://jasonbrain.com/music-production/) – Custom beats, remixes, and original productions. 🎶
+- **Web Development**: [jasonbrain.com/web-developer/](https://jasonbrain.com/web-developer/) – AI-powered and creative web solutions. 🌐
+- **Corporate Events**: [jasonbrain.com/corporate-events/](https://jasonbrain.com/corporate-events/) – Professional DJ and AV production.
 - **Visual Entertainment**: Projection mapping, UV/blacklight systems, and immersive visual experiences
-- **Web Development**: WordPress, custom sites, SEO optimization, and interactive experiences 🌐
 - **Home Automation**: Smart home setups using Home Assistant and IoT integration 🏡
 - **DIY Electronics**: Raspberry Pi, ESP32, Arduino projects, and laser engraving ⚡
 - **Geometric & Cosmic Observations**: Exploring patterns in nature, music, and the universe ✨
@@ -29,8 +30,10 @@ Creating unforgettable wedding experiences in Ontario's cottage country while pu
 ## 📬 Connect With Me
 
 - 🌍 **Main Website**: [jasonbrain.com](https://jasonbrain.com)
-- 🎧 **Wedding DJ Services**: [weddingdj.jasonbrain.com](https://weddingdj.jasonbrain.com)
-- 🎛️ **Music Production Services**: [musicproducer.jasonbrain.com](https://musicproducer.jasonbrain.com)
+- 💒 **Wedding DJ Services**: [jasonbrain.com/wedding-dj/](https://jasonbrain.com/wedding-dj/)
+- 🎵 **Music Production Services**: [jasonbrain.com/music-production/](https://jasonbrain.com/music-production/)
+- 💻 **Web Development Services**: [jasonbrain.com/web-developer/](https://jasonbrain.com/web-developer/)
+- 🎤 **Corporate Event Services**: [jasonbrain.com/corporate-events/](https://jasonbrain.com/corporate-events/)
 - 💿 **Music Mixes**: [hearthis.at/iason](https://hearthis.at/iason)
 - 📺 **YouTube**: [@JasonBrain](https://www.youtube.com/@JasonBrain)
 - 🦜 X (formerly Twitter): [@JasonBra1n](https://x.com/JasonBra1n)  

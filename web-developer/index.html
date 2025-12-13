@@ -17,54 +17,26 @@
     gtag('js', new Date());
     gtag('config', 'G-2RTGH4Z617');
   </script>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styles.css">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "Jason Brain Web Developer",
-      "url": "https://webdeveloper.jasonbrain.com/",
+      "name": "Jason Brain - Web Developer",
+      "url": "https://jasonbrain.com/web-developer/",
       "author": {
         "@type": "Person",
         "name": "Jason Brain",
-        "url": "https://jasonbrain.com"
+        "url": "https://jasonbrain.com/"
       },
       "description": "Professional web development services specializing in AI-powered solutions, custom websites, and SEO for creative businesses."
     }
   </script>
 </head>
 <body>
-  <nav class="top-nav">
-    <div class="nav-container">
-      <a href="https://jasonbrain.com/" class="nav-logo">Jason Brain</a>
-      <ul class="nav-menu">
-        <li><a href="https://jasonbrain.com/">Home</a></li>
-        <li><a href="https://jasonbrain.com/#about">About</a></li>
-        <li class="dropdown">
-          <a href="https://jasonbrain.com/#services" class="dropbtn">Services</a>
-          <div class="dropdown-content">
-            <a href="https://weddingdj.jasonbrain.com/">Wedding DJ</a>
-            <a href="https://musicproducer.jasonbrain.com/">Music Production</a>
-            <a href="https://webdeveloper.jasonbrain.com/">Web Development</a>
-            <a href="https://corporatedj.jasonbrain.com/">Corporate Events</a>
-          </div>
-        </li>
-        <li class="dropdown">
-          <a href="https://jasonbrain.com/#blogs" class="dropbtn">Blogs</a>
-          <div class="dropdown-content">
-            <a href="https://blog.jasonbrain.com/">Music Blog</a>
-            <a href="https://devblog.jasonbrain.com/">Tech Blog</a>
-          </div>
-        </li>
-        <li><a href="https://jasonbrain.com/#contact">Contact</a></li>
-      </ul>
-      <button class="hamburger" aria-label="Toggle navigation menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
+  <!-- Navigation will be loaded here -->
+  <div id="nav-placeholder"></div>
+
   <header>
     <div class="header-background"></div>
     <div class="header-gradient"></div>
@@ -80,7 +52,7 @@
       <h2>Meet Jason Brain - Your Creative Web Architect</h2>
       <div class="about-content-wrapper">
         <div class="about-image-container">
-          <img src="https://webdeveloper.jasonbrain.com/images/jason-webdev.jpg" alt="Jason Brain - Professional Web Developer" 
+          <img src="images/jason-webdev.jpg" alt="Jason Brain - Professional Web Developer" 
                class="about-image">
         </div>
         <div class="about-text-content">
@@ -140,29 +112,29 @@
 
     <section class="venues">
       <h2>Development Services</h2>
-      <div class="venue-card">
-        <img src="https://webdeveloper.jasonbrain.com/images/custom-websites.jpg" alt="Custom website design and development" loading="lazy">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+        <img src="images/custom-websites.jpg" alt="Custom website design and development" loading="lazy">
         <p>Custom Websites</p>
       </div>
-      <div class="venue-card">
-        <img src="https://webdeveloper.jasonbrain.com/images/ai-integration.jpg" alt="AI integration for web applications" loading="lazy">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+        <img src="images/ai-integration.jpg" alt="AI integration for web applications" loading="lazy">
         <p>AI Integration</p>
       </div>
-      <div class="venue-card">
-        <img src="https://webdeveloper.jasonbrain.com/images/ecommerce.jpg" alt="E-commerce and online store solutions" loading="lazy">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+        <img src="images/ecommerce.jpg" alt="E-commerce and online store solutions" loading="lazy">
         <p>E-commerce</p>
       </div>
-      <div class="venue-card">
-        <img src="https://webdeveloper.jasonbrain.com/images/seo.jpg" alt="SEO and performance optimization" loading="lazy">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+        <img src="images/seo.jpg" alt="SEO and performance optimization" loading="lazy">
         <p>SEO & Optimization</p>
       </div>
     </section>
     <hr>
     <section class="gallery">
       <h2>Project Showcase</h2>
-      <img src="https://webdeveloper.jasonbrain.com/images/project-weddingdj.jpg" alt="Wedding DJ Website Project" loading="lazy">
-      <img src="https://webdeveloper.jasonbrain.com/images/project-musicproducer.jpg" alt="Music Producer Website Project" loading="lazy">
-      <img src="https://webdeveloper.jasonbrain.com/images/project-main.jpg" alt="Main Portfolio Website Project" loading="lazy">
+      <img src="images/project-weddingdj.jpg" alt="Wedding DJ Website Project" loading="lazy">
+      <img src="images/project-musicproducer.jpg" alt="Music Producer Website Project" loading="lazy">
+      <img src="images/project-main.jpg" alt="Main Portfolio Website Project" loading="lazy">
     </section>
     <hr>
     <section class="blog">
@@ -308,7 +280,7 @@
 
       <div class="contact-card">
         <div class="contact-form-container">
-          <form action="https://formspree.io/f/your-formspree-id" method="POST" class="contact-form">
+          <form action="https://formspree.io/f/mvgqrylp" method="POST" class="contact-form">
             <input type="hidden" name="_subject" value="New Web Dev Inquiry from webdeveloper.jasonbrain.com">
             <input type="text" name="_gotcha" style="display: none;">
             <div class="form-group">
@@ -376,7 +348,7 @@
   </div>
   
   <footer>
-    <p>© 2025 Jason Brain | Web Developer | AI-Powered Web Solutions | <a href="https://jasonbrain.com">More Services</a></p>
+    <p>© <span id="copyright-year"></span> Jason Brain | Web Developer | AI-Powered Web Solutions | <a href="../">More Services</a></p>
     <p class="footer-italic-text">
       ΙΑΣΩΝ is the Greek origin of Jason, meaning healer. I bring wellness to your business through intuitive digital solutions.
     </p>
@@ -387,6 +359,6 @@
       <path d="M12 4l8 8h-6v8h-4v-8H4l8-8z"/>
     </svg>
   </button>
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
 </body>
 </html>

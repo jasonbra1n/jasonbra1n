@@ -41,37 +41,9 @@
   </script>
 </head>
 <body>
-  <nav class="top-nav">
-    <div class="nav-container">
-      <a href="https://jasonbrain.com" class="nav-logo">Jason Brain</a>
-      <ul class="nav-menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li class="dropdown">
-          <a href="#services" class="dropbtn">Services</a>
-          <div class="dropdown-content">
-            <a href="https://weddingdj.jasonbrain.com/">Wedding DJ</a>
-            <a href="https://musicproducer.jasonbrain.com/">Music Production</a>
-            <a href="https://webdeveloper.jasonbrain.com/">Web Development</a>
-            <a href="https://corporatedj.jasonbrain.com/">Corporate Events</a>
-          </div>
-        </li>
-        <li class="dropdown">
-          <a href="#blogs" class="dropbtn">Blogs</a>
-          <div class="dropdown-content">
-            <a href="https://blog.jasonbrain.com/">Music Blog</a>
-            <a href="https://devblog.jasonbrain.com/">Tech Blog</a>
-          </div>
-        </li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button class="hamburger" aria-label="Toggle navigation menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
+  <!-- Navigation will be loaded here -->
+  <div id="nav-placeholder"></div>
+
   <header>
     <div class="header-background"></div>
     <div class="header-gradient"></div>
@@ -149,19 +121,19 @@
 
     <section class="venues" id="services">
       <h2>Creative Services</h2>
-      <a href="https://weddingdj.jasonbrain.com" class="venue-card">
+      <a href="/wedding-dj/" class="venue-card">
         <img src="images/wedding-dj-service_tn.webp" alt="Wedding DJ Services - Premium celebration experiences" loading="lazy" />
         <p><strong>Wedding DJ Services</strong><br />Premium celebration experiences</p>
       </a>
-      <a href="https://musicproducer.jasonbrain.com" class="venue-card">
+      <a href="/music-production/" class="venue-card">
         <img src="images/music-production-service_tn.webp" alt="Music Production - Custom beats, remixes, original productions" loading="lazy">
         <p><strong>Music Production</strong><br>Custom beats, remixes & originals</p>
       </a>
       <a href="#web-dev" class="venue-card">
         <img src="images/web-development-service_tn.webp" alt="Web Development - From simple sites to AI-powered solutions" loading="lazy">
-        <p><strong>Web Development</strong><br>From simple to AI-powered solutions</p>
+        <p><strong>Web Development</strong><br>From simple to AI-powered</p>
       </a>
-      <a href="#corporate-events" class="venue-card">
+      <a href="/corporate-events/" class="venue-card">
         <img src="images/corporate-events-service_tn.webp" alt="Corporate Events - Professional DJ and AV production" loading="lazy">
         <p><strong>Corporate Events</strong><br>Professional DJ & AV production</p>
       </a>
@@ -573,13 +545,13 @@
         <div class="contact-map-container">
           <h4>Service Branches</h4>
           <div style="display: flex; flex-direction: column; gap: 1rem; text-align: center;">
-            <a href="https://weddingdj.jasonbrain.com"  
+            <a href="/wedding-dj/"  
                style="display: block; padding: 1rem; background: #f8f4ff; border-radius: 10px; text-decoration: none; color: #291259; border: 2px solid #8146ff;">
               <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">💒</div>
               <div style="font-weight: bold;">Wedding DJ Services</div>
               <div style="font-size: 0.9rem; color: #666;">Premium celebration experiences</div>
             </a>
-            <a href="https://musicproducer.jasonbrain.com" 
+            <a href="/music-production/" 
                style="display: block; padding: 1rem; background: #f8f4ff; border-radius: 10px; text-decoration: none; color: #291259; border: 2px solid #8146ff;">
               <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🎵</div>
               <div style="font-weight: bold;">Music Production</div>
@@ -591,7 +563,7 @@
               <div style="font-weight: bold;">Web Development</div>
               <div style="font-size: 0.9rem; color: #666;">From simple to AI-powered...</div>
             </a>
-            <a href="#corporate-events" 
+            <a href="/corporate-events/" 
                style="display: block; padding: 1rem; background: #f8f4ff; border-radius: 10px; text-decoration: none; color: #291259; border: 2px solid #8146ff;">
               <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🎤</div>
               <div style="font-weight: bold;">Corporate AV/DJ</div>

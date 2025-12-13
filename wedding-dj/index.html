@@ -17,61 +17,31 @@
     gtag('js', new Date());
     gtag('config', 'G-2RTGH4Z617');
   </script>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styles.css">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": "Service",
+      "serviceType": "Wedding DJ Services",
       "name": "Jason Brain Wedding DJ",
-      "image": "https://weddingdj.jasonbrain.com/images/dj-setup.jpg",
-      "telephone": "(123) 456-7890",
-      "email": "jason@weddingdj.jasonbrain.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Haliburton",
-        "addressRegion": "ON",
-        "postalCode": "K0M 1S0"
-      },
-      "url": "https://weddingdj.jasonbrain.com/",
+      "url": "https://jasonbrain.com/wedding-dj/",
       "sameAs": [
         "https://x.com/JasonBra1n",
         "https://www.tiktok.com/@jason.bra1n"
-      ]
+      ],
+      "provider": {
+        "@type": "Person",
+        "name": "Jason Brain",
+        "url": "https://jasonbrain.com/"
+      },
+      "description": "Professional Wedding DJ services in Haliburton, Minden, and Kawartha Lakes, Ontario. Specializing in custom playlists, premium sound, and immersive lighting."
     }
   </script>
 </head>
 <body>
-  <nav class="top-nav">
-    <div class="nav-container">
-      <a href="https://jasonbrain.com/" class="nav-logo">Jason Brain</a>
-      <ul class="nav-menu">
-        <li><a href="https://jasonbrain.com/">Home</a></li>
-        <li><a href="https://jasonbrain.com/#about">About</a></li>
-        <li class="dropdown">
-          <a href="https://jasonbrain.com/#services" class="dropbtn">Services</a>
-          <div class="dropdown-content">
-            <a href="https://weddingdj.jasonbrain.com/">Wedding DJ</a>
-            <a href="https://musicproducer.jasonbrain.com/">Music Production</a>
-            <a href="https://webdeveloper.jasonbrain.com/">Web Development</a>
-            <a href="https://corporatedj.jasonbrain.com/">Corporate Events</a>
-          </div>
-        </li>
-        <li class="dropdown">
-          <a href="https://jasonbrain.com/#blogs" class="dropbtn">Blogs</a>
-          <div class="dropdown-content">
-            <a href="https://blog.jasonbrain.com/">Music Blog</a>
-            <a href="https://devblog.jasonbrain.com/">Tech Blog</a>
-          </div>
-        </li>
-        <li><a href="https://jasonbrain.com/#contact">Contact</a></li>
-      </ul>
-      <button class="hamburger" aria-label="Toggle navigation menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
+  <!-- Navigation will be loaded here -->
+  <div id="nav-placeholder"></div>
+
   <header>
     <div class="header-background"></div>
     <div class="header-gradient"></div>
@@ -87,7 +57,7 @@
       <h2>Meet Jason Brain - Your Wedding Day Music Curator</h2>
       <div class="about-content-wrapper">
         <div class="about-image-container">
-          <img src="https://weddingdj.jasonbrain.com/images/jason.jpg" alt="Jason Brain - Professional Wedding DJ in action at an elegant tent wedding" 
+          <img src="images/jason.jpg" alt="Jason Brain - Professional Wedding DJ in action at an elegant tent wedding" 
                class="about-image">
         </div>
         <div class="about-text-content">
@@ -185,29 +155,29 @@
     
     <section class="venues">
       <h2>Versatile Venues for Wedding DJs in Ontario</h2>
-      <div class="venue-card">
-        <img src="https://weddingdj.jasonbrain.com/images/party-tent.jpg" alt="Party tent wedding setup with DJ in Haliburton, Ontario" loading="lazy">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+        <img src="images/party-tent.jpg" alt="Party tent wedding setup with DJ in Haliburton, Ontario" loading="lazy">
         <p>Party Tents</p>
       </div>
-      <div class="venue-card">
-        <img src="https://weddingdj.jasonbrain.com/images/backyard.jpg" alt="Backyard wedding setup with DJ in Minden, Ontario" loading="lazy">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+        <img src="images/backyard.jpg" alt="Backyard wedding setup with DJ in Minden, Ontario" loading="lazy">
         <p>Backyards</p>
       </div>
-      <div class="venue-card">
-        <img src="https://weddingdj.jasonbrain.com/images/barn.jpg" alt="Barn wedding setup with DJ in Kawartha Lakes, Ontario" loading="lazy">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+        <img src="images/barn.jpg" alt="Barn wedding setup with DJ in Kawartha Lakes, Ontario" loading="lazy">
         <p>Barns</p>
       </div>
-      <div class="venue-card">
-        <img src="https://weddingdj.jasonbrain.com/images/hall.jpg" alt="Hall wedding setup with DJ in Peterborough, Ontario" loading="lazy">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+        <img src="images/hall.jpg" alt="Hall wedding setup with DJ in Peterborough, Ontario" loading="lazy">
         <p>Halls</p>
       </div>
     </section>
     <hr>
     <section class="gallery">
       <h2>Past Events with Wedding DJ Services</h2>
-      <img src="https://weddingdj.jasonbrain.com/images/dj-setup.jpg" alt="Wedding DJ setup with RGB lights in Haliburton, Ontario" loading="lazy">
-      <img src="https://weddingdj.jasonbrain.com/images/backyard-party.jpg" alt="Backyard wedding dance party with DJ in Minden, Ontario" loading="lazy">
-      <img src="https://weddingdj.jasonbrain.com/images/barn-event.jpg" alt="Barn wedding with fog machine and DJ in Kawartha Lakes, Ontario" loading="lazy">
+      <img src="images/dj-setup.jpg" alt="Wedding DJ setup with RGB lights in Haliburton, Ontario" loading="lazy">
+      <img src="images/backyard-party.jpg" alt="Backyard wedding dance party with DJ in Minden, Ontario" loading="lazy">
+      <img src="images/barn-event.jpg" alt="Barn wedding with fog machine and DJ in Kawartha Lakes, Ontario" loading="lazy">
     </section>
     <hr>
     <section class="blog">
@@ -522,7 +492,7 @@
       <div class="contact-card">
         <div class="contact-form-container">
           <form action="https://formspree.io/f/mvgqrylp" method="POST" class="contact-form">
-            <input type="hidden" name="_subject" value="New Wedding DJ Inquiry from weddingdj.jasonbrain.com">
+            <input type="hidden" name="_subject" value="New Wedding DJ Inquiry from jasonbrain.com/wedding-dj">
             <input type="text" name="_gotcha" style="display: none;">
             <div class="form-group">
               <label for="name" class="form-label">Name</label>
@@ -578,7 +548,7 @@
         </p>
         <div class="visual-grid">
           <div class="visual-image-container">
-            <img src="https://weddingdj.jasonbrain.com/images/vegas-br.jpg" 
+            <img src="images/vegas-br.jpg" 
                  alt="Jason Brain's projection mapping and visual production setup for DJ Vegas from Brasil in Toronto"
                  class="visual-image">
             <div class="visual-image-badge">
@@ -801,7 +771,7 @@
   </div> <!-- Close container div HERE -->
   
   <footer>
-    <p>© 2025 Jason Brain | Wedding DJ Services in Haliburton, Minden & Kawartha Lakes, Ontario | <a href="https://jasonbrain.com">More Services</a></p>
+    <p>© <span id="copyright-year"></span> Jason Brain | Wedding DJ Services in Haliburton, Minden & Kawartha Lakes, Ontario | <a href="../">More Services</a></p>
     <p class="footer-italic-text">
       ΙΑΣΩΝ is the Greek origin of Jason, meaning healer. Jason Brain brings wellness and joy to every celebration.
     </p>
@@ -812,6 +782,6 @@
       <path d="M12 4l8 8h-6v8h-4v-8H4l8-8z"/>
     </svg>
   </button>
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
 </body>
 </html>

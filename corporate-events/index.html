@@ -17,57 +17,27 @@
     gtag('js', new Date());
     gtag('config', 'G-2RTGH4Z617');
   </script>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styles.css">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": "Service",
+      "serviceType": "Corporate Event Services",
       "name": "Jason Brain Corporate DJ & AV",
-      "image": "https://corporatedj.jasonbrain.com/images/corporate-event.jpg",
-      "telephone": "(123) 456-7890",
-      "email": "jason@corporatedj.jasonbrain.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Toronto",
-        "addressRegion": "ON"
+      "url": "https://jasonbrain.com/corporate-events/",
+      "provider": {
+        "@type": "Person",
+        "name": "Jason Brain",
+        "url": "https://jasonbrain.com/"
       },
-      "url": "https://corporatedj.jasonbrain.com/",
       "description": "Professional DJ and AV services for corporate events in Toronto and across Ontario."
     }
   </script>
 </head>
 <body>
-  <nav class="top-nav">
-    <div class="nav-container">
-      <a href="https://jasonbrain.com/" class="nav-logo">Jason Brain</a>
-      <ul class="nav-menu">
-        <li><a href="https://jasonbrain.com/">Home</a></li>
-        <li><a href="https://jasonbrain.com/#about">About</a></li>
-        <li class="dropdown">
-          <a href="https://jasonbrain.com/#services" class="dropbtn">Services</a>
-          <div class="dropdown-content">
-            <a href="https://weddingdj.jasonbrain.com/">Wedding DJ</a>
-            <a href="https://musicproducer.jasonbrain.com/">Music Production</a>
-            <a href="https://webdeveloper.jasonbrain.com/">Web Development</a>
-            <a href="https://corporatedj.jasonbrain.com/">Corporate Events</a>
-          </div>
-        </li>
-        <li class="dropdown">
-          <a href="https://jasonbrain.com/#blogs" class="dropbtn">Blogs</a>
-          <div class="dropdown-content">
-            <a href="https://blog.jasonbrain.com/">Music Blog</a>
-            <a href="https://devblog.jasonbrain.com/">Tech Blog</a>
-          </div>
-        </li>
-        <li><a href="https://jasonbrain.com/#contact">Contact</a></li>
-      </ul>
-      <button class="hamburger" aria-label="Toggle navigation menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
+  <!-- Navigation will be loaded here -->
+  <div id="nav-placeholder"></div>
+
   <header>
     <div class="header-background"></div>
     <div class="header-gradient"></div>
@@ -83,7 +53,7 @@
       <h2>Meet Jason Brain - Your Corporate Event Partner</h2>
       <div class="about-content-wrapper">
         <div class="about-image-container">
-          <img src="https://corporatedj.jasonbrain.com/images/jason-corporate.jpg" alt="Jason Brain - Professional Corporate DJ" 
+          <img src="images/jason-corporate.jpg" alt="Jason Brain - Professional Corporate DJ" 
                class="about-image">
         </div>
         <div class="about-text-content">
@@ -143,29 +113,29 @@
 
     <section class="venues">
       <h2>Event Types</h2>
-      <div class="venue-card">
-        <img src="https://corporatedj.jasonbrain.com/images/conference.jpg" alt="DJ for a corporate conference" loading="lazy">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+        <img src="images/conference.jpg" alt="DJ for a corporate conference" loading="lazy">
         <p>Conferences & Seminars</p>
       </div>
-      <div class="venue-card">
-        <img src="https://corporatedj.jasonbrain.com/images/holiday-party.jpg" alt="DJ for a company holiday party" loading="lazy">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+        <img src="images/holiday-party.jpg" alt="DJ for a company holiday party" loading="lazy">
         <p>Holiday Parties</p>
       </div>
-      <div class="venue-card">
-        <img src="https://corporatedj.jasonbrain.com/images/product-launch.jpg" alt="AV for a product launch event" loading="lazy">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+        <img src="images/product-launch.jpg" alt="AV for a product launch event" loading="lazy">
         <p>Product Launches</p>
       </div>
-      <div class="venue-card">
-        <img src="https://corporatedj.jasonbrain.com/images/gala.jpg" alt="DJ for a corporate gala or awards night" loading="lazy">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+        <img src="images/gala.jpg" alt="DJ for a corporate gala or awards night" loading="lazy">
         <p>Gala Dinners & Awards</p>
       </div>
     </section>
     <hr>
     <section class="gallery">
       <h2>Past Corporate Events</h2>
-      <img src="https://corporatedj.jasonbrain.com/images/event-setup-1.jpg" alt="Corporate event DJ setup with uplighting" loading="lazy">
-      <img src="https://corporatedj.jasonbrain.com/images/event-setup-2.jpg" alt="AV setup for a corporate presentation" loading="lazy">
-      <img src="https://corporatedj.jasonbrain.com/images/event-setup-3.jpg" alt="DJ playing at a corporate networking event" loading="lazy">
+      <img src="images/event-setup-1.jpg" alt="Corporate event DJ setup with uplighting" loading="lazy">
+      <img src="images/event-setup-2.jpg" alt="AV setup for a corporate presentation" loading="lazy">
+      <img src="images/event-setup-3.jpg" alt="DJ playing at a corporate networking event" loading="lazy">
     </section>
     <hr>
     <section class="blog">
@@ -307,8 +277,8 @@
 
       <div class="contact-card">
         <div class="contact-form-container">
-          <form action="https://formspree.io/f/your-formspree-id" method="POST" class="contact-form">
-            <input type="hidden" name="_subject" value="New Corporate Event Inquiry from corporatedj.jasonbrain.com">
+          <form action="https://formspree.io/f/mvgqrylp" method="POST" class="contact-form">
+            <input type="hidden" name="_subject" value="New Corporate Event Inquiry from jasonbrain.com/corporate-events">
             <input type="text" name="_gotcha" style="display: none;">
             <div class="form-group">
               <label for="name" class="form-label">Contact Name</label>
@@ -357,7 +327,7 @@
   </div>
   
   <footer>
-    <p>© 2025 Jason Brain | Corporate DJ & AV Production | <a href="https://jasonbrain.com">More Services</a></p>
+    <p>© <span id="copyright-year"></span> Jason Brain | Corporate DJ & AV Production | <a href="../">More Services</a></p>
     <p class="footer-italic-text">
       ΙΑΣΩΝ is the Greek origin of Jason, meaning healer. I bring a healing sense of calm and professionalism to your event planning.
     </p>
@@ -368,6 +338,6 @@
       <path d="M12 4l8 8h-6v8h-4v-8H4l8-8z"/>
     </svg>
   </button>
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
 </body>
 </html>

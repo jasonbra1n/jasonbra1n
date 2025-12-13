@@ -1,137 +1,89 @@
-const canvas = document.querySelector('.lights');
-const ctx = canvas.getContext('2d');
-const header = document.querySelector('header');
-const ctaButton = document.querySelector('.cta-button');
-let centerX = header.clientWidth * (0.2 + Math.random() * 0.6);
-let centerY = header.clientHeight * (0.2 + Math.random() * 0.6);
-let targetX = centerX;
-let targetY = centerY;
-
-const lights = [];
-const ripples = [];
-const stars = [];
-const colors = ['#ff0000', '#00ff00', '#0000ff', '#ff00ff', '#00ffff', '#ffff00'];
-for (let i = 0; i < 50; i++) {
-  const radius = Math.random() * header.clientWidth;
-  const angle = Math.random() * Math.PI * 2;
-  const speed = (Math.random() * 0.002 + 0.001) * (Math.random() < 0.5 ? 1 : -1);
-  lights.push({ radius, angle, color: colors[Math.floor(Math.random() * colors.length)], opacity: Math.random() * 0.5 + 0.3, speed, trail: [] });
-}
-for (let i = 0; i < 100; i++) {
-  stars.push({ x: Math.random() * header.clientWidth, y: Math.random() * header.clientHeight, size: Math.random() * 2 + 1, opacity: Math.random() * 0.6 + 0.2 });
-}
-
-function lerp(a, b, t) { return a + (b - a) * t; }
-
-function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-  stars.forEach(star => {
-    const twinkle = (Math.sin(Date.now() * 0.001 + star.x + star.y) + 1) / 2;
-    const starOpacity = star.opacity * twinkle;
-    ctx.beginPath(); ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
-    ctx.fillStyle = 'rgba(255, 255, 255, ' + starOpacity + ')'; ctx.fill();
-  });
-
-  ripples.forEach((ripple, index) => {
-    ripple.radius += 2;
-    ripple.opacity -= 0.002;
-    const maxRadius = Math.sqrt(header.clientWidth * header.clientWidth + header.clientHeight * header.clientHeight);
-    if (ripple.opacity <= 0 || ripple.radius > maxRadius) { ripples.splice(index, 1); return; }
-    ctx.beginPath(); ctx.arc(ripple.x, ripple.y, ripple.radius, 0, Math.PI * 2);
-    ctx.strokeStyle = 'rgba(255, 255, 255, ' + ripple.opacity + ')'; ctx.lineWidth = 2;
-    ctx.globalAlpha = ripple.opacity; ctx.stroke();
-  });
-
-  const dx = targetX - centerX;
-  const dy = targetY - centerY;
-  const distance = Math.sqrt(dx * dx + dy * dy);
-  const maxSpeed = 2;
-  if (distance > 0) {
-    const speed = Math.min(maxSpeed, distance * 0.05);
-    centerX += (dx / distance) * speed;
-    centerY += (dy / distance) * speed;
+/**
+ * Fetches and injects the shared navigation menu.
+ * It fetches nav.html, replaces path placeholders, and injects it into the page.
+ * It also re-initializes menu-related event listeners.
+ * @param {string} rootPath - The relative path to the root directory (e.g., './' or '../').
+ */
+async function loadNav(rootPath = './') {
+  const navPlaceholder = document.getElementById('nav-placeholder');
+  if (!navPlaceholder) {
+    console.error('Navigation placeholder not found!');
+    return;
   }
 
-  lights.forEach(light => {
-    light.angle += light.speed;
-    const x = centerX + light.radius * Math.cos(light.angle);
-    const y = centerY + light.radius * Math.sin(light.angle);
-    light.trail.push({ x, y }); if (light.trail.length > 10) light.trail.shift();
+  try {
+    const response = await fetch(`${rootPath}nav.html`);
+    if (!response.ok) throw new Error(`Failed to fetch nav.html: ${response.statusText}`);
+    
+    let navHTML = await response.text();
+    
+    // Replace placeholders with the correct root path
+    navHTML = navHTML.replace(/{{ROOT}}/g, rootPath);
+    
+    navPlaceholder.innerHTML = navHTML;
 
-    for (let i = 0; i < light.trail.length; i++) {
-      const pos = light.trail[i];
-      const trailOpacity = i / (light.trail.length - 1) * light.opacity;
-      ctx.beginPath(); ctx.arc(pos.x, pos.y, 3, 0, Math.PI * 2);
-      ctx.fillStyle = light.color; ctx.globalAlpha = trailOpacity; ctx.fill();
-    }
+    // Re-initialize hamburger and dropdown functionality after nav is loaded
+    initializeNavEventListeners(rootPath); // This function now correctly attaches listeners
 
-    ctx.beginPath(); ctx.arc(x, y, 3, 0, Math.PI * 2);
-    ctx.fillStyle = light.color; ctx.globalAlpha = light.opacity; ctx.fill();
-    light.opacity += Math.sin(Date.now() * light.speed / 1000) * 0.02;
-    if (light.opacity < 0.3) light.opacity = 0.3; if (light.opacity > 0.8) light.opacity = 0.8;
-  });
-
-  ctx.globalAlpha = 1;
-  requestAnimationFrame(animate);
+  } catch (error) {
+    console.error('Error loading navigation:', error);
+    navPlaceholder.innerHTML = '<p style="color:red; text-align:center;">Failed to load navigation.</p>';
+  }
 }
 
-header.addEventListener('mousemove', (event) => {
-  const rect = header.getBoundingClientRect();
-  targetX = event.clientX - rect.left;
-  targetY = event.clientY - rect.top;
-});
+/**
+ * Attaches event listeners to the navigation elements (hamburger, dropdowns, smooth scroll).
+ * This needs to be called after the navigation is dynamically loaded.
+ */
+function initializeNavEventListeners(rootPath) {
+  // Hamburger Menu
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.nav-menu');
 
-header.addEventListener('touchmove', (event) => {
-  // Do not prevent default to allow scrolling
-  const touch = event.touches[0];
-  const rect = header.getBoundingClientRect();
-  targetX = touch.clientX - rect.left;
-  targetY = touch.clientY - rect.top;
-});
-
-header.addEventListener('mousedown', (event) => {
-  const rect = header.getBoundingClientRect();
-  const x = event.clientX - rect.left;
-  const y = event.clientY - rect.top;
-  // Only trigger ripple if not clicking the button
-  if (!ctaButton.contains(event.target)) {
-    ripples.push({ x, y, radius: 10, opacity: 1 });
+  if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
   }
-});
 
-header.addEventListener('touchstart', (event) => {
-  // Do not prevent default to allow button taps
-  const touch = event.touches[0];
-  const rect = header.getBoundingClientRect();
-  const x = touch.clientX - rect.left;
-  const y = touch.clientY - rect.top;
-  // Only trigger ripple if not tapping the button
-  if (!ctaButton.contains(event.target)) {
-    ripples.push({ x, y, radius: 10, opacity: 1 });
-  }
-});
+  // Smooth scrolling for nav menu
+  document.querySelectorAll('.nav-menu a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      
+      // Check for internal links that are not just the root path
+      if (href.startsWith(rootPath + '#') && href.length > rootPath.length + 1) {
+        e.preventDefault();
+        const targetId = href.substring(href.indexOf('#'));
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+      // Close hamburger menu on link click
+      if (navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+      }
+    });
+  });
 
-window.addEventListener('resize', () => {
-  canvas.width = header.clientWidth;
-  canvas.height = header.clientHeight;
-});
-
-canvas.width = header.clientWidth;
-canvas.height = header.clientHeight;
-animate();
-
-const scrollToTopBtn = document.querySelector('.scroll-to-top');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 100) {
-    scrollToTopBtn.classList.add('visible');
-  } else {
-    scrollToTopBtn.classList.remove('visible');
-  }
-});
-scrollToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  // Navbar scroll behavior
+  let lastScrollTop = 0;
+  const topNav = document.querySelector('.top-nav');
+  if (topNav) {
+    window.addEventListener('scroll', () => {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop && scrollTop > topNav.offsetHeight) {
+        // Downscroll
+        topNav.style.top = '-100px';
+      } else {
+        // Upscroll
+        topNav.style.top = '0';
+      }
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+    });
+  } 
+}
 
 // Function to handle package selection
 function selectPackage(selectedElement) {
@@ -142,8 +94,24 @@ function selectPackage(selectedElement) {
   selectedElement.classList.add('popular'); // Add 'popular' class to the clicked card
 }
 
-// Iframe lazy-loading
+// Dynamic Copyright Year
+const copyrightYear = document.getElementById('copyright-year');
+if (copyrightYear) copyrightYear.textContent = new Date().getFullYear();
+
+
+// Main script execution after the DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
+  
+  // Determine root path for asset loading
+  const isSubPage = window.location.pathname.split('/').filter(Boolean).length > 0;
+  const rootPath = isSubPage ? '../' : './';
+  loadNav(rootPath);
+
+  // Dynamic Copyright Year
+  const copyrightYearEl = document.getElementById('copyright-year');
+  if (copyrightYearEl) copyrightYearEl.textContent = new Date().getFullYear();
+
+  // Iframe lazy-loading
   const placeholders = document.querySelectorAll('.iframe-placeholder');
   placeholders.forEach(placeholder => {
     placeholder.addEventListener('click', () => {
@@ -158,88 +126,131 @@ document.addEventListener('DOMContentLoaded', () => {
       placeholder.parentNode.replaceChild(iframe, placeholder);
     });
   });
-});
 
-// Hamburger Menu
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-
-hamburger.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
-});
-
-// Dropdown Menu
-const dropdowns = document.querySelectorAll('.dropdown');
-
-dropdowns.forEach(dropdown => {
-  const dropbtn = dropdown.querySelector('.dropbtn');
-  const dropdownContent = dropdown.querySelector('.dropdown-content');
-
-  if (dropbtn) {
-    dropbtn.addEventListener('click', (e) => {
-      // On mobile, the link will just work. On desktop, this click is for hover fallback.
-      // We no longer need to prevent default or toggle classes for mobile.
-    });
-  }
-});
-
-// Close dropdowns if clicking outside
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    const dropdowns = document.querySelectorAll('.dropdown-content');
-    dropdowns.forEach(dropdown => {
-      if (dropdown.classList.contains('show')) {
-        // This logic is for desktop hover-fallback, so it can be simplified.
-        dropdown.classList.remove('show');
-      }
-    });
-  }
-}
-
-
-// Smooth scrolling for nav menu
-document.querySelectorAll('.nav-menu a').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    const targetId = this.getAttribute('href');
-
-    // Only do smooth scrolling for internal links (that start with #)
-    if (targetId && targetId.startsWith('#')) {
-      e.preventDefault();
-
-      if (targetId === '#') {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+  // Scroll to Top Button
+  const scrollToTopBtn = document.querySelector('.scroll-to-top');
+  if (scrollToTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        scrollToTopBtn.classList.add('visible');
       } else {
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          targetElement.scrollIntoView({
-            behavior: 'smooth'
-          });
-        }
+        scrollToTopBtn.classList.remove('visible');
       }
-    }
-    navMenu.classList.remove('active');
-  });
-});
-
-// Navbar scroll behavior
-let lastScrollTop = 0;
-const topNav = document.querySelector('.top-nav');
-
-window.addEventListener('scroll', () => {
-  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  if (scrollTop > lastScrollTop) {
-    // Downscroll
-    topNav.style.top = '-100px';
-  } else {
-    // Upscroll
-    topNav.style.top = '0';
+    });
+    scrollToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   }
-  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
-});
 
-// Dynamic Copyright Year
-const copyrightYear = document.getElementById('copyright-year');
-if (copyrightYear) copyrightYear.textContent = new Date().getFullYear();
+  // Header Canvas Animation (only if canvas exists)
+  const canvas = document.querySelector('.lights');
+  const header = document.querySelector('header');
+  if (canvas && header) {
+    const ctx = canvas.getContext('2d');
+    const ctaButton = document.querySelector('.cta-button');
+
+    let centerX = header.clientWidth * (0.2 + Math.random() * 0.6);
+    let centerY = header.clientHeight * (0.2 + Math.random() * 0.6);
+    let targetX = centerX;
+    let targetY = centerY;
+
+    const lights = [];
+    const ripples = [];
+    const stars = [];
+    const colors = ['#ff0000', '#00ff00', '#0000ff', '#ff00ff', '#00ffff', '#ffff00'];
+    for (let i = 0; i < 50; i++) {
+      const radius = Math.random() * header.clientWidth;
+      const angle = Math.random() * Math.PI * 2;
+      const speed = (Math.random() * 0.002 + 0.001) * (Math.random() < 0.5 ? 1 : -1);
+      lights.push({ radius, angle, color: colors[Math.floor(Math.random() * colors.length)], opacity: Math.random() * 0.5 + 0.3, speed, trail: [] });
+    }
+    for (let i = 0; i < 100; i++) {
+      stars.push({ x: Math.random() * header.clientWidth, y: Math.random() * header.clientHeight, size: Math.random() * 2 + 1, opacity: Math.random() * 0.6 + 0.2 });
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      stars.forEach(star => {
+        const twinkle = (Math.sin(Date.now() * 0.001 + star.x + star.y) + 1) / 2;
+        const starOpacity = star.opacity * twinkle;
+        ctx.beginPath(); ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(255, 255, 255, ' + starOpacity + ')'; ctx.fill();
+      });
+
+      ripples.forEach((ripple, index) => {
+        ripple.radius += 2;
+        ripple.opacity -= 0.002;
+        const maxRadius = Math.sqrt(header.clientWidth * header.clientWidth + header.clientHeight * header.clientHeight);
+        if (ripple.opacity <= 0 || ripple.radius > maxRadius) { ripples.splice(index, 1); return; }
+        ctx.beginPath(); ctx.arc(ripple.x, ripple.y, ripple.radius, 0, Math.PI * 2);
+        ctx.strokeStyle = 'rgba(255, 255, 255, ' + ripple.opacity + ')'; ctx.lineWidth = 2;
+        ctx.globalAlpha = ripple.opacity; ctx.stroke();
+      });
+
+      const dx = targetX - centerX;
+      const dy = targetY - centerY;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      const maxSpeed = 2;
+      if (distance > 0) {
+        const speed = Math.min(maxSpeed, distance * 0.05);
+        centerX += (dx / distance) * speed;
+        centerY += (dy / distance) * speed;
+      }
+
+      lights.forEach(light => {
+        light.angle += light.speed;
+        const x = centerX + light.radius * Math.cos(light.angle);
+        const y = centerY + light.radius * Math.sin(light.angle);
+        light.trail.push({ x, y }); if (light.trail.length > 10) light.trail.shift();
+
+        for (let i = 0; i < light.trail.length; i++) {
+          const pos = light.trail[i];
+          const trailOpacity = i / (light.trail.length - 1) * light.opacity;
+          ctx.beginPath(); ctx.arc(pos.x, pos.y, 3, 0, Math.PI * 2);
+          ctx.fillStyle = light.color; ctx.globalAlpha = trailOpacity; ctx.fill();
+        }
+
+        ctx.beginPath(); ctx.arc(x, y, 3, 0, Math.PI * 2);
+        ctx.fillStyle = light.color; ctx.globalAlpha = light.opacity; ctx.fill();
+        light.opacity += Math.sin(Date.now() * light.speed / 1000) * 0.02;
+        if (light.opacity < 0.3) light.opacity = 0.3; if (light.opacity > 0.8) light.opacity = 0.8;
+      });
+
+      ctx.globalAlpha = 1;
+      requestAnimationFrame(animate);
+    }
+
+    header.addEventListener('mousemove', (event) => {
+      const rect = header.getBoundingClientRect();
+      targetX = event.clientX - rect.left;
+      targetY = event.clientY - rect.top;
+    });
+
+    header.addEventListener('mousedown', (event) => {
+      const rect = header.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+      // Only trigger ripple if not clicking the button
+      if (ctaButton && !ctaButton.contains(event.target)) {
+        ripples.push({ x, y, radius: 10, opacity: 1 });
+      }
+    });
+
+    header.addEventListener('touchstart', (event) => {
+      // Do not prevent default to allow button taps
+      const touch = event.touches[0];
+      const rect = header.getBoundingClientRect();
+      const x = touch.clientX - rect.left;
+      const y = touch.clientY - rect.top;
+      // Only trigger ripple if not tapping the button
+      if (ctaButton && !ctaButton.contains(event.target)) {
+        ripples.push({ x, y, radius: 10, opacity: 1 });
+      }
+    });
+
+    canvas.width = header.clientWidth;
+    canvas.height = header.clientHeight;
+    animate();
+  }
+});

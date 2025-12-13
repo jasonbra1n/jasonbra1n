@@ -17,15 +17,15 @@
     gtag('js', new Date());
     gtag('config', 'G-2RTGH4Z617');
   </script>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styles.css">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MusicGroup",
-      "name": "Jason Brain Music Producer",
+      "@type": "Service",
+      "serviceType": "Music Production",
+      "name": "Jason Brain - Music Producer",
       "alternateName": "ΙΑΣΩΝ",
-      "image": "https://musicproducer.jasonbrain.com/images/studio-setup.jpg",
-      "url": "https://musicproducer.jasonbrain.com/",
+      "url": "https://jasonbrain.com/music-production/",
       "sameAs": [
         "https://x.com/JasonBra1n",
         "https://www.tiktok.com/@jason.bra1n",
@@ -33,43 +33,20 @@
         "https://soundcloud.com/jason-brain",
         "https://hearthis.at/iason/"
       ],
+      "provider": {
+        "@type": "Person",
+        "name": "Jason Brain",
+        "url": "https://jasonbrain.com/"
+      },
       "genre": ["Electronic", "House", "Dancehall", "Rock", "Trance"],
       "description": "Professional music producer specializing in beats, remixes, acapella extraction, and original productions across all genres."
     }
   </script>
 </head>
 <body>
-  <nav class="top-nav">
-    <div class="nav-container">
-      <a href="https://jasonbrain.com/" class="nav-logo">Jason Brain</a>
-      <ul class="nav-menu">
-        <li><a href="https://jasonbrain.com/">Home</a></li>
-        <li><a href="https://jasonbrain.com/#about">About</a></li>
-        <li class="dropdown">
-          <a href="https://jasonbrain.com/#services" class="dropbtn">Services</a>
-          <div class="dropdown-content">
-            <a href="https://weddingdj.jasonbrain.com/">Wedding DJ</a>
-            <a href="https://musicproducer.jasonbrain.com/">Music Production</a>
-            <a href="https://webdeveloper.jasonbrain.com/">Web Development</a>
-            <a href="https://corporatedj.jasonbrain.com/">Corporate Events</a>
-          </div>
-        </li>
-        <li class="dropdown">
-          <a href="https://jasonbrain.com/#blogs" class="dropbtn">Blogs</a>
-          <div class="dropdown-content">
-            <a href="https://blog.jasonbrain.com/">Music Blog</a>
-            <a href="https://devblog.jasonbrain.com/">Tech Blog</a>
-          </div>
-        </li>
-        <li><a href="https://jasonbrain.com/#contact">Contact</a></li>
-      </ul>
-      <button class="hamburger" aria-label="Toggle navigation menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
+  <!-- Navigation will be loaded here -->
+  <div id="nav-placeholder"></div>
+
   <header>
     <div class="header-background"></div>
     <div class="header-gradient"></div>
@@ -85,7 +62,7 @@
       <h2>Meet Jason Brain (ΙΑΣΩΝ) - Your Sound Architect</h2>
       <div class="about-content-wrapper">
         <div class="about-image-container">
-          <img src="https://musicproducer.jasonbrain.com/images/jason-studio.jpg" alt="Jason Brain - Professional Music Producer in his studio" 
+          <img src="images/jason-studio.jpg" alt="Jason Brain - Professional Music Producer in his studio" 
                class="about-image">
         </div>
         <div class="about-text-content">
@@ -219,29 +196,29 @@
 
     <section class="venues">
       <h2>Production Services</h2>
-      <div class="venue-card">
-        <img src="https://musicproducer.jasonbrain.com/images/beat-making.jpg" alt="Custom beat production in Ableton Live" loading="lazy">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+        <img src="images/beat-making.jpg" alt="Custom beat production in Ableton Live" loading="lazy">
         <p>Custom Beats</p>
       </div>
-      <div class="venue-card">
-        <img src="https://musicproducer.jasonbrain.com/images/remix-studio.jpg" alt="Professional remix production setup" loading="lazy">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+        <img src="images/remix-studio.jpg" alt="Professional remix production setup" loading="lazy">
         <p>Remixes</p>
       </div>
-      <div class="venue-card">
-        <img src="https://musicproducer.jasonbrain.com/images/acapella-extraction.jpg" alt="Acapella extraction tools and software" loading="lazy">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+        <img src="images/acapella-extraction.jpg" alt="Acapella extraction tools and software" loading="lazy">
         <p>Acapella Extraction</p>
       </div>
-      <div class="venue-card">
-        <img src="https://musicproducer.jasonbrain.com/images/megamix-production.jpg" alt="Megamix production for dance routines" loading="lazy">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+        <img src="images/megamix-production.jpg" alt="Megamix production for dance routines" loading="lazy">
         <p>Megamix Production</p>
       </div>
     </section>
     <hr>
     <section class="gallery">
       <h2>Studio & Production Gallery</h2>
-      <img src="https://musicproducer.jasonbrain.com/images/studio-wide.jpg" alt="Jason Brain's music production studio setup" loading="lazy">
-      <img src="https://musicproducer.jasonbrain.com/images/ableton-session.jpg" alt="Ableton Live session showing beat production" loading="lazy">
-      <img src="https://musicproducer.jasonbrain.com/images/mixing-console.jpg" alt="Professional mixing console in use" loading="lazy">
+      <img src="images/studio-wide.jpg" alt="Jason Brain's music production studio setup" loading="lazy">
+      <img src="images/ableton-session.jpg" alt="Ableton Live session showing beat production" loading="lazy">
+      <img src="images/mixing-console.jpg" alt="Professional mixing console in use" loading="lazy">
     </section>
     <hr>
     <section class="blog">
@@ -455,7 +432,7 @@
       <div class="contact-card">
         <div class="contact-form-container">
           <form action="https://formspree.io/f/xrbaqokv" method="POST" class="contact-form">
-            <input type="hidden" name="_subject" value="New Music Production Inquiry from musicproducer.jasonbrain.com">
+            <input type="hidden" name="_subject" value="New Music Production Inquiry from jasonbrain.com/music-production">
             <input type="text" name="_gotcha" style="display: none;">
             <div class="form-group">
               <label for="name" class="form-label">Name</label>
@@ -535,7 +512,7 @@
         </p>
         <div class="visual-grid">
           <div class="visual-image-container">
-            <img src="https://musicproducer.jasonbrain.com/images/ableton-live-session.jpg" 
+            <img src="images/ableton-live-session.jpg" 
                  alt="Jason Brain's Ableton Live production session"
                  class="visual-image">
             <div class="visual-image-badge">
@@ -726,7 +703,7 @@
   </div> <!-- Close container div HERE -->
   
   <footer>
-    <p>© 2025 Jason Brain | Music Producer | Beats, Remixes & Original Productions | <a href="https://jasonbrain.com">More Services</a></p>
+    <p>© <span id="copyright-year"></span> Jason Brain | Music Producer | Beats, Remixes & Original Productions | <a href="../">More Services</a></p>
     <p class="footer-italic-text">
       ΙΑΣΩΝ is the Greek origin of Jason, meaning healer. Jason Brain brings healing and joy through music.
     </p>
@@ -737,6 +714,6 @@
       <path d="M12 4l8 8h-6v8h-4v-8H4l8-8z"/>
     </svg>
   </button>
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
 </body>
 </html>

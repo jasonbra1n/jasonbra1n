@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap>
-    <loc>https://jasonbrain.com/sitemap-main.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://weddingdj.jasonbrain.com/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://musicproducer.jasonbrain.com/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://webdeveloper.jasonbrain.com/sitemap.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://corporatedj.jasonbrain.com/sitemap.xml</loc>
-  </sitemap>
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Main Page -->
+  <url>
+    <loc>https://jasonbrain.com/</loc>
+    <lastmod>2025-12-13</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- Service Pages -->
+  <url>
+    <loc>https://jasonbrain.com/wedding-dj/</loc>
+    <lastmod>2025-12-13</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://jasonbrain.com/music-production/</loc>
+    <lastmod>2025-12-13</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://jasonbrain.com/web-developer/</loc>
+    <lastmod>2025-12-13</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://jasonbrain.com/corporate-events/</loc>
+    <lastmod>2025-12-13</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+</urlset>
