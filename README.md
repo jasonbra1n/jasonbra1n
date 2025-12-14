@@ -1,8 +1,18 @@
 [![Latest Release](https://img.shields.io/github/v/release/jasonbra1n/jasonbra1n?style=for-the-badge&color=8146ff)](https://github.com/jasonbra1n/jasonbra1n/releases/latest)
+[![GitHub last commit](https://img.shields.io/github/last-commit/jasonbra1n/jasonbra1n?style=for-the-badge&color=8146ff)](https://github.com/jasonbra1n/jasonbra1n/commits/main)
+[![License: MIT](https://img.shields.io/github/license/jasonbra1n/jasonbra1n?style=for-the-badge&color=8146ff)](https://github.com/jasonbra1n/jasonbra1n/blob/main/LICENSE)
 
 # Hi there, I'm Jason Brain (jasonbra1n) 👋
 
 Welcome to my GitHub profile! I'm a **professional wedding DJ, multimedia producer, and tech enthusiast** with over 30 years of experience creating unforgettable celebrations and innovative digital experiences.
+
+## 🛠️ Built With
+
+![PHP](https://img.shields.io/badge/PHP-8146FF?style=for-the-badge&logo=php&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-8146FF?style=for-the-badge&logo=javascript&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-8146FF?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-8146FF?style=for-the-badge&logo=css3&logoColor=white)
+
 
 ## 🎵 About Me
 - 🎧 **Wedding DJ & Event Entertainment** – Specializing in weddings, private events, and corporate celebrations across Haliburton, Minden & Kawartha Lakes, Ontario. From intimate backyard ceremonies to grand celebrations, I craft personalized soundtracks with professional sound systems, RGB DMX lighting, fog effects, and projection mapping.
