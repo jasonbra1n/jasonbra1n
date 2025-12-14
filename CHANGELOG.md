@@ -15,6 +15,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
+## [1.2.0] - 2025-12-13
+
+### Added
+- **Blogger Template**: Created the initial version of the custom Blogger XML template (`blogger-template.xml`) by importing and adapting a working theme.
+- Created a dedicated contact page (`/contact/`) with a self-hosted PHP form processor.
+- Created a dedicated about page (`/about/`) to improve site navigation and structure.
+- Created a reusable `footer.html` include to standardize the site footer.
+
+### Changed
+- **Architecture**: Converted all pages from `.html` to `.php` to enable server-side includes for shared components (`nav.html`, `footer.html`), replacing the previous JavaScript-based loading mechanism.
+- **Blogger Template**: Refactored `blogger-template.xml` to use the project's standard CSS variables, aligning its color palette and fonts with `STYLE_GUIDE.md`.
+- Updated `sitemap.xml` to include new pages and reflect recent changes.
+- Refactored all pages (`index.php`, `about/`, `contact/`, and all service pages) to use the new `footer.html` include, completing the component standardization.
+
+### Removed
+- **Blogger Template**: Deleted the obsolete `base-template.xml` placeholder file.
+- Removed the third-party Formspree dependency for contact forms.
+- Removed the full "About" section from the homepage, replacing it with a concise teaser.
+- Deleted redundant `sitemap-main.xml` file.
+
 ## [1.1.0] - 2025-12-13
 ### Added
 - Created dedicated service pages for Wedding DJ, Music Production, Web Developer, and Corporate Events.
@@ -46,6 +66,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Integrated Formspree for the contact form.
 - Added lazy loading for images and iframe placeholders for performance.
 
-[Unreleased]: https://github.com/jasonbra1n/jasonbra1n/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/jasonbra1n/jasonbra1n/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/jasonbra1n/jasonbra1n/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/jasonbra1n/jasonbra1n/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/jasonbra1n/jasonbra1n/releases/tag/v1.0.0

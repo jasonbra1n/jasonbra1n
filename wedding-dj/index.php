@@ -39,8 +39,8 @@
   </script>
 </head>
 <body>
-  <!-- Navigation will be loaded here -->
-  <div id="nav-placeholder"></div>
+  <!-- Server-side include for navigation -->
+  <?php include '../nav.html'; ?>
 
   <header>
     <div class="header-background"></div>
@@ -770,18 +770,8 @@
     </section>
   </div> <!-- Close container div HERE -->
   
-  <footer>
-    <p>© <span id="copyright-year"></span> Jason Brain | Wedding DJ Services in Haliburton, Minden & Kawartha Lakes, Ontario | <a href="../">More Services</a></p>
-    <p class="footer-italic-text">
-      ΙΑΣΩΝ is the Greek origin of Jason, meaning healer. Jason Brain brings wellness and joy to every celebration.
-    </p>
-  </footer>
+  <?php include '../footer.html'; ?>
   
-  <button class="scroll-to-top" aria-label="Scroll to top">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-      <path d="M12 4l8 8h-6v8h-4v-8H4l8-8z"/>
-    </svg>
-  </button>
   <script src="../script.js"></script>
 </body>
 </html>

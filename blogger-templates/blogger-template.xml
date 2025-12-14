@@ -2,22 +2,46 @@
 <!DOCTYPE html>
 <html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 <head>
-  <meta content='IE=EmulateIE7' http-equiv='X-UA-Compatible'/>
-  <b:if cond='data:blog.isMobile'>
-    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/>
-  <b:else/>
-    <meta content='width=1100' name='viewport'/>
-  </b:if>
+  <meta content='width=device-width, initial-scale=1' name='viewport'/>
   <b:include data='blog' name='all-head-content'/>
   <title><data:blog.pageTitle/></title>
   
   <b:skin><![CDATA[
+/*-----------------------------------------------------------------------------------
+  Blogger Template for jasonbrain.com
+  Version: 1.1
+  Author: Jason Brain
+  Description: A custom template for the Music and Tech blogs, aligned with the
+               main site's STYLE_GUIDE.md.
+-----------------------------------------------------------------------------------*/
+
+/* >> Base Variables from STYLE_GUIDE.md
+----------------------------------------------- */
+:root {
+  /* Primary Colors */
+  --color-primary-bg: #291259;
+  --color-accent-purple: #8146ff;
+
+  /* Accent Colors */
+  --color-accent-coral: #ff6f61;
+  --color-accent-cyan: #00ffff;
+
+  /* Neutral Colors */
+  --color-neutral-white: #ffffff;
+  --color-neutral-light-gray: #f8f4ff;
+  --color-text-dark: #333;
+  --color-text-medium: #666;
+
+  /* Typography */
+  --font-family-main: 'Arial', sans-serif;
+}
+
 /* Reset and Base Styles */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { 
-  font-family: 'Arial', sans-serif; 
-  background: linear-gradient(180deg, #291259, #8146ff); 
-  color: #333; 
+  font-family: var(--font-family-main); 
+  background: linear-gradient(180deg, var(--color-primary-bg), var(--color-accent-purple)); 
+  color: var(--color-text-dark); 
   overflow-x: hidden;
   min-height: 100vh;
 }
@@ -28,7 +52,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(41, 18, 89, 0.95);
+  background: color-mix(in srgb, var(--color-primary-bg) 95%, transparent);
   backdrop-filter: blur(10px);
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0,0,0,0.3);
@@ -45,11 +69,11 @@ body {
 }
 
 .nav-logo {
-  color: white;
+  color: var(--color-neutral-white);
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
-  font-family: Arial, sans-serif;
+  font-family: var(--font-family-main);
 }
 
 .nav-menu ul {
@@ -62,15 +86,15 @@ body {
 }
 
 .nav-menu li a {
-  color: white;
+  color: var(--color-neutral-white);
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s;
-  font-family: Arial, sans-serif;
+  font-family: var(--font-family-main);
 }
 
 .nav-menu li a:hover {
-  color: #ff6f61;
+  color: var(--color-accent-coral);
 }
 
 /* Dropdown Menu Styles */
@@ -82,7 +106,7 @@ body {
 .nav-menu .dropdown .dropdown-content {
   display: none;
   position: absolute;
-  background-color: rgba(41, 18, 89, 0.95);
+  background-color: color-mix(in srgb, var(--color-primary-bg) 95%, transparent);
   backdrop-filter: blur(10px);
   min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -102,7 +126,7 @@ body {
 }
 
 .nav-menu .dropdown .dropdown-content a {
-  color: white;
+  color: var(--color-neutral-white);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -111,7 +135,7 @@ body {
 }
 
 .nav-menu .dropdown .dropdown-content a:hover {
-  background-color: #8146ff;
+  background-color: var(--color-accent-purple);
 }
 
 /* Reset margin for the navigation LinkList widget */
@@ -125,7 +149,7 @@ body {
   max-width: 1200px;
   margin: 6rem auto 2rem;
   padding: 2rem;
-  background: white;
+  background: var(--color-neutral-white);
   border-radius: 20px;
   min-height: 70vh;
 }
@@ -147,32 +171,32 @@ body {
 .blog-header {
   text-align: center;
   padding: 2rem 0;
-  border-bottom: 3px solid #8146ff;
+  border-bottom: 3px solid var(--color-accent-purple);
   margin-bottom: 2rem;
 }
 
 .blog-header h1 {
   font-size: 2.5rem;
-  color: #291259;
+  color: var(--color-primary-bg);
   margin-bottom: 0.5rem;
 }
 
 .blog-description {
-  color: #666;
+  color: var(--color-text-medium);
   font-size: 1.1rem;
 }
 
 .post {
-  background: #f9f9f9;
+  background: var(--color-neutral-light-gray);
   border-radius: 15px;
   padding: 2rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  border-left: 4px solid #8146ff;
+  border-left: 4px solid var(--color-accent-purple);
 }
 
 .post-title {
   font-size: 2rem;
-  color: #291259;
+  color: var(--color-primary-bg);
   margin-bottom: 0.5rem;
 }
 
@@ -183,11 +207,11 @@ body {
 }
 
 .post-title a:hover {
-  color: #8146ff;
+  color: var(--color-accent-purple);
 }
 
 .post-header {
-  color: #666;
+  color: var(--color-text-medium);
   font-size: 0.9rem;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
@@ -196,7 +220,7 @@ body {
 
 .post-body {
   line-height: 1.8;
-  color: #444;
+  color: var(--color-text-dark);
   margin-bottom: 1rem;
 }
 
@@ -216,8 +240,8 @@ body {
 }
 
 .post-labels a {
-  background: #8146ff;
-  color: white;
+  background: var(--color-accent-purple);
+  color: var(--color-neutral-white);
   padding: 0.3rem 0.8rem;
   border-radius: 15px;
   text-decoration: none;
@@ -226,12 +250,12 @@ body {
 }
 
 .post-labels a:hover {
-  background: #ff6f61;
+  background: var(--color-accent-coral);
 }
 
 .read-more {
-  background: linear-gradient(135deg, #8146ff, #ff6f61);
-  color: white;
+  background: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-coral));
+  color: var(--color-neutral-white);
   padding: 0.8rem 1.5rem;
   border-radius: 25px;
   text-decoration: none;
@@ -248,7 +272,7 @@ body {
 
 /* Sidebar */
 .sidebar {
-  background: #f8f4ff;
+  background: var(--color-neutral-light-gray);
   padding: 2rem;
   border-radius: 15px;
   margin-top: 2rem;
@@ -256,10 +280,10 @@ body {
 }
 
 .sidebar h2 {
-  color: #291259;
+  color: var(--color-primary-bg);
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  border-bottom: 2px solid #8146ff;
+  border-bottom: 2px solid var(--color-accent-purple);
   padding-bottom: 0.5rem;
 }
 
@@ -278,38 +302,38 @@ body {
 }
 
 .sidebar ul li a {
-  color: #291259;
+  color: var(--color-primary-bg);
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .sidebar ul li a:hover {
-  color: #8146ff;
+  color: var(--color-accent-purple);
 }
 
 /* Comments */
 .comments {
   margin-top: 3rem;
   padding-top: 2rem;
-  border-top: 3px solid #8146ff;
+  border-top: 3px solid var(--color-accent-purple);
 }
 
 .comments h3 {
-  color: #291259;
+  color: var(--color-primary-bg);
   margin-bottom: 1rem;
 }
 
 /* Footer */
 footer {
-  background: #291259;
-  color: white;
+  background: var(--color-primary-bg);
+  color: var(--color-neutral-white);
   text-align: center;
   padding: 2rem;
   margin-top: 2rem;
 }
 
 footer a {
-  color: #ff6f61;
+  color: var(--color-accent-coral);
   text-decoration: none;
 }
 
@@ -353,8 +377,8 @@ footer a:hover {
 }
 
 .blog-pager a {
-  background: #8146ff;
-  color: white;
+  background: var(--color-accent-purple);
+  color: var(--color-neutral-white);
   padding: 0.8rem 1.5rem;
   border-radius: 25px;
   text-decoration: none;
@@ -364,7 +388,7 @@ footer a:hover {
 }
 
 .blog-pager a:hover {
-  background: #ff6f61;
+  background: var(--color-accent-coral);
 }
 
 /* Scroll to Top Button */
@@ -372,8 +396,8 @@ footer a:hover {
   position: fixed;
   bottom: 20px;
   left: 20px;
-  background: rgba(41, 18, 89, 0.8);
-  color: white;
+  background: color-mix(in srgb, var(--color-primary-bg) 80%, transparent);
+  color: var(--color-neutral-white);
   border: none;
   border-radius: 50%;
   width: 50px;
@@ -397,14 +421,14 @@ footer a:hover {
 }
 
 .scroll-to-top:hover {
-  background: #8146ff;
+  background: var(--color-accent-purple);
   transform: translateY(-2px);
 }
 
 .scroll-to-top svg {
   width: 24px;
   height: 24px;
-  fill: white;
+  fill: var(--color-neutral-white);
 }
   ]]></b:skin>
 </head>

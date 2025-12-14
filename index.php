@@ -41,8 +41,8 @@
   </script>
 </head>
 <body>
-  <!-- Navigation will be loaded here -->
-  <div id="nav-placeholder"></div>
+  <!-- Server-side include for navigation -->
+  <?php include 'nav.html'; ?>
 
   <header>
     <div class="header-background"></div>
@@ -54,69 +54,21 @@
       <button class="cta-button" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">Explore My Services</button>
     </div>
   </header>
-  <div class="container">
-    <section class="about" id="about">
-      <h2>Meet Jason Brain (ΙΑΣΩΝ) - Multi-Disciplinary Creative</h2>
-      <div class="about-content-wrapper">
-        <div class="about-image-container">
-          <img src="images/jason-profile_tn.webp" alt="Jason Brain - Creative Professional and Multi-Disciplinary Artist" 
-               class="about-image">
+  <div class="container">    
+    <section class="about-teaser" id="about">
+        <h2>Multi-Disciplinary Creative</h2>
+        <div class="about-teaser-content">
+            <img src="images/jason-profile_tn.webp" alt="Jason Brain - Creative Professional" class="about-teaser-image">
+            <div class="about-teaser-text">
+                <p class="intro-text">
+                    <strong>I architect experiences that bridge music, technology, and human connection.</strong>
+                </p>
+                <p>
+                    With a journey spanning three decades—from legendary nightclub residencies to cutting-edge AI development—I bring a unique blend of artistic intuition and technical expertise to every project. My mission is to create meaningful, innovative, and unforgettable experiences.
+                </p>
+                <a href="/about/" class="cta-button" style="display: inline-block; margin-top: 1rem;">Learn My Story</a>
+            </div>
         </div>
-        <div class="about-text-content">
-          <p class="intro-text">
-            <strong>I don't just create – I architect experiences that bridge music, technology, and human connection.</strong>
-          </p>
-          <p>
-            My journey began spinning records at public school dance events across Ontario, evolved through legendary nights closing Lindsay's York Tavern, and has transformed into a multi-faceted creative practice. Today, I merge three decades of musical intuition with cutting-edge technology.
-          </p>
-          <p>
-            From producing healing frequency trance as ΙΑΣΩΝ to developing AI-powered web solutions, I bring the same passion for connection and innovation to every project. <em>Every service I offer is built on the foundation of understanding what moves people.</em>
-          </p>
-          <div class="why-choose-box">
-            <h4>What Sets Jason Brain Apart:</h4>
-            <ul class="why-choose-list">
-              <li class="why-choose-list-item">
-                <span class="checkmark">✓</span>
-                Three Decades of Experience: From nightclub floors to digital innovation
-              </li>
-              <li class="why-choose-list-item">
-                <span class="checkmark">✓</span>
-                Multi-Disciplinary Expertise: Music, technology, and human psychology
-              </li>
-              <li class="why-choose-list-item">
-                <span class="checkmark">✓</span>
-                Innovation Focus: Always exploring what's next in creative technology
-              </li>
-              <li class="why-choose-list-item">
-                <span class="checkmark">✓</span>
-                Proven Results: Trusted by couples, artists, and businesses across Ontario
-              </li>
-              <li class="why-choose-list-item">
-                <span class="checkmark">✓</span>
-                Personal Attention: Every project gets my full creative commitment
-              </li>
-            </ul>
-          </div>
-          <p class="about-quote-text">
-            "ΙΑΣΩΝ means healer in Greek. I bring wellness and joy through music, technology, and meaningful connections."
-          </p>
-        </div>
-      </div>
-      
-      <!-- Extended Background Section -->
-      <div class="extended-background-box" style="background: #f8f4ff; padding: 2rem; border-radius: 15px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); margin-top: 2rem; border-left: 4px solid #8146ff;">
-        <h3 style="color: #291259; margin-bottom: 1rem;">The Evolution of a Creative Professional</h3>
-        <p>
-          What started as a young DJ spinning records at school dances has evolved into a comprehensive creative practice. Those early years taught me to read energy, understand what connects with people, and create moments that matter.
-        </p>
-        <p>
-          Through college pub gigs and legendary nightclub residencies in Peterborough, Oshawa, and Toronto, I developed an intuitive understanding of how music moves people. This foundation now informs everything I do – from crafting custom beats to developing user experiences that truly resonate.
-        </p>
-        <p>
-          Today, I channel this experience into multiple creative disciplines: producing music that heals, creating weddings that become legendary, and building digital solutions that connect businesses with their audiences. The tools have evolved, but the mission remains the same – creating experiences that move people.
-        </p>
-      </div>
-      
     </section>
 
     <section class="venues" id="services">
@@ -493,107 +445,19 @@
       <div class="contact-intro-box">
         <h3>Ready to Start Your Project?</h3>
         <p>
-          Whether you need a wedding DJ, music production, web development, or corporate event services, 
-          I'm here to bring your vision to life. Let's discuss how three decades of creative experience can serve your needs.
+          Whether you need a wedding DJ, music production, web development, or corporate event services, I'm here to bring your vision to life.
         </p>
       </div>
 
-      <!-- Two-column form and info section -->
-      <div class="contact-card">
-        <div class="contact-form-container">
-          <form action="https://formspree.io/f/mvgqrylp" method="POST" class="contact-form">
-            <input type="hidden" name="_subject" value="New General Inquiry from jasonbrain.com">
-            <input type="text" name="_gotcha" style="display: none;">
-            <div class="form-group">
-              <label for="name" class="form-label">Name</label>
-              <input type="text" id="name" name="name" required placeholder="Your Name" class="form-input">
-            </div>
-            <div class="form-group">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" id="email" name="email" required placeholder="Your Email" class="form-input">
-            </div>
-            <div class="form-group">
-              <label for="phone" class="form-label">Phone Number (Optional)</label>
-              <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" class="form-input">
-            </div>
-            <div class="form-group">
-              <label for="service-interest" class="form-label">Service Interest</label>
-              <select id="service-interest" name="service-interest" class="form-input">
-                <option value="">Select Primary Interest</option>
-                <option value="wedding-dj">Wedding DJ Services</option>
-                <option value="music-production">Music Production</option>
-                <option value="web-development">Web Development</option>
-                <option value="corporate-events">Corporate Events</option>
-                <option value="multiple">Multiple Services</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="message" class="form-label">Project Details</label>
-              <textarea id="message" name="message" required placeholder="Tell me about your project or event! Include timeline, location (if applicable), and any specific requirements." class="form-textarea"></textarea>
-            </div>
-            <button type="submit" class="form-submit-button">Send Message</button>
-          </form>
-          <noscript>
-            <p class="noscript-message">
-              Please enable JavaScript to use the contact form, or reach out via 
-              <a href="https://x.com/JasonBra1n" target="_blank">X (Twitter)</a> or 
-              <a href="https://www.tiktok.com/@jason.bra1n" target="_blank">TikTok</a>.
-            </p>
-          </noscript>
-        </div>
-        
-        <div class="contact-map-container">
-          <h4>Service Branches</h4>
-          <div style="display: flex; flex-direction: column; gap: 1rem; text-align: center;">
-            <a href="/wedding-dj/"  
-               style="display: block; padding: 1rem; background: #f8f4ff; border-radius: 10px; text-decoration: none; color: #291259; border: 2px solid #8146ff;">
-              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">💒</div>
-              <div style="font-weight: bold;">Wedding DJ Services</div>
-              <div style="font-size: 0.9rem; color: #666;">Premium celebration experiences</div>
-            </a>
-            <a href="/music-production/" 
-               style="display: block; padding: 1rem; background: #f8f4ff; border-radius: 10px; text-decoration: none; color: #291259; border: 2px solid #8146ff;">
-              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🎵</div>
-              <div style="font-weight: bold;">Music Production</div>
-              <div style="font-size: 0.9rem; color: #666;">Custom beats, remixes & originals</div>
-            </a>
-            <a href="#web-dev" 
-               style="display: block; padding: 1rem; background: #f8f4ff; border-radius: 10px; text-decoration: none; color: #291259; border: 2px solid #8146ff;">
-              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">💻</div>
-              <div style="font-weight: bold;">Web Development</div>
-              <div style="font-size: 0.9rem; color: #666;">From simple to AI-powered...</div>
-            </a>
-            <a href="/corporate-events/" 
-               style="display: block; padding: 1rem; background: #f8f4ff; border-radius: 10px; text-decoration: none; color: #291259; border: 2px solid #8146ff;">
-              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🎤</div>
-              <div style="font-weight: bold;">Corporate AV/DJ</div>
-              <div style="font-size: 0.9rem; color: #666;">Professional Event Production</div>
-            </a>
-          </div>
-          <div class="map-info-box">
-            <p><strong class="map-info-strong">Based in:</strong> Haliburton, Ontario</p>
-            <p><strong class="map-info-strong">Serving:</strong> Ontario & Remote Worldwide</p>
-            <p class="small-text">30+ years of creative excellence</p>
-          </div>
-        </div>
+      <div class="contact-cta-container" style="text-align: center; padding: 2rem 0;">
+          <a href="/contact/" class="cta-button" style="font-size: 1.2rem; padding: 15px 30px;">Get In Touch</a>
       </div>
       
       <p class="contact-cta">Ready to bring your creative vision to life?<br><strong>Let's make something legendary together!</strong></p>
     </section>
   </div> <!-- Close container div HERE -->
-  
-  <footer>
-    <p>© <span id="copyright-year"></span> Jason Brain | Creative Professional - Music, Technology & Innovation</p>
-    <p class="footer-italic-text">
-      ΙΑΣΩΝ is the Greek origin of Jason, meaning healer. Jason Brain brings healing and joy through creative expression.
-    </p>
-  </footer>
-  
-  <button class="scroll-to-top" aria-label="Scroll to top">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-      <path d="M12 4l8 8h-6v8h-4v-8H4l8-8z"/>
-    </svg>
-  </button>
+
+  <?php include 'footer.html'; ?>
   <script src="script.js"></script>
 </body>
 </html>

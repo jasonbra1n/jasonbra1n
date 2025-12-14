@@ -11,7 +11,16 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
 
 ## Short-Term (Next 3 Months)
 
-- **[Done] Foundational Refactoring**:
+- **[Done] Server-Side Enhancement (PHP)**:
+  - **Server-Side Includes**: Refactored all pages to use PHP `include` for shared components like the navigation (`nav.html`) and footer (`footer.html`), completing the transition away from the old JavaScript loader.
+    - **Navigation**: All pages now use `<?php include 'nav.html'; ?>`.
+    - **Footer**: All pages now use `<?php include 'footer.html'; ?>`.
+  - **[Done] Self-Hosted Forms**: Replace the third-party Formspree dependency with a custom PHP script to handle contact form submissions.
+
+- **[Done] Security & Best Practices**:
+  - **Configuration Management**: Implemented a `config.php` file for sensitive data (like email addresses), which is ignored by Git. A `config-sample.php` is provided for developers.
+
+- **[Done] Foundational Refactoring (v1.1.0)**:
   - Migrate all service pages from subdomains to subfolders within this repository (e.g., `/wedding-dj/`, `/music-production/`).
   - Implemented a shared navigation menu loaded via JavaScript.
   - Centralized all CSS and JavaScript assets into root files.
@@ -27,9 +36,9 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
   - Expand Schema.org structured data on all pages for richer search results.
 
 - **[In Progress] Blog Template Development**:
-  - The Music Blog (`blog.jasonbrain.com`) and Tech Blog (`devblog.jasonbrain.com`) will remain on the Blogger platform.
-  - Develop custom Blogger XML templates that align with this site's `STYLE_GUIDE.md`.
-  - Create a `blogger-templates/` directory in this repository to store and version-control the templates, ensuring brand consistency.
+  - **Initial Template Complete**: A custom Blogger XML template (`blogger-template.xml`) has been developed to align with the main site's branding and `STYLE_GUIDE.md`.
+  - **[To Do] Refinement & Deployment**: Refine the template's CSS variables and responsive behavior, then deploy it to both the Music Blog and Tech Blog.
+  - The template is version-controlled in the `blogger-templates/` directory.
 
 - **[To Do] Blog Content Population**:
   - Write and publish the first 3-5 articles for both the Music Blog and Tech Blog to establish a content baseline on their respective platforms.

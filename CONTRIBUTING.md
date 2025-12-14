@@ -13,12 +13,18 @@ All new copy and content should align with this voice. When in doubt, refer to t
 
 ## Tech Stack
 - **Frontend**: HTML5, CSS3, JavaScript (ES6+)
-- **Contact Form**: Formspree
+- **Backend**: PHP (v8.4 on production)
+- **Database**: MySQL
+- **Contact Form**: Self-hosted PHP script
 - **Blogs**: Blogger platform, with custom XML templates stored in the `blogger-templates/` directory.
-- **Hosting**: Static site hosting (e.g., GitHub Pages, Netlify, Vercel)
+- **Hosting**: PHP-enabled hosting (e.g., cPanel)
 
 ## Development Workflow
 
+1.  **Initial Setup**: Before starting, copy the `config-sample.php` file to a new file named `config.php`. Update `config.php` with your local environment details (e.g., a test email address). This file is ignored by Git and is required for features like the contact form to work.
+    ```bash
+    cp config-sample.php config.php
+    ```
 1.  **Create a new branch**: All new features or fixes should be done in a separate branch.
     ```bash
     git checkout -b feature/your-feature-name
@@ -29,10 +35,23 @@ All new copy and content should align with this voice. When in doubt, refer to t
 
 ## Coding Standards
 
+### Site Architecture
+- **Multi-Page Structure**: The site is moving from a single-page, anchor-link-heavy design to a more robust multi-page architecture. New top-level sections (like "About" or "Contact") should be created in their own subdirectories (e.g., `/about/`, `/contact/`) with an `index.php` file. This improves SEO, maintainability, and user navigation.
+- **Descriptive URLs**: Directory names should be lowercase, hyphenated, and descriptive of the page's content (e.g., `music-production`). This creates clean, SEO-friendly URLs.
+- **Reusable Components**: Core repeating elements like the navigation and footer are managed as PHP includes (`nav.html`, `footer.html`). All new pages should use these includes to ensure consistency.
+  - `<?php include '../nav.html'; ?>`
+  - `<?php include '../footer.html'; ?>`
+- **Sitemap**: Whenever a new page is added or an existing one is removed, the `sitemap.xml` file in the root directory must be updated to reflect the change. This is crucial for SEO and ensuring search engines can find all content.
+- **Internal Linking**: When relevant, add contextual links within page content to other pages on the site. This helps users discover more content and signals the relationship between pages to search engines.
+
 ### HTML
 - Use semantic HTML5 tags (`<section>`, `<nav>`, `<header>`, `<footer>`, etc.).
+- **Page Metadata**: Every page must have a unique and descriptive:
+  - `<title>` tag (e.g., "Wedding DJ Services in Haliburton | Jason Brain").
+  - `<meta name="description">` tag that summarizes the page content (approx. 150-160 characters).
 - Ensure all images have descriptive `alt` attributes for accessibility and SEO.
 - Use lazy loading (`loading="lazy"`) for off-screen images and iframes to improve performance.
+- **Structured Data**: Use Schema.org structured data (via JSON-LD script) to help search engines understand the page's content. Refer to `contact/index.php` for an example of `ContactPage` schema.
 
 ### CSS
 - Follow the existing BEM-like naming convention (e.g., `.contact-form-container`, `.package-feature-item`).

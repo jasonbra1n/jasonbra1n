@@ -35,8 +35,8 @@
   </script>
 </head>
 <body>
-  <!-- Navigation will be loaded here -->
-  <div id="nav-placeholder"></div>
+  <!-- Server-side include for navigation -->
+  <?php include '../nav.html'; ?>
 
   <header>
     <div class="header-background"></div>
@@ -326,18 +326,8 @@
 
   </div>
   
-  <footer>
-    <p>© <span id="copyright-year"></span> Jason Brain | Corporate DJ & AV Production | <a href="../">More Services</a></p>
-    <p class="footer-italic-text">
-      ΙΑΣΩΝ is the Greek origin of Jason, meaning healer. I bring a healing sense of calm and professionalism to your event planning.
-    </p>
-  </footer>
-  
-  <button class="scroll-to-top" aria-label="Scroll to top">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-      <path d="M12 4l8 8h-6v8h-4v-8H4l8-8z"/>
-    </svg>
-  </button>
+  <?php include '../footer.html'; ?>
+
   <script src="../script.js"></script>
 </body>
 </html>

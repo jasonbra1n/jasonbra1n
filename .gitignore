@@ -1,1 +1,15 @@
-*.ffs_db
+# Sensitive configuration file
+config.php
+
+# Composer dependencies
+/vendor/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# IDE/Editor-specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace

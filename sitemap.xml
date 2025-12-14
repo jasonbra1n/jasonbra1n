@@ -8,6 +8,18 @@
     <priority>1.00</priority>
   </url>
 
+  <!-- Core Pages -->
+  <url>
+    <loc>https://jasonbrain.com/about/</loc>
+    <lastmod>2025-12-13</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://jasonbrain.com/contact/</loc>
+    <lastmod>2025-12-13</lastmod>
+    <priority>0.80</priority>
+  </url>
+
   <!-- Service Pages -->
   <url>
     <loc>https://jasonbrain.com/wedding-dj/</loc>

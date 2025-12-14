@@ -1,3 +1,5 @@
+[![Latest Release](https://img.shields.io/github/v/release/jasonbra1n/jasonbra1n?style=for-the-badge&color=8146ff)](https://github.com/jasonbra1n/jasonbra1n/releases/latest)
+
 # Hi there, I'm Jason Brain (jasonbra1n) 👋
 
 Welcome to my GitHub profile! I'm a **professional wedding DJ, multimedia producer, and tech enthusiast** with over 30 years of experience creating unforgettable celebrations and innovative digital experiences.
@@ -29,17 +31,16 @@ Creating unforgettable wedding experiences in Ontario's cottage country while pu
 
 ## 📬 Connect With Me
 
-- 🌍 **Main Website**: [jasonbrain.com](https://jasonbrain.com)
-- 💒 **Wedding DJ Services**: [jasonbrain.com/wedding-dj/](https://jasonbrain.com/wedding-dj/)
-- 🎵 **Music Production Services**: [jasonbrain.com/music-production/](https://jasonbrain.com/music-production/)
-- 💻 **Web Development Services**: [jasonbrain.com/web-developer/](https://jasonbrain.com/web-developer/)
-- 🎤 **Corporate Event Services**: [jasonbrain.com/corporate-events/](https://jasonbrain.com/corporate-events/)
-- 💿 **Music Mixes**: [hearthis.at/iason](https://hearthis.at/iason)
-- 📺 **YouTube**: [@JasonBrain](https://www.youtube.com/@JasonBrain)
-- 🦜 X (formerly Twitter): [@JasonBra1n](https://x.com/JasonBra1n)  
-- 🎬 TikTok: [@jason.bra1n](https://www.tiktok.com/@jason.bra1n)
-
-
+- 🌍 **Website**: [jasonbrain.com](https://jasonbrain.com)
+- ✍️ **Blogs**: [Music Blog](https://blog.jasonbrain.com/) & [Tech Blog](https://devblog.jasonbrain.com/)
+- **Music Platforms**:
+  - ☁️ **SoundCloud**: [Original Productions](https://soundcloud.com/jason-brain)
+  - 🎧 **Mixcloud**: [DJ Mixes & Sets](https://www.mixcloud.com/jasonbra1n/)
+  - ❤️ **HearThis.at**: [ΙΑΣΩΝ Releases](https://hearthis.at/iason)
+- **Social Media**:
+  - 📺 **YouTube**: [@JasonBrain](https://www.youtube.com/@JasonBrain)
+  - 🦜 **X (Twitter)**: [@JasonBra1n](https://x.com/JasonBra1n)  
+  - 🎬 **TikTok**: [@jason.bra1n](https://www.tiktok.com/@jason.bra1n)
 
 ---
 

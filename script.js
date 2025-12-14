@@ -1,37 +1,4 @@
 /**
- * Fetches and injects the shared navigation menu.
- * It fetches nav.html, replaces path placeholders, and injects it into the page.
- * It also re-initializes menu-related event listeners.
- * @param {string} rootPath - The relative path to the root directory (e.g., './' or '../').
- */
-async function loadNav(rootPath = './') {
-  const navPlaceholder = document.getElementById('nav-placeholder');
-  if (!navPlaceholder) {
-    console.error('Navigation placeholder not found!');
-    return;
-  }
-
-  try {
-    const response = await fetch(`${rootPath}nav.html`);
-    if (!response.ok) throw new Error(`Failed to fetch nav.html: ${response.statusText}`);
-    
-    let navHTML = await response.text();
-    
-    // Replace placeholders with the correct root path
-    navHTML = navHTML.replace(/{{ROOT}}/g, rootPath);
-    
-    navPlaceholder.innerHTML = navHTML;
-
-    // Re-initialize hamburger and dropdown functionality after nav is loaded
-    initializeNavEventListeners(rootPath); // This function now correctly attaches listeners
-
-  } catch (error) {
-    console.error('Error loading navigation:', error);
-    navPlaceholder.innerHTML = '<p style="color:red; text-align:center;">Failed to load navigation.</p>';
-  }
-}
-
-/**
  * Attaches event listeners to the navigation elements (hamburger, dropdowns, smooth scroll).
  * This needs to be called after the navigation is dynamically loaded.
  */
@@ -51,8 +18,8 @@ function initializeNavEventListeners(rootPath) {
     anchor.addEventListener('click', function (e) {
       const href = this.getAttribute('href');
       
-      // Check for internal links that are not just the root path
-      if (href.startsWith(rootPath + '#') && href.length > rootPath.length + 1) {
+      // Check for internal anchor links
+      if (href.startsWith('/#') && href.length > 2) {
         e.preventDefault();
         const targetId = href.substring(href.indexOf('#'));
         const targetElement = document.querySelector(targetId);
@@ -102,10 +69,8 @@ if (copyrightYear) copyrightYear.textContent = new Date().getFullYear();
 // Main script execution after the DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   
-  // Determine root path for asset loading
-  const isSubPage = window.location.pathname.split('/').filter(Boolean).length > 0;
-  const rootPath = isSubPage ? '../' : './';
-  loadNav(rootPath);
+  // Initialize navigation event listeners
+  initializeNavEventListeners();
 
   // Dynamic Copyright Year
   const copyrightYearEl = document.getElementById('copyright-year');
