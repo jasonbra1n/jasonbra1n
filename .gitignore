@@ -1,6 +1,9 @@
 # Sensitive configuration file
 config.php
 
+# Server-specific configuration (e.g., from cPanel)
+.htaccess
+
 # Composer dependencies
 /vendor/
 
