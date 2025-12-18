@@ -64,9 +64,9 @@
                     <strong>I architect experiences that bridge music, technology, and human connection.</strong>
                 </p>
                 <p>
-                    With a journey spanning three decades—from legendary nightclub residencies to cutting-edge AI development—I bring a unique blend of artistic intuition and technical expertise to every project. My mission is to create meaningful, innovative, and unforgettable experiences.
+                    With a journey spanning three decades—from legendary nightclub residencies to cutting-edge AI development—I bring a unique blend of artistic intuition and technical expertise to every project. My work is a fusion of Music, Technology, and AI, all driven by a mission to create meaningful and unforgettable experiences.
                 </p>
-                <a href="/about/" class="cta-button" style="display: inline-block; margin-top: 1rem;">Learn My Story</a>
+                <a href="/about/" class="cta-button">Learn My Story</a>
             </div>
         </div>
     </section>
@@ -335,7 +335,7 @@
         Connect with me across platforms to hear my latest productions, see my work, and stay updated on new projects
       </p>
       <div class="packages-grid">
-        <div class="package-card" onclick="window.open('https://www.mixcloud.com/jasonbra1n/', '_blank')">
+        <div class="package-card" onclick="window.open('https://www.mixcloud.com/jasonbra1n/', '_blank')" style="cursor: pointer;">
           <div class="package-badge essential">
             MIXES
           </div>
@@ -361,7 +361,7 @@
             </li>
           </ul>
         </div>
-        <div class="package-card popular" onclick="window.open('https://soundcloud.com/jason-brain', '_blank')">
+        <div class="package-card popular" onclick="window.open('https://soundcloud.com/jason-brain', '_blank')" style="cursor: pointer;">
           <div class="package-badge popular">
             ORIGINALS
           </div>
@@ -387,7 +387,7 @@
             </li>
           </ul>
         </div>
-        <div class="package-card" onclick="window.open('https://hearthis.at/iason/', '_blank')">
+        <div class="package-card" onclick="window.open('https://hearthis.at/iason/', '_blank')" style="cursor: pointer;">
           <div class="package-badge luxury">
             ΙΑΣΩΝ
           </div>
@@ -427,11 +427,11 @@
     <hr>
     <section class="venues" id="blogs">
       <h2>My Blogs</h2>
-      <div class="venue-card" onclick="window.location.href='https://devblog.jasonbrain.com'">
+      <div class="venue-card" onclick="window.open('https://devblog.jasonbrain.com', '_blank')" style="cursor: pointer;">
         <img src="images/web-development-service_tn.webp" alt="Technology & Web Dev Blog" loading="lazy">
         <p><strong>Technology & Web Dev</strong><br>Tutorials, code snippets, and tech insights</p>
       </div>
-      <div class="venue-card" onclick="window.location.href='https://blog.jasonbrain.com'">
+      <div class="venue-card" onclick="window.open('https://blog.jasonbrain.com', '_blank')" style="cursor: pointer;">
         <img src="images/music-production-service_tn.webp" alt="Music & DJ Blog" loading="lazy">
         <p><strong>Music & DJing</strong><br>Event stories, production tips, and mixes</p>
       </div>

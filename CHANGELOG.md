@@ -7,13 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2025-12-18
+
 ### Added
+- Created a custom `404.php` error page.
+- Updated the **Project Showcase** in the Web Developer section to include the `jasonbrain.com` monorepo and the new `lab.jasonbrain.com` SPA.
 
 ### Changed
+- **perf**: Implemented the "click-to-load" iframe facade on the `music-production` page to improve initial load performance.
 
 ### Fixed
-
-### Removed
+- Improved accessibility for interactive elements (`.package-card`, `.venue-card`) by removing inline `onclick` attributes and implementing keyboard navigation via `script.js`.
 
 ## [1.2.0] - 2025-12-13
 

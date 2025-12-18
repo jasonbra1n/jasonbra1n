@@ -52,7 +52,7 @@
       <h2>Meet Jason Brain - Your Creative Web Architect</h2>
       <div class="about-content-wrapper">
         <div class="about-image-container">
-          <img src="images/jason-webdev.jpg" alt="Jason Brain - Professional Web Developer" 
+          <img src="../images/jason-webdev.jpg" alt="Jason Brain - Professional Web Developer" 
                class="about-image">
         </div>
         <div class="about-text-content">
@@ -112,29 +112,34 @@
 
     <section class="venues">
       <h2>Development Services</h2>
-      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
-        <img src="images/custom-websites.jpg" alt="Custom website design and development" loading="lazy">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
+        <img src="../images/custom-websites.webp" alt="Custom website design and development" loading="lazy">
         <p>Custom Websites</p>
       </div>
-      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
-        <img src="images/ai-integration.jpg" alt="AI integration for web applications" loading="lazy">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
+        <img src="../images/ai-integration.webp" alt="AI integration for web applications" loading="lazy">
         <p>AI Integration</p>
       </div>
-      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
-        <img src="images/ecommerce.jpg" alt="E-commerce and online store solutions" loading="lazy">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
+        <img src="../images/ecommerce.webp" alt="E-commerce and online store solutions" loading="lazy">
         <p>E-commerce</p>
       </div>
-      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
-        <img src="images/seo.jpg" alt="SEO and performance optimization" loading="lazy">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
+        <img src="../images/seo.webp" alt="SEO and performance optimization" loading="lazy">
         <p>SEO & Optimization</p>
       </div>
     </section>
     <hr>
-    <section class="gallery">
+    <section class="venues">
       <h2>Project Showcase</h2>
-      <img src="images/project-weddingdj.jpg" alt="Wedding DJ Website Project" loading="lazy">
-      <img src="images/project-musicproducer.jpg" alt="Music Producer Website Project" loading="lazy">
-      <img src="images/project-main.jpg" alt="Main Portfolio Website Project" loading="lazy">
+      <div class="venue-card" onclick="window.open('https://github.com/jasonbra1n/jasonbra1n', '_blank')" style="cursor: pointer;">
+        <img src="../images/project-main.webp" alt="jasonbrain.com Monorepo Project" loading="lazy">
+        <p><strong>jasonbrain.com</strong><br>Full-Stack Monorepo (PHP)</p>
+      </div>
+      <div class="venue-card" onclick="window.open('https://github.com/jasonbra1n/lab.jasonbrain.com', '_blank')" style="cursor: pointer;">
+        <img src="../images/web-development-setup.webp" alt="Jason Brain Lab SPA Project" loading="lazy">
+        <p><strong>lab.jasonbrain.com</strong><br>React SPA / Code Playground</p>
+      </div>
     </section>
     <hr>
     <section class="blog">
@@ -163,7 +168,7 @@
         Creative and technical expertise to build your ideal digital presence. Each package is a starting point and can be customized to your exact needs.
       </p>
       <div class="packages-grid">
-        <div class="package-card" onclick="selectPackage(this)">
+        <div class="package-card">
           <div class="package-badge essential">
             STARTER
           </div>
@@ -193,7 +198,7 @@
             </li>
           </ul>
         </div>
-        <div class="package-card popular" onclick="selectPackage(this)">
+        <div class="package-card popular">
           <div class="package-badge popular">
             MOST POPULAR
           </div>
@@ -223,7 +228,7 @@
             </li>
           </ul>
         </div>
-        <div class="package-card" onclick="selectPackage(this)">
+        <div class="package-card">
           <div class="package-badge luxury">
             PREMIUM
           </div>

@@ -65,6 +65,40 @@ All new copy and content should align with this voice. When in doubt, refer to t
 - Add comments to explain complex logic.
 - Ensure any new interactive elements are accessible via keyboard.
 
+### Iframe Lazy-Loading (Facade Pattern)
+- **Purpose**: To improve initial page load speed by deferring the loading of heavy `iframe` content (like music players) until a user clicks on a placeholder.
+- **Location**: The logic is located in `script.js` inside the `DOMContentLoaded` event listener.
+- **How to Use**:
+  1.  Instead of placing an `<iframe>` tag directly in the HTML, create a `<div>` with the class `iframe-placeholder`.
+  2.  Add a `data-src` attribute to the div, containing the URL that the final iframe will use.
+  3.  Inside the `div`, you can add simple HTML to style the placeholder, such as a play button and text.
+- **Example HTML**:
+  ```html
+  <div class="iframe-placeholder" data-src="https://app.hearthis.at/embed/...">
+    <div class="iframe-placeholder-content">
+      <div class="play-button"></div>
+      <p>Load Player</p>
+    </div>
+  </div>
+  ```
+- **How it Works**: The script finds all `.iframe-placeholder` elements, listens for a click, and then dynamically creates the `iframe` element and replaces the placeholder with it.
+
+
+### Header Canvas Animation
+- **Location**: The logic is located in `script.js` inside the `DOMContentLoaded` event listener, triggered by the presence of the `.lights` canvas element.
+- **Overview**: This is a custom, multi-layered animation. It's designed to be a visually engaging, interactive element for the site's header.
+- **Key Components**:
+  - `lights`: An array of objects representing the colored orbs that orbit a central point. This creates the "disco ball" effect.
+  - `ripples`: An array of objects created on `mousedown` or `touchstart` events, creating an expanding "water ripple" effect.
+  - `stars`: An array of objects for the twinkling starfield background.
+  - `animate()`: The core animation loop using `requestAnimationFrame` to draw all components onto the canvas.
+- **Contribution Guidelines**:
+  - **Performance**: Be mindful of performance. New effects should be efficient and not cause significant CPU/GPU load. Test on various devices.
+  - **Modularity**: When adding new effects, try to keep their logic separate within the `animate()` loop for clarity.
+  - **Configuration**: If adding configurable parameters (e.g., number of stars, light speed), consider defining them as constants at the top of the animation block.
+  - **Brand Alignment**: New visual effects should align with the "Creative & Innovative" and "slightly futuristic" brand voice.
+
+
 ### Commit Messages
 
 Follow the Conventional Commits specification. This helps in automating changelogs and understanding the history.

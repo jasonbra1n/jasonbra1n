@@ -113,19 +113,19 @@
 
     <section class="venues">
       <h2>Event Types</h2>
-      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
         <img src="images/conference.jpg" alt="DJ for a corporate conference" loading="lazy">
         <p>Conferences & Seminars</p>
       </div>
-      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
         <img src="images/holiday-party.jpg" alt="DJ for a company holiday party" loading="lazy">
         <p>Holiday Parties</p>
       </div>
-      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
         <img src="images/product-launch.jpg" alt="AV for a product launch event" loading="lazy">
         <p>Product Launches</p>
       </div>
-      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
         <img src="images/gala.jpg" alt="DJ for a corporate gala or awards night" loading="lazy">
         <p>Gala Dinners & Awards</p>
       </div>
@@ -164,7 +164,7 @@
         Reliable, professional, and scalable solutions for your corporate events. All packages are customizable to fit your specific needs.
       </p>
       <div class="packages-grid">
-        <div class="package-card" onclick="selectPackage(this)">
+        <div class="package-card">
           <div class="package-badge essential">
             ESSENTIALS
           </div>
@@ -190,7 +190,7 @@
             </li>
           </ul>
         </div>
-        <div class="package-card popular" onclick="selectPackage(this)">
+        <div class="package-card popular">
           <div class="package-badge popular">
             MOST POPULAR
           </div>
@@ -220,7 +220,7 @@
             </li>
           </ul>
         </div>
-        <div class="package-card" onclick="selectPackage(this)">
+        <div class="package-card">
           <div class="package-badge luxury">
             FULL PRODUCTION
           </div>

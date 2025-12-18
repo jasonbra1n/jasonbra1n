@@ -155,19 +155,19 @@
     
     <section class="venues">
       <h2>Versatile Venues for Wedding DJs in Ontario</h2>
-      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
         <img src="images/party-tent.jpg" alt="Party tent wedding setup with DJ in Haliburton, Ontario" loading="lazy">
         <p>Party Tents</p>
       </div>
-      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
         <img src="images/backyard.jpg" alt="Backyard wedding setup with DJ in Minden, Ontario" loading="lazy">
         <p>Backyards</p>
       </div>
-      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
         <img src="images/barn.jpg" alt="Barn wedding setup with DJ in Kawartha Lakes, Ontario" loading="lazy">
         <p>Barns</p>
       </div>
-      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
         <img src="images/hall.jpg" alt="Hall wedding setup with DJ in Peterborough, Ontario" loading="lazy">
         <p>Halls</p>
       </div>
@@ -271,7 +271,7 @@
         Three decades of experience curating unforgettable celebrations. Every package ends at midnight, ensuring a legendary finish to your special day.
       </p> 
       <div class="packages-grid">
-        <div class="package-card" onclick="selectPackage(this)">
+        <div class="package-card">
           <div class="package-badge budget">
             INTIMATE GATHERINGS
           </div>
@@ -300,7 +300,7 @@
             </li>
           </ul>
         </div>
-       <div class="package-card" onclick="selectPackage(this)">         
+       <div class="package-card">         
           <div class="package-badge essential">
             DINNER & DANCE
           </div>
@@ -333,7 +333,7 @@
             </li>
           </ul>
         </div>
-        <div class="package-card popular" onclick="selectPackage(this)">
+        <div class="package-card popular">
           <div class="package-badge popular">
             MOST POPULAR
           </div>
@@ -366,7 +366,7 @@
             </li>
           </ul>
         </div>
-        <div class="package-card" onclick="selectPackage(this)">
+        <div class="package-card">
           <div class="package-badge luxury">
             FULL EXPERIENCE
           </div>
@@ -428,7 +428,7 @@
     Professional ceremony sound management for couples who have separate reception vendors or intimate ceremonies.
   </p>
   <div class="ceremony-package-container">
-    <div class="package-card ceremony-card" onclick="selectPackage(this)">
+    <div class="package-card ceremony-card">
       <div class="package-badge ceremony">
         CEREMONY ONLY
       </div>

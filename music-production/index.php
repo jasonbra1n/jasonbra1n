@@ -123,11 +123,12 @@
         <!-- REMix 1: EDM REMIX Production -->
         <div class="mix-item">
           <h4 class="mix-item-title">Jason Brain – Call On Me (Jason's 2025 R3tarded Valerie Remix)</h4>
-          <iframe scrolling="no" style="border-radius: 10px;" id="hearthis_at_track_12690061" width="100%" height="150" src="https://app.hearthis.at/embed/12690061/transparent_black/?hcolor=&color=&style=2&block_size=2&block_space=1&background=1&waveform=0&cover=0&autoplay=0&css=" frameborder="0" allowtransparency allow="autoplay">
-            <p>Listen to <a href="https://hearthis.at/iason/valerie-12-beta/" target="_blank">Call On Me ( Jason&#039;s 2025 R3tarded Valerie Remix )</a> <span>by</span>
-            <a href="https://hearthis.at/iason/" target="_blank" >Jason Brain | ΙΑΣΩΝ</a> <span>on</span>
-            <a href="https://hearthis.at/" target="_blank">hearthis.at</a></p>
-          </iframe>
+          <div class="iframe-placeholder" data-src="https://app.hearthis.at/embed/12690061/transparent_black/?hcolor=&color=&style=2&block_size=2&block_space=1&background=1&waveform=0&cover=0&autoplay=0&css=">
+            <div class="iframe-placeholder-content">
+              <div class="play-button"></div>
+              <p>Load "Call On Me" Remix</p>
+            </div>
+          </div>
           <p class="mix-description">Eric Prydz x Steve Winwood ( Jason's 2025 R3tarded Valerie Remix ) <a href="https://hearthis.at/iason/valerie-12-beta/" target="_blank" class="mixcloud-link">Play on HearThis.at</a></p>
         </div>
 
@@ -139,8 +140,13 @@
       Complete digital reconstruction of my first remix from 1996 with my high school pals (credited as The Slash Brothers). 
       20+ years later, I recreated the "lost" remix from scratch as the 2017 digital remake by Jason Brain.
     </em>
-  </p>
-          <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/992903764&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/jason-brain" title="ΙΑΣΩΝ | Jason Brain" target="_blank" style="color: #cccccc; text-decoration: none;">ΙΑΣΩΝ | Jason Brain</a> · <a href="https://soundcloud.com/jason-brain/sexual-healing-2017-love-me-down-remix-remake" title="Max-A-Million - Sexual Healing (2017 Love Me Down Remix Remake)" target="_blank" style="color: #cccccc; text-decoration: none;">Max-A-Million - Sexual Healing (2017 Love Me Down Remix Remake)</a></div>
+          </p>
+          <div class="iframe-placeholder" data-src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/992903764&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+            <div class="iframe-placeholder-content">
+              <div class="play-button"></div>
+              <p>Load "Sexual Healing" Remix</p>
+            </div>
+          </div>
           <p class="mix-description">An exclusive remix showcasing a modern take on a classic. <a href="https://soundcloud.com/jason-brain/sexual-healing-2017-love-me-down-remix-remake" target="_blank" class="mixcloud-link">Play on SoundCloud</a></p>
           
         </div>
@@ -148,7 +154,12 @@
         <!-- Mix 1: Original Trance Production -->
         <div class="mix-item">
           <h4 class="mix-item-title">ΙΑΣΩΝ - "Bow Bow" (Original Trance Production - 423Hz Tuned)</h4>
-          <iframe scrolling="no" style="border-radius: 10px;" id="hearthis_at_track_10484381" width="100%" height="150" src="https://app.hearthis.at/embed/10484381/transparent_black/?hcolor=&color=&style=2&block_size=2&block_space=1&background=1&waveform=0&cover=0&autoplay=0&css=" frameborder="0" allowtransparency allow="autoplay"><p>Listen to <a href="https://hearthis.at/iason/bow-bow/" target="_blank">ΙΑΣΩΝ - Bow Bow (Original)</a> <span>by</span><a href="https://hearthis.at/iason/" target="_blank" >Jason Brain | ΙΑΣΩΝ</a> <span>on</span> <a href="https://hearthis.at/" target="_blank">hearthis.at</a></p></iframe>
+          <div class="iframe-placeholder" data-src="https://app.hearthis.at/embed/10484381/transparent_black/?hcolor=&color=&style=2&block_size=2&block_space=1&background=1&waveform=0&cover=0&autoplay=0&css=">
+            <div class="iframe-placeholder-content">
+              <div class="play-button"></div>
+              <p>Load "Bow Bow" (Original)</p>
+            </div>
+          </div>
           <p class="mix-description">Uplifting trance production tuned to healing 423Hz frequency. <a href="https://soundcloud.com/jason-brain" target="_blank" class="mixcloud-link">More on SoundCloud</a></p>
         </div>
 
@@ -156,14 +167,24 @@
         <!-- Mix 3: Another Rock Production -->
         <div class="mix-item">
           <h4 class="mix-item-title">King and Oakes - "Empty Box" (Rock Production)</h4>
-          <iframe scrolling="no" style="border-radius: 10px;" id="hearthis_at_track_3715226" width="100%" height="150" src="https://app.hearthis.at/embed/3715226/transparent_black/?hcolor=&color=&style=1&block_size=2&block_space=1&background=1&waveform=0&cover=0&autoplay=0&css=" frameborder="0" allowtransparency allow="autoplay"><p>Listen to <a href="https://hearthis.at/kingandoakes/empty-box/" target="_blank">Empty Box</a> <span>by</span><a href="https://hearthis.at/kingandoakes/" target="_blank" >King and Oakes</a> <span>on</span> <a href="https://hearthis.at/" target="_blank">hearthis.at</a></p></iframe>
+          <div class="iframe-placeholder" data-src="https://app.hearthis.at/embed/3715226/transparent_black/?hcolor=&color=&style=1&block_size=2&block_space=1&background=1&waveform=0&cover=0&autoplay=0&css=">
+            <div class="iframe-placeholder-content">
+              <div class="play-button"></div>
+              <p>Load "Empty Box"</p>
+            </div>
+          </div>
           <p class="mix-description">Another example of full rock production with professional mixing and mastering.</p>
         </div>
 
         <!-- Mix 4: Melodic House Mix -->
         <div class="mix-item">
           <h4 class="mix-item-title">ΙΑΣΩΝ - 4x4.2: Heirloom (Melodic House Mix)</h4>
-          <iframe scrolling="no" class="mix-item-iframe" width="100%" height="150" src="https://app.hearthis.at/embed/11056567/transparent_black/?hcolor=&color=&style=2&block_size=2&block_space=1&background=1&waveform=0&cover=0&autoplay=0&css=" frameborder="0" allowtransparency allow="autoplay"><p>Listen to <a href="https://hearthis.at/iason/4x42/" target="_blank">ΙΑΣΩΝ - 4x4.2: Heirloom</a> <span>on</span> <a href="https://hearthis.at/" target="_blank">hearthis.at</a></p></iframe>
+          <div class="iframe-placeholder" data-src="https://app.hearthis.at/embed/11056567/transparent_black/?hcolor=&color=&style=2&block_size=2&block_space=1&background=1&waveform=0&cover=0&autoplay=0&css=">
+            <div class="iframe-placeholder-content">
+              <div class="play-button"></div>
+              <p>Load "Heirloom" Mix</p>
+            </div>
+          </div>
           <p class="mix-description">Sophisticated melodic house production and mixing. <a href="https://www.mixcloud.com/jasonbra1n/" target="_blank" class="mixcloud-link">Full collection on Mixcloud</a></p>
         </div>
 
@@ -196,19 +217,19 @@
 
     <section class="venues">
       <h2>Production Services</h2>
-      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
         <img src="images/beat-making.jpg" alt="Custom beat production in Ableton Live" loading="lazy">
         <p>Custom Beats</p>
       </div>
-      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
         <img src="images/remix-studio.jpg" alt="Professional remix production setup" loading="lazy">
         <p>Remixes</p>
       </div>
-      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
         <img src="images/acapella-extraction.jpg" alt="Acapella extraction tools and software" loading="lazy">
         <p>Acapella Extraction</p>
       </div>
-      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
         <img src="images/megamix-production.jpg" alt="Megamix production for dance routines" loading="lazy">
         <p>Megamix Production</p>
       </div>
@@ -311,7 +332,7 @@
         Three decades of experience crafting sounds across every genre. Each package includes professional mixing, mastering, and my personal attention to your artistic vision.
       </p>
       <div class="packages-grid">
-        <div class="package-card" onclick="selectPackage(this)">
+        <div class="package-card">
           <div class="package-badge essential">
             ESSENTIAL
           </div>
@@ -341,7 +362,7 @@
             </li>
           </ul>
         </div>
-        <div class="package-card popular" onclick="selectPackage(this)">
+        <div class="package-card popular">
           <div class="package-badge popular">
             MOST POPULAR
           </div>
@@ -371,7 +392,7 @@
             </li>
           </ul>
         </div>
-        <div class="package-card" onclick="selectPackage(this)">
+        <div class="package-card">
           <div class="package-badge luxury">
             PREMIUM
           </div>
@@ -512,7 +533,7 @@
         </p>
         <div class="visual-grid">
           <div class="visual-image-container">
-            <img src="images/ableton-live-session.jpg" 
+            <img src="../images/king-oakes-production_tn.webp"
                  alt="Jason Brain's Ableton Live production session"
                  class="visual-image">
             <div class="visual-image-badge">

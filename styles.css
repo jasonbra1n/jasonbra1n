@@ -489,6 +489,37 @@ iframe[src*="google.com/maps"]:hover {
   margin-top: 1.5rem;
 }
 
+/* About Teaser Section (Homepage) */
+.about-teaser-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  text-align: left;
+  margin-top: 1rem;
+}
+.about-teaser-image {
+  flex: 1 1 250px; /* Flex-grow, flex-shrink, flex-basis */
+  max-width: 300px;
+  width: 100%;
+  border-radius: 15px;
+  border: 3px solid var(--color-primary-bg);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  margin: 0 auto; /* Center image when it wraps to its own line on mobile */
+}
+.about-teaser-text {
+  flex: 2 1 300px; /* Allow text to take up more space */
+}
+.about-teaser-text .intro-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.about-teaser-text .cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
 /* Investment Section */
 .investment-box {
   background: linear-gradient(135deg, var(--color-primary-bg), var(--color-accent-purple));

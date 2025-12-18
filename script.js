@@ -69,12 +69,29 @@ if (copyrightYear) copyrightYear.textContent = new Date().getFullYear();
 // Main script execution after the DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   
-  // Initialize navigation event listeners
-  initializeNavEventListeners();
-
   // Dynamic Copyright Year
   const copyrightYearEl = document.getElementById('copyright-year');
   if (copyrightYearEl) copyrightYearEl.textContent = new Date().getFullYear();
+
+  // Add accessible event listeners for package selection and other clickable cards
+  const clickableCards = document.querySelectorAll('.package-card, .venue-card');
+  if (clickableCards.length > 0) {
+    clickableCards.forEach(card => {
+      // Make the card focusable and announce it as a button
+      card.setAttribute('role', 'button');
+      card.setAttribute('tabindex', '0');
+
+      // Add keyboard interaction for 'Enter' and 'Space'
+      card.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault(); // Prevent space from scrolling the page
+          card.click(); // Trigger the existing click behavior
+        }
+      });
+    });
+  }
+  // Attach event listener specifically for package selection logic
+  document.querySelectorAll('.package-card').forEach(card => card.addEventListener('click', () => selectPackage(card)));
 
   // Iframe lazy-loading
   const placeholders = document.querySelectorAll('.iframe-placeholder');
