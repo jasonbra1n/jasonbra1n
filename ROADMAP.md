@@ -18,6 +18,10 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
   - **[Done] Self-Hosted Forms**: Replace the third-party Formspree dependency with a custom PHP script to handle contact form submissions.
 - **[Done] Security & Best Practices**:
   - **Configuration Management**: Implemented a `config.php` file for sensitive data (like email addresses), which is ignored by Git. A `config-sample.php` is provided for developers.
+  - **[Done] Professional Branding & Career Pivot**:
+    - Created a dedicated `/resume/` page to showcase technical skills, education, and certifications.
+    - Refactored `/about/` narrative to reflect the transition from entertainment to software development.
+    - Updated `README.md` to serve as a technical profile for GitHub visitors.
 - **[Done] Foundational Refactoring (v1.1.0)**:
   - Migrate all service pages from subdomains to subfolders within this repository (e.g., `/wedding-dj/`, `/music-production/`).
   - Implemented a shared navigation menu loaded via JavaScript.

@@ -162,6 +162,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($_POST['honeypot'])) { // Chec
                   <option value="music-production" <?php if ($service_interest == "music-production") echo "selected"; ?>>Music Production</option>
                   <option value="web-development" <?php if ($service_interest == "web-development") echo "selected"; ?>>Web Development</option>
                   <option value="corporate-events" <?php if ($service_interest == "corporate-events") echo "selected"; ?>>Corporate Events</option>
+                  <option value="employment" <?php if ($service_interest == "employment") echo "selected"; ?>>Employment / Hiring Inquiry</option>
                   <option value="multiple" <?php if ($service_interest == "multiple") echo "selected"; ?>>Multiple Services</option>
                 </select>
               </div>

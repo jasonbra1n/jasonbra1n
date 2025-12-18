@@ -3,13 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | Jason Brain - Multi-Disciplinary Creative</title>
-  <meta name="description" content="Meet Jason Brain (ΙΑΣΩΝ), a multi-disciplinary creative with 30+ years of experience in music, technology, and architecting unforgettable experiences.">
+  <title>About | Jason Brain - Creative Professional & Technologist</title>
+  <meta name="description" content="Jason Brain is a Creative Professional with a deep technical background (Fleming College). Bridging the gap between art, music, and technology.">
   <meta name="author" content="Jason Brain">
   <link rel="icon" type="image/png" href="../favicon.png">
   <link rel="apple-touch-icon" href="../favicon.png">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0633259514526906"
-   crossorigin="anonymous"></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RTGH4Z617"></script>
   <script>
@@ -22,20 +20,18 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "AboutPage",
-      "name": "About Jason Brain",
-      "url": "https://jasonbrain.com/about/",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://jasonbrain.com/about/"
-      },
+      "@type": "ProfilePage",
       "mainEntity": {
         "@type": "Person",
         "name": "Jason Brain",
         "alternateName": "ΙΑΣΩΝ",
         "url": "https://jasonbrain.com/",
         "jobTitle": "Creative Professional",
-        "description": "Creative professional with 30+ years experience in music, technology, and multimedia production."
+        "description": "Creative Professional and Technologist with a background in Systems Analysis and Multimedia Production.",
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Fleming College"
+        }
       }
     }
   </script>
@@ -45,50 +41,53 @@
 
   <div class="container">
     <section class="about" id="about">
-      <h2>Meet Jason Brain (ΙΑΣΩΝ) - Multi-Disciplinary Creative</h2>
+      <h2>Where Creativity Meets Technical Precision</h2>
       <div class="about-content-wrapper">
         <div class="about-image-container">
-          <img src="../images/jason-profile_tn.webp" alt="Jason Brain - Creative Professional and Multi-Disciplinary Artist" 
-               class="about-image">
+          <img src="../images/jason-profile_tn.webp" alt="Jason Brain - Creative Professional" 
+               class="about-image" loading="lazy">
         </div>
         <div class="about-text-content">
           <p class="intro-text">
-            <strong>I don't just create – I architect experiences that bridge music, technology, and human connection.</strong>
+            <strong>I am a Creative Professional who speaks the language of machines.</strong>
           </p>
           <p>
-            My journey began spinning records at public school dance events across Ontario, evolved through legendary nights closing Lindsay's York Tavern, and has transformed into a multi-faceted creative practice. Today, I merge three decades of musical intuition with cutting-edge technology.
+            My journey isn't a pivot away from technology, but a fusion of it. With a formal education in <strong>Computer Programming and Systems Analysis</strong> (Fleming College), I possess a deep understanding of the hardware and software that powers modern creativity.
           </p>
           <p>
-            From producing healing frequency trance as ΙΑΣΩΝ to developing AI-powered web solutions, I bring the same passion for connection and innovation to every project. <em>Every service I offer is built on the foundation of understanding what moves people.</em>
+            I don't just use creative tools; I build, modify, and optimize them. Whether it's scripting custom automations for a light show, coding a bespoke website, or 3D printing custom parts for a production rig, my technical background empowers my artistic vision.
+          </p>
+          <p>
+            Today, I offer a unique blend of services where "Systems Analyst" discipline meets "DJ" intuition. I am looking for employment that values this versatile, problem-solving mindset—bringing technical rigor to creative projects.
           </p>
           <div class="why-choose-box">
-            <h4>What Sets Jason Brain Apart:</h4>
+            <h4>The "Jason Brain" Advantage:</h4>
             <ul class="why-choose-list">
               <li class="why-choose-list-item">
                 <span class="checkmark">✓</span>
-                Three Decades of Experience: From nightclub floors to digital innovation
+                <strong>Formal Education:</strong> Fleming College Alumni & Microsoft Certified
               </li>
               <li class="why-choose-list-item">
                 <span class="checkmark">✓</span>
-                Multi-Disciplinary Expertise: Music, technology, and human psychology
+                <strong>Technical Creative:</strong> An artist with the discipline of a programmer
               </li>
               <li class="why-choose-list-item">
                 <span class="checkmark">✓</span>
-                Innovation Focus: Always exploring what's next in creative technology
+                <strong>Project Management:</strong> Trained to deliver projects on time and within scope
               </li>
               <li class="why-choose-list-item">
                 <span class="checkmark">✓</span>
-                Proven Results: Trusted by couples, artists, and businesses across Ontario
+                <strong>Mature Perspective:</strong> Decades of real-world professional work experience
               </li>
               <li class="why-choose-list-item">
                 <span class="checkmark">✓</span>
-                Personal Attention: Every project gets my full creative commitment
+                <strong>Hardware & Systems Integration:</strong> Deep understanding of the physical systems that power software
               </li>
             </ul>
           </div>
-          <p class="about-quote-text">
-            "ΙΑΣΩΝ means healer in Greek. I bring wellness and joy through music, technology, and meaningful connections."
-          </p>
+          <div style="margin-top: 2rem; text-align: center;">
+            <a href="/resume/" class="cta-button">View Professional Resume</a>
+          </div>
         </div>
       </div>
     </section>

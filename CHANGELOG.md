@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.0] - 2025-12-18
+
+### Added
+- **Resume Page**: Created a dedicated `/resume/` page with a print-friendly layout to showcase education, certifications, and work history.
+- **Contact Form**: Added "Employment / Hiring Inquiry" to the service interest dropdown in `contact/index.php`.
+
+### Changed
+- **About Page**: Completely rewrote `/about/index.php` to narrate the fusion of creative experience with technical expertise (Creative Technologist).
+- **Navigation**: Added a direct link to the Resume page in the main navigation menu (`nav.html`).
+- **README**: Updated the repository `README.md` to function as a technical profile and portfolio overview.
+
 ## [1.3.0] - 2025-12-18
 
 ### Added
@@ -70,7 +81,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Integrated Formspree for the contact form.
 - Added lazy loading for images and iframe placeholders for performance.
 
-[Unreleased]: https://github.com/jasonbra1n/jasonbra1n/compare/v1.2.0...HEAD
+[Unreleased]: https://github.com/jasonbra1n/jasonbra1n/compare/v1.4.0...HEAD
+[1.4.0]: https://github.com/jasonbra1n/jasonbra1n/compare/v1.3.0...v1.4.0
+[1.3.0]: https://github.com/jasonbra1n/jasonbra1n/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/jasonbra1n/jasonbra1n/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/jasonbra1n/jasonbra1n/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/jasonbra1n/jasonbra1n/releases/tag/v1.0.0

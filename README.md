@@ -4,7 +4,7 @@
 
 # Hi there, I'm Jason Brain (jasonbra1n) 👋
 
-Welcome to my GitHub profile! I'm a **professional wedding DJ, multimedia producer, and tech enthusiast** with over 30 years of experience creating unforgettable celebrations and innovative digital experiences.
+Welcome to my GitHub profile! I am a **Creative Professional and Technologist** who leverages a deep technical background to build innovative digital and physical experiences. With formal education in **Computer Programming** and **Systems Analysis**, combined with decades of success in the entertainment industry, I bridge the gap between code and culture.
 
 ## 🛠️ Built With
 
@@ -13,31 +13,30 @@ Welcome to my GitHub profile! I'm a **professional wedding DJ, multimedia produc
 ![HTML5](https://img.shields.io/badge/HTML5-8146FF?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-8146FF?style=for-the-badge&logo=css3&logoColor=white)
 
+## 🎓 Education & Certifications
+- **Computer Programmer & Systems Analyst** (3-Year Diploma) – Fleming College
+- **Project Management** (Business & Information Technologies) – Global Knowledge / Nexient Learning
+- **Microsoft Certified Professional (MCP)**
+- **Self-Taught Hardware Specialist** – Building custom desktops and systems since childhood.
 
-## 🎵 About Me
-- 🎧 **Wedding DJ & Event Entertainment** – Specializing in weddings, private events, and corporate celebrations across Haliburton, Minden & Kawartha Lakes, Ontario. From intimate backyard ceremonies to grand celebrations, I craft personalized soundtracks with professional sound systems, RGB DMX lighting, fog effects, and projection mapping.
-- 🎬 **Visual Production Specialist** – Advanced projection mapping and visual experiences using Resolume Arena, with extensive music video libraries from XtendaMix and ZIPDJ.
-- 📸 **Multimedia Creator** – Full-stack web development, video production, photography, and interactive digital experiences.
-- 🛠️ **Tech Enthusiast** – Programming in **Python**, working with **Raspberry Pi**, **Arduino**, and **Home Assistant** for creative automation projects.
+## 👨‍💻 Professional Profile & Journey
+My passion for technology started early, self-teaching hardware assembly and building desktops from scratch. This curiosity led to formal education at **Fleming College**, where I mastered the fundamentals of programming and systems analysis.
 
-## 🎶 Musical Journey
-- **30+ Years Behind the Decks**: From closing legendary venues like Lindsay's York Tavern to becoming Haliburton's most trusted wedding DJ
-- **Genre Versatility**: Melodic house, 90s dancehall, Euro dance, and everything in between – I speak all musical languages
-- **Professional Collaborations**: The "Versatile Waybacks" series with DJ Klutch, showcasing decades of musical evolution
-- **Local Legend Status**: Trusted by Haliburton Highlands Secondary School for consecutive proms
+I have spent recent years as a celebrated DJ and event producer—mastering the soft skills of client relations, live pressure management, and creative production. I am now leveraging my diverse life experience and technical education to build robust creative solutions, seeking opportunities in **creative technology, multimedia production, and web development**.
+
+- **Technical Skills**: PHP, JavaScript, HTML5/CSS3, Python, MySQL, Git.
+- **Hardware & IoT**: Raspberry Pi (Klipper/Fluidd), 3D Printing (Creality/Cura), Arduino, ESP32, Home Assistant, Laser Engraving.
+- **Soft Skills**: Project Management, Client Relations, Public Speaking, Creative Problem Solving.
 
 ## 🚀 Projects & Services
-- **Wedding DJ Services**: [jasonbrain.com/wedding-dj/](https://jasonbrain.com/wedding-dj/) – Crafting unforgettable wedding celebrations.
-- **Music Production**: [jasonbrain.com/music-production/](https://jasonbrain.com/music-production/) – Custom beats, remixes, and original productions. 🎶
 - **Web Development**: [jasonbrain.com/web-developer/](https://jasonbrain.com/web-developer/) – AI-powered and creative web solutions. 🌐
-- **Corporate Events**: [jasonbrain.com/corporate-events/](https://jasonbrain.com/corporate-events/) – Professional DJ and AV production.
-- **Visual Entertainment**: Projection mapping, UV/blacklight systems, and immersive visual experiences
 - **Home Automation**: Smart home setups using Home Assistant and IoT integration 🏡
 - **DIY Electronics**: Raspberry Pi, ESP32, Arduino projects, and laser engraving ⚡
+- **Music Production & DJ Services**: [jasonbrain.com](https://jasonbrain.com) – While shifting focus to tech, I continue to maintain my legacy in audio production and event entertainment.
 - **Geometric & Cosmic Observations**: Exploring patterns in nature, music, and the universe ✨
 
 ## 🎯 Current Focus
-Creating unforgettable wedding experiences in Ontario's cottage country while pushing the boundaries of what's possible with music, technology, and visual art. Every celebration deserves a soundtrack as unique as the love story it celebrates.
+**Seeking employment as a Creative Professional.** I am looking for roles that utilize my hybrid background in technology and media—whether that's in technical direction, multimedia production, or creative web development. I bring maturity, experience, and technical discipline to every project.
 
 ## 📬 Connect With Me
 

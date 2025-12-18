@@ -67,6 +67,7 @@
                     With a journey spanning three decades—from legendary nightclub residencies to cutting-edge AI development—I bring a unique blend of artistic intuition and technical expertise to every project. My work is a fusion of Music, Technology, and AI, all driven by a mission to create meaningful and unforgettable experiences.
                 </p>
                 <a href="/about/" class="cta-button">Learn My Story</a>
+                <a href="/resume/" class="cta-button" style="background: transparent; border: 2px solid var(--color-accent-coral); color: var(--color-accent-coral); margin-left: 1rem;">View Resume</a>
             </div>
         </div>
     </section>
@@ -81,7 +82,7 @@
         <img src="images/music-production-service_tn.webp" alt="Music Production - Custom beats, remixes, original productions" loading="lazy">
         <p><strong>Music Production</strong><br>Custom beats, remixes & originals</p>
       </a>
-      <a href="#web-dev" class="venue-card">
+      <a href="/web-developer/" class="venue-card">
         <img src="images/web-development-service_tn.webp" alt="Web Development - From simple sites to AI-powered solutions" loading="lazy">
         <p><strong>Web Development</strong><br>From simple to AI-powered</p>
       </a>
@@ -280,7 +281,7 @@
         
         <p class="intro-paragraph">
           Professional DJ services and audio-visual production for corporate gatherings, 
-          conferences, product launches, and special events. Coming soon with dedicated service page! ✨
+          conferences, product launches, and special events.
         </p>
 
         <div class="fund-vibes-grid">

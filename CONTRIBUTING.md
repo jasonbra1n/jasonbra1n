@@ -36,7 +36,7 @@ All new copy and content should align with this voice. When in doubt, refer to t
 ## Coding Standards
 
 ### Site Architecture
-- **Multi-Page Structure**: The site is moving from a single-page, anchor-link-heavy design to a more robust multi-page architecture. New top-level sections (like "About" or "Contact") should be created in their own subdirectories (e.g., `/about/`, `/contact/`) with an `index.php` file. This improves SEO, maintainability, and user navigation.
+- **Multi-Page Structure**: The site is moving from a single-page, anchor-link-heavy design to a more robust multi-page architecture. New top-level sections should be created in their own subdirectories (e.g., `/about/`, `/contact/`, `/resume/`) with an `index.php` file. This improves SEO, maintainability, and user navigation.
 - **Descriptive URLs**: Directory names should be lowercase, hyphenated, and descriptive of the page's content (e.g., `music-production`). This creates clean, SEO-friendly URLs.
 - **Reusable Components**: Core repeating elements like the navigation and footer are managed as PHP includes (`nav.html`, `footer.html`). All new pages should use these includes to ensure consistency.
   - `<?php include '../nav.html'; ?>`
