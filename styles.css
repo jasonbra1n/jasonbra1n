@@ -165,7 +165,7 @@ header h1 { font-size: 3.5rem; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); }
 header p { font-size: 1.5rem; margin: 1rem 0; }
 
 /* CTA Button */
-.cta-button { padding: 1rem 2rem; font-size: 1.2rem; background: var(--color-accent-coral); color: var(--color-neutral-white); border: none; border-radius: 25px; cursor: pointer; position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; pointer-events: auto; }
+.cta-button { padding: 1rem 2rem; font-size: 1.2rem; background: var(--color-accent-coral); color: var(--color-neutral-white); border: none; border-radius: 25px; cursor: pointer; position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; pointer-events: auto; text-decoration: none; }
 .cta-button::before { content: ''; position: absolute; top: 50%; left: 50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent); transform: translate(-50%, -50%) scale(0); transition: transform 0.5s ease; }
 .cta-button:hover::before { transform: translate(-50%, -50%) scale(1); }
 .cta-button:hover { transform: scale(1.1); box-shadow: 0 0 20px rgba(255, 111, 97, 0.7); }
