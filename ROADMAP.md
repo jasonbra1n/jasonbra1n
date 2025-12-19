@@ -43,6 +43,10 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
 - **[To Do] Blog Content Population**:
   - Write and publish the first 3-5 articles for both the Music Blog and Tech Blog to establish a content baseline on their respective platforms.
 
+- **[To Do] Functional Enhancements**:
+  - **[Done] Testimonial Form**: Add `toggleTestimonialForm` function to `script.js` to enable the "Submit Your Testimonial" button functionality.
+  - **[Done] Form Conversion**: Audit and convert all remaining service page contact forms from Formspree to the self-hosted PHP method.
+
 - **[To Do] Enhance Music Section**:
   - Investigate more dynamic ways to present music (e.g., custom audio player, API integration with Mixcloud/SoundCloud).
   - Add more context or stories behind the featured mixes and productions.

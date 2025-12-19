@@ -61,6 +61,18 @@ function selectPackage(selectedElement) {
   selectedElement.classList.add('popular'); // Add 'popular' class to the clicked card
 }
 
+// Function to toggle the testimonial form visibility
+function toggleTestimonialForm() {
+  const form = document.getElementById('testimonial-form');
+  if (form) {
+    const isHidden = (form.style.display === 'none' || window.getComputedStyle(form).display === 'none');
+    form.style.display = isHidden ? 'block' : 'none';
+    if (isHidden) {
+      form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+}
+
 // Dynamic Copyright Year
 const copyrightYear = document.getElementById('copyright-year');
 if (copyrightYear) copyrightYear.textContent = new Date().getFullYear();

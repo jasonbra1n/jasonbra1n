@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.1] - 2025-12-19
+
+### Added
+- **Styles**: Added global CSS classes for the Testimonials section (`.testimonials`, `.testimonial-card`, etc.) to `styles.css`.
+- **Roadmap**: Added tasks for implementing the testimonial form toggle and converting remaining service page contact forms to PHP.
+- **Documentation**: Added "Form Handling & Security" section to `CONTRIBUTING.md` defining standards for PHP forms and configuration.
+
+### Changed
+- **Styles**: Removed text decoration (underline) from `.cta-button` in `styles.css` to ensure consistent button styling.
+- **Documentation**: Updated `STYLE_GUIDE.md` to explicitly state that buttons should have no text decoration.
+- **Wedding DJ**: Converted contact and testimonial forms in `wedding-dj/index.php` to use self-hosted PHP and secure `config.php` credentials.
+- **Corporate Events**: Converted contact form in `corporate-events/index.php` to use self-hosted PHP.
+- **Music Production**: Converted contact form in `music-production/index.php` to use self-hosted PHP.
+- **Web Developer**: Converted contact form in `web-developer/index.php` to use self-hosted PHP.
+
 ## [1.4.0] - 2025-12-18
 
 ### Added
@@ -81,7 +96,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Integrated Formspree for the contact form.
 - Added lazy loading for images and iframe placeholders for performance.
 
-[Unreleased]: https://github.com/jasonbra1n/jasonbra1n/compare/v1.4.0...HEAD
+[Unreleased]: https://github.com/jasonbra1n/jasonbra1n/compare/v1.4.1...HEAD
+[1.4.1]: https://github.com/jasonbra1n/jasonbra1n/compare/v1.4.0...v1.4.1
 [1.4.0]: https://github.com/jasonbra1n/jasonbra1n/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/jasonbra1n/jasonbra1n/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/jasonbra1n/jasonbra1n/compare/v1.1.0...v1.2.0

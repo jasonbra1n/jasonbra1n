@@ -1,3 +1,91 @@
+<?php
+// --- CONFIGURATION ---
+if (file_exists(__DIR__ . '/../config.php')) {
+    require_once __DIR__ . '/../config.php';
+} else {
+    die('Configuration file not found. Please copy config-sample.php to config.php and fill in your details.');
+}
+
+// Initialize variables for Testimonial Form
+$t_name = $t_type = $t_location = $t_message = "";
+$t_status_msg = "";
+$t_success = false;
+
+// Initialize variables for Contact Form
+$c_name = $c_email = $c_date = $c_message = "";
+$c_status_msg = "";
+$c_success = false;
+
+// Check for Testimonial Form Submission
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST['form_type'] == 'testimonial') {
+    // Honeypot check
+    if (!empty($_POST['honeypot'])) {
+        die("Spam detected");
+    }
+
+    $t_name = strip_tags(trim($_POST["name"]));
+    $t_type = strip_tags(trim($_POST["type"]));
+    $t_location = strip_tags(trim($_POST["location"]));
+    $t_message = strip_tags(trim($_POST["testimonial"]));
+
+    if (empty($t_name) || empty($t_message)) {
+        $t_status_msg = "Please fill out all required fields.";
+    } else {
+        $recipient = RECIPIENT_NAME . " <" . RECIPIENT_EMAIL . ">";
+        $subject = "New Testimonial from " . $t_name;
+        
+        $email_content = "Name: $t_name\n";
+        $email_content .= "Type: $t_type\n";
+        $email_content .= "Location: $t_location\n\n";
+        $email_content .= "Testimonial:\n$t_message\n";
+
+        $headers = "From: " . RECIPIENT_NAME . " <" . RECIPIENT_EMAIL . ">\r\n";
+        $headers .= "Reply-To: no-reply@jasonbrain.com\r\n";
+        $headers .= "Content-Type: text/plain; charset=utf-8";
+
+        if (mail($recipient, $subject, $email_content, $headers)) {
+            $t_success = true;
+        } else {
+            $t_status_msg = "There was a problem sending your testimonial. Please try again.";
+        }
+    }
+}
+
+// Check for Contact Form Submission
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST['form_type'] == 'contact') {
+    // Honeypot check
+    if (!empty($_POST['honeypot'])) {
+        die("Spam detected");
+    }
+
+    $c_name = strip_tags(trim($_POST["name"]));
+    $c_email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+    $c_date = strip_tags(trim($_POST["event-date"]));
+    $c_message = strip_tags(trim($_POST["message"]));
+
+    if (empty($c_name) || empty($c_email) || empty($c_message) || !filter_var($c_email, FILTER_VALIDATE_EMAIL)) {
+        $c_status_msg = "Please fill out all required fields and provide a valid email address.";
+    } else {
+        $recipient = RECIPIENT_NAME . " <" . RECIPIENT_EMAIL . ">";
+        $subject = "New Wedding DJ Inquiry from " . $c_name;
+        
+        $email_content = "Name: $c_name\n";
+        $email_content .= "Email: $c_email\n";
+        $email_content .= "Event Date: $c_date\n\n";
+        $email_content .= "Message:\n$c_message\n";
+
+        $headers = "From: " . RECIPIENT_NAME . " <" . RECIPIENT_EMAIL . ">\r\n";
+        $headers .= "Reply-To: $c_name <$c_email>\r\n";
+        $headers .= "Content-Type: text/plain; charset=utf-8";
+
+        if (mail($recipient, $subject, $email_content, $headers)) {
+            $c_success = true;
+        } else {
+            $c_status_msg = "There was a problem sending your message. Please try again.";
+        }
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -491,34 +579,39 @@
       <!-- Two-column form and map section -->
       <div class="contact-card">
         <div class="contact-form-container">
-          <form action="https://formspree.io/f/mvgqrylp" method="POST" class="contact-form">
-            <input type="hidden" name="_subject" value="New Wedding DJ Inquiry from jasonbrain.com/wedding-dj">
-            <input type="text" name="_gotcha" style="display: none;">
+          <?php if ($c_success): ?>
+            <div style="background: #d4edda; color: #155724; padding: 2rem; border-radius: 10px; border: 1px solid #c3e6cb; text-align: center;">
+              <h4 style="color: #155724; margin-bottom: 1rem;">Message Sent!</h4>
+              <p>Thank you for reaching out. I'll get back to you within one business day to discuss your wedding plans.</p>
+            </div>
+          <?php else: ?>
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>#contact" method="POST" class="contact-form">
+            <input type="hidden" name="form_type" value="contact">
+            <input type="text" name="honeypot" style="display: none;">
+            <?php if (!empty($c_status_msg)): ?>
+              <div style="background: #f8d7da; color: #721c24; padding: 1rem; border-radius: 10px; margin-bottom: 1rem; border: 1px solid #f5c6cb;">
+                <?php echo $c_status_msg; ?>
+              </div>
+            <?php endif; ?>
             <div class="form-group">
               <label for="name" class="form-label">Name</label>
-              <input type="text" id="name" name="name" required placeholder="Your Name" class="form-input">
+              <input type="text" id="name" name="name" required placeholder="Your Name" class="form-input" value="<?php echo htmlspecialchars($c_name); ?>">
             </div>
             <div class="form-group">
               <label for="email" class="form-label">Email</label>
-              <input type="email" id="email" name="email" required placeholder="Your Email" class="form-input">
+              <input type="email" id="email" name="email" required placeholder="Your Email" class="form-input" value="<?php echo htmlspecialchars($c_email); ?>">
             </div>
             <div class="form-group">
               <label for="event-date" class="form-label">Event Date (Optional)</label>
-              <input type="date" id="event-date" name="event-date" placeholder="YYYY-MM-DD" class="form-input">
+              <input type="date" id="event-date" name="event-date" placeholder="YYYY-MM-DD" class="form-input" value="<?php echo htmlspecialchars($c_date); ?>">
             </div>
             <div class="form-group">
               <label for="message" class="form-label">Message</label>
-              <textarea id="message" name="message" required placeholder="Tell me about your wedding!" class="form-textarea"></textarea>
+              <textarea id="message" name="message" required placeholder="Tell me about your wedding!" class="form-textarea"><?php echo htmlspecialchars($c_message); ?></textarea>
             </div>
             <button type="submit" class="form-submit-button">Send Message</button>
           </form>
-          <noscript>
-            <p class="noscript-message">
-              Please enable JavaScript to use the contact form, or reach out via my
-              <a href="https://x.com/JasonBra1n" target="_blank">X account</a> or
-              <a href="https://www.tiktok.com/@jason.bra1n" target="_blank">TikTok</a>.
-            </p>
-          </noscript>
+          <?php endif; ?>
         </div>
         
         <div class="contact-map-container">
@@ -738,30 +831,42 @@
         <h4>Ready to Create Your Own Success Story?</h4>
         <p>Join hundreds of couples who've trusted Jason Brain to make their wedding day legendary.</p>
         <button class="testimonials-cta-button" onclick="toggleTestimonialForm()">Submit Your Testimonial</button>
-        <div id="testimonial-form-container" style="display: none; margin-top: 2rem;">
-          <form class="contact-form" action="https://formspree.io/f/xandolaw" method="POST">
+        <div id="testimonial-form" style="display: <?php echo (isset($_POST['form_type']) && $_POST['form_type'] == 'testimonial') ? 'block' : 'none'; ?>; margin-top: 2rem;">
+          <?php if ($t_success): ?>
+            <div style="background: #d4edda; color: #155724; padding: 1rem; border-radius: 10px; border: 1px solid #c3e6cb; margin-bottom: 1rem;">
+              <strong>Thank you!</strong> Your testimonial has been submitted successfully.
+            </div>
+          <?php else: ?>
+            <form class="contact-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>#testimonial-form" method="POST">
+            <input type="hidden" name="form_type" value="testimonial">
+            <input type="text" name="honeypot" style="display:none">
+            <?php if (!empty($t_status_msg)): ?>
+              <div style="background: #f8d7da; color: #721c24; padding: 1rem; border-radius: 10px; margin-bottom: 1rem; border: 1px solid #f5c6cb;">
+                <?php echo $t_status_msg; ?>
+              </div>
+            <?php endif; ?>
             <div class="form-group">
               <label for="testimonial-name">Your Name(s)</label>
-              <input type="text" id="testimonial-name" name="name" class="form-input" required placeholder="e.g., John & Jane or Vendor Name">
+              <input type="text" id="testimonial-name" name="name" class="form-input" required placeholder="e.g., John & Jane or Vendor Name" value="<?php echo htmlspecialchars($t_name); ?>">
             </div>
             <div class="form-group">
               <label for="testimonial-type">Are You a Couple or Vendor?</label>
               <select id="testimonial-type" name="type" class="form-input" required>
-                <option value="Couple">Couple</option>
-                <option value="Vendor">Vendor</option>
+                <option value="Couple" <?php if ($t_type == "Couple") echo "selected"; ?>>Couple</option>
+                <option value="Vendor" <?php if ($t_type == "Vendor") echo "selected"; ?>>Vendor</option>
               </select>
             </div>
             <div class="form-group">
               <label for="testimonial-location">Event Location</label>
-              <input type="text" id="testimonial-location" name="location" class="form-input" required placeholder="e.g., Tent Wedding, Haliburton">
+              <input type="text" id="testimonial-location" name="location" class="form-input" required placeholder="e.g., Tent Wedding, Haliburton" value="<?php echo htmlspecialchars($t_location); ?>">
             </div>
             <div class="form-group">
               <label for="testimonial-message">Your Testimonial</label>
-              <textarea id="testimonial-message" name="testimonial" class="form-textarea" required placeholder="Share your experience with Jason Brain's services"></textarea>
+              <textarea id="testimonial-message" name="testimonial" class="form-textarea" required placeholder="Share your experience with Jason Brain's services"><?php echo htmlspecialchars($t_message); ?></textarea>
             </div>
             <button type="submit" class="form-submit-button">Submit Testimonial</button>
-            <p class="noscript-message">Please enable JavaScript to use the testimonial form, or reach out via my <a href="https://x.com/JasonBra1n" target="_blank">X account</a> or <a href="https://www.tiktok.com/@jason.bra1n" target="_blank">TikTok</a>.</p>
           </form>
+          <?php endif; ?>
         </div>
         <p></p>
         <p><a href="#contact" class="testimonials-cta-button">Book Your Consultation</a></p>

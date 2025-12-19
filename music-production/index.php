@@ -1,3 +1,51 @@
+<?php
+// --- CONFIGURATION ---
+if (file_exists(__DIR__ . '/../config.php')) {
+    require_once __DIR__ . '/../config.php';
+} else {
+    die('Configuration file not found. Please copy config-sample.php to config.php and fill in your details.');
+}
+
+// Initialize variables for Music Production Contact Form
+$mp_name = $mp_email = $mp_project_type = $mp_message = "";
+$mp_status_msg = "";
+$mp_success = false;
+
+// Check for Contact Form Submission
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST['form_type'] == 'music_production_contact') {
+    // Honeypot check
+    if (!empty($_POST['honeypot'])) {
+        die("Spam detected");
+    }
+
+    $mp_name = strip_tags(trim($_POST["name"]));
+    $mp_email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+    $mp_project_type = strip_tags(trim($_POST["project-type"]));
+    $mp_message = strip_tags(trim($_POST["message"]));
+
+    if (empty($mp_name) || empty($mp_email) || empty($mp_message) || !filter_var($mp_email, FILTER_VALIDATE_EMAIL)) {
+        $mp_status_msg = "Please fill out all required fields and provide a valid email address.";
+    } else {
+        $recipient = RECIPIENT_NAME . " <" . RECIPIENT_EMAIL . ">";
+        $subject = "New Music Production Inquiry from " . $mp_name;
+        
+        $email_content = "Name: $mp_name\n";
+        $email_content .= "Email: $mp_email\n";
+        $email_content .= "Project Type: $mp_project_type\n\n";
+        $email_content .= "Project Details:\n$mp_message\n";
+
+        $headers = "From: " . RECIPIENT_NAME . " <" . RECIPIENT_EMAIL . ">\r\n";
+        $headers .= "Reply-To: $mp_name <$mp_email>\r\n";
+        $headers .= "Content-Type: text/plain; charset=utf-8";
+
+        if (mail($recipient, $subject, $email_content, $headers)) {
+            $mp_success = true;
+        } else {
+            $mp_status_msg = "There was a problem sending your message. Please try again.";
+        }
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -452,42 +500,47 @@
       <!-- Two-column form and platforms section -->
       <div class="contact-card">
         <div class="contact-form-container">
-          <form action="https://formspree.io/f/xrbaqokv" method="POST" class="contact-form">
-            <input type="hidden" name="_subject" value="New Music Production Inquiry from jasonbrain.com/music-production">
-            <input type="text" name="_gotcha" style="display: none;">
+          <?php if ($mp_success): ?>
+            <div style="background: #d4edda; color: #155724; padding: 2rem; border-radius: 10px; border: 1px solid #c3e6cb; text-align: center;">
+              <h4 style="color: #155724; margin-bottom: 1rem;">Message Sent!</h4>
+              <p>Thank you for your inquiry. I'll review your project details and get back to you within one business day.</p>
+            </div>
+          <?php else: ?>
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>#contact" method="POST" class="contact-form">
+            <input type="hidden" name="form_type" value="music_production_contact">
+            <input type="text" name="honeypot" style="display: none;">
+            <?php if (!empty($mp_status_msg)): ?>
+              <div style="background: #f8d7da; color: #721c24; padding: 1rem; border-radius: 10px; margin-bottom: 1rem; border: 1px solid #f5c6cb;">
+                <?php echo $mp_status_msg; ?>
+              </div>
+            <?php endif; ?>
             <div class="form-group">
               <label for="name" class="form-label">Name</label>
-              <input type="text" id="name" name="name" required placeholder="Your Name" class="form-input">
+              <input type="text" id="name" name="name" required placeholder="Your Name" class="form-input" value="<?php echo htmlspecialchars($mp_name); ?>">
             </div>
             <div class="form-group">
               <label for="email" class="form-label">Email</label>
-              <input type="email" id="email" name="email" required placeholder="Your Email" class="form-input">
+              <input type="email" id="email" name="email" required placeholder="Your Email" class="form-input" value="<?php echo htmlspecialchars($mp_email); ?>">
             </div>
             <div class="form-group">
               <label for="project-type" class="form-label">Project Type</label>
               <select id="project-type" name="project-type" class="form-input">
                 <option value="">Select Project Type</option>
-                <option value="beat-production">Custom Beat Production</option>
-                <option value="remix">Remix Production</option>
-                <option value="full-production">Full Original Production</option>
-                <option value="acapella-extraction">Acapella Extraction</option>
-                <option value="megamix">Megamix for Dance Routine</option>
-                <option value="other">Other/Multiple Services</option>
+                <option value="beat-production" <?php if ($mp_project_type == "beat-production") echo "selected"; ?>>Custom Beat Production</option>
+                <option value="remix" <?php if ($mp_project_type == "remix") echo "selected"; ?>>Remix Production</option>
+                <option value="full-production" <?php if ($mp_project_type == "full-production") echo "selected"; ?>>Full Original Production</option>
+                <option value="acapella-extraction" <?php if ($mp_project_type == "acapella-extraction") echo "selected"; ?>>Acapella Extraction</option>
+                <option value="megamix" <?php if ($mp_project_type == "megamix") echo "selected"; ?>>Megamix for Dance Routine</option>
+                <option value="other" <?php if ($mp_project_type == "other") echo "selected"; ?>>Other/Multiple Services</option>
               </select>
             </div>
             <div class="form-group">
               <label for="message" class="form-label">Project Details</label>
-              <textarea id="message" name="message" required placeholder="Tell me about your project! Include genre, style references, timeline, and any specific requirements." class="form-textarea"></textarea>
+              <textarea id="message" name="message" required placeholder="Tell me about your project! Include genre, style references, timeline, and any specific requirements." class="form-textarea"><?php echo htmlspecialchars($mp_message); ?></textarea>
             </div>
             <button type="submit" class="form-submit-button">Start My Project</button>
           </form>
-          <noscript>
-            <p class="noscript-message">
-              Please enable JavaScript to use the contact form, or reach out via our
-              <a href="https://x.com/JasonBra1n" target="_blank">X account</a> or
-              <a href="https://www.tiktok.com/@jason.bra1n" target="_blank">TikTok</a>.
-            </p>
-          </noscript>
+          <?php endif; ?>
         </div>
         
         <div class="contact-map-container">

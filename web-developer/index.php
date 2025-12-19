@@ -1,3 +1,51 @@
+<?php
+// --- CONFIGURATION ---
+if (file_exists(__DIR__ . '/../config.php')) {
+    require_once __DIR__ . '/../config.php';
+} else {
+    die('Configuration file not found. Please copy config-sample.php to config.php and fill in your details.');
+}
+
+// Initialize variables for Web Dev Contact Form
+$wd_name = $wd_email = $wd_project_type = $wd_message = "";
+$wd_status_msg = "";
+$wd_success = false;
+
+// Check for Contact Form Submission
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST['form_type'] == 'web_dev_contact') {
+    // Honeypot check
+    if (!empty($_POST['honeypot'])) {
+        die("Spam detected");
+    }
+
+    $wd_name = strip_tags(trim($_POST["name"]));
+    $wd_email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+    $wd_project_type = strip_tags(trim($_POST["project-type"]));
+    $wd_message = strip_tags(trim($_POST["message"]));
+
+    if (empty($wd_name) || empty($wd_email) || empty($wd_message) || !filter_var($wd_email, FILTER_VALIDATE_EMAIL)) {
+        $wd_status_msg = "Please fill out all required fields and provide a valid email address.";
+    } else {
+        $recipient = RECIPIENT_NAME . " <" . RECIPIENT_EMAIL . ">";
+        $subject = "New Web Dev Inquiry from " . $wd_name;
+        
+        $email_content = "Name: $wd_name\n";
+        $email_content .= "Email: $wd_email\n";
+        $email_content .= "Project Type: $wd_project_type\n\n";
+        $email_content .= "Project Details:\n$wd_message\n";
+
+        $headers = "From: " . RECIPIENT_NAME . " <" . RECIPIENT_EMAIL . ">\r\n";
+        $headers .= "Reply-To: $wd_name <$wd_email>\r\n";
+        $headers .= "Content-Type: text/plain; charset=utf-8";
+
+        if (mail($recipient, $subject, $email_content, $headers)) {
+            $wd_success = true;
+        } else {
+            $wd_status_msg = "There was a problem sending your message. Please try again.";
+        }
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -285,39 +333,45 @@
 
       <div class="contact-card">
         <div class="contact-form-container">
-          <form action="https://formspree.io/f/mvgqrylp" method="POST" class="contact-form">
-            <input type="hidden" name="_subject" value="New Web Dev Inquiry from webdeveloper.jasonbrain.com">
-            <input type="text" name="_gotcha" style="display: none;">
+          <?php if ($wd_success): ?>
+            <div style="background: #d4edda; color: #155724; padding: 2rem; border-radius: 10px; border: 1px solid #c3e6cb; text-align: center;">
+              <h4 style="color: #155724; margin-bottom: 1rem;">Quote Request Sent!</h4>
+              <p>Thank you for your inquiry. I'll review your project details and get back to you within one business day.</p>
+            </div>
+          <?php else: ?>
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>#contact" method="POST" class="contact-form">
+            <input type="hidden" name="form_type" value="web_dev_contact">
+            <input type="text" name="honeypot" style="display: none;">
+            <?php if (!empty($wd_status_msg)): ?>
+              <div style="background: #f8d7da; color: #721c24; padding: 1rem; border-radius: 10px; margin-bottom: 1rem; border: 1px solid #f5c6cb;">
+                <?php echo $wd_status_msg; ?>
+              </div>
+            <?php endif; ?>
             <div class="form-group">
               <label for="name" class="form-label">Name</label>
-              <input type="text" id="name" name="name" required placeholder="Your Name" class="form-input">
+              <input type="text" id="name" name="name" required placeholder="Your Name" class="form-input" value="<?php echo htmlspecialchars($wd_name); ?>">
             </div>
             <div class="form-group">
               <label for="email" class="form-label">Email</label>
-              <input type="email" id="email" name="email" required placeholder="Your Email" class="form-input">
+              <input type="email" id="email" name="email" required placeholder="Your Email" class="form-input" value="<?php echo htmlspecialchars($wd_email); ?>">
             </div>
             <div class="form-group">
               <label for="project-type" class="form-label">Project Type</label>
               <select id="project-type" name="project-type" class="form-input">
                 <option value="">Select Project Type</option>
-                <option value="starter">LaunchPad Site</option>
-                <option value="business">Business Pro</option>
-                <option value="custom-ai">AI-Powered Solution</option>
-                <option value="other">Other/Unsure</option>
+                <option value="starter" <?php if ($wd_project_type == "starter") echo "selected"; ?>>LaunchPad Site</option>
+                <option value="business" <?php if ($wd_project_type == "business") echo "selected"; ?>>Business Pro</option>
+                <option value="custom-ai" <?php if ($wd_project_type == "custom-ai") echo "selected"; ?>>AI-Powered Solution</option>
+                <option value="other" <?php if ($wd_project_type == "other") echo "selected"; ?>>Other/Unsure</option>
               </select>
             </div>
             <div class="form-group">
               <label for="message" class="form-label">Project Details</label>
-              <textarea id="message" name="message" required placeholder="Tell me about your business and what you're looking for in a website." class="form-textarea"></textarea>
+              <textarea id="message" name="message" required placeholder="Tell me about your business and what you're looking for in a website." class="form-textarea"><?php echo htmlspecialchars($wd_message); ?></textarea>
             </div>
             <button type="submit" class="form-submit-button">Get a Free Quote</button>
           </form>
-          <noscript>
-            <p class="noscript-message">
-              Please enable JavaScript to use the contact form, or reach out via my
-              <a href="https://x.com/JasonBra1n" target="_blank">X account</a>.
-            </p>
-          </noscript>
+          <?php endif; ?>
         </div>
         
         <div class="contact-map-container">

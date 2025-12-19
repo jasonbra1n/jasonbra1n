@@ -56,6 +56,7 @@ This document defines the visual identity for jasonbrain.com. All new components
   - Text Color: `white`
   - Border-radius: `25px`
   - Padding: `1rem 2rem`
+  - Text Decoration: `none`
   - Hover: Scale and shadow effect.
 - **Form Submit (`.form-submit-button`)**:
   - Background: `linear-gradient(135deg, #8146ff, #ff6f61)`

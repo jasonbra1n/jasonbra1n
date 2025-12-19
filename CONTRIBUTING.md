@@ -65,6 +65,15 @@ All new copy and content should align with this voice. When in doubt, refer to t
 - Add comments to explain complex logic.
 - Ensure any new interactive elements are accessible via keyboard.
 
+### Form Handling & Security
+- **Self-Hosted PHP**: All forms should be processed by self-hosted PHP scripts within the same page (or a dedicated handler), removing dependencies on third-party services like Formspree.
+- **Configuration**: Never hardcode email addresses or sensitive credentials in the PHP files.
+  - Always require `config.php` at the top of the file.
+  - Use the constants defined in `config.php` (e.g., `RECIPIENT_EMAIL`, `RECIPIENT_NAME`).
+  - Include a fallback or `die()` check if `config.php` is missing to prevent errors in environments where it hasn't been set up.
+- **Spam Protection**: Implement a "honeypot" field (hidden input) to catch basic bots.
+- **Sanitization**: Always sanitize and validate user input (`strip_tags`, `filter_var`) before processing or sending emails.
+
 ### Iframe Lazy-Loading (Facade Pattern)
 - **Purpose**: To improve initial page load speed by deferring the loading of heavy `iframe` content (like music players) until a user clicks on a placeholder.
 - **Location**: The logic is located in `script.js` inside the `DOMContentLoaded` event listener.
