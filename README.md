@@ -17,7 +17,7 @@ Welcome to my GitHub profile! I am a **Creative Professional and Technologist** 
 ## 🧰 Development Tools
 - **Code Editor**: [Visual Studio Code](https://code.visualstudio.com/) - My primary editor for this project, enhanced with the Gemini Code Assist extension.
 - **AI Code Assistant**: [Gemini Code Assist](https://deepmind.google/technologies/gemini/) - Used for pair programming, refactoring, and documentation in a Human-AI collaborative workflow.
-- **AI Jukebox Project IDE**: Google's "Antigravity" - The exclusive environment for developing the [DJ Brain](https://github.com/jasonbra1n/DJ-Brain) project.
+- **AI Jukebox Project IDE**: [Google's "Antigravity"](https://antigravity.google/) - The exclusive environment for developing the [DJ Brain](https://github.com/jasonbra1n/DJ-Brain) project.
 - **AI Workflow**: [Starter Prompts](./prompt.md) - A set of standardized prompts to streamline AI collaboration.
 
 ## 🎓 Education & Certifications
