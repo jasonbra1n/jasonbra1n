@@ -68,6 +68,8 @@ This repository is managed with professional-grade documentation and standards t
 ## 🎯 Current Focus
 **Seeking employment as a Creative Professional.** I am looking for roles that utilize my hybrid background in technology and media—whether that's in technical direction, multimedia production, or creative web development. I bring maturity, experience, and technical discipline to every project.
 
+👉 **[View My Full Resume](https://jasonbrain.com/resume/)**
+
 ## 📬 Connect With Me
 
 - 🌍 **Website**: [jasonbrain.com](https://jasonbrain.com)
