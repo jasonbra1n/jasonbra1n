@@ -67,41 +67,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($_POST['honeypot'])) { // Chec
         }
     }
 }
+
+// Define page-specific metadata
+$page_title = 'Contact | ' . SITE_NAME . ' - Creative Professional';
+$page_description = 'Get in touch with Jason Brain for wedding DJ services, music production, web development, or corporate events.';
+
+// Define Schema.org JSON-LD
+$schema_data = [
+    "@context" => "https://schema.org",
+    "@type" => "ContactPage",
+    "name" => "Contact " . SITE_NAME,
+    "url" => SITE_URL . "/contact/",
+    "mainEntityOfPage" => [
+        "@type" => "WebPage",
+        "@id" => SITE_URL . "/contact/"
+    ],
+    "description" => "Contact Jason Brain for professional inquiries about music production, DJ services, web development, and creative projects."
+];
+$schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Jason Brain - Creative Professional</title>
-  <meta name="description" content="Get in touch with Jason Brain for wedding DJ services, music production, web development, or corporate events.">
-  <meta name="author" content="Jason Brain">
-  <link rel="icon" type="image/png" href="../favicon.png">
-  <link rel="apple-touch-icon" href="../favicon.png">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0633259514526906"
-   crossorigin="anonymous"></script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RTGH4Z617"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-2RTGH4Z617');
-  </script>
-  <link rel="stylesheet" href="../styles.css">
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ContactPage",
-      "name": "Contact Jason Brain",
-      "url": "https://jasonbrain.com/contact/",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://jasonbrain.com/contact/"
-      },
-      "description": "Contact Jason Brain for professional inquiries about music production, DJ services, web development, and creative projects."
-    }
-  </script>
+  <?php include '../head.php'; ?>
 </head>
 <body>
   <?php include '../nav.html'; ?>

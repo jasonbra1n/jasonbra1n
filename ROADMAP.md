@@ -17,6 +17,9 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
   - **Asset Minification**: Introduce a build step to minify CSS and JavaScript files for production.
 - **[To Do] Enhance SEO & User Experience**:
   - Expand Schema.org structured data on all pages for richer search results.
+- **[To Do] Configuration Refactoring**:
+  - **Centralize Site Data**: Define constants for Site Name, Base URL, Contact Address, and Social Links in `config.php`.
+  - **Refactor Pages**: Update all pages (`index.php`, service pages, contact forms) to use the shared `head.php` include and config constants, reducing hardcoded values and improving maintainability.
 - **[In Progress] Blog Template Development**:
   - **Initial Template Complete**: A custom Blogger XML template (`blogger-template.xml`) has been developed to align with the main site's branding and `STYLE_GUIDE.md`.
   - **[To Do] Refinement & Deployment**: Refine the template's CSS variables and responsive behavior, then deploy it to both the Music Blog and Tech Blog.
@@ -59,6 +62,7 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
 - **Server-Side Enhancement (PHP)**:
   - **Server-Side Includes**: Refactored all pages to use PHP `include` for shared components like the navigation (`nav.html`) and footer (`footer.html`).
   - **Self-Hosted Forms**: Replace the third-party Formspree dependency with a custom PHP script.
+  - **Shared Head Include**: Created `head.php` to centralize meta tags and assets.
 - **Security & Best Practices**:
   - **Configuration Management**: Implemented a `config.php` file for sensitive data.
   - **Professional Branding & Career Pivot**:

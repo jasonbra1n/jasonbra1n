@@ -29,20 +29,20 @@ I have spent recent years as a celebrated DJ and event producer—mastering the 
 - **Soft Skills**: Project Management, Client Relations, Public Speaking, Creative Problem Solving.
 
 ## 🚀 Projects & Services
-- **jasonbrain.com (This Repository)**: A custom-built, performance-optimized PHP application.
+- **jasonbrain.com (This Repository)**: [View Case Study](https://jasonbrain.com/web-developer/jasonbrain-project.php) | A custom-built, performance-optimized PHP application.
   - **Architecture**: Component-based PHP structure with server-side includes for maintainability.
   - **Security**: Self-hosted contact forms with honeypot protection and secure credential management (`config.php`).
   - **Performance**: Implements lazy-loading and an iframe facade pattern for media players to optimize Core Web Vitals.
 
-- **LAB: Digital Workshop**: lab.jasonbrain.com – An open-source creative sandbox.
+ - **LAB: Digital Workshop**: [lab.jasonbrain.com](https://lab.jasonbrain.com) | [View Case Study](https://jasonbrain.com/web-developer/lab-project.php) | An open-source creative sandbox.
   - **Architecture**: Single-Page Application (SPA) with a hybrid dual-loading system (Direct Injection + Iframe Embedding).
   - **Tech**: Built with pure HTML5, CSS3 (Glassmorphism UI), and Vanilla JavaScript (ES6+).
   - **Features**: Modular toolset organized into 5 pillars (Work, Learn, Rest, Play, Info) with dark/light mode accessibility.
 
-- **Web Development**: [jasonbrain.com/web-developer/](https://jasonbrain.com/web-developer/) – AI-powered and creative web solutions. 🌐
+ - **Web Development**: [jasonbrain.com/web-developer](https://jasonbrain.com/web-developer/) | AI-powered and creative web solutions. 🌐
 - **Home Automation**: Smart home setups using Home Assistant and IoT integration 🏡
 - **DIY Electronics**: Raspberry Pi, ESP32, Arduino projects, and laser engraving ⚡
-- **Music Production & DJ Services**: [jasonbrain.com](https://jasonbrain.com) – While shifting focus to tech, I continue to maintain my legacy in audio production and event entertainment.
+ - **Music Production & DJ Services**: [jasonbrain.com](https://jasonbrain.com) | While shifting focus to tech, I continue to maintain my legacy in audio production and event entertainment.
 - **Geometric & Cosmic Observations**: Exploring patterns in nature, music, and the universe ✨
 
 ## 🎯 Current Focus

@@ -1,40 +1,36 @@
+<?php
+// Load configuration
+if (file_exists(__DIR__ . '/../config.php')) {
+    require_once __DIR__ . '/../config.php';
+}
+
+// Define page-specific metadata
+$page_title = 'About | ' . SITE_NAME . ' - Creative Professional & Technologist';
+$page_description = 'Jason Brain is a Creative Professional with a deep technical background (Fleming College). Bridging the gap between art, music, and technology.';
+
+// Define Schema.org JSON-LD
+$schema_data = [
+    "@context" => "https://schema.org",
+    "@type" => "ProfilePage",
+    "mainEntity" => [
+        "@type" => "Person",
+        "name" => SITE_NAME,
+        "alternateName" => "ΙΑΣΩΝ",
+        "url" => SITE_URL . "/",
+        "jobTitle" => "Creative Professional",
+        "description" => "Creative Professional and Technologist with a background in Systems Analysis and Multimedia Production.",
+        "alumniOf" => [
+            "@type" => "CollegeOrUniversity",
+            "name" => "Fleming College"
+        ]
+    ]
+];
+$schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | Jason Brain - Creative Professional & Technologist</title>
-  <meta name="description" content="Jason Brain is a Creative Professional with a deep technical background (Fleming College). Bridging the gap between art, music, and technology.">
-  <meta name="author" content="Jason Brain">
-  <link rel="icon" type="image/png" href="../favicon.png">
-  <link rel="apple-touch-icon" href="../favicon.png">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RTGH4Z617"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-2RTGH4Z617');
-  </script>
-  <link rel="stylesheet" href="../styles.css">
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfilePage",
-      "mainEntity": {
-        "@type": "Person",
-        "name": "Jason Brain",
-        "alternateName": "ΙΑΣΩΝ",
-        "url": "https://jasonbrain.com/",
-        "jobTitle": "Creative Professional",
-        "description": "Creative Professional and Technologist with a background in Systems Analysis and Multimedia Production.",
-        "alumniOf": {
-            "@type": "CollegeOrUniversity",
-            "name": "Fleming College"
-        }
-      }
-    }
-  </script>
+  <?php include '../head.php'; ?>
 </head>
 <body>
   <?php include '../nav.html'; ?>

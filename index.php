@@ -1,44 +1,38 @@
+<?php
+// Load configuration
+if (file_exists('config.php')) {
+    require_once 'config.php';
+}
+
+// Define page-specific metadata
+$page_title = SITE_NAME . ' | ' . SITE_TAGLINE;
+$page_description = SITE_DESCRIPTION;
+$page_keywords = SITE_KEYWORDS;
+
+// Define Schema.org JSON-LD
+$schema_data = [
+    "@context" => "https://schema.org",
+    "@type" => "Person",
+    "name" => SITE_NAME,
+    "alternateName" => "ΙΑΣΩΝ",
+    "url" => SITE_URL . "/",
+    "sameAs" => [
+        SOCIAL_X,
+        SOCIAL_TIKTOK,
+        SOCIAL_MIXCLOUD,
+        SOCIAL_SOUNDCLOUD,
+        SOCIAL_HEARTHIS
+    ],
+    "jobTitle" => "Creative Professional",
+    "knowsAbout" => ["Music Production", "DJ Services", "Web Development", "AI Technology"],
+    "description" => SITE_DESCRIPTION
+];
+$schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jason Brain | Creative Professional - Music, Technology & Innovation</title>
-  <meta name="description" content="Jason Brain - Creative professional specializing in music production, wedding DJ services, web development, and AI innovation. 30+ years of creative excellence.">
-  <meta name="keywords" content="Jason Brain, music producer, wedding DJ, web developer, AI specialist, creative professional, multimedia production">
-  <meta name="author" content="Jason Brain">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0633259514526906"
-   crossorigin="anonymous"></script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RTGH4Z617"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-2RTGH4Z617');
-  </script>
-  <link rel="stylesheet" href="styles.css">
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Jason Brain",
-      "alternateName": "ΙΑΣΩΝ",
-      "url": "https://jasonbrain.com/",
-      "sameAs": [
-        "https://x.com/JasonBra1n",
-        "https://www.tiktok.com/@jason.bra1n",
-        "https://www.mixcloud.com/jasonbra1n/",
-        "https://soundcloud.com/jason-brain",
-        "https://hearthis.at/iason/"
-      ],
-      "jobTitle": "Creative Professional",
-      "knowsAbout": ["Music Production", "DJ Services", "Web Development", "AI Technology"],
-      "description": "Creative professional with 30+ years experience in music, technology, and multimedia production."
-    }
-  </script>
+  <?php include 'head.php'; ?>
 </head>
 <body>
   <!-- Server-side include for navigation -->

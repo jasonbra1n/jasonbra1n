@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.3] - 2025-12-20
+
+### Added
+- **Architecture**: Created `head.php` server-side include to centralize meta tags, CSS links, and analytics scripts across all pages.
+- **Configuration**: Added `SITE_AUTHOR`, `SITE_DESCRIPTION`, and `SITE_KEYWORDS` to `config-sample.php` (and `config.php`) for global SEO management.
+
+### Changed
+- **Refactoring**: Updated `index.php`, `about/index.php`, and `contact/index.php` to use the new `head.php` include and configuration constants, reducing code duplication.
+- **Documentation**: Updated `README.md` to standardize link formatting for project case studies.
+- **Roadmap**: Marked "Shared Head Include" as completed in `ROADMAP.md`.
+
 ## [1.4.2] - 2025-12-20
 
 ### Added
