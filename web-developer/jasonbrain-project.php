@@ -1,26 +1,16 @@
 <?php
-// --- CONFIGURATION ---
-if (file_exists(__DIR__ . '/../config.php')) {
-    require_once __DIR__ . '/../config.php';
+// Load application bootstrap
+if (file_exists(__DIR__ . '/../src/bootstrap.php')) {
+    require_once __DIR__ . '/../src/bootstrap.php';
 }
+
+$page_title = 'jasonbrain.com | Project Case Study | ' . SITE_NAME;
+$page_description = 'Case study of jasonbrain.com - A custom-built, performance-optimized PHP application showcasing full-stack development skills.';
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>jasonbrain.com | Project Case Study | Jason Brain</title>
-  <meta name="description" content="Case study of jasonbrain.com - A custom-built, performance-optimized PHP application showcasing full-stack development skills.">
-  <meta name="author" content="Jason Brain">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RTGH4Z617"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-2RTGH4Z617');
-  </script>
-  <link rel="stylesheet" href="../styles.css">
+  <?php include '../head.php'; ?>
   <style>
     .tech-stack-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 2rem 0; }
     .tech-item { background: var(--color-neutral-light-gray); padding: 1rem; border-radius: 10px; text-align: center; border: 1px solid #ddd; }
@@ -148,7 +138,7 @@ if (file_exists(__DIR__ . '/../config.php')) {
     </section>
   </div>
 
-  <?php include '../footer.html'; ?>
+  <?php include '../footer.php'; ?>
   <script src="../script.js"></script>
 </body>
 </html>

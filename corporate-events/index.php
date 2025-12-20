@@ -1,9 +1,7 @@
 <?php
-// --- CONFIGURATION ---
-if (file_exists(__DIR__ . '/../config.php')) {
-    require_once __DIR__ . '/../config.php';
-} else {
-    die('Configuration file not found. Please copy config-sample.php to config.php and fill in your details.');
+// Load application bootstrap
+if (file_exists(__DIR__ . '/../src/bootstrap.php')) {
+    require_once __DIR__ . '/../src/bootstrap.php';
 }
 
 // Initialize variables for Corporate Contact Form
@@ -47,42 +45,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
         }
     }
 }
+
+// Define page-specific metadata
+$page_title = 'Corporate Event DJ & AV | Haliburton & Northern Retreats | ' . SITE_NAME;
+$page_description = 'Professional Corporate DJ and AV services for Northern Retreats in Haliburton, Minden, and Kawartha Lakes. ' . SITE_NAME . ' offers 30+ years of experience for off-site conferences and team building.';
+$page_keywords = 'Corporate DJ Haliburton, Northern Retreat AV, Corporate Retreat DJ, Minden Corporate Events, Kawartha Lakes AV, ' . SITE_NAME . ', team building DJ';
+
+// Define Schema.org JSON-LD
+$schema_data = [
+    "@context" => "https://schema.org",
+    "@type" => "Service",
+    "serviceType" => "Corporate Event Services",
+    "name" => SITE_NAME . " Corporate DJ & AV",
+    "url" => SITE_URL . "/corporate-events/",
+    "provider" => [
+        "@type" => "Person",
+        "name" => SITE_NAME,
+        "url" => SITE_URL . "/"
+    ],
+    "description" => "Professional DJ and AV services for corporate retreats and events in Haliburton and Northern Ontario."
+];
+$schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Corporate Event DJ & AV | Haliburton & Northern Retreats | Jason Brain</title>
-  <meta name="description" content="Professional Corporate DJ and AV services for Northern Retreats in Haliburton, Minden, and Kawartha Lakes. Jason Brain offers 30+ years of experience for off-site conferences and team building.">
-  <meta name="keywords" content="Corporate DJ Haliburton, Northern Retreat AV, Corporate Retreat DJ, Minden Corporate Events, Kawartha Lakes AV, Jason Brain, team building DJ">
-  <meta name="author" content="Jason Brain">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0633259514526906"
-   crossorigin="anonymous"></script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RTGH4Z617"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-2RTGH4Z617');
-  </script>
-  <link rel="stylesheet" href="../styles.css">
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Corporate Event Services",
-      "name": "Jason Brain Corporate DJ & AV",
-      "url": "https://jasonbrain.com/corporate-events/",
-      "provider": {
-        "@type": "Person",
-        "name": "Jason Brain",
-        "url": "https://jasonbrain.com/"
-      },
-      "description": "Professional DJ and AV services for corporate retreats and events in Haliburton and Northern Ontario."
-    }
-  </script>
+  <?php include '../head.php'; ?>
 </head>
 <body>
   <!-- Server-side include for navigation -->
@@ -387,7 +375,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
 
   </div>
   
-  <?php include '../footer.html'; ?>
+  <?php include '../footer.php'; ?>
 
   <script src="../script.js"></script>
 </body>

@@ -7,6 +7,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.0] - 2025-12-20
+
+### Added
+- **Portfolio**: Added "DJ Brain" project to `README.md` and `web-developer/index.php`.
+- **Web Developer**: Created a dedicated case study page (`web-developer/dj-brain-project.php`) for the "DJ Brain" project.
+- **Documentation**: Added "AI Collaboration" section to `CONTRIBUTING.md` to formalize the Human-AI workflow.
+- **UI**: Added "Developed with Gemini" badge to the site footer and `README.md`.
+- **Portfolio**: Documented the use of Google's "Antigravity" app for the DJ Brain project in `README.md` and the case study.
+- **Documentation**: Added VS Code as the official IDE to `CONTRIBUTING.md`.
+- **Documentation**: Created `prompt.md` with starter prompts to streamline AI collaboration sessions.
+
+### Changed
+- **Architecture**: Refactored all pages (root, services, about, contact, resume, case studies) to use the centralized `head.php` include, removing hardcoded headers.
+- **Architecture**: Renamed `footer.html` to `footer.php` and updated all include references to follow best practices.
+- **Architecture**: Implemented `src/bootstrap.php` as the single entry point for all pages, standardizing application initialization.
+- **Refactoring**: Updated all pages to use constants from `config.php` (via bootstrap) for page titles, descriptions, and Schema.org data, ensuring site-wide consistency.
+- **UI/UX**: Refactored headers on service pages (`wedding-dj`, `music-production`, `web-developer`) for improved readability and visual hierarchy.
+- **Documentation**: Updated `ROADMAP.md` to include DJ Brain milestones and reflect completed refactoring tasks.
+- **Web Developer**: Updated the "Tech Stack" and FAQ on the web developer page to mention Gemini and Gemma.
+
+### Fixed
+- **CSS**: Corrected a layout issue where the `.cta-button` would overlap text above it by adding `display: inline-block` and `margin-top` in `styles.css`.
+
 ## [1.4.3] - 2025-12-20
 
 ### Added

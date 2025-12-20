@@ -1,9 +1,7 @@
 <?php
-// --- CONFIGURATION ---
-if (file_exists(__DIR__ . '/../config.php')) {
-    require_once __DIR__ . '/../config.php';
-} else {
-    die('Configuration file not found. Please copy config-sample.php to config.php and fill in your details.');
+// Load application bootstrap
+if (file_exists(__DIR__ . '/../src/bootstrap.php')) {
+    require_once __DIR__ . '/../src/bootstrap.php';
 }
 
 // Initialize variables for Web Dev Contact Form
@@ -45,41 +43,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
         }
     }
 }
+
+// Define page-specific metadata
+$page_title = SITE_NAME . ' | Web Developer | AI-Powered Web Solutions';
+$page_description = 'Professional web developer ' . SITE_NAME . ' - Custom websites, AI integration, e-commerce, and SEO for creative businesses. 30+ years of creative and technical experience.';
+$page_keywords = 'web developer, AI web development, custom websites, e-commerce solutions, SEO services, creative business websites, ' . SITE_NAME;
+
+// Define Schema.org JSON-LD
+$schema_data = [
+    "@context" => "https://schema.org",
+    "@type" => "WebSite",
+    "name" => SITE_NAME . " - Web Developer",
+    "url" => SITE_URL . "/web-developer/",
+    "author" => [
+        "@type" => "Person",
+        "name" => SITE_NAME,
+        "url" => SITE_URL . "/"
+    ],
+    "description" => "Professional web development services specializing in AI-powered solutions, custom websites, and SEO for creative businesses."
+];
+$schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jason Brain | Web Developer | AI-Powered Web Solutions</title>
-  <meta name="description" content="Professional web developer Jason Brain - Custom websites, AI integration, e-commerce, and SEO for creative businesses. 30+ years of creative and technical experience.">
-  <meta name="keywords" content="web developer, AI web development, custom websites, e-commerce solutions, SEO services, creative business websites, Jason Brain">
-  <meta name="author" content="Jason Brain">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0633259514526906"
-   crossorigin="anonymous"></script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RTGH4Z617"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-2RTGH4Z617');
-  </script>
-  <link rel="stylesheet" href="../styles.css">
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Jason Brain - Web Developer",
-      "url": "https://jasonbrain.com/web-developer/",
-      "author": {
-        "@type": "Person",
-        "name": "Jason Brain",
-        "url": "https://jasonbrain.com/"
-      },
-      "description": "Professional web development services specializing in AI-powered solutions, custom websites, and SEO for creative businesses."
-    }
-  </script>
+  <?php include '../head.php'; ?>
 </head>
 <body>
   <!-- Server-side include for navigation -->
@@ -90,8 +78,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
     <div class="header-gradient"></div>
     <canvas class="lights"></canvas>
     <div class="header-content">
-      <h1 id="header-title">Jason Brain | Web Developer - AI-Powered & Creative Web Solutions</h1>
-      <p>30+ Years of Creative Intuition Meets Technical Innovation</p>
+      <h1 id="header-title">Jason Brain</h1>
+      <p style="font-size: 2.5rem; font-weight: bold; margin: 0.5rem 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Web Developer</p>
+      <p>AI-Powered & Creative Web Solutions</p>
       <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Start Your Project!</button>
     </div>
   </header>
@@ -188,6 +177,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
         <img src="../images/web-development-setup.webp" alt="LAB: Digital Workshop SPA" loading="lazy">
         <p><strong>LAB: Digital Workshop</strong><br>Vanilla JS SPA / Modular Tools</p>
       </div>
+      <div class="venue-card" onclick="window.location.href='dj-brain-project.php'" style="cursor: pointer;">
+        <img src="../images/music-production-service_tn.webp" alt="DJ Brain Project" loading="lazy">
+        <p><strong>DJ Brain</strong><br>AI-Powered Jukebox System</p>
+      </div>
     </section>
     <hr>
     <section class="blog">
@@ -197,7 +190,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
         <div class="faq-item">
           <button class="faq-question">How does AI improve web development?</button>
           <div class="faq-answer">
-            <p>AI accelerates the development process through code generation, automated testing, and intelligent recommendations. This allows me to focus more on the creative and strategic aspects of your project, delivering a higher quality product faster. I use tools like GitHub Copilot and other AI assistants in my daily workflow.</p>
+            <p>AI accelerates the development process through code generation, automated testing, and intelligent recommendations. This allows me to focus more on the creative and strategic aspects of your project, delivering a higher quality product faster. I leverage advanced models like Gemini and Gemma in my daily workflow.</p>
           </div>
         </div>
         <div class="faq-item">
@@ -389,8 +382,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
             </div>
              <div class="platform-link">
               <div class="platform-icon">🤖</div>
-              <div class="platform-name">AI Tools</div>
-              <div class="platform-description">Copilot, ChatGPT, etc.</div>
+              <div class="platform-name">AI Assistants</div>
+              <div class="platform-description">Gemini & Gemma Models</div>
             </div>
              <div class="platform-link">
               <div class="platform-icon">🐍</div>
@@ -411,7 +404,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
 
   </div>
   
-  <?php include '../footer.html'; ?>
+  <?php include '../footer.php'; ?>
   
   <script src="../script.js"></script>
 </body>

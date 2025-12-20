@@ -19,6 +19,11 @@
     <lastmod>2025-12-13</lastmod>
     <priority>0.80</priority>
   </url>
+  <url>
+    <loc>https://jasonbrain.com/resume/</loc>
+    <lastmod>2025-12-18</lastmod>
+    <priority>0.80</priority>
+  </url>
 
   <!-- Service Pages -->
   <url>
@@ -44,6 +49,11 @@
   <url>
     <loc>https://jasonbrain.com/web-developer/jasonbrain-project.php</loc>
     <lastmod>2025-12-19</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://jasonbrain.com/web-developer/dj-brain-project.php</loc>
+    <lastmod>2025-12-20</lastmod>
     <priority>0.80</priority>
   </url>
   <url>

@@ -12,6 +12,12 @@ Welcome to my GitHub profile! I am a **Creative Professional and Technologist** 
 ![JavaScript](https://img.shields.io/badge/JavaScript-8146FF?style=for-the-badge&logo=javascript&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-8146FF?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-8146FF?style=for-the-badge&logo=css3&logoColor=white)
+![Gemini](https://img.shields.io/badge/Developed%20with-Gemini-8146FF?style=for-the-badge&logo=google-gemini&logoColor=white)
+
+## 🧰 Development Tools
+- **Code Editor**: [Visual Studio Code](https://code.visualstudio.com/) - My primary editor for this project, enhanced with the Gemini Code Assist extension.
+- **AI Code Assistant**: [Gemini Code Assist](https://deepmind.google/technologies/gemini/) - Used for pair programming, refactoring, and documentation in a Human-AI collaborative workflow.
+- **AI Jukebox Project IDE**: Google's "Antigravity" - The exclusive environment for developing the [DJ Brain](https://github.com/jasonbra1n/DJ-Brain) project.
 
 ## 🎓 Education & Certifications
 - **Computer Programmer & Systems Analyst** (3-Year Diploma) – Fleming College
@@ -38,6 +44,12 @@ I have spent recent years as a celebrated DJ and event producer—mastering the 
   - **Architecture**: Single-Page Application (SPA) with a hybrid dual-loading system (Direct Injection + Iframe Embedding).
   - **Tech**: Built with pure HTML5, CSS3 (Glassmorphism UI), and Vanilla JavaScript (ES6+).
   - **Features**: Modular toolset organized into 5 pillars (Work, Learn, Rest, Play, Info) with dark/light mode accessibility.
+
+ - **DJ Brain**: [View Repository](https://github.com/jasonbra1n/DJ-Brain) | An open-source, self-hosted, AI-powered jukebox system.
+  - **Concept**: A "self-hosted" AI DJ Co-Pilot designed to manage music queues intelligently for parties and venues.
+  - **Architecture**: Dockerized stack with PHP Slim API, Python AI engine, and Vanilla JS frontend.
+  - **Features**: Multi-room audio, BYOM (Bring Your Own Music), and intelligent gap-filling.
+  - **Development**: Built exclusively with Google's "Antigravity" coding app and Gemini Code Assist.
 
  - **Web Development**: [jasonbrain.com/web-developer](https://jasonbrain.com/web-developer/) | AI-powered and creative web solutions. 🌐
 - **Home Automation**: Smart home setups using Home Assistant and IoT integration 🏡

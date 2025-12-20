@@ -18,6 +18,11 @@ All new copy and content should align with this voice. When in doubt, refer to t
 - **Contact Form**: Self-hosted PHP script
 - **Blogs**: Blogger platform, with custom XML templates stored in the `blogger-templates/` directory.
 - **Hosting**: PHP-enabled hosting (e.g., cPanel)
+- **Development Environment**: VS Code with the Gemini Code Assist extension.
+
+### AI Collaboration
+- **Primary AI Assistant**: Google Gemini is the primary AI coding assistant for this project, acting as a pair programmer under human direction.
+- **Workflow**: The development process follows a Human-AI collaboration model, where the human director sets the vision and standards, and the AI assistant helps with code generation, refactoring, and documentation.
 
 ## Development Workflow
 
@@ -50,9 +55,11 @@ To ensure the professional profile remains current, please adhere to the followi
 ### Site Architecture
 - **Multi-Page Structure**: The site is moving from a single-page, anchor-link-heavy design to a more robust multi-page architecture. New top-level sections should be created in their own subdirectories (e.g., `/about/`, `/contact/`, `/resume/`) with an `index.php` file. This improves SEO, maintainability, and user navigation.
 - **Descriptive URLs**: Directory names should be lowercase, hyphenated, and descriptive of the page's content (e.g., `music-production`). This creates clean, SEO-friendly URLs.
-- **Reusable Components**: Core repeating elements like the navigation and footer are managed as PHP includes (`nav.html`, `footer.html`). All new pages should use these includes to ensure consistency.
+- **Reusable Components**: Core repeating elements like the navigation and footer are managed as PHP includes (`nav.html`, `footer.php`). All new pages should use these includes to ensure consistency.
   - `<?php include '../nav.html'; ?>`
-  - `<?php include '../footer.html'; ?>`
+  - `<?php include '../footer.php'; ?>`
+- **Application Entrypoint**: All pages should begin by requiring the `src/bootstrap.php` file, which handles configuration loading and future class autoloading.
+- **PHP Logic**: Business logic (like form handlers or data processors) should eventually be encapsulated in classes within a `/src` directory to keep page files clean.
 - **Sitemap**: Whenever a new page is added or an existing one is removed, the `sitemap.xml` file in the root directory must be updated to reflect the change. This is crucial for SEO and ensuring search engines can find all content.
 - **Internal Linking**: When relevant, add contextual links within page content to other pages on the site. This helps users discover more content and signals the relationship between pages to search engines.
 

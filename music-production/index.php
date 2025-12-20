@@ -1,9 +1,7 @@
 <?php
-// --- CONFIGURATION ---
-if (file_exists(__DIR__ . '/../config.php')) {
-    require_once __DIR__ . '/../config.php';
-} else {
-    die('Configuration file not found. Please copy config-sample.php to config.php and fill in your details.');
+// Load application bootstrap
+if (file_exists(__DIR__ . '/../src/bootstrap.php')) {
+    require_once __DIR__ . '/../src/bootstrap.php';
 }
 
 // Initialize variables for Music Production Contact Form
@@ -45,51 +43,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
         }
     }
 }
+
+// Define page-specific metadata
+$page_title = SITE_NAME . ' | Music Producer | Beats, Remixes & Original Productions';
+$page_description = 'Professional music producer ' . SITE_NAME . ' (ΙΑΣΩΝ) - Custom beats, remixes, acapella extraction, megamix production. 30+ years experience across all genres.';
+$page_keywords = 'music producer, beat maker, remix producer, acapella extraction, megamix, custom beats, music production services, ' . SITE_NAME . ', IASON';
+
+// Define Schema.org JSON-LD
+$schema_data = [
+    "@context" => "https://schema.org",
+    "@type" => "Service",
+    "serviceType" => "Music Production",
+    "name" => SITE_NAME . " - Music Producer",
+    "alternateName" => "ΙΑΣΩΝ",
+    "url" => SITE_URL . "/music-production/",
+    "sameAs" => [
+        SOCIAL_X,
+        SOCIAL_TIKTOK,
+        SOCIAL_MIXCLOUD,
+        SOCIAL_SOUNDCLOUD,
+        SOCIAL_HEARTHIS
+    ],
+    "provider" => [
+        "@type" => "Person",
+        "name" => SITE_NAME,
+        "url" => SITE_URL . "/"
+    ],
+    "genre" => ["Electronic", "House", "Dancehall", "Rock", "Trance"],
+    "description" => "Professional music producer specializing in beats, remixes, acapella extraction, and original productions across all genres."
+];
+$schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jason Brain | Music Producer | Beats, Remixes & Original Productions</title>
-  <meta name="description" content="Professional music producer Jason Brain (ΙΑΣΩΝ) - Custom beats, remixes, acapella extraction, megamix production. 30+ years experience across all genres.">
-  <meta name="keywords" content="music producer, beat maker, remix producer, acapella extraction, megamix, custom beats, music production services, Jason Brain, IASON">
-  <meta name="author" content="Jason Brain">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0633259514526906"
-   crossorigin="anonymous"></script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RTGH4Z617"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-2RTGH4Z617');
-  </script>
-  <link rel="stylesheet" href="../styles.css">
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Music Production",
-      "name": "Jason Brain - Music Producer",
-      "alternateName": "ΙΑΣΩΝ",
-      "url": "https://jasonbrain.com/music-production/",
-      "sameAs": [
-        "https://x.com/JasonBra1n",
-        "https://www.tiktok.com/@jason.bra1n",
-        "https://www.mixcloud.com/jasonbra1n/",
-        "https://soundcloud.com/jason-brain",
-        "https://hearthis.at/iason/"
-      ],
-      "provider": {
-        "@type": "Person",
-        "name": "Jason Brain",
-        "url": "https://jasonbrain.com/"
-      },
-      "genre": ["Electronic", "House", "Dancehall", "Rock", "Trance"],
-      "description": "Professional music producer specializing in beats, remixes, acapella extraction, and original productions across all genres."
-    }
-  </script>
+  <?php include '../head.php'; ?>
 </head>
 <body>
   <!-- Server-side include for navigation -->
@@ -100,7 +88,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
     <div class="header-gradient"></div>
     <canvas class="lights"></canvas>
     <div class="header-content">
-      <h1 id="header-title">Jason Brain | Music Producer - Custom Beats, Remixes & Original Productions</h1>
+      <h1 id="header-title">Music Producer</h1>
+      <p style="font-size: 1.8rem; font-weight: bold; margin: 0.5rem 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Custom Beats, Remixes & Original Productions</p>
       <p>30+ Years Crafting Sounds Across Every Genre</p>
       <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Start Your Project!</button>
     </div>
@@ -781,7 +770,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
     </section>
   </div> <!-- Close container div HERE -->
   
-  <?php include '../footer.html'; ?>
+  <?php include '../footer.php'; ?>
   
   <script src="../script.js"></script>
 </body>

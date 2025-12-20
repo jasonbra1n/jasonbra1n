@@ -1,9 +1,7 @@
 <?php
-// --- CONFIGURATION ---
-if (file_exists(__DIR__ . '/../config.php')) {
-    require_once __DIR__ . '/../config.php';
-} else {
-    die('Configuration file not found. Please copy config-sample.php to config.php and fill in your details.');
+// Load application bootstrap
+if (file_exists(__DIR__ . '/../src/bootstrap.php')) {
+    require_once __DIR__ . '/../src/bootstrap.php';
 }
 
 // Initialize variables for Testimonial Form
@@ -85,46 +83,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
         }
     }
 }
+
+// Define page-specific metadata
+$page_title = 'Wedding DJ Haliburton, Minden & Kawartha Lakes | ' . SITE_NAME;
+$page_description = 'Top Wedding DJ in Haliburton, Minden, and Kawartha Lakes, Ontario. ' . SITE_NAME . ' offers RGB lights, fog machines, and custom playlists. Book now for 2026!';
+$page_keywords = 'Wedding DJ Haliburton, Minden DJ, Kawartha Lakes wedding music, outdoor wedding DJ Ontario, ceremony-only DJ Haliburton, vow renewal DJ Ontario, custom wedding playlists, RGB DMX lights, fog machine rental, ' . SITE_NAME;
+
+// Define Schema.org JSON-LD
+$schema_data = [
+    "@context" => "https://schema.org",
+    "@type" => "Service",
+    "serviceType" => "Wedding DJ Services",
+    "name" => SITE_NAME . " Wedding DJ",
+    "url" => SITE_URL . "/wedding-dj/",
+    "sameAs" => [
+        SOCIAL_X,
+        SOCIAL_TIKTOK
+    ],
+    "provider" => [
+        "@type" => "Person",
+        "name" => SITE_NAME,
+        "url" => SITE_URL . "/"
+    ],
+    "description" => "Professional Wedding DJ services in Haliburton, Minden, and Kawartha Lakes, Ontario. Specializing in custom playlists, premium sound, and immersive lighting."
+];
+$schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wedding DJ Haliburton, Minden & Kawartha Lakes | Jason Brain</title>
-  <meta name="description" content="Top Wedding DJ in Haliburton, Minden, and Kawartha Lakes, Ontario. Jason Brain offers RGB lights, fog machines, and custom playlists. Book now for 2026!">
-  <meta name="keywords" content="Wedding DJ Haliburton, Minden DJ, Kawartha Lakes wedding music, outdoor wedding DJ Ontario, ceremony-only DJ Haliburton, vow renewal DJ Ontario, custom wedding playlists, RGB DMX lights, fog machine rental">
-  <meta name="author" content="Jason Brain">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0633259514526906"
-   crossorigin="anonymous"></script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RTGH4Z617"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-2RTGH4Z617');
-  </script>
-  <link rel="stylesheet" href="../styles.css">
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Wedding DJ Services",
-      "name": "Jason Brain Wedding DJ",
-      "url": "https://jasonbrain.com/wedding-dj/",
-      "sameAs": [
-        "https://x.com/JasonBra1n",
-        "https://www.tiktok.com/@jason.bra1n"
-      ],
-      "provider": {
-        "@type": "Person",
-        "name": "Jason Brain",
-        "url": "https://jasonbrain.com/"
-      },
-      "description": "Professional Wedding DJ services in Haliburton, Minden, and Kawartha Lakes, Ontario. Specializing in custom playlists, premium sound, and immersive lighting."
-    }
-  </script>
+  <?php include '../head.php'; ?>
 </head>
 <body>
   <!-- Server-side include for navigation -->
@@ -135,8 +123,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
     <div class="header-gradient"></div>
     <canvas class="lights"></canvas>
     <div class="header-content">
-      <h1 id="header-title">Wedding DJ Services in Haliburton, Minden & Kawartha Lakes - Booking Now for <span id="booking-year"></span></h1>
-      <p>Premier Wedding DJ in Haliburton, Minden & Kawartha Lakes</p>
+      <h1 id="header-title">Wedding DJ Services</h1>
+      <p>Haliburton, Minden & Kawartha Lakes</p>
+      <p>Booking Now for <span id="booking-year"></span></p>
       <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Book Your Dance Party!</button>
     </div>
   </header>
@@ -910,7 +899,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
     </section>
   </div> <!-- Close container div HERE -->
   
-  <?php include '../footer.html'; ?>
+  <?php include '../footer.php'; ?>
   
   <script src="../script.js"></script>
 </body>

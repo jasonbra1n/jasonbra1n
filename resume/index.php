@@ -1,36 +1,32 @@
+<?php
+// Load application bootstrap
+if (file_exists(__DIR__ . '/../src/bootstrap.php')) {
+    require_once __DIR__ . '/../src/bootstrap.php';
+}
+
+// Define page-specific metadata
+$page_title = 'Resume | ' . SITE_NAME . ' - Creative Professional & Technologist';
+$page_description = 'Resume of ' . SITE_NAME . ': Creative Professional and Technologist. Leveraging a background in Systems Analysis and Programming for multimedia and event innovation.';
+
+// Define Schema.org JSON-LD
+$schema_data = [
+    "@context" => "https://schema.org",
+    "@type" => "ProfilePage",
+    "mainEntity" => [
+        "@type" => "Person",
+        "name" => SITE_NAME,
+        "url" => SITE_URL . "/resume/",
+        "jobTitle" => "Creative Professional",
+        "alumniOf" => "Fleming College",
+        "knowsAbout" => ["Computer Programming", "Systems Analysis", "Project Management", "Hardware Assembly"]
+    ]
+];
+$schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume | Jason Brain - Creative Professional & Technologist</title>
-  <meta name="description" content="Resume of Jason Brain: Creative Professional and Technologist. Leveraging a background in Systems Analysis and Programming for multimedia and event innovation.">
-  <meta name="author" content="Jason Brain">
-  <link rel="icon" type="image/png" href="../favicon.png">
-  <link rel="apple-touch-icon" href="../favicon.png">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RTGH4Z617"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-2RTGH4Z617');
-  </script>
-  <link rel="stylesheet" href="../styles.css">
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfilePage",
-      "mainEntity": {
-        "@type": "Person",
-        "name": "Jason Brain",
-        "url": "https://jasonbrain.com/resume/",
-        "jobTitle": "Creative Professional",
-        "alumniOf": "Fleming College",
-        "knowsAbout": ["Computer Programming", "Systems Analysis", "Project Management", "Hardware Assembly"]
-      }
-    }
-  </script>
+  <?php include '../head.php'; ?>
   <style>
     /* Resume Specific Styles */
     .resume-header-block { 
@@ -201,6 +197,7 @@
           <div class="skill-tag">HTML5 / CSS3</div>
           <div class="skill-tag">Python</div>
           <div class="skill-tag">Git / GitHub</div>
+          <div class="skill-tag">VS Code</div>
         </div>
       </div>
       <div class="resume-item">
@@ -300,7 +297,7 @@
   </div>
 
   <div class="no-print">
-    <?php include '../footer.html'; ?>
+    <?php include '../footer.php'; ?>
   </div>
   <script src="../script.js"></script>
 </body>

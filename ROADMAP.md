@@ -36,6 +36,11 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
   - Investigate more dynamic ways to present music (e.g., custom audio player, API integration with Mixcloud/SoundCloud).
   - Add more context or stories behind the featured mixes and productions.
 
+- **[In Progress] DJ Brain Project**:
+  - **Phase 1 (Foundation)**: Implement Mopidy setup, Database Schema, and PHP Backend MVP (API & Request Handling).
+  - **Phase 2 (The Brain)**: Develop the Python AI Engine for intelligent queue management and context awareness.
+  - **Phase 3 (Polish)**: Refine the frontend UI and implement multi-room audio support.
+
 ## Medium-Term (3-6 Months)
 
 - **[Planned] Enhance Header Animation**:
@@ -60,15 +65,18 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
 ## Completed Tasks
 
 - **Server-Side Enhancement (PHP)**:
-  - **Server-Side Includes**: Refactored all pages to use PHP `include` for shared components like the navigation (`nav.html`) and footer (`footer.html`).
+  - **Server-Side Includes**: Refactored all pages to use PHP `include` for shared components like the navigation (`nav.html`) and footer (`footer.php`).
   - **Self-Hosted Forms**: Replace the third-party Formspree dependency with a custom PHP script.
   - **Shared Head Include**: Created `head.php` to centralize meta tags and assets.
+  - **Bootstrap Implementation**: Implemented `src/bootstrap.php` as the single entry point for all pages.
 - **Security & Best Practices**:
   - **Configuration Management**: Implemented a `config.php` file for sensitive data.
   - **Professional Branding & Career Pivot**:
     - Created a dedicated `/resume/` page.
     - Refactored `/about/` narrative.
     - Updated `README.md`.
+  - **DJ Brain Project**:
+    - **Phase 0**: Completed project definition, architecture overview, and initial Docker scaffolding.
 - **Foundational Refactoring (v1.1.0)**:
   - Migrate all service pages from subdomains to subfolders.
   - Implemented a shared navigation menu.
@@ -81,6 +89,7 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
   - **Form Conversion**: Audit and convert all remaining service page contact forms from Formspree to the self-hosted PHP method.
 - **UI/UX Refinements**:
   - **FAQ Styling**: Improve the CSS for FAQ sections across all pages to enhance readability and visual appeal.
+  - **AI Collaboration Badge**: Added a "Developed with Gemini" badge to the site footer and `README.md`.
 - **Content Strategy & Updates**:
   - **Corporate Events Pivot**: Refocus the Corporate Events page away from Toronto to highlight Haliburton corporate events and AV services for northern retreats.
   - **Resume Expansion**: Add 6+ years of Rogers TV experience (Durham Region) to the resume.

@@ -7,6 +7,10 @@
  * The "config.php" file is ignored by Git to keep sensitive information private.
  */
 
+// --- Environment ---
+// Set to 'development' or 'production'. In 'development', some features like analytics may be disabled.
+define('ENVIRONMENT', 'development');
+
 // --- Site Identity ---
 define('SITE_NAME', 'Your Site Name');
 define('SITE_TAGLINE', 'Your Site Tagline');

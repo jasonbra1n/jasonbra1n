@@ -1,11 +1,7 @@
 <?php
-// --- CONFIGURATION ---
-// Load configuration from the root directory.
-if (file_exists(__DIR__ . '/../config.php')) {
-    require_once __DIR__ . '/../config.php';
-} else {
-    // Fallback for safety, though it should not be used in production.
-    die('Configuration file not found. Please copy config-sample.php to config.php and fill in your details.');
+// Load application bootstrap
+if (file_exists(__DIR__ . '/../src/bootstrap.php')) {
+    require_once __DIR__ . '/../src/bootstrap.php';
 }
 
 // Initialize variables to hold form data and error messages
@@ -166,7 +162,7 @@ $schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLAS
     </section>
   </div>
 
-  <?php include '../footer.html'; ?>
+  <?php include '../footer.php'; ?>
   <script src="../script.js"></script>
 </body>
 </html>

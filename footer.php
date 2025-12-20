@@ -3,6 +3,11 @@
   <p class="footer-italic-text">
     ΙΑΣΩΝ is the Greek origin of Jason, meaning healer. Jason Brain brings healing and joy through creative expression.
   </p>
+  <div style="margin-top: 1.5rem;">
+    <a href="https://deepmind.google/technologies/gemini/" target="_blank" rel="noopener noreferrer" title="Developed with Google Gemini">
+      <img src="https://img.shields.io/badge/Developed%20with-Gemini-8146FF?style=for-the-badge&logo=google-gemini&logoColor=white" alt="Developed with Gemini" width="140" height="28" style="height: 28px; width: auto;">
+    </a>
+  </div>
 </footer>
 
 <button class="scroll-to-top" aria-label="Scroll to top">

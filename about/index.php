@@ -1,7 +1,7 @@
 <?php
-// Load configuration
-if (file_exists(__DIR__ . '/../config.php')) {
-    require_once __DIR__ . '/../config.php';
+// Load application bootstrap
+if (file_exists(__DIR__ . '/../src/bootstrap.php')) {
+    require_once __DIR__ . '/../src/bootstrap.php';
 }
 
 // Define page-specific metadata
@@ -89,7 +89,7 @@ $schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLAS
     </section>
   </div>
 
-  <?php include '../footer.html'; ?>
+  <?php include '../footer.php'; ?>
   <script src="../script.js"></script>
 </body>
 </html>
