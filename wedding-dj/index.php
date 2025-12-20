@@ -204,21 +204,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
         <!-- Mix 1: Melodic House -->
         <div class="mix-item">
           <h4 class="mix-item-title">ΙΑΣΩΝ - 4x4.2: Heirloom (Melodic House)</h4>
-          <iframe scrolling="no" class="mix-item-iframe" id="hearthis_at_track_11056567" width="100%" height="150" src="https://app.hearthis.at/embed/11056567/transparent_black/?hcolor=&color=&style=2&block_size=2&block_space=1&background=1&waveform=0&cover=0&autoplay=0&css=" frameborder="0" allowtransparency allow="autoplay"><p>Listen to <a href="https://hearthis.at/iason/4x42/" target="_blank">ΙΑΣΩΝ - 4x4.2: Heirloom - April 2024</a> <span>by</span><a href="https://hearthis.at/iason/" target="_blank">Jason Brain | ΙΑΣΩΝ</a> <span>on</span> <a href="https://hearthis.at/" target="_blank">hearthis.at</a></p></iframe>
+          <div class="iframe-placeholder" data-src="https://app.hearthis.at/embed/11056567/transparent_black/?hcolor=&color=&style=2&block_size=2&block_space=1&background=1&waveform=0&cover=0&autoplay=0&css=" style="height: 150px;">
+            <div class="iframe-placeholder-content">
+              <div class="play-button"></div>
+              <p>Load "Heirloom" Mix</p>
+            </div>
+          </div>
           <p class="mix-description">Perfect for cocktail hour or late-night sophisticated vibes. <a href="https://www.mixcloud.com/jasonbra1n/%CE%B9%CE%B1%CF%83%CF%89%CE%BD-4x42-heirloom-mixed-april-2024/" target="_blank" class="mixcloud-link">Also on Mixcloud</a></p>
         </div>
 
         <!-- Mix 2: Reggae/Dancehall -->
         <div class="mix-item">
           <h4 class="mix-item-title">Versatile Waybacks Vol. 11 - 90s Dancehall (with DJ Klutch)</h4>
-          <iframe scrolling="no" class="mix-item-iframe" id="hearthis_at_track_6581803" width="100%" height="150" src="https://app.hearthis.at/embed/6581803/transparent_black/?hcolor=&color=&style=2&block_size=2&block_space=1&background=1&waveform=0&cover=0&autoplay=0&css=" frameborder="0" allowtransparency allow="autoplay"><p>Listen to <a href="https://hearthis.at/djklutchlive/waybacksvol11/" target="_blank">DJs Klutch &amp; Brain - Versatile Waybacks Vol. 11 90s Dancehall Super Mix</a> <span>by</span><a href="https://hearthis.at/djklutchlive/" target="_blank">Dj Klutch Live</a> <span>on</span> <a href="https://hearthis.at/" target="_blank">hearthis.at</a></p></iframe>
+          <div class="iframe-placeholder" data-src="https://app.hearthis.at/embed/6581803/transparent_black/?hcolor=&color=&style=2&block_size=2&block_space=1&background=1&waveform=0&cover=0&autoplay=0&css=" style="height: 150px;">
+            <div class="iframe-placeholder-content">
+              <div class="play-button"></div>
+              <p>Load "90s Dancehall" Mix</p>
+            </div>
+          </div>
           <p class="mix-description">Classic 90s dancehall energy - perfect for getting everyone moving!</p>
         </div>
 
         <!-- Mix 3: 90s Euro Dance -->
         <div class="mix-item">
           <h4 class="mix-item-title">Versatile Waybacks Vol. 9 - 90s Euro Dance (with DJ Klutch)</h4>
-          <iframe scrolling="no" class="mix-item-iframe" id="hearthis_at_track_4152575" width="100%" height="150" src="https://app.hearthis.at/embed/4152575/transparent_black/?hcolor=&color=&style=2&block_size=2&block_space=1&background=1&waveform=0&cover=0&autoplay=0&css=" frameborder="0" allowtransparency allow="autoplay"><p>Listen to <a href="https://hearthis.at/djklutchlive/waybacks9/" target="_blank">Versatile Waybacks Vol. 9.0 "90s Euro Dance"</a> <span>by</span><a href="https://hearthis.at/djklutchlive/" target="_blank">Dj Klutch Live</a> <span>on</span> <a href="https://hearthis.at/" target="_blank">hearthis.at</a></p></iframe>
+          <div class="iframe-placeholder" data-src="https://app.hearthis.at/embed/4152575/transparent_black/?hcolor=&color=&style=2&block_size=2&block_space=1&background=1&waveform=0&cover=0&autoplay=0&css=" style="height: 150px;">
+            <div class="iframe-placeholder-content">
+              <div class="play-button"></div>
+              <p>Load "90s Euro Dance" Mix</p>
+            </div>
+          </div>
           <p class="mix-description">High-energy 90s Euro dance classics - guaranteed to fill any dance floor! <a href="https://hearthis.at/iason/set/versatile-waybacks/" target="_blank" class="mixcloud-link">Full Versatile Waybacks Series</a></p>
         </div>
 
@@ -234,9 +249,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
 
     <!-- PLAYLIST SECTION STARTS HERE -->
     <section class="playlist-section">
-      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5Dmx1Q8gk6p3FfRo73uTC7?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1yrknz9oc6qOeRbMcdCWzH?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6zvtlZ2j96mg4Dh2AHUaRH?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <div class="iframe-placeholder spotify-placeholder" data-src="https://open.spotify.com/embed/playlist/5Dmx1Q8gk6p3FfRo73uTC7?utm_source=generator" style="height: 352px;">
+        <div class="iframe-placeholder-content">
+          <div class="play-button"></div>
+          <p>Load Spotify Playlist: Dinner & Cocktails</p>
+        </div>
+      </div>
+      <div class="iframe-placeholder spotify-placeholder" data-src="https://open.spotify.com/embed/playlist/1yrknz9oc6qOeRbMcdCWzH?utm_source=generator" style="height: 352px;">
+        <div class="iframe-placeholder-content">
+          <div class="play-button"></div>
+          <p>Load Spotify Playlist: All Time Hits</p>
+        </div>
+      </div>
+      <div class="iframe-placeholder spotify-placeholder" data-src="https://open.spotify.com/embed/playlist/6zvtlZ2j96mg4Dh2AHUaRH?utm_source=generator" style="height: 352px;">
+        <div class="iframe-placeholder-content">
+          <div class="play-button"></div>
+          <p>Load Spotify Playlist: Dance Party</p>
+        </div>
+      </div>
     </section>
     <!-- PLAYLIST SECTION ENDS HERE -->
 
@@ -271,21 +301,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
     <section class="blog">
       <h2>Wedding DJ Tips for Haliburton & Kawartha Lakes</h2>
       <h3>Frequently Asked Questions</h3>
-      <article>
-        <h4>What Should I Look for in a Wedding DJ in Haliburton?</h4>
-        <p>Choosing a wedding DJ in Haliburton or Minden involves evaluating experience, equipment (like RGB DMX lights), and playlist customization. Jason Brain offers over 30 years of expertise to ensure your outdoor wedding in Kawartha Lakes is a hit.</p>
-        <br><br>
-      </article>
-      <article>
-        <h4>Which Are the Best Wedding Venues in the Area?</h4>
-        <p>Top venues include <a href="https://www.sirsams.ca" target="_blank">Sir Sams Ski Resort</a>, <a href="https://www.boshkungsmokehouse.com" target="_blank">Boshkung Smokehouse</a>, <a href="https://www.sandylaneresort.com" target="_blank">Sandy Lane Resort</a>, and <a href="https://pinestone-resort.com" target="_blank">Pinestone Resort</a> for stunning settings. For hall options, consider <a href="https://www.haliburtonlegion.com/facility-rentals" target="_blank">The Royal Canadian Legion Branch 129 in Haliburton</a> or the hall at the <a href="https://www.dysartetal.ca/en/explore-and-play/aj-larue-community-centre.aspx" target="_blank">A.J. LaRue Community Centre</a>. A skilled wedding DJ can elevate any of these spaces with custom sound systems.</p>
-        <br><br>
-      </article>
-      <article>
-        <h4>How Can I Customize My Wedding Music?</h4>
-        <p>Work closely with your DJ to create custom wedding playlists tailored to your tastes. Jason Brain incorporates music videos and visuals, enhancing the experience at venues like barns or party tents in Haliburton and Kawartha Lakes.</p>
-        <br><br>
-      </article>
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <button class="faq-question">What Should I Look for in a Wedding DJ in Haliburton?</button>
+          <div class="faq-answer">
+            <p>Choosing a wedding DJ in Haliburton or Minden involves evaluating experience, equipment (like RGB DMX lights), and playlist customization. Jason Brain offers over 30 years of expertise to ensure your outdoor wedding in Kawartha Lakes is a hit.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Which Are the Best Wedding Venues in the Area?</button>
+          <div class="faq-answer">
+            <p>Top venues include <a href="https://www.sirsams.ca" target="_blank">Sir Sams Ski Resort</a>, <a href="https://www.boshkungsmokehouse.com" target="_blank">Boshkung Smokehouse</a>, <a href="https://www.sandylaneresort.com" target="_blank">Sandy Lane Resort</a>, and <a href="https://pinestone-resort.com" target="_blank">Pinestone Resort</a> for stunning settings. For hall options, consider <a href="https://www.haliburtonlegion.com/facility-rentals" target="_blank">The Royal Canadian Legion Branch 129 in Haliburton</a> or the hall at the <a href="https://www.dysartetal.ca/en/explore-and-play/aj-larue-community-centre.aspx" target="_blank">A.J. LaRue Community Centre</a>. A skilled wedding DJ can elevate any of these spaces with custom sound systems.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How Can I Customize My Wedding Music?</button>
+          <div class="faq-answer">
+            <p>Work closely with your DJ to create custom wedding playlists tailored to your tastes. Jason Brain incorporates music videos and visuals, enhancing the experience at venues like barns or party tents in Haliburton and Kawartha Lakes.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Fund the Vibes Section -->

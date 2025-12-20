@@ -53,9 +53,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Corporate DJ & AV Services | Jason Brain | Toronto & Ontario</title>
-  <meta name="description" content="Professional Corporate DJ and AV services in Toronto, Haliburton, and across Ontario. Jason Brain offers 30+ years of experience for conferences, product launches, and company events.">
-  <meta name="keywords" content="Corporate DJ Toronto, Corporate AV services, event DJ Ontario, conference DJ, product launch AV, Jason Brain, professional event production">
+  <title>Corporate Event DJ & AV | Haliburton & Northern Retreats | Jason Brain</title>
+  <meta name="description" content="Professional Corporate DJ and AV services for Northern Retreats in Haliburton, Minden, and Kawartha Lakes. Jason Brain offers 30+ years of experience for off-site conferences and team building.">
+  <meta name="keywords" content="Corporate DJ Haliburton, Northern Retreat AV, Corporate Retreat DJ, Minden Corporate Events, Kawartha Lakes AV, Jason Brain, team building DJ">
   <meta name="author" content="Jason Brain">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0633259514526906"
    crossorigin="anonymous"></script>
@@ -80,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
         "name": "Jason Brain",
         "url": "https://jasonbrain.com/"
       },
-      "description": "Professional DJ and AV services for corporate events in Toronto and across Ontario."
+      "description": "Professional DJ and AV services for corporate retreats and events in Haliburton and Northern Ontario."
     }
   </script>
 </head>
@@ -93,8 +93,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
     <div class="header-gradient"></div>
     <canvas class="lights"></canvas>
     <div class="header-content">
-      <h1 id="header-title">Corporate DJ & AV Production Services - Toronto & Ontario</h1>
-      <p>30+ Years of Professionalism, Reliability, and Event Excellence</p>
+      <h1 id="header-title">Corporate Event DJ & AV Production - Haliburton & Northern Retreats</h1>
+      <p>Bringing Professional City-Quality Production to the Serenity of the North</p>
       <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get a Quote!</button>
     </div>
   </header>
@@ -103,18 +103,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
       <h2>Meet Jason Brain - Your Corporate Event Partner</h2>
       <div class="about-content-wrapper">
         <div class="about-image-container">
-          <img src="images/jason-corporate.jpg" alt="Jason Brain - Professional Corporate DJ" 
+          <img src="../images/corporate-events-service.jpg" alt="Jason Brain - Professional Corporate DJ" 
                class="about-image">
         </div>
         <div class="about-text-content">
           <p class="intro-text">
-            <strong>I don't just play music – I provide seamless audio-visual solutions that elevate your corporate event.</strong>
+            <strong>I don't just play music – I provide seamless audio-visual solutions that elevate your corporate retreat.</strong>
           </p>
           <p>
-            With over 30 years of experience in event production, from intimate gatherings to large-scale nightclub events, I bring a level of professionalism and reliability that corporate clients demand. I understand that a corporate event is a reflection of your brand, and every detail matters.
+            With over 30 years of experience in event production, I specialize in bringing high-end audio-visual solutions to corporate retreats and off-site events in the Haliburton and Kawartha Lakes region. Whether you are hosting a leadership summit at a lakeside resort or a team-building weekend in the woods, I ensure your brand is presented flawlessly.
           </p>
           <p>
-            My approach is built on precision and planning. I work closely with event planners and marketing teams to ensure the audio, visual, and musical elements align perfectly with your event's goals, whether it's a product launch, a holiday party, or a multi-day conference.
+            My approach is built on precision and planning. I work closely with event planners and venue coordinators to ensure the audio, visual, and musical elements align perfectly with your event's goals, creating a seamless experience that allows your team to focus on connection and strategy.
           </p>
           <p>
             My approach is simple: <em>Your event's success is my top priority.</em> I provide not just a service, but a partnership, ensuring a flawless execution from start to finish.
@@ -136,7 +136,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
               </li>
               <li class="why-choose-list-item">
                 <span class="checkmark">✓</span>
-                Seamless Coordination: I work directly with your venue and event planners
+                Northern Specialist: Expert knowledge of local venues and logistics
               </li>
               <li class="why-choose-list-item">
                 <span class="checkmark">✓</span>
@@ -164,48 +164,53 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
     <section class="venues">
       <h2>Event Types</h2>
       <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
-        <img src="images/conference.jpg" alt="DJ for a corporate conference" loading="lazy">
+        <img src="../images/conference.webp" alt="DJ for a corporate conference" loading="lazy">
         <p>Conferences & Seminars</p>
       </div>
       <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
-        <img src="images/holiday-party.jpg" alt="DJ for a company holiday party" loading="lazy">
+        <img src="../images/holiday-party.webp" alt="DJ for a company holiday party" loading="lazy">
         <p>Holiday Parties</p>
       </div>
       <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
-        <img src="images/product-launch.jpg" alt="AV for a product launch event" loading="lazy">
-        <p>Product Launches</p>
+        <img src="../images/product-launch.webp" alt="AV for a product launch event" loading="lazy">
+        <p>Team Building</p>
       </div>
       <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
-        <img src="images/gala.jpg" alt="DJ for a corporate gala or awards night" loading="lazy">
-        <p>Gala Dinners & Awards</p>
+        <img src="../images/gala.webp" alt="DJ for a corporate gala or awards night" loading="lazy">
+        <p>Retreats & Summits</p>
       </div>
     </section>
     <hr>
     <section class="gallery">
       <h2>Past Corporate Events</h2>
-      <img src="images/event-setup-1.jpg" alt="Corporate event DJ setup with uplighting" loading="lazy">
-      <img src="images/event-setup-2.jpg" alt="AV setup for a corporate presentation" loading="lazy">
-      <img src="images/event-setup-3.jpg" alt="DJ playing at a corporate networking event" loading="lazy">
+      <img src="../images/event-setup-1.webp" alt="Corporate event DJ setup with uplighting" loading="lazy">
+      <img src="../images/event-setup-2.webp" alt="AV setup for a corporate presentation" loading="lazy">
+      <img src="../images/event-setup-3.webp" alt="DJ playing at a corporate networking event" loading="lazy">
     </section>
     <hr>
     <section class="blog">
       <h2>Corporate Event Insights</h2>
       <h3>Frequently Asked Questions</h3>
-      <article>
-        <h4>What AV services do you provide?</h4>
-        <p>I provide a comprehensive suite of AV services including professional sound systems (PA), wireless handheld and lavalier microphones, stage and atmospheric lighting, projectors and screens, and projection mapping for custom branding and visuals. I can handle the full technical production for most small to medium-sized events.</p>
-        <br><br>
-      </article>
-      <article>
-        <h4>How do you select music for a corporate event?</h4>
-        <p>Music selection is a collaborative process. I consult with you to understand the event's tone, audience demographics, and your brand's image. I can provide anything from unobtrusive background music for networking to upbeat, energetic playlists for a celebration. All music is clean, radio-edited, and professionally appropriate.</p>
-        <br><br>
-      </article>
-      <article>
-        <h4>Can you incorporate our company's branding?</h4>
-        <p>Absolutely. I can use projection mapping to display your company logo, custom graphics, or brand colors throughout the venue. Lighting can also be customized to match your brand's color palette, creating a cohesive and immersive brand experience for your guests.</p>
-        <br><br>
-      </article>
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <button class="faq-question">What AV services do you provide?</button>
+          <div class="faq-answer">
+            <p>I provide a comprehensive suite of AV services including professional sound systems (PA), wireless handheld and lavalier microphones, stage and atmospheric lighting, projectors and screens, and projection mapping for custom branding and visuals. I can handle the full technical production for most small to medium-sized events.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How do you select music for a corporate event?</button>
+          <div class="faq-answer">
+            <p>Music selection is a collaborative process. I consult with you to understand the event's tone, audience demographics, and your brand's image. I can provide anything from unobtrusive background music for networking to upbeat, energetic playlists for a celebration. All music is clean, radio-edited, and professionally appropriate.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Can you incorporate our company's branding?</button>
+          <div class="faq-answer">
+            <p>Absolutely. I can use projection mapping to display your company logo, custom graphics, or brand colors throughout the venue. Lighting can also be customized to match your brand's color palette, creating a cohesive and immersive brand experience for your guests.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="packages">
@@ -310,7 +315,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
           <strong>All packages include:</strong> Pre-event consultation, all necessary equipment, professional setup/teardown, and my 30+ years of event production experience.
         </p>
         <p class="small-text">
-          <em>Travel fees may apply for events outside the Greater Toronto Area and Haliburton region. All prices are subject to HST.</em>
+          <em>Travel included within the Haliburton region. Travel fees may apply for events in Muskoka or further afield. All prices are subject to HST.</em>
         </p>
       </div>
     </section>
@@ -368,11 +373,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
         
         <div class="contact-map-container">
           <h4>Service Area</h4>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d368330.1739848162!2d-79.75092656916503!3d43.71815565664923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C%20ON!5e0!3m2!1sen!2sca!4v1620000000000!5m2!1sen!2sca" width="100%" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184000.0000000001!2d-78.7!3d44.85!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cd5bdfd63c1a0f1%3A0x7a10b4e6b9e1b7e1!2sHaliburton%2C%20ON!5e0!3m2!1sen!2sca!4v9999999999999!5m2!1sen!2sca" width="100%" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           <div class="map-info-box">
-            <p><strong class="map-info-strong">Primary Area:</strong> Greater Toronto Area</p>
-            <p><strong class="map-info-strong">Also Serving:</strong> Haliburton, Kawarthas, and across Ontario</p>
-            <p class="small-text">Your partner in professional event production.</p>
+            <p><strong class="map-info-strong">Based in:</strong> Haliburton, Ontario</p>
+            <p><strong class="map-info-strong">Serving:</strong> Minden, Kawartha Lakes & Muskoka</p>
+            <p class="small-text">Your partner in northern event production.</p>
           </div>
         </div>
       </div>

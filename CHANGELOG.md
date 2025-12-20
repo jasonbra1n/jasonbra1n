@@ -7,6 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.2] - 2025-12-20
+
+### Added
+- **Web Developer**: Created a dedicated case study page (`web-developer/lab-project.php`) for the "LAB: Digital Workshop" project, including a "Recent Updates" section.
+- **Web Developer**: Added "Project Milestones" section to `lab-project.php` detailing v1.0.0 and v1.0.1 releases.
+- **Web Developer**: Created a dedicated case study page (`web-developer/jasonbrain-project.php`) for the main `jasonbrain.com` monorepo.
+- **Web Developer**: Added "Latest Update" and "Project Milestones" sections to the `jasonbrain-project.php` case study, sourcing content from the project's changelog.
+- **Styles**: Added `.spotify-placeholder` class to `styles.css` for branded Spotify placeholders.
+
+### Changed
+- **Web Developer**: Updated the project card in `web-developer/index.php` to link to the new case study page.
+- **Web Developer**: Updated the `jasonbrain.com` project card to link to its new case study page.
+- **Portfolio**: Updated `README.md` to include the LAB project and technical details of the `jasonbrain.com` monorepo.
+- **SEO**: Updated `sitemap.xml` to include the new case study page.
+- **Corporate Events**: Rewrote `corporate-events/index.php` to pivot focus from Toronto to Haliburton corporate retreats and northern AV services.
+- **Resume**: Added Rogers TV broadcast experience to `resume/index.php`.
+- **Performance**: Implemented "click-to-load" iframe facade pattern on `wedding-dj/index.php` to improve page load speed.
+- **Scripts**: Enhanced `script.js` to support dynamic height inheritance for iframe placeholders.
+- **UI/UX**: Refactored FAQ sections on all service pages to use interactive collapsible accordions.
+
 ## [1.4.1] - 2025-12-19
 
 ### Added

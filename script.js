@@ -112,12 +112,26 @@ document.addEventListener('DOMContentLoaded', () => {
       const iframe = document.createElement('iframe');
       iframe.src = placeholder.dataset.src;
       iframe.setAttribute('frameborder', '0');
-      iframe.setAttribute('allowtransparency', 'true');
-      iframe.setAttribute('allow', 'autoplay');
+      iframe.setAttribute('allow', 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture');
       iframe.width = '100%';
-      iframe.height = '150';
-      iframe.style.borderRadius = '10px';
+      iframe.height = placeholder.offsetHeight; // Use the placeholder's height
+      iframe.style.borderRadius = '12px'; // Match Spotify's style
       placeholder.parentNode.replaceChild(iframe, placeholder);
+    });
+  });
+
+  // FAQ Accordion
+  const faqQuestions = document.querySelectorAll('.faq-question');
+  faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+      const item = question.parentElement;
+      const answer = item.querySelector('.faq-answer');
+      item.classList.toggle('active');
+      if (item.classList.contains('active')) {
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      } else {
+        answer.style.maxHeight = null;
+      }
     });
   });
 

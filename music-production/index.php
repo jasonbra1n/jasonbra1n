@@ -171,7 +171,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
         <!-- REMix 1: EDM REMIX Production -->
         <div class="mix-item">
           <h4 class="mix-item-title">Jason Brain – Call On Me (Jason's 2025 R3tarded Valerie Remix)</h4>
-          <div class="iframe-placeholder" data-src="https://app.hearthis.at/embed/12690061/transparent_black/?hcolor=&color=&style=2&block_size=2&block_space=1&background=1&waveform=0&cover=0&autoplay=0&css=">
+          <div class="iframe-placeholder" data-src="https://app.hearthis.at/embed/12690061/transparent_black/?hcolor=&color=&style=2&block_size=2&block_space=1&background=1&waveform=0&cover=0&autoplay=0&css=" style="height: 150px;">
             <div class="iframe-placeholder-content">
               <div class="play-button"></div>
               <p>Load "Call On Me" Remix</p>
@@ -189,7 +189,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
       20+ years later, I recreated the "lost" remix from scratch as the 2017 digital remake by Jason Brain.
     </em>
           </p>
-          <div class="iframe-placeholder" data-src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/992903764&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+          <div class="iframe-placeholder" data-src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/992903764&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" style="height: 150px;">
             <div class="iframe-placeholder-content">
               <div class="play-button"></div>
               <p>Load "Sexual Healing" Remix</p>
@@ -202,7 +202,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
         <!-- Mix 1: Original Trance Production -->
         <div class="mix-item">
           <h4 class="mix-item-title">ΙΑΣΩΝ - "Bow Bow" (Original Trance Production - 423Hz Tuned)</h4>
-          <div class="iframe-placeholder" data-src="https://app.hearthis.at/embed/10484381/transparent_black/?hcolor=&color=&style=2&block_size=2&block_space=1&background=1&waveform=0&cover=0&autoplay=0&css=">
+          <div class="iframe-placeholder" data-src="https://app.hearthis.at/embed/10484381/transparent_black/?hcolor=&color=&style=2&block_size=2&block_space=1&background=1&waveform=0&cover=0&autoplay=0&css=" style="height: 150px;">
             <div class="iframe-placeholder-content">
               <div class="play-button"></div>
               <p>Load "Bow Bow" (Original)</p>
@@ -215,7 +215,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
         <!-- Mix 3: Another Rock Production -->
         <div class="mix-item">
           <h4 class="mix-item-title">King and Oakes - "Empty Box" (Rock Production)</h4>
-          <div class="iframe-placeholder" data-src="https://app.hearthis.at/embed/3715226/transparent_black/?hcolor=&color=&style=1&block_size=2&block_space=1&background=1&waveform=0&cover=0&autoplay=0&css=">
+          <div class="iframe-placeholder" data-src="https://app.hearthis.at/embed/3715226/transparent_black/?hcolor=&color=&style=1&block_size=2&block_space=1&background=1&waveform=0&cover=0&autoplay=0&css=" style="height: 150px;">
             <div class="iframe-placeholder-content">
               <div class="play-button"></div>
               <p>Load "Empty Box"</p>
@@ -227,7 +227,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
         <!-- Mix 4: Melodic House Mix -->
         <div class="mix-item">
           <h4 class="mix-item-title">ΙΑΣΩΝ - 4x4.2: Heirloom (Melodic House Mix)</h4>
-          <div class="iframe-placeholder" data-src="https://app.hearthis.at/embed/11056567/transparent_black/?hcolor=&color=&style=2&block_size=2&block_space=1&background=1&waveform=0&cover=0&autoplay=0&css=">
+          <div class="iframe-placeholder" data-src="https://app.hearthis.at/embed/11056567/transparent_black/?hcolor=&color=&style=2&block_size=2&block_space=1&background=1&waveform=0&cover=0&autoplay=0&css=" style="height: 150px;">
             <div class="iframe-placeholder-content">
               <div class="play-button"></div>
               <p>Load "Heirloom" Mix</p>
@@ -293,21 +293,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
     <section class="blog">
       <h2>Music Production Tips & Insights</h2>
       <h3>Frequently Asked Questions</h3>
-      <article>
-        <h4>What Makes a Great Custom Beat?</h4>
-        <p>A great custom beat starts with understanding your artistic vision and target audience. With 30+ years of experience across genres, I craft beats that complement your style while pushing creative boundaries. Every beat includes professional mixing and stems for maximum flexibility.</p>
-        <br><br>
-      </article>
-      <article>
-        <h4>How Do You Extract Clean Acapellas?</h4>
-        <p>Using advanced spectral editing tools and proprietary techniques developed over decades of production work, I can extract clean acapellas from most mixed tracks. Perfect for remixes, mashups, or creating new arrangements. Results vary by source material quality.</p>
-        <br><br>
-      </article>
-      <article>
-        <h4>What's Involved in Professional Remix Production?</h4>
-        <p>Professional remixes involve complete reconstruction of the original track's elements, adding new instrumentation, updating the arrangement, and creating a fresh sonic identity while respecting the original's essence. I work across all genres from trance to rock to dancehall.</p>
-        <br><br>
-      </article>
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <button class="faq-question">What Makes a Great Custom Beat?</button>
+          <div class="faq-answer">
+            <p>A great custom beat starts with understanding your artistic vision and target audience. With 30+ years of experience across genres, I craft beats that complement your style while pushing creative boundaries. Every beat includes professional mixing and stems for maximum flexibility.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How Do You Extract Clean Acapellas?</button>
+          <div class="faq-answer">
+            <p>Using advanced spectral editing tools and proprietary techniques developed over decades of production work, I can extract clean acapellas from most mixed tracks. Perfect for remixes, mashups, or creating new arrangements. Results vary by source material quality.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What's Involved in Professional Remix Production?</button>
+          <div class="faq-answer">
+            <p>Professional remixes involve complete reconstruction of the original track's elements, adding new instrumentation, updating the arrangement, and creating a fresh sonic identity while respecting the original's essence. I work across all genres from trance to rock to dancehall.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Fund the Vibes Section -->

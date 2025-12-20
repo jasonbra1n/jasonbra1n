@@ -100,7 +100,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
       <h2>Meet Jason Brain - Your Creative Web Architect</h2>
       <div class="about-content-wrapper">
         <div class="about-image-container">
-          <img src="../images/jason-webdev.jpg" alt="Jason Brain - Professional Web Developer" 
+          <img src="../images/web-development-setup.webp" alt="Jason Brain - Professional Web Developer" 
                class="about-image">
         </div>
         <div class="about-text-content">
@@ -180,34 +180,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST
     <hr>
     <section class="venues">
       <h2>Project Showcase</h2>
-      <div class="venue-card" onclick="window.open('https://github.com/jasonbra1n/jasonbra1n', '_blank')" style="cursor: pointer;">
+      <div class="venue-card" onclick="window.location.href='jasonbrain-project.php'" style="cursor: pointer;">
         <img src="../images/project-main.webp" alt="jasonbrain.com Monorepo Project" loading="lazy">
         <p><strong>jasonbrain.com</strong><br>Full-Stack Monorepo (PHP)</p>
       </div>
-      <div class="venue-card" onclick="window.open('https://github.com/jasonbra1n/lab.jasonbrain.com', '_blank')" style="cursor: pointer;">
-        <img src="../images/web-development-setup.webp" alt="Jason Brain Lab SPA Project" loading="lazy">
-        <p><strong>lab.jasonbrain.com</strong><br>React SPA / Code Playground</p>
+      <div class="venue-card" onclick="window.location.href='lab-project.php'" style="cursor: pointer;">
+        <img src="../images/web-development-setup.webp" alt="LAB: Digital Workshop SPA" loading="lazy">
+        <p><strong>LAB: Digital Workshop</strong><br>Vanilla JS SPA / Modular Tools</p>
       </div>
     </section>
     <hr>
     <section class="blog">
       <h2>Web Dev Insights & FAQ</h2>
       <h3>Frequently Asked Questions</h3>
-      <article>
-        <h4>How does AI improve web development?</h4>
-        <p>AI accelerates the development process through code generation, automated testing, and intelligent recommendations. This allows me to focus more on the creative and strategic aspects of your project, delivering a higher quality product faster. I use tools like GitHub Copilot and other AI assistants in my daily workflow.</p>
-        <br><br>
-      </article>
-      <article>
-        <h4>What is 'Full-Stack' development?</h4>
-        <p>Full-stack development means I handle both the 'front-end' (what users see and interact with in their browser) and the 'back-end' (the server, database, and application logic). This comprehensive approach ensures a seamless, fully integrated product from start to finish.</p>
-        <br><br>
-      </article>
-      <article>
-        <h4>Why is SEO important from the start?</h4>
-        <p>Building a website with Search Engine Optimization (SEO) in mind from day one is crucial. It involves structuring the site correctly, optimizing for speed, using proper tags, and creating quality content. This foundational work makes it much easier for search engines like Google to find and rank your site, driving organic traffic to your business.</p>
-        <br><br>
-      </article>
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <button class="faq-question">How does AI improve web development?</button>
+          <div class="faq-answer">
+            <p>AI accelerates the development process through code generation, automated testing, and intelligent recommendations. This allows me to focus more on the creative and strategic aspects of your project, delivering a higher quality product faster. I use tools like GitHub Copilot and other AI assistants in my daily workflow.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What is 'Full-Stack' development?</button>
+          <div class="faq-answer">
+            <p>Full-stack development means I handle both the 'front-end' (what users see and interact with in their browser) and the 'back-end' (the server, database, and application logic). This comprehensive approach ensures a seamless, fully integrated product from start to finish.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Why is SEO important from the start?</button>
+          <div class="faq-answer">
+            <p>Building a website with Search Engine Optimization (SEO) in mind from day one is crucial. It involves structuring the site correctly, optimizing for speed, using proper tags, and creating quality content. This foundational work makes it much easier for search engines like Google to find and rank your site, driving organic traffic to your business.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="packages">

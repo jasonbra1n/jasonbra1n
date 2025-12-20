@@ -258,6 +258,16 @@
       </div>
 
       <div class="resume-item">
+        <h3>Broadcast Production Crew (Volunteer)</h3>
+        <span class="meta">Rogers TV (Durham Region) | 6+ Years</span>
+        <ul>
+          <li><strong>Mobile Broadcasts (Oshawa Generals):</strong> Worked in the broadcast truck for every home game of the Oshawa Generals Hockey Club, managing live production tasks in a high-pressure sporting environment.</li>
+          <li><strong>Studio Productions:</strong> Contributed to a variety of in-studio shows, gaining technical proficiency with broadcast cameras, audio boards, and lighting systems.</li>
+          <li><strong>Live Event Operations:</strong> Developed critical skills in cable management, equipment setup, and real-time troubleshooting for live sporting events.</li>
+        </ul>
+      </div>
+
+      <div class="resume-item">
         <h3>Early Career & Education Funding</h3>
         <span class="meta">General Motors | Canadian Tire | Campus DJ</span>
         <ul>

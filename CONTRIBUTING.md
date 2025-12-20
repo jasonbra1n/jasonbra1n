@@ -33,6 +33,18 @@ All new copy and content should align with this voice. When in doubt, refer to t
 3.  **Update documentation**: If you add a new feature, update the `ROADMAP.md` or `CHANGELOG.md` as needed.
 4.  **Submit a Pull Request**: Provide a clear description of the changes you've made.
 
+## Content & Resume Maintenance
+
+To ensure the professional profile remains current, please adhere to the following update triggers:
+- **Resume Page (`/resume/`)**: Update this page whenever a significant project is completed, a new technology is mastered, or a new certification is earned.
+- **GitHub Profile (`README.md`)**: This file acts as the public-facing portfolio. Ensure it mirrors the skills and "Current Focus" listed on the resume page.
+- **Service Pages**: When adding new capabilities (e.g., a new music production service), ensure the corresponding service page and the "Services" dropdown in `nav.html` are updated.
+- **Project Case Studies**: For major projects (like `jasonbrain.com` or `lab.jasonbrain.com`), create a dedicated case study page within the `/web-developer/` directory to detail the project's architecture, features, and tech stack. This serves as a deep-dive for the portfolio.
+
+## Roadmap Maintenance
+
+- **Completed Tasks**: When a task in `ROADMAP.md` is marked as `[Done]`, move it from its current section (e.g., Short-Term) to the "Completed Tasks" list at the bottom of the file. This keeps the active roadmap focused on pending work.
+
 ## Coding Standards
 
 ### Site Architecture
@@ -80,10 +92,11 @@ All new copy and content should align with this voice. When in doubt, refer to t
 - **How to Use**:
   1.  Instead of placing an `<iframe>` tag directly in the HTML, create a `<div>` with the class `iframe-placeholder`.
   2.  Add a `data-src` attribute to the div, containing the URL that the final iframe will use.
+  3.  Set the desired height of the placeholder and the final iframe using an inline style (e.g., `style="height: 352px;"`). If no height is set, it will default to a `min-height` of 150px.
   3.  Inside the `div`, you can add simple HTML to style the placeholder, such as a play button and text.
 - **Example HTML**:
   ```html
-  <div class="iframe-placeholder" data-src="https://app.hearthis.at/embed/...">
+  <div class="iframe-placeholder" data-src="https://app.hearthis.at/embed/..." style="height: 150px;">
     <div class="iframe-placeholder-content">
       <div class="play-button"></div>
       <p>Load Player</p>
