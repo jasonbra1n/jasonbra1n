@@ -18,6 +18,7 @@ Welcome to my GitHub profile! I am a **Creative Professional and Technologist** 
 - **Code Editor**: [Visual Studio Code](https://code.visualstudio.com/) - My primary editor for this project, enhanced with the Gemini Code Assist extension.
 - **AI Code Assistant**: [Gemini Code Assist](https://deepmind.google/technologies/gemini/) - Used for pair programming, refactoring, and documentation in a Human-AI collaborative workflow.
 - **AI Jukebox Project IDE**: Google's "Antigravity" - The exclusive environment for developing the [DJ Brain](https://github.com/jasonbra1n/DJ-Brain) project.
+- **AI Workflow**: [Starter Prompts](./prompt.md) - A set of standardized prompts to streamline AI collaboration.
 
 ## 🎓 Education & Certifications
 - **Computer Programmer & Systems Analyst** (3-Year Diploma) – Fleming College
@@ -56,6 +57,13 @@ I have spent recent years as a celebrated DJ and event producer—mastering the 
 - **DIY Electronics**: Raspberry Pi, ESP32, Arduino projects, and laser engraving ⚡
  - **Music Production & DJ Services**: [jasonbrain.com](https://jasonbrain.com) | While shifting focus to tech, I continue to maintain my legacy in audio production and event entertainment.
 - **Geometric & Cosmic Observations**: Exploring patterns in nature, music, and the universe ✨
+
+## 🏆 Best Practices & Project Standards
+This repository is managed with professional-grade documentation and standards to ensure quality and maintainability.
+- **[Contribution Guide](./CONTRIBUTING.md)**: Detailed guidelines on architecture, coding standards, and release processes.
+- **[Style Guide](./STYLE_GUIDE.md)**: A comprehensive document defining the visual identity, color palette, and component styles.
+- **[Project Roadmap](./ROADMAP.md)**: A public-facing roadmap outlining short-term and long-term goals.
+- **[Changelog](./CHANGELOG.md)**: Meticulously maintained log of all changes, following Semantic Versioning.
 
 ## 🎯 Current Focus
 **Seeking employment as a Creative Professional.** I am looking for roles that utilize my hybrid background in technology and media—whether that's in technical direction, multimedia production, or creative web development. I bring maturity, experience, and technical discipline to every project.

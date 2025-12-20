@@ -92,3 +92,12 @@ This document defines the visual identity for jasonbrain.com. All new components
   - Background: `var(--color-neutral-light-gray)`.
   - Border: `2px dashed var(--color-accent-purple)`.
   - Used to highlight payment terms.
+
+### Code Blocks
+- **Preformatted Text (`pre`)**:
+  - Background: `#2d2d2d` (Dark Gray)
+  - Text Color: `#f8f8f2` (Off White)
+  - Font: Monospace
+  - Border-radius: `5px`
+- **Inline Code (`code`)**:
+  - Text Color: `#e6db74` (Soft Yellow)

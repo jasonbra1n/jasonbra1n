@@ -430,6 +430,19 @@ footer a:hover {
   height: 24px;
   fill: var(--color-neutral-white);
 }
+
+/* Code Syntax Highlighting */
+pre {
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  font-family: 'Courier New', Courier, monospace;
+}
+code {
+  color: #e6db74; /* Soft yellow for inline code */
+}
   ]]></b:skin>
 </head>
 
