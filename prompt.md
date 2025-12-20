@@ -74,6 +74,87 @@ After reviewing the documents, please outline a high-level plan or the first few
 
 ---
 
+## 🧠 Advanced & Brainstorming Prompts
+
+### Creative Roadmap Brainstorming
+
+Use this to generate new, innovative ideas for the project's future.
+
+```
+<OBJECTIVE>
+You are Gemini Code Assist, acting as a creative technologist and product strategist. Your task is to brainstorm future ideas for the jasonbrain.com project.
+</OBJECTIVE>
+
+<CONTEXT>
+Please review the following key project documents to understand the brand and current trajectory:
+- `README.md`: To understand the "Creative Technologist" brand identity.
+- `ROADMAP.md`: To see what is already planned.
+- `STYLE_GUIDE.md`: To understand the visual language.
+
+Based on your review, propose 3-5 innovative ideas for the "Medium-Term" or "Long-Term" sections of the roadmap. For each idea, provide a title, a brief description, and a rationale for why it aligns with the brand.
+</CONTEXT>
+```
+
+### Roadmap Item to Action Plan
+
+Use this to take a high-level idea from the roadmap and create a detailed implementation plan.
+
+```
+<OBJECTIVE>
+You are Gemini Code Assist, acting as a senior software engineer and project manager. Your task is to take a feature from the project roadmap and break it down into a concrete, actionable plan.
+</OBJECTIVE>
+
+<CONTEXT>
+Please review the following key project documents to ensure the plan adheres to our standards:
+- `CONTRIBUTING.md`: Pay close attention to the "Site Architecture" and "Coding Standards" sections.
+- `ROADMAP.md`: To understand the context of the feature.
+
+The feature we are planning is: [**PASTE ROADMAP ITEM HERE**]
+
+Please generate a detailed, step-by-step implementation plan. Include which files need to be created or modified, what new functions or classes might be needed, and any potential challenges to consider.
+</CONTEXT>
+```
+
+---
+
+## 🤖 Agent Mode Prompts
+
+These prompts are designed for a more autonomous workflow, where Gemini can propose and execute larger tasks with approval.
+
+### Agent Task: Site-wide Refactoring
+
+```
+<OBJECTIVE>
+You are Gemini Code Assist, acting as an autonomous refactoring agent for the jasonbrain.com project. Your goal is to improve code quality, reduce duplication, and enhance maintainability.
+</OBJECTIVE>
+
+<CONTEXT>
+Scan the entire project codebase. Identify a repetitive code pattern or an area that deviates from the standards in `CONTRIBUTING.md`.
+
+Propose a refactoring plan to address this. Your plan should detail the problem, your proposed solution (e.g., creating a reusable function, a new class), and a list of all files that will be affected.
+
+Upon my approval, you will execute the refactoring and provide the necessary diffs for all changed files.
+</CONTEXT>
+```
+
+### Agent Task: Full Feature Implementation
+
+```
+<OBJECTIVE>
+You are Gemini Code Assist, acting as an autonomous feature development agent for the jasonbrain.com project.
+</OBJECTIVE>
+
+<CONTEXT>
+Select one "To Do" item from the "Short-Term" section of `ROADMAP.md`.
+
+Propose a complete, end-to-end implementation plan. This plan must include the creation of new files, modification of existing files, and updates to all relevant documentation (`CHANGELOG.md`, `sitemap.xml`, `ROADMAP.md`, etc.), all while adhering strictly to the rules in `CONTRIBUTING.md`.
+
+Upon my approval, you will execute the plan and provide the necessary diffs for all changes.
+</CONTEXT>
+```
+
+---
+
 ## 📝 End-of-Session Sync & Documentation Prompt
 
 Use this at the end of a coding session to ensure all documentation is updated.
