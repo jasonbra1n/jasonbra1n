@@ -41,18 +41,18 @@ I have spent recent years as a celebrated DJ and event producer—mastering the 
   - **Security**: Self-hosted contact forms with honeypot protection and secure credential management (`config.php`).
   - **Performance**: Implements lazy-loading and an iframe facade pattern for media players to optimize Core Web Vitals.
 
- - **LAB: Digital Workshop**: [lab.jasonbrain.com](https://lab.jasonbrain.com) | [View Case Study](https://jasonbrain.com/web-developer/lab-project.php) | An open-source creative sandbox.
+- **LAB: Digital Workshop**: [lab.jasonbrain.com](https://lab.jasonbrain.com) | [View Case Study](https://jasonbrain.com/web-developer/lab-project.php) | An open-source creative sandbox.
   - **Architecture**: Single-Page Application (SPA) with a hybrid dual-loading system (Direct Injection + Iframe Embedding).
   - **Tech**: Built with pure HTML5, CSS3 (Glassmorphism UI), and Vanilla JavaScript (ES6+).
   - **Features**: Modular toolset organized into 5 pillars (Work, Learn, Rest, Play, Info) with dark/light mode accessibility.
 
- - **DJ Brain**: [View Repository](https://github.com/jasonbra1n/DJ-Brain) | An open-source, self-hosted, AI-powered jukebox system.
+- **DJ Brain**: [View Repository](https://github.com/jasonbra1n/DJ-Brain) | An open-source, self-hosted, AI-powered jukebox system.
   - **Concept**: A "self-hosted" AI DJ Co-Pilot designed to manage music queues intelligently for parties and venues.
   - **Architecture**: Dockerized stack with PHP Slim API, Python AI engine, and Vanilla JS frontend.
   - **Features**: Multi-room audio, BYOM (Bring Your Own Music), and intelligent gap-filling.
   - **Development**: Built exclusively with Google's "Antigravity" coding app and Gemini Code Assist.
 
- - **Web Development**: [jasonbrain.com/web-developer](https://jasonbrain.com/web-developer/) | AI-powered and creative web solutions. 🌐
+- **Web Development**: [jasonbrain.com/web-developer](https://jasonbrain.com/web-developer/) | AI-powered and creative web solutions. 🌐
 - **Home Automation**: Smart home setups using Home Assistant and IoT integration 🏡
 - **DIY Electronics**: Raspberry Pi, ESP32, Arduino projects, and laser engraving ⚡
  - **Music Production & DJ Services**: [jasonbrain.com](https://jasonbrain.com) | While shifting focus to tech, I continue to maintain my legacy in audio production and event entertainment.
