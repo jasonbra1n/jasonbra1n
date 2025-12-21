@@ -118,6 +118,64 @@ Task: Create the file structure for [**PAGE NAME**].
 
 ---
 
+## 📝 Content & Documentation Prompts
+
+Use these to automate content creation based on development activity.
+
+### Release Packaging Prompt
+
+```
+<OBJECTIVE>
+You are Gemini Code Assist. We are ready to package a new release for jasonbrain.com.
+</OBJECTIVE>
+
+<CONTEXT>
+Please follow the release process defined in `.github/CONTRIBUTING.md`:
+1.  **Identify Changes**: Review the `[Unreleased]` section of `CHANGELOG.md`.
+2.  **Propose Version**: Suggest a new semantic version number (e.g., v1.7.0).
+3.  **Create Release Notes**: Generate a new `docs/releases/vX.Y.Z.md` file summarizing the key changes.
+4.  **Update Changelog**: Generate the diff to move the `[Unreleased]` items under the new version heading in `CHANGELOG.md`.
+
+Task: Package the current unreleased changes into a new version.
+</CONTEXT>
+```
+
+### Blog Post from Release
+
+```
+<OBJECTIVE>
+You are Gemini Code Assist, acting as a content writer. Your task is to draft a blog post announcing a new software release for jasonbrain.com.
+</OBJECTIVE>
+
+<CONTEXT>
+Please review the following files:
+- `CHANGELOG.md`: To understand the changes in the specified version.
+- `blog-posts/`: To see the format and tone of previous blog posts.
+
+Your draft should be engaging, explain the key features in a user-friendly way, and be formatted in Markdown.
+
+Task: Draft a new blog post for the file `blog-posts/YYYY-MM-DD-release-vX.Y.Z.md` based on the changes in version [**VERSION NUMBER**].
+</CONTEXT>
+```
+
+### Case Study Update Prompt
+
+```
+<OBJECTIVE>
+You are Gemini Code Assist. Your task is to update the `jasonbrain-project.php` case study page with the latest project milestones, as per our contribution guidelines.
+</OBJECTIVE>
+
+<CONTEXT>
+Please review the following files:
+- `CHANGELOG.md`: To find the details of the latest release.
+- `public/web-developer/jasonbrain-project.php`: The case study file to be updated.
+
+Task: Add the latest release from the changelog as a new "Project Milestone" to `jasonbrain-project.php`. Ensure it follows the existing format and style.
+</CONTEXT>
+```
+
+---
+
 ## 🧠 Advanced & Brainstorming Prompts
 
 ### Creative Roadmap Brainstorming

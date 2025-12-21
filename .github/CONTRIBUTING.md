@@ -45,6 +45,7 @@ To ensure the professional profile remains current, please adhere to the followi
 - **GitHub Profile (`README.md`)**: This file acts as the public-facing portfolio. Ensure it mirrors the skills and "Current Focus" listed on the resume page.
 - **Service Pages**: When adding new capabilities (e.g., a new music production service), ensure the corresponding service page and the "Services" dropdown in `nav.html` are updated.
 - **Project Case Studies**: For major projects (like `jasonbrain.com` or `lab.jasonbrain.com`), create a dedicated case study page within the `/web-developer/` directory to detail the project's architecture, features, and tech stack. This serves as a deep-dive for the portfolio.
+- **jasonbrain.com Case Study**: Since this website is a living portfolio, the `public/web-developer/jasonbrain-project.php` page must be updated with every major release (e.g., v1.x.0) to document new architectural patterns, security improvements, or performance optimizations.
 
 ## Roadmap Maintenance
 
@@ -55,6 +56,8 @@ To ensure the professional profile remains current, please adhere to the followi
 ### Repository Structure
 We follow a clean, best-practice directory structure to separate concerns:
 - **`.gemini/`**: Context files and prompts for AI collaboration (e.g., `prompt.md`).
+  - `persona.md`: Defines the specific persona and priorities for the AI assistant.
+  - `scratchpad.md`: A temporary file for collaborative brainstorming and drafting.
 - **`.github/`**: GitHub-specific files (Workflows, `CONTRIBUTING.md`, `ROADMAP.md`, `STYLE_GUIDE.md`).
 - **`docs/releases/`**: Detailed release notes linked from the Changelog.
 - **`public/`**: The web root containing the deployable site (`index.php`, assets, `src/`, `config.php`).

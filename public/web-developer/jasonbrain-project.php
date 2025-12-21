@@ -52,29 +52,41 @@ $page_description = 'Case study of jasonbrain.com - A custom-built, performance-
     </section>
 
     <section>
-      <h2>Latest Update: v1.4.1 - Security Hardening</h2>
+      <h2>Latest Update: v1.6.0 - Project Hub & Content Expansion</h2>
       <div class="update-box">
-        <p>This milestone focused on removing third-party dependencies and enhancing site security by converting all contact forms to a self-hosted PHP solution.</p>
+        <p>This release introduced a new public-facing hub for the project's repository and expanded the site's content structure with a dedicated blog landing page.</p>
         <ul>
-          <li>Implemented a secure, self-hosted PHP mailer script across all service pages.</li>
-          <li>Decoupled credentials using a `config.php` file, which is excluded from version control.</li>
-          <li>Added honeypot fields for spam protection and standardized input sanitization.</li>
+          <li>Launched a static `index.html` at the repository root to serve as a project hub on GitHub Pages.</li>
+          <li>Created a new `/blog/` landing page to act as a central hub for the Music and Tech blogs.</li>
+          <li>Enhanced the AI collaboration workflow by adding new, context-aware prompts in `.gemini/prompt.md`.</li>
         </ul>
       </div>
     </section>
 
     <section>
       <h2>Project Milestones</h2>
-      <div class="milestone-item">
-        <h3>v1.4.0: Professional Rebranding</h3>
+       <div class="milestone-item">
+        <h3>v1.5.1: Strategic Brand Pivot & Accessibility Fixes</h3>
         <div class="update-box" style="border-color: var(--color-accent-purple); background: #f8f4ff;">
-            <p>Shifted the site's narrative to "Creative Technologist" by adding a professional resume and rewriting key content to bridge creative and technical expertise.</p>
+            <p>Formalized the distinction between the personal brand and the **BrainAV** tech lab by creating a new GitHub organization and dedicated project case studies. Also addressed a key accessibility issue.</p>
+        </div>
+      </div>
+       <div class="milestone-item">
+        <h3>v1.5.0: Architectural Standardization & AI Workflow</h3>
+        <div class="update-box" style="border-color: var(--color-accent-cyan); background: #f0f8ff;">
+            <p>Implemented `src/bootstrap.php` as a single, unified entry point for the entire application, significantly improving maintainability. Also formalized the Human-AI development workflow with dedicated prompts.</p>
+        </div>
+      </div>
+       <div class="milestone-item">
+        <h3>v1.4.1: Security Hardening</h3>
+        <div class="update-box" style="border-color: var(--color-accent-purple); background: #f8f4ff;">
+            <p>Removed third-party dependencies by converting all contact forms to a self-hosted PHP solution with a secure `config.php` and honeypot spam protection.</p>
         </div>
       </div>
       <div class="milestone-item">
-        <h3>v1.3.0: Performance & Accessibility</h3>
+        <h3>v1.4.0: Professional Rebranding</h3>
         <div class="update-box" style="border-color: var(--color-accent-cyan); background: #f0f8ff;">
-            <p>Implemented the "click-to-load" iframe facade pattern to improve Core Web Vitals and refactored interactive elements for better keyboard accessibility.</p>
+            <p>Shifted the site's narrative to "Creative Technologist" by adding a professional resume and rewriting key content to bridge creative and technical expertise.</p>
         </div>
       </div>
       <div class="milestone-item">
@@ -91,9 +103,10 @@ $page_description = 'Case study of jasonbrain.com - A custom-built, performance-
         <h3>Component-Based PHP Architecture</h3>
         <p>To ensure maintainability and scalability, the site utilizes a modular structure:</p>
         <ul>
-          <li><strong>Server-Side Includes:</strong> Core components like navigation and footers are managed centrally and injected via PHP, ensuring consistency across all pages.</li>
+          <li><strong>Application Entrypoint:</strong> All pages initialize through a central `src/bootstrap.php` file, standardizing configuration and setup.</li>
+          <li><strong>Server-Side Includes:</strong> Core components like the head, navigation, and footer are managed centrally and injected via PHP.</li>
           <li><strong>Centralized Assets:</strong> CSS and JavaScript are consolidated in the root to reduce HTTP requests and simplify caching strategies.</li>
-          <li><strong>Configuration Management:</strong> Sensitive data is decoupled using a `config.php` file, adhering to security best practices.</li>
+          <li><strong>Secure Configuration:</strong> Sensitive data is decoupled using a `.gitignore`'d `config.php` file, adhering to security best practices.</li>
         </ul>
       </div>
       
