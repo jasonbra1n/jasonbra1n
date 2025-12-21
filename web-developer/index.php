@@ -149,22 +149,22 @@ $schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLAS
 
     <section class="venues">
       <h2>Development Services</h2>
-      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
+      <a href="#contact" class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); return false;">
         <img src="../images/custom-websites.webp" alt="Custom website design and development" loading="lazy">
         <p>Custom Websites</p>
-      </div>
-      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
+      </a>
+      <a href="#contact" class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); return false;">
         <img src="../images/ai-integration.webp" alt="AI integration for web applications" loading="lazy">
         <p>AI Integration</p>
-      </div>
-      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
+      </a>
+      <a href="#contact" class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); return false;">
         <img src="../images/ecommerce.webp" alt="E-commerce and online store solutions" loading="lazy">
         <p>E-commerce</p>
-      </div>
-      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
+      </a>
+      <a href="#contact" class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); return false;">
         <img src="../images/seo.webp" alt="SEO and performance optimization" loading="lazy">
         <p>SEO & Optimization</p>
-      </div>
+      </a>
     </section>
     <hr>
     <section class="venues">
@@ -180,6 +180,10 @@ $schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLAS
       <div class="venue-card" onclick="window.location.href='dj-brain-project.php'" style="cursor: pointer;">
         <img src="../images/music-production-service_tn.webp" alt="DJ Brain Project" loading="lazy">
         <p><strong>DJ Brain</strong><br>AI-Powered Jukebox System</p>
+      </div>
+      <div class="venue-card" onclick="window.location.href='ai-coproducer-project.php'" style="cursor: pointer;">
+        <img src="../images/ai-integration.webp" alt="AI Co-Producer Project" loading="lazy">
+        <p><strong>AI Co-Producer</strong><br>AI Assistant for Ableton Live</p>
       </div>
     </section>
     <hr>

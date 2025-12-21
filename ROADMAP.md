@@ -11,15 +11,21 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
 
 ## Short-Term (Next 3 Months)
 
+- **[To Do] Strategic Brand Pivot ([BrainAV](https://github.com/BrainAV))**:
+  - **Differentiation**: Formalize the distinction between **Jason Brain** (Personal Services/Portfolio) and **BrainAV** (AI Products/Tech Lab).
+  - **Rebranding**: Transition `BrainAV.ca` from a wedding DJ service to the home for "The DJ Brain" and AI music tools.
+
 - **[To Do] Performance & Accessibility Pass**:
   - **Image Optimization**: Implement responsive images using `srcset` or the `<picture>` element to improve load times on different devices.
-  - **[Done] Iframe Optimization**: Expand the use of the "click-to-load" iframe facade pattern to all pages with embedded media (e.g., Spotify, HearThis.at) to improve performance.
   - **Asset Minification**: Introduce a build step to minify CSS and JavaScript files for production.
+  - **Venue Card Accessibility**: Refactor venue cards to use semantic `<a>` tags instead of `<div>` with `onclick` handlers.
+  - **Remove Inline JS**: Move inline `onclick` handlers (e.g., scroll behaviors) to `script.js` using event delegation.
 - **[To Do] Enhance SEO & User Experience**:
   - Expand Schema.org structured data on all pages for richer search results.
 - **[To Do] Configuration Refactoring**:
   - **Centralize Site Data**: Define constants for Site Name, Base URL, Contact Address, and Social Links in `config.php`.
   - **Refactor Pages**: Update all pages (`index.php`, service pages, contact forms) to use the shared `head.php` include and config constants, reducing hardcoded values and improving maintainability.
+  - **Centralize Form Logic**: Create a `src/ContactForm.php` class to encapsulate form handling logic, reducing duplication across service pages.
 - **[In Progress] Blog Template Development**:
   - **Initial Template Complete**: A custom Blogger XML template (`blogger-template.xml`) has been developed to align with the main site's branding and `STYLE_GUIDE.md`.
   - **[To Do] Refinement & Deployment**: Refine the template's CSS variables and responsive behavior, then deploy it to both the Music Blog and Tech Blog.
@@ -36,7 +42,7 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
   - Investigate more dynamic ways to present music (e.g., custom audio player, API integration with Mixcloud/SoundCloud).
   - Add more context or stories behind the featured mixes and productions.
 
-- **[In Progress] DJ Brain Project**:
+- **[In Progress] DJ Brain (BrainAV Flagship Product)**:
   - **Phase 1 (Foundation)**: Implement Mopidy setup, Database Schema, and PHP Backend MVP (API & Request Handling).
   - **Phase 2 (The Brain)**: Develop the Python AI Engine for intelligent queue management and context awareness.
   - **Phase 3 (Polish)**: Refine the frontend UI and implement multi-room audio support.
@@ -46,6 +52,11 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
 - **[Planned] Enhance Header Animation**:
   - Refactor the existing header canvas animation in `script.js` to be more modular and configurable.
   - Explore adding new interactive layers or effects (e.g., audio-reactive elements, different color palettes) to the "disco ball" and "water ripple" animations.
+
+- **[Planned] BRAIN AV: AI Co-Producer**:
+  - **Concept**: An open-source AI assistant for Ableton Live acting as an "Executive Producer" via OSC.
+  - **Features**: Generative MIDI composition, sound design recipes, and arrangement orchestration.
+  - **Tech**: Python bridge, AbletonOSC, and Local/Cloud LLM inference.
 
 - **[Planned] Interactive Web Development Portfolio**:
   - Create a dedicated gallery or case study section for web development projects.
@@ -93,3 +104,7 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
 - **Content Strategy & Updates**:
   - **Corporate Events Pivot**: Refocus the Corporate Events page away from Toronto to highlight Haliburton corporate events and AV services for northern retreats.
   - **Resume Expansion**: Add 6+ years of Rogers TV experience (Durham Region) to the resume.
+- **Strategic Brand Pivot**:
+  - **Migration**: Moved "DJ Brain" project assets and documentation to the BrainAV organization context.
+- **Performance**:
+  - **Iframe Optimization**: Expanded the use of the "click-to-load" iframe facade pattern to all pages with embedded media (e.g., Spotify, HearThis.at) to improve performance.

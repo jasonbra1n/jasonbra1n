@@ -17,7 +17,7 @@ Welcome to my GitHub profile! I am a **Creative Professional and Technologist** 
 ## 🧰 Development Tools
 - **Code Editor**: [Visual Studio Code](https://code.visualstudio.com/) - My primary editor for this project, enhanced with the Gemini Code Assist extension.
 - **AI Code Assistant**: [Gemini Code Assist](https://deepmind.google/technologies/gemini/) - Used for pair programming, refactoring, and documentation in a Human-AI collaborative workflow.
-- **AI Jukebox Project IDE**: [Google's "Antigravity"](https://antigravity.google/) - The exclusive environment for developing the [DJ Brain](https://github.com/jasonbra1n/DJ-Brain) project.
+- **AI Jukebox Project IDE**: [Google's "Antigravity"](https://antigravity.google/) - The exclusive environment for developing the [DJ Brain](https://github.com/BrainAV/The-DJ-Brain) project.
 - **AI Workflow**: [Starter Prompts](./prompt.md) - A set of standardized prompts to streamline AI collaboration.
 
 ## 🎓 Education & Certifications
@@ -46,14 +46,21 @@ I have spent recent years as a celebrated DJ and event producer—mastering the 
   - **Tech**: Built with pure HTML5, CSS3 (Glassmorphism UI), and Vanilla JavaScript (ES6+).
   - **Features**: Modular toolset organized into 5 pillars (Work, Learn, Rest, Play, Info) with dark/light mode accessibility.
 
-- **DJ Brain**: [View Repository](https://github.com/jasonbra1n/DJ-Brain) | An open-source, self-hosted, AI-powered jukebox system.
+- **DJ Brain**: [View Repository](https://github.com/BrainAV/The-DJ-Brain) | The flagship product of **[BrainAV](https://github.com/BrainAV)**.
   - **Concept**: A "self-hosted" AI DJ Co-Pilot designed to manage music queues intelligently for parties and venues.
   - **Architecture**: Dockerized stack with PHP Slim API, Python AI engine, and Vanilla JS frontend.
   - **Features**: Multi-room audio, BYOM (Bring Your Own Music), and intelligent gap-filling.
   - **Development**: Built exclusively with Google's "Antigravity" coding app and Gemini Code Assist.
 
+- **AI Co-Producer**: [View Repository](https://github.com/BrainAV/ai-coproducer) | [View Case Study](https://jasonbrain.com/web-developer/ai-coproducer-project.php) | An open-source AI assistant for Ableton Live.
+  - **Concept**: Acts as an "Executive Producer" inside the DAW, using natural language to compose and arrange music via OSC.
+  - **Tech**: Python bridge, AbletonOSC, and Local/Cloud LLM inference (Gemini/Ollama).
+
 - **Web Development**: [jasonbrain.com/web-developer](https://jasonbrain.com/web-developer/) | AI-powered and creative web solutions. 🌐
 - **Home Automation**: Smart home setups using Home Assistant and IoT integration 🏡
+- **3D Printing & Rapid Prototyping**: Custom design and fabrication using FDM printers.
+  - **Tech**: Creality Ender 3/CR series running Klipper firmware via Raspberry Pi (Fluidd interface).
+  - **Capabilities**: Functional prototypes, custom equipment mounts, and replacement parts using PLA, PETG, and TPU.
 - **DIY Electronics**: Raspberry Pi, ESP32, Arduino projects, and laser engraving ⚡
  - **Music Production & DJ Services**: [jasonbrain.com](https://jasonbrain.com) | While shifting focus to tech, I continue to maintain my legacy in audio production and event entertainment.
 - **Geometric & Cosmic Observations**: Exploring patterns in nature, music, and the universe ✨

@@ -37,7 +37,7 @@ $page_description = 'Case study of DJ Brain - An open-source, self-hosted, AI-po
       <h1 id="header-title">DJ Brain</h1>
       <p>Open-Source AI-Powered Jukebox System</p>
       <div style="margin-top: 2rem;">
-        <a href="https://github.com/jasonbra1n/DJ-Brain" target="_blank" class="cta-button">View Repository</a>
+        <a href="https://github.com/BrainAV/The-DJ-Brain" target="_blank" class="cta-button">View Repository</a>
       </div>
     </div>
   </header>

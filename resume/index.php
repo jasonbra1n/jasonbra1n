@@ -187,6 +187,8 @@ $schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLAS
           <div class="skill-tag">Serato DJ Pro</div>
           <div class="skill-tag">3D Printing / CAD</div>
           <div class="skill-tag">Laser Engraving</div>
+          <div class="skill-tag">4K Drone Pilot</div>
+          <div class="skill-tag">Live Streaming</div>
         </div>
       </div>
       <div class="resume-item">
@@ -279,7 +281,7 @@ $schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLAS
       <h2 class="resume-section-title">Applied Technology & Hardware Projects</h2>
       
       <div class="resume-item">
-        <h3>3D Printing & Additive Manufacturing</h3>
+        <h3>3D Printing & Rapid Prototyping</h3>
         <span class="meta">Independent Project | 2020 - Present</span>
         <ul>
           <li><strong>Systems Integration:</strong> Integrated Raspberry Pi microcontrollers with Creality Ender 3/CR printers to run <strong>Klipper</strong> firmware and <strong>Fluidd</strong> interface, enabling high-precision printing and remote management.</li>

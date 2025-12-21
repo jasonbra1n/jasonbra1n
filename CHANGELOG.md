@@ -7,8 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.1] - 2025-12-20
+
 ### Added
 - **Docs**: Created a second blog post for 2025-12-20 announcing the v1.5.0 release.
+- **Documentation**: Updated `README.md` and `ROADMAP.md` to link to the new BrainAV GitHub Organization.
+- **Web Developer**: Created a new case study page for the "BRAIN AV: AI Co-Producer" project.
+- **Portfolio**: Added "AI Co-Producer" project to `README.md`.
+- **Portfolio**: Expanded "3D Printing" details in `README.md` and `resume/index.php` to reflect skills listed on BrainAV.ca.
+- **Portfolio**: Added "Drone Pilot" and "Live Streaming" skills to `resume/index.php`, completing the migration of personal services from BrainAV.
+- **Portfolio**: Updated "DJ Brain" repository link to the new BrainAV organization location.
+- **Roadmap**: Added tasks for "Venue Card Accessibility" and "Centralize Form Logic" following a QA consistency check.
 
 ## [1.5.0] - 2025-12-20
 
