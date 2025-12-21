@@ -1150,6 +1150,44 @@ iframe[src*="google.com/maps"]:hover {
   font-style:italic;
 }
 
+/* Platforms Grid (Social/Tech Stack) */
+.platforms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.platform-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-text-dark);
+  padding: 1rem;
+  border-radius: 10px;
+  background: var(--color-neutral-light-gray);
+  transition: transform 0.2s, background-color 0.2s;
+}
+.platform-link:hover {
+  transform: translateY(-3px);
+  background: #f0e6ff; /* Light purple tint */
+}
+.platform-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.platform-name {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: var(--color-primary-bg);
+}
+.platform-description {
+  font-size: 0.8rem;
+  color: var(--color-text-medium);
+}
+
 @media (max-width: 600px) {
   .contact-card {
     padding: 1.5rem;

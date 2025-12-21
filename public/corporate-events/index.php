@@ -81,7 +81,8 @@ $schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLAS
     <div class="header-gradient"></div>
     <canvas class="lights"></canvas>
     <div class="header-content">
-      <h1 id="header-title">Corporate Event DJ & AV Production - Haliburton & Northern Retreats</h1>
+      <h1 id="header-title">Corporate Event DJ & AV</h1>
+      <p style="font-size: 2rem; font-weight: bold; margin: 0.5rem 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Haliburton & Northern Retreats</p>
       <p>Bringing Professional City-Quality Production to the Serenity of the North</p>
       <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get a Quote!</button>
     </div>
@@ -151,22 +152,22 @@ $schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLAS
 
     <section class="venues">
       <h2>Event Types</h2>
-      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
+      <a href="#contact" class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); return false;">
         <img src="../images/conference.webp" alt="DJ for a corporate conference" loading="lazy">
         <p>Conferences & Seminars</p>
-      </div>
-      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
+      </a>
+      <a href="#contact" class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); return false;">
         <img src="../images/holiday-party.webp" alt="DJ for a company holiday party" loading="lazy">
         <p>Holiday Parties</p>
-      </div>
-      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
+      </a>
+      <a href="#contact" class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); return false;">
         <img src="../images/product-launch.webp" alt="AV for a product launch event" loading="lazy">
         <p>Team Building</p>
-      </div>
-      <div class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
+      </a>
+      <a href="#contact" class="venue-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'}); return false;">
         <img src="../images/gala.webp" alt="DJ for a corporate gala or awards night" loading="lazy">
         <p>Retreats & Summits</p>
-      </div>
+      </a>
     </section>
     <hr>
     <section class="gallery">

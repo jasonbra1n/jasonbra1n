@@ -26,16 +26,16 @@ All new copy and content should align with this voice. When in doubt, refer to t
 
 ## Development Workflow
 
-1.  **Initial Setup**: Before starting, copy the `config-sample.php` file to a new file named `config.php`. Update `config.php` with your local environment details (e.g., a test email address). This file is ignored by Git and is required for features like the contact form to work.
+1.  **Initial Setup**: Before starting, copy the `public/config-sample.php` file to a new file named `public/config.php`. Update `public/config.php` with your local environment details (e.g., a test email address). This file is ignored by Git and is required for features like the contact form to work.
     ```bash
-    cp config-sample.php config.php
+    cp public/config-sample.php public/config.php
     ```
 1.  **Create a new branch**: All new features or fixes should be done in a separate branch.
     ```bash
     git checkout -b feature/your-feature-name
     ```
 2.  **Write clean code**: Follow the coding standards outlined below.
-3.  **Update documentation**: If you add a new feature, update the `ROADMAP.md` or `CHANGELOG.md` as needed.
+3.  **Update documentation**: If you add a new feature, update the `[ROADMAP.md](./ROADMAP.md)` or `CHANGELOG.md` as needed.
 4.  **Submit a Pull Request**: Provide a clear description of the changes you've made.
 
 ## Content & Resume Maintenance
@@ -48,9 +48,17 @@ To ensure the professional profile remains current, please adhere to the followi
 
 ## Roadmap Maintenance
 
-- **Completed Tasks**: When a task in `ROADMAP.md` is marked as `[Done]`, move it from its current section (e.g., Short-Term) to the "Completed Tasks" list at the bottom of the file. This keeps the active roadmap focused on pending work.
+- **Completed Tasks**: When a task in `[ROADMAP.md](./ROADMAP.md)` is marked as `[Done]`, move it from its current section (e.g., Short-Term) to the "Completed Tasks" list at the bottom of the file. This keeps the active roadmap focused on pending work.
 
 ## Coding Standards
+
+### Repository Structure
+We follow a clean, best-practice directory structure to separate concerns:
+- **`.gemini/`**: Context files and prompts for AI collaboration (e.g., `prompt.md`).
+- **`.github/`**: GitHub-specific files (Workflows, `CONTRIBUTING.md`, `ROADMAP.md`, `STYLE_GUIDE.md`).
+- **`docs/releases/`**: Detailed release notes linked from the Changelog.
+- **`public/`**: The web root containing the deployable site (`index.php`, assets, `src/`, `config.php`).
+- **`index.html` (root)**: A static landing page for the repository's GitHub Pages site, acting as a project hub.
 
 ### Site Architecture
 - **Multi-Page Structure**: The site is moving from a single-page, anchor-link-heavy design to a more robust multi-page architecture. New top-level sections should be created in their own subdirectories (e.g., `/about/`, `/contact/`, `/resume/`) with an `index.php` file. This improves SEO, maintainability, and user navigation.
@@ -75,7 +83,7 @@ To ensure the professional profile remains current, please adhere to the followi
 ### CSS
 - Follow the existing BEM-like naming convention (e.g., `.contact-form-container`, `.package-feature-item`).
 - Keep styles organized into logical sections with comments (e.g., `/* Top Navigation */`, `/* Contact Section */`).
-- Use the CSS variables defined in `:root` for all colors and fonts to maintain consistency with `STYLE_GUIDE.md`.
+- Use the CSS variables defined in `:root` for all colors and fonts to maintain consistency with `[STYLE_GUIDE.md](./STYLE_GUIDE.md)`.
 - Prioritize mobile-first responsive design. Use `@media (max-width: ...)` for adjustments on smaller screens.
 
 ### JavaScript

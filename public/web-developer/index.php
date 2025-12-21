@@ -169,22 +169,26 @@ $schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLAS
     <hr>
     <section class="venues">
       <h2>Project Showcase</h2>
-      <div class="venue-card" onclick="window.location.href='jasonbrain-project.php'" style="cursor: pointer;">
+      <a href="brainav-project.php" class="venue-card">
+        <img src="../images/ai-integration.webp" alt="BrainAV Organization" loading="lazy">
+        <p><strong>BrainAV</strong><br>Creative Tech Lab & AI Projects</p>
+      </a>
+      <a href="jasonbrain-project.php" class="venue-card">
         <img src="../images/project-main.webp" alt="jasonbrain.com Monorepo Project" loading="lazy">
         <p><strong>jasonbrain.com</strong><br>Full-Stack Monorepo (PHP)</p>
-      </div>
-      <div class="venue-card" onclick="window.location.href='lab-project.php'" style="cursor: pointer;">
+      </a>
+      <a href="lab-project.php" class="venue-card">
         <img src="../images/web-development-setup.webp" alt="LAB: Digital Workshop SPA" loading="lazy">
         <p><strong>LAB: Digital Workshop</strong><br>Vanilla JS SPA / Modular Tools</p>
-      </div>
-      <div class="venue-card" onclick="window.location.href='dj-brain-project.php'" style="cursor: pointer;">
+      </a>
+      <a href="dj-brain-project.php" class="venue-card">
         <img src="../images/music-production-service_tn.webp" alt="DJ Brain Project" loading="lazy">
         <p><strong>DJ Brain</strong><br>AI-Powered Jukebox System</p>
-      </div>
-      <div class="venue-card" onclick="window.location.href='ai-coproducer-project.php'" style="cursor: pointer;">
+      </a>
+      <a href="ai-coproducer-project.php" class="venue-card">
         <img src="../images/ai-integration.webp" alt="AI Co-Producer Project" loading="lazy">
         <p><strong>AI Co-Producer</strong><br>AI Assistant for Ableton Live</p>
-      </div>
+      </a>
     </section>
     <hr>
     <section class="blog">

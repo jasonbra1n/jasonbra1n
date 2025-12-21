@@ -7,6 +7,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.6.0] - 2025-12-21
+
+### Added
+- **Repository**: Added a static `index.html` at the root to serve as a GitHub Pages landing hub for the project repository.
+- **Blog**: Created a dedicated blog landing page at `/blog/` to serve as a hub for the Music and Tech blogs.
+- **AI Workflow**: Added new prompts to `.gemini/prompt.md` for targeted development in the `public/` directory.
+- **Contact Page**: Added a sidebar with social media links, fulfilling a roadmap item.
+- **Styles**: Added missing `.platforms-grid` and `.platform-link` styles to `styles.css` for consistent social link display.
+- **Documentation**: Added "Repository Structure" section to `.github/CONTRIBUTING.md` to define the directory layout standards.
+- **Documentation**: Added links to `SECURITY.md` and `CODE_OF_CONDUCT.md` in `README.md` under Project Standards.
+- **Architecture**: Moved all deployable website code (index.php, assets, src) to a `public/` directory to separate it from repository metadata.
+
+### Changed
+- **Navigation**: Updated the "Blogs" link in `nav.html` to point to the new `/blog/` landing page.
+- **README**: Added a "Project Hub" badge to `README.md` linking to the new GitHub Pages landing page.
+- **Corporate Events**: Refactored the page header for improved readability.
+- **Repository**: Moved `prompt.md` to `.gemini/` directory to declutter root.
+- **Repository**: Removed redundant `ROADMAP.md` and `STYLE_GUIDE.md` from root (canonical versions are in `.github/`).
+- **Changelog**: Updated version links to point to local `docs/releases/` files instead of GitHub comparisons.
+
+### Fixed
+- **Contact Page**: Added the standard site header, which was previously missing.
+- **Accessibility**: Converted `div`-based "venue cards" to semantic `<a>` tags on `corporate-events/index.php` to improve accessibility, addressing a QA finding.
+
+---
+
 ## [1.5.1] - 2025-12-20
 
 ### Added
@@ -18,6 +44,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Portfolio**: Added "Drone Pilot" and "Live Streaming" skills to `resume/index.php`, completing the migration of personal services from BrainAV.
 - **Portfolio**: Updated "DJ Brain" repository link to the new BrainAV organization location.
 - **Roadmap**: Added tasks for "Venue Card Accessibility" and "Centralize Form Logic" following a QA consistency check.
+- **Web Developer**: Created `brainav-project.php` case study to serve as the parent page for the BrainAV organization.
+- **Web Developer**: Refactored project showcase cards in `web-developer/index.php` to use accessible `<a>` tags and added BrainAV.
 
 ## [1.5.0] - 2025-12-20
 
@@ -162,10 +190,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Integrated Formspree for the contact form.
 - Added lazy loading for images and iframe placeholders for performance.
 
-[Unreleased]: https://github.com/jasonbra1n/jasonbra1n/compare/v1.4.1...HEAD
-[1.4.1]: https://github.com/jasonbra1n/jasonbra1n/compare/v1.4.0...v1.4.1
-[1.4.0]: https://github.com/jasonbra1n/jasonbra1n/compare/v1.3.0...v1.4.0
-[1.3.0]: https://github.com/jasonbra1n/jasonbra1n/compare/v1.2.0...v1.3.0
-[1.2.0]: https://github.com/jasonbra1n/jasonbra1n/compare/v1.1.0...v1.2.0
-[1.1.0]: https://github.com/jasonbra1n/jasonbra1n/compare/v1.0.0...v1.1.0
+[Unreleased]: https://github.com/jasonbra1n/jasonbra1n/compare/v1.6.0...HEAD
+[1.6.0]: docs/releases/v1.6.0.md
+[1.5.1]: docs/releases/v1.5.1.md
+[1.5.0]: docs/releases/v1.5.0.md
+[1.4.3]: docs/releases/v1.4.3.md
+[1.4.2]: docs/releases/v1.4.2.md
+[1.4.1]: docs/releases/v1.4.1.md
+[1.4.0]: docs/releases/v1.4.0.md
+[1.3.0]: docs/releases/v1.3.0.md
+[1.2.0]: docs/releases/v1.2.0.md
+[1.1.0]: docs/releases/v1.1.0.md
 [1.0.0]: https://github.com/jasonbra1n/jasonbra1n/releases/tag/v1.0.0

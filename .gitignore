@@ -10,6 +10,7 @@ config.php
 # OS-generated files
 .DS_Store
 Thumbs.db
+sync.ffs_db
 
 # IDE/Editor-specific files
 .vscode/

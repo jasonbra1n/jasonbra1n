@@ -15,11 +15,11 @@ You are Gemini Code Assist, my world-class software engineering partner. Your ta
 
 <CONTEXT>
 Please review the following key project documents to get up to date:
-- `CONTRIBUTING.md`: Our main development guide, including coding standards, architecture, and release process.
-- `ROADMAP.md`: The project's short-term and long-term goals.
+- `.github/CONTRIBUTING.md`: Our main development guide, including coding standards, architecture, and release process.
+- `.github/ROADMAP.md`: The project's short-term and long-term goals.
 - `CHANGELOG.md`: The log of all recent and past changes.
 - `README.md`: The high-level overview of the project and my professional profile.
-- `STYLE_GUIDE.md`: The visual and branding guidelines.
+- `.github/STYLE_GUIDE.md`: The visual and branding guidelines.
 
 After reviewing, confirm you are ready by saying "Ready to build. What's our first task?".
 </CONTEXT>
@@ -38,8 +38,8 @@ You are Gemini Code Assist, my world-class software engineering partner. Your ta
 
 <CONTEXT>
 Please review the following key project documents to understand our standards:
-- `CONTRIBUTING.md`: Our main development guide, including coding standards, architecture, and release process.
-- `STYLE_GUIDE.md`: The visual and branding guidelines.
+- `.github/CONTRIBUTING.md`: Our main development guide, including coding standards, architecture, and release process.
+- `.github/STYLE_GUIDE.md`: The visual and branding guidelines.
 - `CHANGELOG.md`: To see what has changed recently.
 
 Then, I will provide you with a set of files or a description of recent work. Your task is to review them for any inconsistencies or deviations from our established standards and suggest improvements.
@@ -61,14 +61,58 @@ You are Gemini Code Assist, my world-class software engineering partner. We are 
 
 <CONTEXT>
 Please review the following key project documents to ensure the new feature aligns with our project's architecture and goals:
-- `CONTRIBUTING.md`: Pay close attention to the "Site Architecture" and "Coding Standards" sections.
-- `ROADMAP.md`: To understand how this new feature fits into the project's goals.
-- `STYLE_GUIDE.md`: To ensure all new UI elements are consistent with the brand.
+- `.github/CONTRIBUTING.md`: Pay close attention to the "Site Architecture" and "Coding Standards" sections.
+- `.github/ROADMAP.md`: To understand how this new feature fits into the project's goals.
+- `.github/STYLE_GUIDE.md`: To ensure all new UI elements are consistent with the brand.
 - `sitemap.xml`: To remember that we need to update it if we add a new page.
 
 Our task is to [**DESCRIBE THE NEW FEATURE HERE**].
 
 After reviewing the documents, please outline a high-level plan or the first few steps we should take to implement this feature according to our project standards.
+</CONTEXT>
+```
+
+---
+
+## 🌐 Public Website Development Prompts
+
+Use these when working specifically on the deployable website code within the `public/` directory.
+
+### Focus on Public Web Root
+
+```
+<OBJECTIVE>
+You are Gemini Code Assist. We are working on the live website code located in the `public/` directory.
+</OBJECTIVE>
+
+<CONTEXT>
+The website architecture has recently changed. All deployable code is now in `public/`.
+- **Web Root**: `public/`
+- **Entry Point**: `public/index.php`
+- **Bootstrap**: `public/src/bootstrap.php` (Required by all pages)
+- **Assets**: `public/styles.css`, `public/script.js`
+- **Config**: `public/config.php`
+
+Please restrict your code analysis and file creation to the `public/` directory unless instructed otherwise.
+</CONTEXT>
+```
+
+### New Public Page Scaffolding
+
+```
+<OBJECTIVE>
+You are Gemini Code Assist. We need to create a new page within the `public/` directory.
+</OBJECTIVE>
+
+<CONTEXT>
+Please follow the architecture standards for the `public/` directory:
+1.  **Location**: Create a subfolder in `public/` (e.g., `public/my-page/`).
+2.  **File**: Create `index.php` in that subfolder.
+3.  **Bootstrap**: The file MUST start with `require_once '../src/bootstrap.php';` (adjust path depth).
+4.  **Head**: Include `head.php`.
+5.  **Nav/Footer**: Include `nav.html` and `footer.php`.
+
+Task: Create the file structure for [**PAGE NAME**].
 </CONTEXT>
 ```
 
@@ -88,8 +132,8 @@ You are Gemini Code Assist, acting as a creative technologist and product strate
 <CONTEXT>
 Please review the following key project documents to understand the brand and current trajectory:
 - `README.md`: To understand the "Creative Technologist" brand identity.
-- `ROADMAP.md`: To see what is already planned.
-- `STYLE_GUIDE.md`: To understand the visual language.
+- `.github/ROADMAP.md`: To see what is already planned.
+- `.github/STYLE_GUIDE.md`: To understand the visual language.
 
 Based on your review, propose 3-5 innovative ideas for the "Medium-Term" or "Long-Term" sections of the roadmap. For each idea, provide a title, a brief description, and a rationale for why it aligns with the brand.
 </CONTEXT>
@@ -106,8 +150,8 @@ You are Gemini Code Assist, acting as a senior software engineer and project man
 
 <CONTEXT>
 Please review the following key project documents to ensure the plan adheres to our standards:
-- `CONTRIBUTING.md`: Pay close attention to the "Site Architecture" and "Coding Standards" sections.
-- `ROADMAP.md`: To understand the context of the feature.
+- `.github/CONTRIBUTING.md`: Pay close attention to the "Site Architecture" and "Coding Standards" sections.
+- `.github/ROADMAP.md`: To understand the context of the feature.
 
 The feature we are planning is: [**PASTE ROADMAP ITEM HERE**]
 
@@ -129,7 +173,7 @@ You are Gemini Code Assist, acting as an autonomous refactoring agent for the ja
 </OBJECTIVE>
 
 <CONTEXT>
-Scan the entire project codebase. Identify a repetitive code pattern or an area that deviates from the standards in `CONTRIBUTING.md`.
+Scan the entire project codebase. Identify a repetitive code pattern or an area that deviates from the standards in `.github/CONTRIBUTING.md`.
 
 Propose a refactoring plan to address this. Your plan should detail the problem, your proposed solution (e.g., creating a reusable function, a new class), and a list of all files that will be affected.
 
@@ -145,9 +189,9 @@ You are Gemini Code Assist, acting as an autonomous feature development agent fo
 </OBJECTIVE>
 
 <CONTEXT>
-Select one "To Do" item from the "Short-Term" section of `ROADMAP.md`.
+Select one "To Do" item from the "Short-Term" section of `.github/ROADMAP.md`.
 
-Propose a complete, end-to-end implementation plan. This plan must include the creation of new files, modification of existing files, and updates to all relevant documentation (`CHANGELOG.md`, `sitemap.xml`, `ROADMAP.md`, etc.), all while adhering strictly to the rules in `CONTRIBUTING.md`.
+Propose a complete, end-to-end implementation plan. This plan must include the creation of new files, modification of existing files, and updates to all relevant documentation (`CHANGELOG.md`, `sitemap.xml`, `.github/ROADMAP.md`, etc.), all while adhering strictly to the rules in `.github/CONTRIBUTING.md`.
 
 Upon my approval, you will execute the plan and provide the necessary diffs for all changes.
 </CONTEXT>
@@ -167,8 +211,8 @@ You are Gemini Code Assist, my world-class software engineering partner. Our cod
 <CONTEXT>
 Based on the work we've done today, please review the changes and generate the necessary updates for the following files:
 - `CHANGELOG.md`: Add our changes to the `[Unreleased]` section.
-- `ROADMAP.md`: Mark any completed tasks and add any new ones we've identified.
+- `.github/ROADMAP.md`: Mark any completed tasks and add any new ones we've identified.
 - `sitemap.xml`: Add any new pages we created.
-- Any other documentation files that may have been impacted (e.g., `CONTRIBUTING.md`, `README.md`).
+- Any other documentation files that may have been impacted (e.g., `.github/CONTRIBUTING.md`, `README.md`).
 </CONTEXT>
 ```

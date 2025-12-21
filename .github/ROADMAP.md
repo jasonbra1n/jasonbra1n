@@ -14,6 +14,7 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
 - **[To Do] Strategic Brand Pivot ([BrainAV](https://github.com/BrainAV))**:
   - **Differentiation**: Formalize the distinction between **Jason Brain** (Personal Services/Portfolio) and **BrainAV** (AI Products/Tech Lab).
   - **Rebranding**: Transition `BrainAV.ca` from a wedding DJ service to the home for "The DJ Brain" and AI music tools.
+  - **Lab Migration**: Rebrand "LAB: Digital Workshop" to be exclusively associated with Brain AV, consolidating all "Lab" concepts under the Tech Lab organization.
 
 - **[To Do] Performance & Accessibility Pass**:
   - **Image Optimization**: Implement responsive images using `srcset` or the `<picture>` element to improve load times on different devices.
@@ -23,8 +24,6 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
 - **[To Do] Enhance SEO & User Experience**:
   - Expand Schema.org structured data on all pages for richer search results.
 - **[To Do] Configuration Refactoring**:
-  - **Centralize Site Data**: Define constants for Site Name, Base URL, Contact Address, and Social Links in `config.php`.
-  - **Refactor Pages**: Update all pages (`index.php`, service pages, contact forms) to use the shared `head.php` include and config constants, reducing hardcoded values and improving maintainability.
   - **Centralize Form Logic**: Create a `src/ContactForm.php` class to encapsulate form handling logic, reducing duplication across service pages.
 - **[In Progress] Blog Template Development**:
   - **Initial Template Complete**: A custom Blogger XML template (`blogger-template.xml`) has been developed to align with the main site's branding and `STYLE_GUIDE.md`.
@@ -35,7 +34,6 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
   - Write and publish the first 3-5 articles for both the Music Blog and Tech Blog to establish a content baseline on their respective platforms.
 
 - **[To Do] UI/UX Refinements**:
-  - **Social Links**: Add social network links to the Contact page to provide alternative ways to connect.
   - **Page Headers**: Refine page header styles (height, padding, typography) to improve readability and responsiveness across different devices.
 
 - **[To Do] Enhance Music Section**:
@@ -75,6 +73,14 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
 
 ## Completed Tasks
 
+- **Repository Structure Refinement (Phase 2)**:
+  - **Isolate Web Root**: Moved all public-facing code (`index.php`, assets, content pages) into a `public/` directory.
+  - **Path Updates**: Verified `bootstrap.php` references in all page files account for the new directory structure.
+- **Repository Structure Refinement**:
+  - **Adopt Best Practices**: Created `.gemini/` directory and moved `prompt.md` there.
+  - **Cleanup**: Removed redundant `ROADMAP.md` and `STYLE_GUIDE.md` from the root directory.
+  - **Changelog**: Updated `CHANGELOG.md` to link to detailed release notes in `docs/releases/`.
+- **Refactor project structure**: Move documentation to .github directory for repository cleanliness.
 - **Server-Side Enhancement (PHP)**:
   - **Server-Side Includes**: Refactored all pages to use PHP `include` for shared components like the navigation (`nav.html`) and footer (`footer.php`).
   - **Self-Hosted Forms**: Replace the third-party Formspree dependency with a custom PHP script.
@@ -101,6 +107,7 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
 - **UI/UX Refinements**:
   - **FAQ Styling**: Improve the CSS for FAQ sections across all pages to enhance readability and visual appeal.
   - **AI Collaboration Badge**: Added a "Developed with Gemini" badge to the site footer and `README.md`.
+  - **Social Links**: Added social network links to the Contact page to provide alternative ways to connect.
 - **Content Strategy & Updates**:
   - **Corporate Events Pivot**: Refocus the Corporate Events page away from Toronto to highlight Haliburton corporate events and AV services for northern retreats.
   - **Resume Expansion**: Add 6+ years of Rogers TV experience (Durham Region) to the resume.
@@ -108,3 +115,7 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
   - **Migration**: Moved "DJ Brain" project assets and documentation to the BrainAV organization context.
 - **Performance**:
   - **Iframe Optimization**: Expanded the use of the "click-to-load" iframe facade pattern to all pages with embedded media (e.g., Spotify, HearThis.at) to improve performance.
+- **Configuration Refactoring**:
+  - **Centralize Site Data**: Defined constants for Site Name, Base URL, Contact Address, and Social Links in `config.php`.
+  - **Refactor Pages**: Updated all pages (`index.php`, service pages, contact forms) to use the shared `head.php` include and config constants.
+  - **Portfolio Hierarchy**: Established BrainAV as the top-level project in the showcase with a dedicated case study.

@@ -11,7 +11,12 @@ $form_message_class = "";
 $form_submitted_successfully = false;
 
 // Check if the form was submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($_POST['honeypot'])) { // Check for honeypot
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_type']) && $_POST['form_type'] == 'general_contact') {
+    // Honeypot check
+    if (!empty($_POST['honeypot'])) {
+        die("Spam detected");
+    }
+
     // --- FORM SANITIZATION & VALIDATION ---
     $name = strip_tags(trim($_POST["name"]));
     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
@@ -23,7 +28,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($_POST['honeypot'])) { // Chec
     if (empty($name) || empty($message) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
         // Set error message if validation fails
         $form_message = "Please fill out all required fields and provide a valid email address.";
-        $form_message_class = "form-error";
     } else {
         // --- EMAIL SENDING LOGIC ---
         $recipient = RECIPIENT_NAME . " <" . RECIPIENT_EMAIL . ">";
@@ -59,7 +63,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($_POST['honeypot'])) { // Chec
         } else {
             // Failure
             $form_message = "Oops! Something went wrong and your message could not be sent. Please try again later.";
-            $form_message_class = "form-error";
         }
     }
 }
@@ -90,6 +93,16 @@ $schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLAS
 <body>
   <?php include '../nav.html'; ?>
 
+  <header>
+    <div class="header-background"></div>
+    <div class="header-gradient"></div>
+    <canvas class="lights"></canvas>
+    <div class="header-content">
+      <h1 id="header-title">Contact</h1>
+      <p>Get in Touch & Start Your Project</p>
+    </div>
+  </header>
+
   <div class="container">
     <section class="contact" id="contact">
       <h2>Let's Create Something Amazing Together</h2>
@@ -103,6 +116,7 @@ $schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLAS
       </div>
 
       <div class="contact-card">
+        <div class="contact-form-container">
         <?php if ($form_submitted_successfully): ?>
           <div class="form-success-container" style="text-align: center; padding: 3rem 1rem;">
             <div style="font-size: 4rem; color: var(--color-accent-purple);">✓</div>
@@ -113,12 +127,12 @@ $schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLAS
             <a href="/" class="cta-button">Return to Homepage</a>
           </div>
         <?php else: ?>
-          <div class="contact-form-container">
             <!-- The action attribute points to this page itself to process the form -->
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="contact-form">
+              <input type="hidden" name="form_type" value="general_contact">
               
               <?php if (!empty($form_message)): ?>
-                <div class="form-message <?php echo $form_message_class; ?>">
+                <div style="background: #f8d7da; color: #721c24; padding: 1rem; border-radius: 10px; margin-bottom: 1rem; border: 1px solid #f5c6cb;">
                   <?php echo $form_message; ?>
                 </div>
               <?php endif; ?>
@@ -156,8 +170,34 @@ $schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLAS
               </div>
               <button type="submit" class="form-submit-button">Send Message</button>
             </form>
-          </div>
         <?php endif; ?>
+        </div>
+
+        <div class="contact-map-container">
+          <h4>Connect Online</h4>
+          <div class="platforms-grid">
+            <a href="<?php echo defined('SOCIAL_X') ? SOCIAL_X : '#'; ?>" target="_blank" class="platform-link">
+              <div class="platform-icon">🦜</div>
+              <div class="platform-name">X (Twitter)</div>
+            </a>
+            <a href="<?php echo defined('SOCIAL_TIKTOK') ? SOCIAL_TIKTOK : '#'; ?>" target="_blank" class="platform-link">
+              <div class="platform-icon">🎬</div>
+              <div class="platform-name">TikTok</div>
+            </a>
+            <a href="<?php echo defined('SOCIAL_MIXCLOUD') ? SOCIAL_MIXCLOUD : '#'; ?>" target="_blank" class="platform-link">
+              <div class="platform-icon">🎧</div>
+              <div class="platform-name">Mixcloud</div>
+            </a>
+             <a href="<?php echo defined('SOCIAL_SOUNDCLOUD') ? SOCIAL_SOUNDCLOUD : '#'; ?>" target="_blank" class="platform-link">
+              <div class="platform-icon">☁️</div>
+              <div class="platform-name">SoundCloud</div>
+            </a>
+          </div>
+          <div class="map-info-box">
+            <p><strong class="map-info-strong">Location:</strong> <?php echo defined('SITE_LOCATION') ? SITE_LOCATION : 'Haliburton, Ontario'; ?></p>
+            <p class="small-text">Available for remote work worldwide.</p>
+          </div>
+        </div>
       </div>
     </section>
   </div>
