@@ -101,3 +101,13 @@ This document defines the visual identity for jasonbrain.com. All new components
   - Border-radius: `5px`
 - **Inline Code (`code`)**:
   - Text Color: `#e6db74` (Soft Yellow)
+
+### Badges
+Used in documentation (README.md) and the site footer to indicate technologies, status, or special links.
+- **Style**: We use the `for-the-badge` style from shields.io for a consistent, flat, and readable look.
+- **Colors**:
+  - **Standard Tech/Status**: `8146ff` (Bright Purple). Matches the primary accent.
+  - **Special/CTA**: `ff6f61` (Coral Red). Used for high-priority links like the "Project Hub".
+- **Examples**:
+  - Tech Stack: `https://img.shields.io/badge/PHP-8146FF?style=for-the-badge&logo=php&logoColor=white`
+  - "Developed with Gemini": `https://img.shields.io/badge/Developed%20with-Gemini-8146FF?style=for-the-badge&logo=google-gemini&logoColor=white`

@@ -83,7 +83,7 @@ This repository is managed with professional-grade documentation and standards t
 ## 📬 Connect With Me
 
 - 🌍 **Website**: [jasonbrain.com](https://jasonbrain.com)
-- ✍️ **Blogs**: [Music Blog](https://blog.jasonbrain.com/) & [Tech Blog](https://devblog.jasonbrain.com/)
+- ✍️ **Blogs**: [Blog Hub](https://jasonbrain.com/blog/) | [Music Blog](https://blog.jasonbrain.com/) & [Tech Blog](https://devblog.jasonbrain.com/)
 - **Music Platforms**:
   - ☁️ **SoundCloud**: [Original Productions](https://soundcloud.com/jason-brain)
   - 🎧 **Mixcloud**: [DJ Mixes & Sets](https://www.mixcloud.com/jasonbra1n/)

@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **AI Workflow**: Added new prompts to `.gemini/prompt.md` for targeted development in the `public/` directory.
 - **Contact Page**: Added a sidebar with social media links, fulfilling a roadmap item.
 - **Styles**: Added missing `.platforms-grid` and `.platform-link` styles to `styles.css` for consistent social link display.
+- **Documentation**: Added a "Badges" section to `STYLE_GUIDE.md` to standardize shields.io usage.
 - **Documentation**: Added "Repository Structure" section to `.github/CONTRIBUTING.md` to define the directory layout standards.
 - **Documentation**: Added links to `SECURITY.md` and `CODE_OF_CONDUCT.md` in `README.md` under Project Standards.
 - **Architecture**: Moved all deployable website code (index.php, assets, src) to a `public/` directory to separate it from repository metadata.
@@ -22,7 +23,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - **Navigation**: Updated the "Blogs" link in `nav.html` to point to the new `/blog/` landing page.
 - **README**: Added a "Project Hub" badge to `README.md` linking to the new GitHub Pages landing page.
-- **Repository Hub**: Updated root `index.html` to serve as a broader "Creative Technologist Hub", linking to the BrainAV organization and GitHub profile.
+- **README**: Updated the main profile `README.md` to link to the new `/blog/` hub.
+- **Repository Hub**: Enhanced root `index.html` to serve as a full "Creative Technologist Hub", adding links to the blog, social media, and a standardized Gemini badge.
 - **Corporate Events**: Refactored the page header for improved readability.
 - **Repository**: Moved `prompt.md` to `.gemini/` directory to declutter root.
 - **Repository**: Removed redundant `ROADMAP.md` and `STYLE_GUIDE.md` from root (canonical versions are in `.github/`).
