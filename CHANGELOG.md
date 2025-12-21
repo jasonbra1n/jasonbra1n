@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.6.0] - 2025-12-21
 
 ### Added
-- **AI Workflow**: Created `persona.md` and `scratchpad.md` in the `.gemini/` directory to further formalize the AI collaboration process.
+- **AI Workflow**: Defined the "Creative Technologist" persona and project priorities in `.gemini/persona.md` and added `scratchpad.md` to further formalize the AI collaboration process.
 - **Repository**: Added a static `index.html` at the root to serve as a GitHub Pages landing hub for the project repository.
 - **Blog**: Created a dedicated blog landing page at `/blog/` to serve as a hub for the Music and Tech blogs.
 - **AI Workflow**: Added new prompts to `.gemini/prompt.md` for targeted development in the `public/` directory.

@@ -19,7 +19,6 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
 - **[To Do] Performance & Accessibility Pass**:
   - **Image Optimization**: Implement responsive images using `srcset` or the `<picture>` element to improve load times on different devices.
   - **Asset Minification**: Introduce a build step to minify CSS and JavaScript files for production.
-  - **Venue Card Accessibility**: Refactor venue cards to use semantic `<a>` tags instead of `<div>` with `onclick` handlers.
   - **Remove Inline JS**: Move inline `onclick` handlers (e.g., scroll behaviors) to `script.js` using event delegation.
 - **[To Do] Enhance SEO & User Experience**:
   - Expand Schema.org structured data on all pages for richer search results.
@@ -76,6 +75,7 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
 - **Repository Structure Refinement (Phase 2)**:
   - **Isolate Web Root**: Moved all public-facing code (`index.php`, assets, content pages) into a `public/` directory.
   - **Path Updates**: Verified `bootstrap.php` references in all page files account for the new directory structure.
+  - **Project Hub**: Created a static `index.html` at the root to serve as a GitHub Pages landing site.
 - **Repository Structure Refinement**:
   - **Adopt Best Practices**: Created `.gemini/` directory and moved `prompt.md` there.
   - **Cleanup**: Removed redundant `ROADMAP.md` and `STYLE_GUIDE.md` from the root directory.
@@ -100,6 +100,7 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
   - Centralized all CSS and JavaScript assets.
   - Refactored the main stylesheet to use CSS variables.
 - **Accessibility**: Make all interactive elements keyboard-accessible.
+  - **Venue Card Accessibility**: Refactored all venue and service cards to use semantic `<a>` tags.
 - **Create a custom `404.html` error page.**
 - **Functional Enhancements**:
   - **Testimonial Form**: Add `toggleTestimonialForm` function to `script.js`.
@@ -111,6 +112,7 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
 - **Content Strategy & Updates**:
   - **Corporate Events Pivot**: Refocus the Corporate Events page away from Toronto to highlight Haliburton corporate events and AV services for northern retreats.
   - **Resume Expansion**: Add 6+ years of Rogers TV experience (Durham Region) to the resume.
+  - **Blog Hub**: Created a dedicated `/blog/` landing page to aggregate Music and Tech blog content.
 - **Strategic Brand Pivot**:
   - **Migration**: Moved "DJ Brain" project assets and documentation to the BrainAV organization context.
 - **Performance**:
