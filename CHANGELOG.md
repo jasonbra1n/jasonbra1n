@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - **Navigation**: Updated the "Blogs" link in `nav.html` to point to the new `/blog/` landing page.
 - **README**: Added a "Project Hub" badge to `README.md` linking to the new GitHub Pages landing page.
+- **Repository Hub**: Updated root `index.html` to serve as a broader "Creative Technologist Hub", linking to the BrainAV organization and GitHub profile.
 - **Corporate Events**: Refactored the page header for improved readability.
 - **Repository**: Moved `prompt.md` to `.gemini/` directory to declutter root.
 - **Repository**: Removed redundant `ROADMAP.md` and `STYLE_GUIDE.md` from root (canonical versions are in `.github/`).
