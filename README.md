@@ -22,9 +22,15 @@ Welcome to my GitHub profile! I am a **Creative Professional and Technologist** 
 - **AI Workflow**: [Prompt Guide](.gemini/PROMPT_GUIDE.md) - A set of standardized prompts to streamline AI collaboration.
 
 ## 🎓 Education & Certifications
+[![CompTIA A+](https://img.shields.io/badge/CompTIA-A%2B-8146FF?style=for-the-badge&logo=comptia&logoColor=white)](https://cp.certmetrics.com/comptia/en/public/verify/credential/VHQX4HE15D41YSWD)
+![Microsoft MCP](https://img.shields.io/badge/Microsoft-MCP-8146FF?style=for-the-badge&logo=microsoft&logoColor=white)
+![Fleming College](https://img.shields.io/badge/Fleming_College-Diploma-8146FF?style=for-the-badge)
+![Project Management](https://img.shields.io/badge/Project_Management-Certified-8146FF?style=for-the-badge)
+
 - **Computer Programmer & Systems Analyst** (3-Year Diploma) – Fleming College
 - **Project Management** (Business & Information Technologies) – Global Knowledge / Nexient Learning
 - **Microsoft Certified Professional (MCP)**
+- **CompTIA A+ Certified Professional** – [Verify Credential](https://cp.certmetrics.com/comptia/en/public/verify/credential/VHQX4HE15D41YSWD) (Lifetime Certification)
 - **Self-Taught Hardware Specialist** – Building custom desktops and systems since childhood.
 
 ## 👨‍💻 Professional Profile & Journey

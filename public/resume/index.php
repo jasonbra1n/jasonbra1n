@@ -175,6 +175,15 @@ $schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLAS
           <li>Validated expertise in Microsoft systems, server administration, and technical troubleshooting.</li>
         </ul>
       </div>
+
+      <div class="resume-item">
+        <h3>CompTIA A+ Certified Professional</h3>
+        <span class="meta">CompTIA | Issued Jan 2006 (Lifetime Certification)</span>
+        <ul>
+          <li><strong>Verification ID:</strong> <a href="https://cp.certmetrics.com/comptia/en/public/verify/credential/VHQX4HE15D41YSWD" target="_blank" rel="noopener noreferrer" style="color: var(--color-accent-purple); text-decoration: none;">VHQX4HE15D41YSWD</a></li>
+          <li>Validated foundational knowledge in computer hardware, troubleshooting, and operating systems achieved through self-directed study.</li>
+        </ul>
+      </div>
     </section>
 
     <section class="resume-section">
