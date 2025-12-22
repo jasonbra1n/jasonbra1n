@@ -22,7 +22,9 @@ define('SITE_KEYWORDS', 'keyword1, keyword2, keyword3');
 
 // --- Social Media Links ---
 define('SOCIAL_X', 'https://x.com/yourhandle');
+define('SOCIAL_GITHUB', 'https://github.com/yourhandle');
 define('SOCIAL_TIKTOK', 'https://www.tiktok.com/@yourhandle');
+define('SOCIAL_YOUTUBE', 'https://www.youtube.com/@yourhandle');
 define('SOCIAL_MIXCLOUD', 'https://www.mixcloud.com/yourhandle/');
 define('SOCIAL_SOUNDCLOUD', 'https://soundcloud.com/yourhandle');
 define('SOCIAL_HEARTHIS', 'https://hearthis.at/yourhandle/');

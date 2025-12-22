@@ -1,5 +1,5 @@
 # Sensitive configuration file
-config.php
+/public/config.php
 
 # Server-specific configuration (e.g., from cPanel)
 .htaccess

@@ -55,9 +55,10 @@ To ensure the professional profile remains current, please adhere to the followi
 
 ### Repository Structure
 We follow a clean, best-practice directory structure to separate concerns:
-- **`.gemini/`**: Context files and prompts for AI collaboration (e.g., `prompt.md`).
+- **`.gemini/`**: Context files and prompts for AI collaboration (e.g., `PROMPT_GUIDE.md`).
   - `persona.md`: Defines the specific persona and priorities for the AI assistant.
   - `scratchpad.md`: A temporary file for collaborative brainstorming and drafting.
+  - `PROMPT.md`: The core context file loaded by the "Quick Sync" prompt.
 - **`.github/`**: GitHub-specific files (Workflows, `CONTRIBUTING.md`, `ROADMAP.md`, `STYLE_GUIDE.md`).
 - **`docs/releases/`**: Detailed release notes linked from the Changelog.
 - **`public/`**: The web root containing the deployable site (`index.php`, assets, `src/`, `config.php`).

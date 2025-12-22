@@ -18,6 +18,8 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
 
 - **[To Do] Performance & Accessibility Pass**:
   - **Image Optimization**: Implement responsive images using `srcset` or the `<picture>` element to improve load times on different devices.
+  - **Explicit Image Dimensions**: Add `width` and `height` attributes to all `<img>` tags to prevent Cumulative Layout Shift (CLS).
+  - **Defer Third-Party Scripts**: Defer loading of Google Ads and Google Tag Manager scripts to reduce unused JavaScript and improve initial load time.
   - **Asset Minification**: Introduce a build step to minify CSS and JavaScript files for production.
   - **Remove Inline JS**: Move inline `onclick` handlers (e.g., scroll behaviors) to `script.js` using event delegation.
 - **[To Do] Enhance SEO & User Experience**:
@@ -72,6 +74,7 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
 
 ## Completed Tasks
 
+- **Mobile Navigation**: Fixed the hamburger menu functionality by re-enabling the event listeners in `script.js`.
 - **Repository Structure Refinement (Phase 2)**:
   - **Isolate Web Root**: Moved all public-facing code (`index.php`, assets, content pages) into a `public/` directory.
   - **Path Updates**: Verified `bootstrap.php` references in all page files account for the new directory structure.

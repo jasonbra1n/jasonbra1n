@@ -10,6 +10,7 @@ function initializeNavEventListeners(rootPath) {
   if (hamburger && navMenu) {
     hamburger.addEventListener('click', () => {
       navMenu.classList.toggle('active');
+      hamburger.classList.toggle('active');
     });
   }
 
@@ -30,6 +31,7 @@ function initializeNavEventListeners(rootPath) {
       // Close hamburger menu on link click
       if (navMenu.classList.contains('active')) {
         navMenu.classList.remove('active');
+        if (hamburger) hamburger.classList.remove('active');
       }
     });
   });
@@ -84,6 +86,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Dynamic Copyright Year
   const copyrightYearEl = document.getElementById('copyright-year');
   if (copyrightYearEl) copyrightYearEl.textContent = new Date().getFullYear();
+
+  // Initialize Navigation Event Listeners (Hamburger, Smooth Scroll)
+  initializeNavEventListeners();
 
   // Add accessible event listeners for package selection and other clickable cards
   const clickableCards = document.querySelectorAll('.package-card, .venue-card');

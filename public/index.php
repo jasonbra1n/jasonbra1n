@@ -52,7 +52,11 @@ $schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLAS
     <section class="about-teaser" id="about">
         <h2>Multi-Disciplinary Creative</h2>
         <div class="about-teaser-content">
-            <img src="images/jason-profile_tn.webp" alt="Jason Brain - Creative Professional" class="about-teaser-image">
+            <img src="images/jason-profile-480.webp" 
+                 srcset="images/jason-profile-480.webp 480w, images/jason-profile-800.webp 800w, images/jason-profile-1200.webp 1200w"
+                 sizes="(max-width: 768px) 100vw, 300px"
+                 alt="Jason Brain - Creative Professional" 
+                 class="about-teaser-image">
             <div class="about-teaser-text">
                 <p class="intro-text">
                     <strong>I architect experiences that bridge music, technology, and human connection.</strong>
@@ -69,19 +73,31 @@ $schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLAS
     <section class="venues" id="services">
       <h2>Creative Services</h2>
       <a href="/wedding-dj/" class="venue-card">
-        <img src="images/wedding-dj-service_tn.webp" alt="Wedding DJ Services - Premium celebration experiences" loading="lazy" />
+        <img src="images/wedding-dj-service-480.webp" 
+             srcset="images/wedding-dj-service-480.webp 480w, images/wedding-dj-service-768.webp 768w"
+             sizes="(max-width: 768px) 150px, 200px"
+             alt="Wedding DJ Services - Premium celebration experiences" loading="lazy" />
         <p><strong>Wedding DJ Services</strong><br />Premium celebration experiences</p>
       </a>
       <a href="/music-production/" class="venue-card">
-        <img src="images/music-production-service_tn.webp" alt="Music Production - Custom beats, remixes, original productions" loading="lazy">
+        <img src="images/music-production-service-480.webp" 
+             srcset="images/music-production-service-480.webp 480w, images/music-production-service-768.webp 768w"
+             sizes="(max-width: 768px) 150px, 200px"
+             alt="Music Production - Custom beats, remixes, original productions" loading="lazy">
         <p><strong>Music Production</strong><br>Custom beats, remixes & originals</p>
       </a>
       <a href="/web-developer/" class="venue-card">
-        <img src="images/web-development-service_tn.webp" alt="Web Development - From simple sites to AI-powered solutions" loading="lazy">
+        <img src="images/web-development-service-480.webp" 
+             srcset="images/web-development-service-480.webp 480w, images/web-development-service-768.webp 768w"
+             sizes="(max-width: 768px) 150px, 200px"
+             alt="Web Development - From simple to AI-powered" loading="lazy">
         <p><strong>Web Development</strong><br>From simple to AI-powered</p>
       </a>
       <a href="/corporate-events/" class="venue-card">
-        <img src="images/corporate-events-service_tn.webp" alt="Corporate Events - Professional DJ and AV production" loading="lazy">
+        <img src="images/corporate-events-service-480.webp" 
+             srcset="images/corporate-events-service-480.webp 480w, images/corporate-events-service-768.webp 768w"
+             sizes="(max-width: 768px) 150px, 200px"
+             alt="Corporate Events - Professional DJ and AV production" loading="lazy">
         <p><strong>Corporate Events</strong><br>Professional DJ & AV production</p>
       </a>
     </section>
@@ -90,9 +106,18 @@ $schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLAS
     <!-- Featured Work Section -->
     <section class="gallery">
       <h2>Featured Work & Collaborations</h2>
-      <img src="images/king-oakes-production_tn.webp" alt="Rock production work with King and Oakes" loading="lazy">
-      <img src="images/video-dj_tn.webp" alt="Jack and Jill Video DJ and Karaoke" loading="lazy">
-      <img src="images/community-center_tn.webp" alt="Community Center Setup" loading="lazy">
+      <img src="images/king-oakes-production-480.webp" 
+           srcset="images/king-oakes-production-480.webp 480w, images/king-oakes-production-800.webp 800w, images/king-oakes-production-1200.webp 1200w"
+           sizes="(max-width: 600px) 100vw, 300px"
+           alt="Rock production work with King and Oakes" loading="lazy">
+      <img src="images/video-dj-480.webp" 
+           srcset="images/video-dj-480.webp 480w, images/video-dj-800.webp 800w, images/video-dj-1200.webp 1200w"
+           sizes="(max-width: 600px) 100vw, 300px"
+           alt="Jack and Jill Video DJ and Karaoke" loading="lazy">
+      <img src="images/community-center-480.webp" 
+           srcset="images/community-center-480.webp 480w, images/community-center-800.webp 800w"
+           sizes="(max-width: 600px) 100vw, 300px"
+           alt="Community Center Setup" loading="lazy">
     </section>
     <hr>
 
@@ -423,11 +448,17 @@ $schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLAS
     <section class="venues" id="blogs">
       <h2>My Blogs</h2>
       <div class="venue-card" onclick="window.open('https://devblog.jasonbrain.com', '_blank')" style="cursor: pointer;">
-        <img src="images/web-development-service_tn.webp" alt="Technology & Web Dev Blog" loading="lazy">
+        <img src="images/web-development-service-480.webp" 
+             srcset="images/web-development-service-480.webp 480w, images/web-development-service-768.webp 768w"
+             sizes="(max-width: 768px) 150px, 200px"
+             alt="Technology & Web Dev Blog" loading="lazy">
         <p><strong>Technology & Web Dev</strong><br>Tutorials, code snippets, and tech insights</p>
       </div>
       <div class="venue-card" onclick="window.open('https://blog.jasonbrain.com', '_blank')" style="cursor: pointer;">
-        <img src="images/music-production-service_tn.webp" alt="Music & DJ Blog" loading="lazy">
+        <img src="images/music-production-service-480.webp" 
+             srcset="images/music-production-service-480.webp 480w, images/music-production-service-768.webp 768w"
+             sizes="(max-width: 768px) 150px, 200px"
+             alt="Music & DJ Blog" loading="lazy">
         <p><strong>Music & DJing</strong><br>Event stories, production tips, and mixes</p>
       </div>
     </section>

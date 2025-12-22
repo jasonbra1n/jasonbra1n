@@ -176,6 +176,14 @@ $schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLAS
         <div class="contact-map-container">
           <h4>Connect Online</h4>
           <div class="platforms-grid">
+            <a href="<?php echo defined('SOCIAL_GITHUB') ? SOCIAL_GITHUB : '#'; ?>" target="_blank" class="platform-link">
+              <div class="platform-icon">🐙</div>
+              <div class="platform-name">GitHub</div>
+            </a>
+            <a href="<?php echo defined('SOCIAL_YOUTUBE') ? SOCIAL_YOUTUBE : '#'; ?>" target="_blank" class="platform-link">
+              <div class="platform-icon">📺</div>
+              <div class="platform-name">YouTube</div>
+            </a>
             <a href="<?php echo defined('SOCIAL_X') ? SOCIAL_X : '#'; ?>" target="_blank" class="platform-link">
               <div class="platform-icon">🦜</div>
               <div class="platform-name">X (Twitter)</div>
@@ -184,11 +192,11 @@ $schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLAS
               <div class="platform-icon">🎬</div>
               <div class="platform-name">TikTok</div>
             </a>
-            <a href="<?php echo defined('SOCIAL_MIXCLOUD') ? SOCIAL_MIXCLOUD : '#'; ?>" target="_blank" class="platform-link">
-              <div class="platform-icon">🎧</div>
-              <div class="platform-name">Mixcloud</div>
+            <a href="<?php echo defined('SOCIAL_HEARTHIS') ? SOCIAL_HEARTHIS : '#'; ?>" target="_blank" class="platform-link">
+              <div class="platform-icon">❤️</div>
+              <div class="platform-name">HearThis.at</div>
             </a>
-             <a href="<?php echo defined('SOCIAL_SOUNDCLOUD') ? SOCIAL_SOUNDCLOUD : '#'; ?>" target="_blank" class="platform-link">
+            <a href="<?php echo defined('SOCIAL_SOUNDCLOUD') ? SOCIAL_SOUNDCLOUD : '#'; ?>" target="_blank" class="platform-link">
               <div class="platform-icon">☁️</div>
               <div class="platform-name">SoundCloud</div>
             </a>

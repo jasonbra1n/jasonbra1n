@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.7.0] - 2025-12-22
+
+### Added
+- **Social Links**: Added GitHub, YouTube, and HearThis.at to `contact/index.php` and `config.php`.
+
+### Changed
+- **Workflow**: Streamlined `.gemini/PROMPT_GUIDE.md` to focus on a "Quick Sync" workflow and removed legacy XML-based prompts.
+- **Documentation**: Updated `CONTRIBUTING.md` to include `PROMPT.md` in the repository structure overview.
+- **Documentation**: Updated `README.md` to link to the correct `PROMPT_GUIDE.md`.
+- **Project Hub**: Updated `index.html` with absolute documentation links and expanded social icons.
+- **Performance**: Implemented responsive images on the homepage (`index.php`) using `srcset` and `sizes` attributes to serve optimized WebP assets based on viewport size.
+
+### Fixed
+- **Mobile Navigation**: Restored functionality to the hamburger menu by explicitly calling `initializeNavEventListeners()` in `script.js` (broken during PHP migration).
+- **Mobile UI**: Restored the hamburger menu "X" animation and improved the alignment and hover states of mobile menu items in `styles.css`.
+
 ## [1.6.0] - 2025-12-21
 
 ### Added
