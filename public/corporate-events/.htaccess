@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^corporatedj\.jasonbrain\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.corporatedj\.jasonbrain\.com$
+RewriteRule ^/?$ "https\:\/\/jasonbrain\.com\/corporate\-events\/" [R=301,L]
+

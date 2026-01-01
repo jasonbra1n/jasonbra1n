@@ -521,6 +521,27 @@ iframe[src*="google.com/maps"]:hover {
 }
 
 /* About Teaser Section (Homepage) */
+.about-teaser {
+  margin: 4rem 0;
+  background: linear-gradient(135deg, var(--color-primary-bg), #5e35b1);
+  color: var(--color-neutral-white);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+.about-bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.05) 0%, transparent 60%);
+  z-index: 1;
+}
+.about-content-relative { position: relative; z-index: 2; }
+.about-teaser h2 { color: var(--color-neutral-white); text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
 .about-teaser-content {
   display: flex;
   flex-wrap: wrap;
@@ -534,7 +555,7 @@ iframe[src*="google.com/maps"]:hover {
   max-width: 300px;
   width: 100%;
   border-radius: 15px;
-  border: 3px solid var(--color-primary-bg);
+  border: 3px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 24px rgba(0,0,0,0.15);
   margin: 0 auto; /* Center image when it wraps to its own line on mobile */
 }
@@ -545,10 +566,20 @@ iframe[src*="google.com/maps"]:hover {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.95);
 }
-.about-teaser-text .cta-button {
-  display: inline-block;
-  margin-top: 1rem;
+.about-teaser-text p {
+  color: rgba(255, 255, 255, 0.9);
+}
+.about-teaser-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+.about-teaser-buttons .cta-button {
+  margin-top: 0;
 }
 
 /* Investment Section */
@@ -1222,5 +1253,125 @@ iframe[src*="google.com/maps"]:hover {
 @media (max-width: 600px) {
   .contact-card {
     padding: 1.5rem;
+  }
+}
+
+/* Contact Page Header Redesign */
+.contact-header,
+.about-header {
+  height: auto; /* Allow growth */
+  min-height: 100vh;
+  padding: 100px 20px 50px; /* Top padding for nav */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.header-text-column {
+  text-align: center;
+  color: var(--color-neutral-white);
+}
+
+.header-intro-box {
+  margin-top: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header-intro-box h3 {
+  color: var(--color-accent-cyan);
+  margin-bottom: 1rem;
+}
+
+.header-form-column {
+  width: 100%;
+}
+
+/* Reuse existing .contact-form-container but ensure it looks good here */
+.contact-header .contact-form-container {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+@media (min-width: 992px) {
+  .header-content-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  
+  .header-text-column {
+    flex: 1;
+    text-align: left;
+    padding-right: 4rem;
+    padding-top: 2rem;
+  }
+  
+  .contact-header h1, 
+  .contact-header p {
+    text-align: left;
+  }
+  
+  .header-form-column {
+    flex: 0 0 480px; /* Fixed width for form */
+  }
+}
+
+/* About Header Specifics */
+.about-header .about-text-column {
+  color: var(--color-neutral-white);
+  text-align: left;
+}
+
+.about-header .about-text-column p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.about-header .about-image {
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.about-header .why-choose-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 4px solid var(--color-accent-cyan);
+  color: var(--color-neutral-white);
+}
+
+.about-header .why-choose-box h4 {
+  color: var(--color-accent-cyan);
+}
+
+.about-header .why-choose-list-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 992px) {
+  .about-image-column {
+    flex: 0 0 400px;
+    margin-right: 4rem;
+  }
+  
+  .about-text-column {
+    flex: 1;
+    padding-top: 0;
   }
 }

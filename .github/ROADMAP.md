@@ -11,7 +11,7 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
 
 ## Short-Term (Next 3 Months)
 
-- **[To Do] Strategic Brand Pivot ([BrainAV](https://github.com/BrainAV))**:
+- **[In Progress] Strategic Brand Pivot ([BrainAV](https://github.com/BrainAV))**:
   - **Differentiation**: Formalize the distinction between **Jason Brain** (Personal Services/Portfolio) and **BrainAV** (AI Products/Tech Lab).
   - **Rebranding**: Transition `BrainAV.ca` from a wedding DJ service to the home for "The DJ Brain" and AI music tools.
   - **Lab Migration**: Rebrand "LAB: Digital Workshop" to be exclusively associated with Brain AV, consolidating all "Lab" concepts under the Tech Lab organization.
@@ -37,6 +37,15 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
 - **[To Do] UI/UX Refinements**:
   - **Page Headers**: Refine page header styles (height, padding, typography) to improve readability and responsiveness across different devices.
 
+- **[Planned] Seasonal & Occasion Effects**:
+  - Expand the "Festive Mode" logic to support other holidays (e.g., New Year's Fireworks, Valentine's Hearts).
+  - Create a configuration structure to easily schedule these effects.
+
+- **[In Progress] Gemini API Integration**:
+  - **[Done] Phase 1**: Add `GEMINI_API_KEY` to `config.php` to enable server-side AI features.
+  - **[Done] Phase 2**: Create a PHP service class (`src/GeminiService.php`) to handle API requests.
+  - **[Done] Phase 3**: Migrate credentials to the database (manageable via Admin Settings).
+
 - **[To Do] Enhance Music Section**:
   - Investigate more dynamic ways to present music (e.g., custom audio player, API integration with Mixcloud/SoundCloud).
   - Add more context or stories behind the featured mixes and productions.
@@ -46,11 +55,20 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
   - **Phase 2 (The Brain)**: Develop the Python AI Engine for intelligent queue management and context awareness.
   - **Phase 3 (Polish)**: Refine the frontend UI and implement multi-room audio support.
 
+- **[To Do] Side Quest: AVDJ.ca & Flight Deck**:
+  - **AVDJ.ca**: Establish the web presence for the AVDJ.ca domain.
+  - **Flight Deck App**: Formalize and continue development of the custom "Flight Deck" control interface.
+
 ## Medium-Term (3-6 Months)
 
 - **[Planned] Enhance Header Animation**:
   - Refactor the existing header canvas animation in `script.js` to be more modular and configurable.
   - Explore adding new interactive layers or effects (e.g., audio-reactive elements, different color palettes) to the "disco ball" and "water ripple" animations.
+
+- **[In Progress] Admin Dashboard & CMS**:
+  - **Database Integration**: Implement a secure login system backed by the MariaDB database.
+  - **[In Progress] Content Management**: Create a dashboard to manage site settings (e.g., toggle Festive Mode, update contact info, manage Gemini API keys) and content.
+  - **[To Do] Dynamic Routing**: Implement a router to fetch page and post content from the database based on the requested URL slug.
 
 - **[Planned] BRAIN AV: AI Co-Producer**:
   - **Concept**: An open-source AI assistant for Ableton Live acting as an "Executive Producer" via OSC.
@@ -69,11 +87,24 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
 - **[Vision] E-commerce Integration**:
   - Explore selling digital products (sample packs, music tracks) or services (consulting sessions) directly through the site.
 
+- **[Vision] Open Source "ResumeCMS" Product**:
+  - Evolve the public resume/portfolio site into a packaged, reusable open-source product.
+  - Create an installer and documentation for other creative professionals to host their own version.
+- **[Vision] AI-Powered Site Builder**:
+  - An admin tool to generate new pages and content from prompts, with a staging area for review before publishing.
+  - This would form the core of a "self-administering" CMS, leveraging the Gemini API.
+
 - **[Vision] Interactive Audio-Visual Experiences**:
   - Leverage WebGL or other technologies to create a unique, interactive experience on the homepage that combines Jason's music and visual art style.
 
 ## Completed Tasks
 
+- **Resume Update**: Refined "Great Blue Heron Casino" entry with specific technical achievements (Systems Operator, Kiosks, ITIL).
+- **Admin Authentication**: Implemented a secure, session-based login system (`login.php`, `logout.php`) for the `/admin/` area, backed by the MariaDB `users` table.
+- **Admin Foundational Setup**: Created and secured initial admin setup (`setup.php`) and diagnostic (`db-check.php`) scripts, and fixed class autoloading in `bootstrap.php`.
+- **Admin Settings**: Created `admin/settings.php` and `src/Settings.php` to manage site configuration from the database.
+- **Maintenance Mode**: Implemented a database-driven maintenance mode system.
+- **Festive Mode**: Implemented a seasonal "Snowflake" animation for the site header in `script.js` that automatically activates between Dec 19 and Jan 1.
 - **Mobile Navigation**: Fixed the hamburger menu functionality by re-enabling the event listeners in `script.js`.
 - **Repository Structure Refinement (Phase 2)**:
   - **Isolate Web Root**: Moved all public-facing code (`index.php`, assets, content pages) into a `public/` directory.
@@ -89,6 +120,7 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
   - **Self-Hosted Forms**: Replace the third-party Formspree dependency with a custom PHP script.
   - **Shared Head Include**: Created `head.php` to centralize meta tags and assets.
   - **Bootstrap Implementation**: Implemented `src/bootstrap.php` as the single entry point for all pages.
+  - **Database Connection**: Created `src/Database.php` and configured `config.php` for secure MariaDB access.
 - **Security & Best Practices**:
   - **Configuration Management**: Implemented a `config.php` file for sensitive data.
   - **Professional Branding & Career Pivot**:
@@ -124,3 +156,5 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
   - **Centralize Site Data**: Defined constants for Site Name, Base URL, Contact Address, and Social Links in `config.php`.
   - **Refactor Pages**: Updated all pages (`index.php`, service pages, contact forms) to use the shared `head.php` include and config constants.
   - **Portfolio Hierarchy**: Established BrainAV as the top-level project in the showcase with a dedicated case study.
+- **UI/UX Refinements**:
+  - **Contact Page Layout**: Redesigned the Contact page to move the form "above the fold" into the header area for better immediate visibility.

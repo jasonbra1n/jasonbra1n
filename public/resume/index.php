@@ -248,11 +248,14 @@ $schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLAS
       </div>
 
       <div class="resume-item">
-        <h3>Information Systems Manager & Special Projects</h3>
+        <h3>Systems Operator & MIS Support</h3>
         <span class="meta">Great Blue Heron Casino</span>
         <ul>
-          <li>Managed the Information Systems Department, overseeing critical gaming and business infrastructure.</li>
-          <li>Led special technical projects to improve operational efficiency and security in a highly regulated environment.</li>
+          <li><strong>Systems Operator:</strong> Promoted from entry-level MIS support to Systems Operator, providing critical front-line technical support for 24/7 casino operations.</li>
+          <li><strong>Gaming Modernization:</strong> Managed the facility-wide conversion from coin-based slots to ticket-based payouts and the migration of the core Gaming System from Bally's SDS to Konami.</li>
+          <li><strong>Infrastructure Projects:</strong> Led the migration to Silverware POS (overnight rip-and-replace) and brought high-speed internet to the island location, benefiting the local community.</li>
+          <li><strong>ITIL Transformation:</strong> Transformed the department to be ITIL compliant, implementing new Help Desk ticketing and Asset Management systems.</li>
+          <li><strong>Special Projects:</strong> Designed custom touch-screen kiosks (hardware & code), integrated biometric scanners, and implemented a comprehensive disaster recovery plan.</li>
         </ul>
       </div>
 

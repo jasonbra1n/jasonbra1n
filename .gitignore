@@ -1,19 +1,13 @@
-# Sensitive configuration file
-/public/config.php
+# Local Configuration
+**/config.php
 
 # Server-specific configuration (e.g., from cPanel)
-.htaccess
-
-# Composer dependencies
-/vendor/
+/public/.htaccess
 
 # OS-generated files
 .DS_Store
 Thumbs.db
 sync.ffs_db
 
-# IDE/Editor-specific files
-.vscode/
-.idea/
-*.sublime-project
-*.sublime-workspace
+# Local Development
+/workspace/

@@ -4,6 +4,21 @@ if (file_exists('src/bootstrap.php')) {
     require_once 'src/bootstrap.php';
 }
 
+// Check for Maintenance Mode
+// This allows logged-in admins to view the site while it's in maintenance.
+$session = new Session();
+$database = new Database();
+$db = $database->getConnection();
+$settings = new Settings($db);
+
+$maintenance_mode = $settings->get('maintenance_mode');
+
+// If maintenance mode is on ('1') and the user is not logged in, show the maintenance page.
+if ($maintenance_mode === '1' && !$session->isLoggedIn()) {
+    require_once 'maintenance.php';
+    exit();
+}
+
 // Define page-specific metadata
 $page_title = SITE_NAME . ' | ' . SITE_TAGLINE;
 $page_description = SITE_DESCRIPTION;
@@ -50,22 +65,27 @@ $schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLAS
   </header>
   <div class="container">    
     <section class="about-teaser" id="about">
-        <h2>Multi-Disciplinary Creative</h2>
-        <div class="about-teaser-content">
-            <img src="images/jason-profile-480.webp" 
-                 srcset="images/jason-profile-480.webp 480w, images/jason-profile-800.webp 800w, images/jason-profile-1200.webp 1200w"
-                 sizes="(max-width: 768px) 100vw, 300px"
-                 alt="Jason Brain - Creative Professional" 
-                 class="about-teaser-image">
-            <div class="about-teaser-text">
-                <p class="intro-text">
-                    <strong>I architect experiences that bridge music, technology, and human connection.</strong>
-                </p>
-                <p>
-                    With a journey spanning three decades—from legendary nightclub residencies to cutting-edge AI development—I bring a unique blend of artistic intuition and technical expertise to every project. My work is a fusion of Music, Technology, and AI, all driven by a mission to create meaningful and unforgettable experiences.
-                </p>
-                <a href="/about/" class="cta-button">Learn My Story</a>
-                <a href="/resume/" class="cta-button" style="background: transparent; border: 2px solid var(--color-accent-coral); color: var(--color-accent-coral); margin-left: 1rem;">View Resume</a>
+        <div class="about-bg-pattern"></div>
+        <div class="about-content-relative">
+            <h2>Creative Technologist</h2>
+            <div class="about-teaser-content">
+                <img src="images/jason-profile-480.webp" 
+                     srcset="images/jason-profile-480.webp 480w, images/jason-profile-800.webp 800w, images/jason-profile-1200.webp 1200w"
+                     sizes="(max-width: 768px) 100vw, 300px"
+                     alt="Jason Brain - Creative Professional" 
+                     class="about-teaser-image">
+                <div class="about-teaser-text">
+                    <p class="intro-text">
+                        <strong>Bridging the gap between technical requirements and creative vision.</strong>
+                    </p>
+                    <p>
+                        I am a Creative Technologist with a formal background in <strong>Systems Analysis</strong> and over 30 years of experience in media production. From custom web development and AI integration to live event production, I bring technical rigor to creative projects.
+                    </p>
+                    <div class="about-teaser-buttons">
+                        <a href="/about/" class="cta-button">Learn My Story</a>
+                        <a href="/resume/" class="cta-button" style="background: transparent; border: 2px solid var(--color-accent-coral); color: var(--color-accent-coral);">View Resume</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

@@ -11,6 +11,13 @@
 // Set to 'development' or 'production'. In 'development', some features like analytics may be disabled.
 define('ENVIRONMENT', 'development');
 
+// --- Database Configuration ---
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'your_database_name');
+define('DB_USER', 'your_database_user');
+define('DB_PASS', 'your_database_password');
+define('DB_CHARSET', 'utf8mb4');
+
 // --- Site Identity ---
 define('SITE_NAME', 'Your Site Name');
 define('SITE_TAGLINE', 'Your Site Tagline');

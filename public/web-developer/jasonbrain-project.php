@@ -52,19 +52,25 @@ $page_description = 'Case study of jasonbrain.com - A custom-built, performance-
     </section>
 
     <section>
-      <h2>Latest Update: v1.6.0 - Project Hub & Content Expansion</h2>
+      <h2>Latest Update: v1.7.0 - Performance & Responsive Images</h2>
       <div class="update-box">
-        <p>This release introduced a new public-facing hub for the project's repository and expanded the site's content structure with a dedicated blog landing page.</p>
+        <p>This release focused on improving Core Web Vitals and mobile usability, alongside streamlining the AI collaboration documentation.</p>
         <ul>
-          <li>Launched a static `index.html` at the repository root to serve as a project hub on GitHub Pages.</li>
-          <li>Created a new `/blog/` landing page to act as a central hub for the Music and Tech blogs.</li>
-          <li>Enhanced the AI collaboration workflow by adding new, context-aware prompts in `.gemini/prompt.md`.</li>
+          <li><strong>Responsive Images:</strong> Implemented `srcset` and `sizes` attributes on the homepage to serve optimized WebP assets based on viewport size.</li>
+          <li><strong>Mobile Fixes:</strong> Restored hamburger menu functionality and improved mobile UI alignment.</li>
+          <li><strong>Social Integration:</strong> Added social media links to the Contact page and configuration.</li>
         </ul>
       </div>
     </section>
 
     <section>
       <h2>Project Milestones</h2>
+       <div class="milestone-item">
+        <h3>v1.6.0: Project Hub & Content Expansion</h3>
+        <div class="update-box" style="border-color: var(--color-accent-cyan); background: #f0f8ff;">
+            <p>Introduced a new public-facing hub for the repository and expanded the site's content structure with a dedicated blog landing page.</p>
+        </div>
+      </div>
        <div class="milestone-item">
         <h3>v1.5.1: Strategic Brand Pivot & Accessibility Fixes</h3>
         <div class="update-box" style="border-color: var(--color-accent-purple); background: #f8f4ff;">

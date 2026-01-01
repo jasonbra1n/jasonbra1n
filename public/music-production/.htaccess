@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^musicproducer\.jasonbrain\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.musicproducer\.jasonbrain\.com$
+RewriteRule ^/?$ "https\:\/\/jasonbrain\.com\/music\-production\/" [R=301,L]
+

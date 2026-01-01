@@ -158,112 +158,172 @@ document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('header');
   if (canvas && header) {
     const ctx = canvas.getContext('2d');
-    const ctaButton = document.querySelector('.cta-button');
+    
+    // Set canvas size
+    const resizeCanvas = () => {
+      canvas.width = header.clientWidth;
+      canvas.height = header.clientHeight;
+    };
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
 
-    let centerX = header.clientWidth * (0.2 + Math.random() * 0.6);
-    let centerY = header.clientHeight * (0.2 + Math.random() * 0.6);
-    let targetX = centerX;
-    let targetY = centerY;
+    // Date Check for Festive Season (Dec 19 - Dec 31)
+    const now = new Date();
+    const month = now.getMonth(); // 0 = Jan, 11 = Dec
+    const day = now.getDate();
+    const isFestive = (month === 11 && day >= 19);
 
-    const lights = [];
-    const ripples = [];
-    const stars = [];
-    const colors = ['#ff0000', '#00ff00', '#0000ff', '#ff00ff', '#00ffff', '#ffff00'];
-    for (let i = 0; i < 50; i++) {
-      const radius = Math.random() * header.clientWidth;
-      const angle = Math.random() * Math.PI * 2;
-      const speed = (Math.random() * 0.002 + 0.001) * (Math.random() < 0.5 ? 1 : -1);
-      lights.push({ radius, angle, color: colors[Math.floor(Math.random() * colors.length)], opacity: Math.random() * 0.5 + 0.3, speed, trail: [] });
-    }
-    for (let i = 0; i < 100; i++) {
-      stars.push({ x: Math.random() * header.clientWidth, y: Math.random() * header.clientHeight, size: Math.random() * 2 + 1, opacity: Math.random() * 0.6 + 0.2 });
-    }
+    if (isFestive) {
+      // --- FESTIVE MODE: SNOWFLAKES ---
+      const snowflakes = [];
+      const numFlakes = 100;
 
-    function animate() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      stars.forEach(star => {
-        const twinkle = (Math.sin(Date.now() * 0.001 + star.x + star.y) + 1) / 2;
-        const starOpacity = star.opacity * twinkle;
-        ctx.beginPath(); ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(255, 255, 255, ' + starOpacity + ')'; ctx.fill();
-      });
-
-      ripples.forEach((ripple, index) => {
-        ripple.radius += 2;
-        ripple.opacity -= 0.002;
-        const maxRadius = Math.sqrt(header.clientWidth * header.clientWidth + header.clientHeight * header.clientHeight);
-        if (ripple.opacity <= 0 || ripple.radius > maxRadius) { ripples.splice(index, 1); return; }
-        ctx.beginPath(); ctx.arc(ripple.x, ripple.y, ripple.radius, 0, Math.PI * 2);
-        ctx.strokeStyle = 'rgba(255, 255, 255, ' + ripple.opacity + ')'; ctx.lineWidth = 2;
-        ctx.globalAlpha = ripple.opacity; ctx.stroke();
-      });
-
-      const dx = targetX - centerX;
-      const dy = targetY - centerY;
-      const distance = Math.sqrt(dx * dx + dy * dy);
-      const maxSpeed = 2;
-      if (distance > 0) {
-        const speed = Math.min(maxSpeed, distance * 0.05);
-        centerX += (dx / distance) * speed;
-        centerY += (dy / distance) * speed;
+      class Snowflake {
+        constructor() {
+          this.reset();
+        }
+        reset() {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.radius = Math.random() * 2 + 1;
+          this.speed = Math.random() * 1 + 0.5;
+          this.wind = Math.random() * 0.5 - 0.25;
+          this.opacity = Math.random() * 0.5 + 0.3;
+        }
+        update() {
+          this.y += this.speed;
+          this.x += this.wind;
+          if (this.y > canvas.height) {
+            this.y = -5;
+            this.x = Math.random() * canvas.width;
+          }
+          if (this.x > canvas.width) this.x = 0;
+          if (this.x < 0) this.x = canvas.width;
+        }
+        draw() {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+          ctx.fill();
+        }
       }
 
-      lights.forEach(light => {
-        light.angle += light.speed;
-        const x = centerX + light.radius * Math.cos(light.angle);
-        const y = centerY + light.radius * Math.sin(light.angle);
-        light.trail.push({ x, y }); if (light.trail.length > 10) light.trail.shift();
+      for (let i = 0; i < numFlakes; i++) snowflakes.push(new Snowflake());
 
-        for (let i = 0; i < light.trail.length; i++) {
-          const pos = light.trail[i];
-          const trailOpacity = i / (light.trail.length - 1) * light.opacity;
-          ctx.beginPath(); ctx.arc(pos.x, pos.y, 3, 0, Math.PI * 2);
-          ctx.fillStyle = light.color; ctx.globalAlpha = trailOpacity; ctx.fill();
+      function animateSnow() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        snowflakes.forEach(flake => { flake.update(); flake.draw(); });
+        requestAnimationFrame(animateSnow);
+      }
+      animateSnow();
+
+    } else {
+      // --- STANDARD MODE: LED & RIPPLES ---
+      const ctaButton = document.querySelector('.cta-button');
+
+      let centerX = header.clientWidth * (0.2 + Math.random() * 0.6);
+      let centerY = header.clientHeight * (0.2 + Math.random() * 0.6);
+      let targetX = centerX;
+      let targetY = centerY;
+
+      const lights = [];
+      const ripples = [];
+      const stars = [];
+      const colors = ['#ff0000', '#00ff00', '#0000ff', '#ff00ff', '#00ffff', '#ffff00'];
+      for (let i = 0; i < 50; i++) {
+        const radius = Math.random() * header.clientWidth;
+        const angle = Math.random() * Math.PI * 2;
+        const speed = (Math.random() * 0.002 + 0.001) * (Math.random() < 0.5 ? 1 : -1);
+        lights.push({ radius, angle, color: colors[Math.floor(Math.random() * colors.length)], opacity: Math.random() * 0.5 + 0.3, speed, trail: [] });
+      }
+      for (let i = 0; i < 100; i++) {
+        stars.push({ x: Math.random() * header.clientWidth, y: Math.random() * header.clientHeight, size: Math.random() * 2 + 1, opacity: Math.random() * 0.6 + 0.2 });
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        stars.forEach(star => {
+          const twinkle = (Math.sin(Date.now() * 0.001 + star.x + star.y) + 1) / 2;
+          const starOpacity = star.opacity * twinkle;
+          ctx.beginPath(); ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(255, 255, 255, ' + starOpacity + ')'; ctx.fill();
+        });
+
+        ripples.forEach((ripple, index) => {
+          ripple.radius += 2;
+          ripple.opacity -= 0.002;
+          const maxRadius = Math.sqrt(header.clientWidth * header.clientWidth + header.clientHeight * header.clientHeight);
+          if (ripple.opacity <= 0 || ripple.radius > maxRadius) { ripples.splice(index, 1); return; }
+          ctx.beginPath(); ctx.arc(ripple.x, ripple.y, ripple.radius, 0, Math.PI * 2);
+          ctx.strokeStyle = 'rgba(255, 255, 255, ' + ripple.opacity + ')'; ctx.lineWidth = 2;
+          ctx.globalAlpha = ripple.opacity; ctx.stroke();
+        });
+
+        const dx = targetX - centerX;
+        const dy = targetY - centerY;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        const maxSpeed = 2;
+        if (distance > 0) {
+          const speed = Math.min(maxSpeed, distance * 0.05);
+          centerX += (dx / distance) * speed;
+          centerY += (dy / distance) * speed;
         }
 
-        ctx.beginPath(); ctx.arc(x, y, 3, 0, Math.PI * 2);
-        ctx.fillStyle = light.color; ctx.globalAlpha = light.opacity; ctx.fill();
-        light.opacity += Math.sin(Date.now() * light.speed / 1000) * 0.02;
-        if (light.opacity < 0.3) light.opacity = 0.3; if (light.opacity > 0.8) light.opacity = 0.8;
+        lights.forEach(light => {
+          light.angle += light.speed;
+          const x = centerX + light.radius * Math.cos(light.angle);
+          const y = centerY + light.radius * Math.sin(light.angle);
+          light.trail.push({ x, y }); if (light.trail.length > 10) light.trail.shift();
+
+          for (let i = 0; i < light.trail.length; i++) {
+            const pos = light.trail[i];
+            const trailOpacity = i / (light.trail.length - 1) * light.opacity;
+            ctx.beginPath(); ctx.arc(pos.x, pos.y, 3, 0, Math.PI * 2);
+            ctx.fillStyle = light.color; ctx.globalAlpha = trailOpacity; ctx.fill();
+          }
+
+          ctx.beginPath(); ctx.arc(x, y, 3, 0, Math.PI * 2);
+          ctx.fillStyle = light.color; ctx.globalAlpha = light.opacity; ctx.fill();
+          light.opacity += Math.sin(Date.now() * light.speed / 1000) * 0.02;
+          if (light.opacity < 0.3) light.opacity = 0.3; if (light.opacity > 0.8) light.opacity = 0.8;
+        });
+
+        ctx.globalAlpha = 1;
+        requestAnimationFrame(animate);
+      }
+
+      header.addEventListener('mousemove', (event) => {
+        const rect = header.getBoundingClientRect();
+        targetX = event.clientX - rect.left;
+        targetY = event.clientY - rect.top;
       });
 
-      ctx.globalAlpha = 1;
-      requestAnimationFrame(animate);
+      header.addEventListener('mousedown', (event) => {
+        const rect = header.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        // Only trigger ripple if not clicking the button
+        if (ctaButton && !ctaButton.contains(event.target)) {
+          ripples.push({ x, y, radius: 10, opacity: 1 });
+        }
+      });
+
+      header.addEventListener('touchstart', (event) => {
+        // Do not prevent default to allow button taps
+        const touch = event.touches[0];
+        const rect = header.getBoundingClientRect();
+        const x = touch.clientX - rect.left;
+        const y = touch.clientY - rect.top;
+        // Only trigger ripple if not tapping the button
+        if (ctaButton && !ctaButton.contains(event.target)) {
+          ripples.push({ x, y, radius: 10, opacity: 1 });
+        }
+      });
+
+      animate();
     }
-
-    header.addEventListener('mousemove', (event) => {
-      const rect = header.getBoundingClientRect();
-      targetX = event.clientX - rect.left;
-      targetY = event.clientY - rect.top;
-    });
-
-    header.addEventListener('mousedown', (event) => {
-      const rect = header.getBoundingClientRect();
-      const x = event.clientX - rect.left;
-      const y = event.clientY - rect.top;
-      // Only trigger ripple if not clicking the button
-      if (ctaButton && !ctaButton.contains(event.target)) {
-        ripples.push({ x, y, radius: 10, opacity: 1 });
-      }
-    });
-
-    header.addEventListener('touchstart', (event) => {
-      // Do not prevent default to allow button taps
-      const touch = event.touches[0];
-      const rect = header.getBoundingClientRect();
-      const x = touch.clientX - rect.left;
-      const y = touch.clientY - rect.top;
-      // Only trigger ripple if not tapping the button
-      if (ctaButton && !ctaButton.contains(event.target)) {
-        ripples.push({ x, y, radius: 10, opacity: 1 });
-      }
-    });
-
-    canvas.width = header.clientWidth;
-    canvas.height = header.clientHeight;
-    animate();
   }
 });

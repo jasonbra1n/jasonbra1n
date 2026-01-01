@@ -35,59 +35,68 @@ $schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLAS
 <body>
   <?php include '../nav.html'; ?>
 
-  <div class="container">
-    <section class="about" id="about">
-      <h2>Where Creativity Meets Technical Precision</h2>
-      <div class="about-content-wrapper">
-        <div class="about-image-container">
-          <img src="../images/jason-profile_tn.webp" alt="Jason Brain - Creative Professional" 
-               class="about-image" loading="lazy">
-        </div>
-        <div class="about-text-content">
-          <p class="intro-text">
-            <strong>I am a Creative Professional who speaks the language of machines.</strong>
-          </p>
-          <p>
-            My journey isn't a pivot away from technology, but a fusion of it. With a formal education in <strong>Computer Programming and Systems Analysis</strong> (Fleming College), I possess a deep understanding of the hardware and software that powers modern creativity.
-          </p>
-          <p>
-            I don't just use creative tools; I build, modify, and optimize them. Whether it's scripting custom automations for a light show, coding a bespoke website, or 3D printing custom parts for a production rig, my technical background empowers my artistic vision.
-          </p>
-          <p>
-            Today, I offer a unique blend of services where "Systems Analyst" discipline meets "DJ" intuition. I am looking for employment that values this versatile, problem-solving mindset—bringing technical rigor to creative projects.
-          </p>
-          <div class="why-choose-box">
-            <h4>The "Jason Brain" Advantage:</h4>
-            <ul class="why-choose-list">
-              <li class="why-choose-list-item">
-                <span class="checkmark">✓</span>
-                <strong>Formal Education:</strong> Fleming College Alumni & Microsoft Certified
-              </li>
-              <li class="why-choose-list-item">
-                <span class="checkmark">✓</span>
-                <strong>Technical Creative:</strong> An artist with the discipline of a programmer
-              </li>
-              <li class="why-choose-list-item">
-                <span class="checkmark">✓</span>
-                <strong>Project Management:</strong> Trained to deliver projects on time and within scope
-              </li>
-              <li class="why-choose-list-item">
-                <span class="checkmark">✓</span>
-                <strong>Mature Perspective:</strong> Decades of real-world professional work experience
-              </li>
-              <li class="why-choose-list-item">
-                <span class="checkmark">✓</span>
-                <strong>Hardware & Systems Integration:</strong> Deep understanding of the physical systems that power software
-              </li>
-            </ul>
-          </div>
+  <header class="about-header">
+    <div class="header-background"></div>
+    <div class="header-gradient"></div>
+    <canvas class="lights"></canvas>
+
+    <div class="header-content-wrapper">
+      <div class="about-image-column">
+          <img src="../images/jason-profile-800.webp" 
+               srcset="../images/jason-profile-480.webp 480w, ../images/jason-profile-800.webp 800w, ../images/jason-profile-1200.webp 1200w"
+               sizes="(max-width: 768px) 100vw, 400px"
+               alt="Jason Brain - Creative Technologist" 
+               class="about-image" width="400"  loading="lazy">
           <div style="margin-top: 2rem; text-align: center;">
             <a href="/resume/" class="cta-button">View Professional Resume</a>
           </div>
+      </div>
+      
+      <div class="about-text-column">
+        <div class="why-choose-box" style="margin-top: 0; padding: 2rem;">
+          <h1 style="font-size: 2.5rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">About Jason Brain</h1>
+          <p class="intro-text">
+            <strong>Location:</strong> Haliburton, Ontario (Open to Remote &amp; Hybrid)<br>
+            <strong>Focus:</strong> Creative Technology, Web Development, AI Integration
+          </p>
+          <p>
+            I am a Creative Technologist with a formal background in <strong>Systems Analysis</strong> (Fleming College) and over 30 years of experience in media production. I bridge the gap between technical requirements and creative vision.
+          </p>
+            <h4 style="margin-top: 1.5rem;">Core Competencies &amp; Expertise:</h4>
+            <ul class="why-choose-list">
+              <li class="why-choose-list-item" style="align-items: flex-start;">
+                <span class="checkmark" style="margin-top: 0.2rem;">✓</span>
+                <div>
+                  <strong style="display: block; margin-bottom: 0.2rem;">Systems Analysis</strong>
+                  Fleming College Alumni trained in software design, database management, and ITIL protocols.
+                </div>
+              </li>
+              <li class="why-choose-list-item" style="align-items: flex-start;">
+                <span class="checkmark" style="margin-top: 0.2rem;">✓</span>
+                <div>
+                  <strong style="display: block; margin-bottom: 0.2rem;">Web Development &amp; AI</strong>
+                  Building custom, performance-focused applications using PHP, JS, and Python.
+                </div>
+              </li>
+              <li class="why-choose-list-item" style="align-items: flex-start;">
+                <span class="checkmark" style="margin-top: 0.2rem;">✓</span>
+                <div>
+                  <strong style="display: block; margin-bottom: 0.2rem;">Production Leadership</strong>
+                  Decades of experience managing live events and complex audio-visual systems.
+                </div>
+              </li>
+              <li class="why-choose-list-item" style="align-items: flex-start;">
+                <span class="checkmark" style="margin-top: 0.2rem;">✓</span>
+                <div>
+                  <strong style="display: block; margin-bottom: 0.2rem;">Hardware Integration</strong>
+                  Deep understanding of AV systems and physical computing
+                </div>
+              </li>
+            </ul>
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </header>
 
   <?php include '../footer.php'; ?>
   <script src="../script.js"></script>

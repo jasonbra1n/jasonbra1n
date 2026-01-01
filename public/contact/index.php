@@ -93,87 +93,89 @@ $schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLAS
 <body>
   <?php include '../nav.html'; ?>
 
-  <header>
+  <header class="contact-header">
     <div class="header-background"></div>
     <div class="header-gradient"></div>
     <canvas class="lights"></canvas>
-    <div class="header-content">
-      <h1 id="header-title">Contact</h1>
-      <p>Get in Touch & Start Your Project</p>
+    
+    <div class="header-content-wrapper">
+      <div class="header-text-column">
+        <h1 id="header-title">Contact</h1>
+        <p>Get in Touch & Start Your Project</p>
+        
+        <div class="header-intro-box">
+          <h3>Ready to Start Your Project?</h3>
+          <p>
+            Whether you need a wedding DJ, music production, web development, or corporate event services, 
+            I'm here to bring your vision to life. Fill out the form to get started.
+          </p>
+        </div>
+      </div>
+
+      <div class="header-form-column">
+        <div class="contact-form-container">
+          <?php if ($form_submitted_successfully): ?>
+            <div class="form-success-container" style="text-align: center; padding: 3rem 1rem;">
+              <div style="font-size: 4rem; color: var(--color-accent-purple);">✓</div>
+              <h3 style="margin-top: 1rem;">Thank You!</h3>
+              <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+                Your message has been sent successfully. I will get back to you shortly.
+              </p>
+              <a href="/" class="cta-button">Return to Homepage</a>
+            </div>
+          <?php else: ?>
+              <!-- The action attribute points to this page itself to process the form -->
+              <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="contact-form">
+                <input type="hidden" name="form_type" value="general_contact">
+                
+                <?php if (!empty($form_message)): ?>
+                  <div style="background: #f8d7da; color: #721c24; padding: 1rem; border-radius: 10px; margin-bottom: 1rem; border: 1px solid #f5c6cb;">
+                    <?php echo $form_message; ?>
+                  </div>
+                <?php endif; ?>
+
+                <!-- Honeypot field for spam protection -->
+                <input type="text" name="honeypot" style="display:none">
+
+                <div class="form-group">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" id="name" name="name" required placeholder="Your Name" class="form-input" value="<?php echo htmlspecialchars($name); ?>">
+                </div>
+                <div class="form-group">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" id="email" name="email" required placeholder="Your Email" class="form-input" value="<?php echo htmlspecialchars($email); ?>">
+                </div>
+                <div class="form-group">
+                  <label for="phone" class="form-label">Phone Number (Optional)</label>
+                  <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" class="form-input" value="<?php echo htmlspecialchars($phone); ?>">
+                </div>
+                <div class="form-group">
+                  <label for="service-interest" class="form-label">Service Interest</label>
+                  <select id="service-interest" name="service-interest" class="form-input">
+                    <option value="" <?php if ($service_interest == "") echo "selected"; ?>>Select Primary Interest</option>
+                    <option value="wedding-dj" <?php if ($service_interest == "wedding-dj") echo "selected"; ?>>Wedding DJ Services</option>
+                    <option value="music-production" <?php if ($service_interest == "music-production") echo "selected"; ?>>Music Production</option>
+                    <option value="web-development" <?php if ($service_interest == "web-development") echo "selected"; ?>>Web Development</option>
+                    <option value="corporate-events" <?php if ($service_interest == "corporate-events") echo "selected"; ?>>Corporate Events</option>
+                    <option value="employment" <?php if ($service_interest == "employment") echo "selected"; ?>>Employment / Hiring Inquiry</option>
+                    <option value="multiple" <?php if ($service_interest == "multiple") echo "selected"; ?>>Multiple Services</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="message" class="form-label">Project Details</label>
+                  <textarea id="message" name="message" required placeholder="Tell me about your project or event!" class="form-textarea"><?php echo htmlspecialchars($message); ?></textarea>
+                </div>
+                <button type="submit" class="form-submit-button">Send Message</button>
+              </form>
+          <?php endif; ?>
+        </div>
+      </div>
     </div>
   </header>
 
   <div class="container">
-    <section class="contact" id="contact">
-      <h2>Let's Create Something Amazing Together</h2>
-      
-      <div class="contact-intro-box">
-        <h3>Ready to Start Your Project?</h3>
-        <p>
-          Whether you need a wedding DJ, music production, web development, or corporate event services, 
-          I'm here to bring your vision to life. Fill out the form below to get started.
-        </p>
-      </div>
-
-      <div class="contact-card">
-        <div class="contact-form-container">
-        <?php if ($form_submitted_successfully): ?>
-          <div class="form-success-container" style="text-align: center; padding: 3rem 1rem;">
-            <div style="font-size: 4rem; color: var(--color-accent-purple);">✓</div>
-            <h3 style="margin-top: 1rem;">Thank You!</h3>
-            <p style="font-size: 1.1rem; margin-bottom: 2rem;">
-              Your message has been sent successfully. I will get back to you shortly.
-            </p>
-            <a href="/" class="cta-button">Return to Homepage</a>
-          </div>
-        <?php else: ?>
-            <!-- The action attribute points to this page itself to process the form -->
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="contact-form">
-              <input type="hidden" name="form_type" value="general_contact">
-              
-              <?php if (!empty($form_message)): ?>
-                <div style="background: #f8d7da; color: #721c24; padding: 1rem; border-radius: 10px; margin-bottom: 1rem; border: 1px solid #f5c6cb;">
-                  <?php echo $form_message; ?>
-                </div>
-              <?php endif; ?>
-
-              <!-- Honeypot field for spam protection -->
-              <input type="text" name="honeypot" style="display:none">
-
-              <div class="form-group">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" id="name" name="name" required placeholder="Your Name" class="form-input" value="<?php echo htmlspecialchars($name); ?>">
-              </div>
-              <div class="form-group">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" id="email" name="email" required placeholder="Your Email" class="form-input" value="<?php echo htmlspecialchars($email); ?>">
-              </div>
-              <div class="form-group">
-                <label for="phone" class="form-label">Phone Number (Optional)</label>
-                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" class="form-input" value="<?php echo htmlspecialchars($phone); ?>">
-              </div>
-              <div class="form-group">
-                <label for="service-interest" class="form-label">Service Interest</label>
-                <select id="service-interest" name="service-interest" class="form-input">
-                  <option value="" <?php if ($service_interest == "") echo "selected"; ?>>Select Primary Interest</option>
-                  <option value="wedding-dj" <?php if ($service_interest == "wedding-dj") echo "selected"; ?>>Wedding DJ Services</option>
-                  <option value="music-production" <?php if ($service_interest == "music-production") echo "selected"; ?>>Music Production</option>
-                  <option value="web-development" <?php if ($service_interest == "web-development") echo "selected"; ?>>Web Development</option>
-                  <option value="corporate-events" <?php if ($service_interest == "corporate-events") echo "selected"; ?>>Corporate Events</option>
-                  <option value="employment" <?php if ($service_interest == "employment") echo "selected"; ?>>Employment / Hiring Inquiry</option>
-                  <option value="multiple" <?php if ($service_interest == "multiple") echo "selected"; ?>>Multiple Services</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="message" class="form-label">Project Details</label>
-                <textarea id="message" name="message" required placeholder="Tell me about your project or event!" class="form-textarea"><?php echo htmlspecialchars($message); ?></textarea>
-              </div>
-              <button type="submit" class="form-submit-button">Send Message</button>
-            </form>
-        <?php endif; ?>
-        </div>
-
-        <div class="contact-map-container">
+    <section class="contact-socials-container">
+      <div class="contact-map-container" style="width: 100%; max-width: 800px; margin: 0 auto; border: none; box-shadow: none;">
           <h4>Connect Online</h4>
           <div class="platforms-grid">
             <a href="<?php echo defined('SOCIAL_GITHUB') ? SOCIAL_GITHUB : '#'; ?>" target="_blank" class="platform-link">
@@ -205,7 +207,6 @@ $schema_json = json_encode($schema_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLAS
             <p><strong class="map-info-strong">Location:</strong> <?php echo defined('SITE_LOCATION') ? SITE_LOCATION : 'Haliburton, Ontario'; ?></p>
             <p class="small-text">Available for remote work worldwide.</p>
           </div>
-        </div>
       </div>
     </section>
   </div>

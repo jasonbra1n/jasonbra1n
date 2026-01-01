@@ -7,6 +7,60 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.7.1] - 2026-01-01
+
+### Added
+- **Architecture**: Created `public/src/GeminiService.php` to handle communication with the Google Gemini API.
+- **Documentation**: Created `docs/database.md` to guide developers on updating the database schema.
+- **Authentication**: Implemented a secure, token-based "Remember Me" feature for the admin login.
+- **Maintenance Mode**: Implemented a database-driven maintenance mode system. Created `public/maintenance.php` and added logic to `public/index.php` to restrict access to non-logged-in users when enabled in settings.
+- **Roadmap**: Added "[Vision] AI-Powered Site Builder" to `.github/ROADMAP.md` and detailed the concept in `.gemini/scratchpad.md`.
+- **Admin**: Created reusable admin header (`includes/header.php`) and footer (`includes/footer.php`) for consistent layout and security.
+- **Admin**: Created a new admin dashboard at `public/admin/index.php`.
+- **Admin**: Created `public/admin/settings.php` to allow management of site settings from the database.
+- **Architecture**: Created `public/src/Settings.php` class to encapsulate database logic for site settings.
+- **Documentation**: Added "Admin Panel Development" section to `CONTRIBUTING.md` to document the standard pattern for creating secure admin pages.
+- **Festive Mode**: Implemented a seasonal "Snowflake" animation in `script.js` that automatically activates between Dec 19 and Dec 31.
+- **Database**: Created `database/` directory and defined initial schema for `users` and `settings` tables in `database.sql`.
+- **Workspace**: Synced the BrainAV organization website (`index.html`) to the local `workspace/BrainAV/` directory.
+- **Configuration**: Updated `.gitignore` to exclude server-specific configuration and OS-generated files.
+- **Documentation**: Updated `.gemini/scratchpad.md` to document the database infrastructure, admin dashboard architecture, and local workspace structure.
+- **Contact Page**: Redesigned the Contact page to move the form "above the fold" into the header area for better visibility.
+- **Database**: Deployed initial schema (`users`, `settings`) to production database `jasonbra_jasonbra1n`.
+- **About Page**: Implemented a new glassmorphism header layout and consolidated professional details into a "Core Competencies" list.
+- **Homepage**: Refreshed the "Creative Technologist" teaser with a new gradient container and centered actions.
+- **Architecture**: Implemented a class autoloader in `src/bootstrap.php` to automatically load classes from the `src/` directory.
+- **Database**: Created `src/Database.php` class to handle secure PDO connections using configuration constants.
+- **Authentication**: Created `src/User.php` and `src/Session.php` in `public/src/` to handle login logic and session management.
+- **Admin**: Created `public/admin/` directory with `login.php`, `index.php` (dashboard), `logout.php`, and `setup.php` for user management.
+- **Admin**: Created `public/admin/reset_password.php` as an emergency utility to reset admin passwords (to be uploaded on demand and deleted after use).
+- **Admin**: Added `db-check.php` for system diagnostics and linked it from the dashboard.
+- **Configuration**: Updated `config-sample.php` to include database connection templates.
+
+### Changed
+- **Admin**: Updated `db-check.php` to verify the existence of the `auth_tokens` table.
+- **Documentation**: Updated `.github/CONTRIBUTING.md` to reference the new database management guide.
+- **Admin**: Refactored `db-check.php` to use the new reusable admin header and footer.
+- **Documentation**: Updated `.gemini/scratchpad.md` with a detailed, phased plan for Gemini API integration features.
+- **Roadmap**: Updated `.github/ROADMAP.md` to mark admin authentication as complete and shift focus to content management.
+- **Documentation**: Refined PHPDoc for `Session::getUser()` for better clarity.
+- **Resume**: Updated the "Great Blue Heron Casino" entry in `resume/index.php` to "Systems Operator & MIS Support". Added detailed achievements regarding Gaming Modernization (TITO, Konami), Infrastructure (POS, Island Internet), ITIL Transformation, and Special Projects (Kiosks, Biometrics).
+- **Configuration**: Updated `.gitignore` to ignore the `workspace/` directory by default and all `config.php` files globally.
+- **Documentation**: Updated `CONTRIBUTING.md` to clarify the usage and structure of the `workspace/` directory.
+- **Roadmap**: Added "Festive Mode" to the Short-Term roadmap.
+- **Roadmap**: Updated "Admin Dashboard & CMS" status to `[In Progress]` following the implementation of database and auth classes.
+- **Content**: Refined copy on the About page and Homepage to be more direct and recruiter-friendly, highlighting "Systems Analysis" and "Creative Technologist" roles.
+- **Performance**: Implemented responsive images (`srcset`) for the profile picture on the About page.
+- **Styles**: Added `.contact-header` and `.about-header` classes to `styles.css` to support the new split-column header layouts.
+
+### Fixed
+- **Architecture**: Corrected a planning oversight by creating the `public/src/GeminiService.php` file, which was previously documented but not implemented.
+- **Authentication**: Fixed fatal 500 errors on `setup.php` and `login.php` by resolving class loading issues with a robust autoloader in `bootstrap.php` and correcting property access.
+- **Admin**: Fixed a fatal 500 error on the admin dashboard by adding the missing `getUser()` method to the `Session` class.
+- **Security**: Re-enabled session protection on `db-check.php` to secure the diagnostics page.
+- **Database**: Improved connection error handling in `src/Database.php` to provide clear error messages instead of a generic 500 error.
+- **Authentication**: Corrected `password` vs `password_hash` column name mismatch in `User.php` and `reset_password.php` to align with the database schema.
+
 ## [1.7.0] - 2025-12-22
 
 ### Added
@@ -210,7 +264,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Integrated Formspree for the contact form.
 - Added lazy loading for images and iframe placeholders for performance.
 
-[Unreleased]: https://github.com/jasonbra1n/jasonbra1n/compare/v1.6.0...HEAD
+[Unreleased]: https://github.com/jasonbra1n/jasonbra1n/compare/v1.7.1...HEAD
+[1.7.1]: docs/releases/v1.7.1.md
 [1.6.0]: docs/releases/v1.6.0.md
 [1.5.1]: docs/releases/v1.5.1.md
 [1.5.0]: docs/releases/v1.5.0.md

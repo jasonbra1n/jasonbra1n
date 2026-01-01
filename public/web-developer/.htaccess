@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^webdeveloper\.jasonbrain\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.webdeveloper\.jasonbrain\.com$
+RewriteRule ^/?$ "https\:\/\/jasonbrain\.com\/web\-developer\/" [R=301,L]
+

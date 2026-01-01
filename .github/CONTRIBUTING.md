@@ -14,8 +14,9 @@ All new copy and content should align with this voice. When in doubt, refer to t
 ## Tech Stack
 - **Frontend**: HTML5, CSS3, JavaScript (ES6+)
 - **Backend**: PHP (v8.4 on production)
-- **Database**: MySQL
+- **Database**: MariaDB 10.11.15 (Server charset: cp1252/latin1)
 - **Contact Form**: Self-hosted PHP script
+- **AI Integration**: Google Gemini API via `src/GeminiService.php`
 - **Blogs**: Blogger platform, with custom XML templates stored in the `blogger-templates/` directory.
 - **Hosting**: PHP-enabled hosting (e.g., cPanel)
 - **Development Environment**: VS Code with the Gemini Code Assist extension.
@@ -61,6 +62,9 @@ We follow a clean, best-practice directory structure to separate concerns:
   - `PROMPT.md`: The core context file loaded by the "Quick Sync" prompt.
 - **`.github/`**: GitHub-specific files (Workflows, `CONTRIBUTING.md`, `ROADMAP.md`, `STYLE_GUIDE.md`).
 - **`docs/releases/`**: Detailed release notes linked from the Changelog.
+- **`database/`**: SQL schema definitions and migration scripts.
+- **`workspace/`**: A local directory for referencing external repositories (e.g., `workspace/BrainAV/brainav.ca`). The structure follows `workspace/<organization>/<repository>`. This directory is included in `.gitignore` by default but can be temporarily commented out for cross-project work.
+- **`docs/`**: Project documentation. See `docs/database.md` for database management instructions.
 - **`public/`**: The web root containing the deployable site (`index.php`, assets, `src/`, `config.php`).
 - **`index.html` (root)**: A static landing page for the repository's GitHub Pages site, acting as a project hub.
 
@@ -74,6 +78,14 @@ We follow a clean, best-practice directory structure to separate concerns:
 - **PHP Logic**: Business logic (like form handlers or data processors) should eventually be encapsulated in classes within a `/src` directory to keep page files clean.
 - **Sitemap**: Whenever a new page is added or an existing one is removed, the `sitemap.xml` file in the root directory must be updated to reflect the change. This is crucial for SEO and ensuring search engines can find all content.
 - **Internal Linking**: When relevant, add contextual links within page content to other pages on the site. This helps users discover more content and signals the relationship between pages to search engines.
+
+### Admin Panel Development
+- **Protected Pages**: Any new page added to `public/admin/` must be secured against unauthorized access.
+- **Standard Pattern**: To create a new admin page, follow this structure:
+  1. **Bootstrap**: `require_once '../src/bootstrap.php';`
+  2. **Page Title**: Set `$page_title = 'Page Name | ' . SITE_NAME;`
+  3. **Header**: `include 'includes/header.php';` (This file handles the session check and redirects to login if necessary).
+  4. **Footer**: `include 'includes/footer.php';`
 
 ### HTML
 - Use semantic HTML5 tags (`<section>`, `<nav>`, `<header>`, `<footer>`, etc.).

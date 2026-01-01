@@ -47,6 +47,8 @@ I have spent recent years as a celebrated DJ and event producer—mastering the 
   - **Architecture**: Component-based PHP structure with server-side includes for maintainability.
   - **Security**: Self-hosted contact forms with honeypot protection and secure credential management (`config.php`).
   - **Performance**: Implements lazy-loading and an iframe facade pattern for media players to optimize Core Web Vitals.
+  - **CMS**: Custom-built admin dashboard for managing site settings, maintenance mode, and system diagnostics.
+  - **AI Integration**: Integrated `GeminiService` for future AI-powered content generation and features.
 
 - **LAB: Digital Workshop**: [lab.jasonbrain.com](https://lab.jasonbrain.com) | [View Case Study](https://jasonbrain.com/web-developer/lab-project.php) | An open-source creative sandbox.
   - **Architecture**: Single-Page Application (SPA) with a hybrid dual-loading system (Direct Injection + Iframe Embedding).
