@@ -52,19 +52,25 @@ $page_description = 'Case study of jasonbrain.com - A custom-built, performance-
     </section>
 
     <section>
-      <h2>Latest Update: v1.7.0 - Performance & Responsive Images</h2>
+      <h2>Latest Update: v1.7.1 - Admin Dashboard & AI Foundation</h2>
       <div class="update-box">
-        <p>This release focused on improving Core Web Vitals and mobile usability, alongside streamlining the AI collaboration documentation.</p>
+        <p>This major release establishes the core infrastructure for a dynamic, self-hosted Content Management System (CMS) and introduces the service layer for AI integration.</p>
         <ul>
-          <li><strong>Responsive Images:</strong> Implemented `srcset` and `sizes` attributes on the homepage to serve optimized WebP assets based on viewport size.</li>
-          <li><strong>Mobile Fixes:</strong> Restored hamburger menu functionality and improved mobile UI alignment.</li>
-          <li><strong>Social Integration:</strong> Added social media links to the Contact page and configuration.</li>
+          <li><strong>Admin Dashboard:</strong> A secure, protected area for managing site settings, maintenance mode, and system diagnostics.</li>
+          <li><strong>Database Integration:</strong> Migrated configuration to a MariaDB database for dynamic control without code edits.</li>
+          <li><strong>AI Service Layer:</strong> Integrated `GeminiService` to handle communication with the Google Gemini API for future features.</li>
         </ul>
       </div>
     </section>
 
     <section>
       <h2>Project Milestones</h2>
+       <div class="milestone-item">
+        <h3>v1.7.0: Performance & Responsive Images</h3>
+        <div class="update-box" style="border-color: var(--color-accent-purple); background: #f8f4ff;">
+            <p>Implemented `srcset` and `sizes` attributes for optimized image delivery, improved mobile usability, and added social integration.</p>
+        </div>
+      </div>
        <div class="milestone-item">
         <h3>v1.6.0: Project Hub & Content Expansion</h3>
         <div class="update-box" style="border-color: var(--color-accent-cyan); background: #f0f8ff;">
@@ -118,6 +124,10 @@ $page_description = 'Case study of jasonbrain.com - A custom-built, performance-
       
       <h3>Key Technical Features</h3>
       <div class="feature-grid">
+        <div class="feature-card">
+          <h4>🛠️ Custom CMS</h4>
+          <p>A secure, bespoke admin dashboard for managing site settings, maintenance mode, and system diagnostics.</p>
+        </div>
         <div class="feature-card">
           <h4>🔒 Security First</h4>
           <p>Self-hosted contact forms with honeypot protection and strict input sanitization. No third-party form dependencies.</p>
