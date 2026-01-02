@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- **Roadmap**: Added task to explore integrating the Lab SPA with the jasonbra1n CMS backend.
+
+### Changed
+- **Roadmap**: Marked "Differentiation" and "Rebranding" tasks for the BrainAV pivot as completed.
+- **Roadmap**: Shifted strategy for "LAB: Digital Workshop" from migration to integration, retaining it as a standalone SPA.
+- **Roadmap**: Updated "Admin Dashboard & CMS" section to formally reference "jasonbra1n CMS".
+
 ## [1.7.1] - 2026-01-01
 
 ### Added

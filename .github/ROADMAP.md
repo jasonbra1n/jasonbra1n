@@ -11,11 +11,6 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
 
 ## Short-Term (Next 3 Months)
 
-- **[In Progress] Strategic Brand Pivot ([BrainAV](https://github.com/BrainAV))**:
-  - **Differentiation**: Formalize the distinction between **Jason Brain** (Personal Services/Portfolio) and **BrainAV** (AI Products/Tech Lab).
-  - **Rebranding**: Transition `BrainAV.ca` from a wedding DJ service to the home for "The DJ Brain" and AI music tools.
-  - **Lab Migration**: Rebrand "LAB: Digital Workshop" to be exclusively associated with Brain AV, consolidating all "Lab" concepts under the Tech Lab organization.
-
 - **[To Do] Performance & Accessibility Pass**:
   - **Image Optimization**: Implement responsive images using `srcset` or the `<picture>` element to improve load times on different devices.
   - **Explicit Image Dimensions**: Add `width` and `height` attributes to all `<img>` tags to prevent Cumulative Layout Shift (CLS).
@@ -65,7 +60,7 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
   - Refactor the existing header canvas animation in `script.js` to be more modular and configurable.
   - Explore adding new interactive layers or effects (e.g., audio-reactive elements, different color palettes) to the "disco ball" and "water ripple" animations.
 
-- **[In Progress] Admin Dashboard & CMS**:
+- **[In Progress] Admin Dashboard & CMS (jasonbra1n CMS)**:
   - **Database Integration**: Implement a secure login system backed by the MariaDB database.
   - **[In Progress] Content Management**: Create a dashboard to manage site settings (e.g., toggle Festive Mode, update contact info, manage Gemini API keys) and content.
   - **[To Do] Dynamic Routing**: Implement a router to fetch page and post content from the database based on the requested URL slug.
@@ -78,6 +73,8 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
 - **[Planned] Interactive Web Development Portfolio**:
   - Create a dedicated gallery or case study section for web development projects.
   - Include project descriptions, technologies used, and links to live sites.
+  - **Lab Integration**: Retain "LAB: Digital Workshop" as a standalone SPA and integrate it into the portfolio narrative.
+  - **CMS Integration**: Explore connecting the Lab SPA to the "jasonbra1n CMS" backend to manage its content dynamically.
 
 - **[Planned] Video Gallery**:
   - Integrate a gallery for video production work, including projection mapping examples and DJ event recaps.
@@ -150,6 +147,8 @@ This document outlines the development roadmap for jasonbrain.com. It serves as 
   - **Blog Hub**: Created a dedicated `/blog/` landing page to aggregate Music and Tech blog content.
 - **Strategic Brand Pivot**:
   - **Migration**: Moved "DJ Brain" project assets and documentation to the BrainAV organization context.
+  - **Differentiation**: Formalized the distinction between **Jason Brain** (Personal Services/Portfolio) and **BrainAV** (AI Products/Tech Lab).
+  - **Rebranding**: Transitioned `BrainAV.ca` from a wedding DJ service to the home for "The DJ Brain" and AI music tools.
 - **Performance**:
   - **Iframe Optimization**: Expanded the use of the "click-to-load" iframe facade pattern to all pages with embedded media (e.g., Spotify, HearThis.at) to improve performance.
 - **Configuration Refactoring**:
