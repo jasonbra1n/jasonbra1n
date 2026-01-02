@@ -95,6 +95,16 @@ We will target three standard sizes to cover mobile, tablet, and desktop:
 *   [x] **Schema Design**: Define tables for `users` (admin) and `settings` (API keys). *Note: BrainAV uses a separate database.*
 *   [x] **Migration Strategy**: Manual upload via phpMyAdmin (Current). Future: PHP migration script.
 
+### Security Hardening
+*   [x] **Database Firewall (Remote MySQL)**:
+    *   **Goal**: Ensure the database only accepts connections from the web server (`localhost`), not the open internet.
+    *   **Action**: Log in to cPanel -> "Remote MySQL".
+    *   **Result**: Confirmed no wildcard (`%`) exists. Server IPs are whitelisted, which is standard for cPanel internal routing.
+    *   **Status**: Secure.
+*   [x] **File Permissions**:
+    *   [x] Ensure `public/config.php` is set to `600` or `644` (Confirmed: 644).
+    *   [x] Ensure `public/admin` directories are not indexable (Created `public/.htaccess` with `Options -Indexes`).
+
 ## 5. Gemini API Integration (Planning)
 **Goal**: Enable server-side AI features using the Gemini API to enhance both the admin experience and public user engagement.
 

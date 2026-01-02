@@ -16,7 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Roadmap**: Marked "Differentiation" and "Rebranding" tasks for the BrainAV pivot as completed.
 - **Roadmap**: Shifted strategy for "LAB: Digital Workshop" from migration to integration, retaining it as a standalone SPA.
 - **Roadmap**: Updated "Admin Dashboard & CMS" section to formally reference "jasonbra1n CMS".
-- **Security**: Moved `public/admin/reset_password.php` to `.gemini/non_public/admin/` to prevent accidental public exposure.
+- **Security**: Moved `public/admin/reset_password.php` and `public/admin/setup.php` to `.gemini/non_public/admin/` to prevent accidental public exposure.
 
 ### Removed
 - **Cleanup**: Deleted obsolete `header.php` from `.github/` directory.

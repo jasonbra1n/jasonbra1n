@@ -1,0 +1,4 @@
+# Security: Prevent directory listing
+Options -Indexes
+
+# Note: This file is currently ignored by Git. Ensure it is uploaded to the server.
