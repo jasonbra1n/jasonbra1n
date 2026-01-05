@@ -4,7 +4,7 @@ PERSONA.md
 
 <PROJECT_INFO>
 **Name**: Jason Brain Portfolio
-**Description**: The personal portfolio website for Jason Brain, a Creative Technologist. It features a custom PHP architecture, self-hosted tools, and showcases work in music, events, and web development.
+**Description**: The central portfolio hub and special GitHub profile README for Jason Brain, a Creative Technologist. This repository showcases projects, skills, and professional documentation. The active development of the jasonbrain.com website and its CMS now occurs in a separate repository.
 **Repository**: https://github.com/jasonbra1n/jasonbra1n
 </PROJECT_INFO>
 

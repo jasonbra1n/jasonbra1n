@@ -1,4 +1,3 @@
-[![Latest Release](https://img.shields.io/github/v/release/jasonbra1n/jasonbra1n?style=for-the-badge&color=8146ff)](https://github.com/jasonbra1n/jasonbra1n/releases/latest)
 [![Project Hub](https://img.shields.io/badge/Project-Hub-ff6f61?style=for-the-badge)](https://jasonbra1n.github.io/jasonbra1n/)
 [![GitHub last commit](https://img.shields.io/github/last-commit/jasonbra1n/jasonbra1n?style=for-the-badge&color=8146ff)](https://github.com/jasonbra1n/jasonbra1n/commits/main)
 [![License: MIT](https://img.shields.io/github/license/jasonbra1n/jasonbra1n?style=for-the-badge&color=8146ff)](https://github.com/jasonbra1n/jasonbra1n/blob/main/LICENSE)
@@ -43,36 +42,9 @@ I have spent recent years as a celebrated DJ and event producer—mastering the 
 - **Soft Skills**: Project Management, Client Relations, Public Speaking, Creative Problem Solving.
 
 ## 🚀 Projects & Services
-- **jasonbrain.com (This Repository)**: [View Case Study](https://jasonbrain.com/web-developer/jasonbrain-project.php) | A custom-built PHP application and the foundation of the **jasonbra1n CMS**.
-  - **Architecture**: Component-based PHP structure with server-side includes for maintainability.
-  - **Security**: Self-hosted contact forms with honeypot protection and secure credential management (`config.php`).
-  - **Performance**: Implements lazy-loading and an iframe facade pattern for media players to optimize Core Web Vitals.
-  - **CMS**: Custom-built admin dashboard ("jasonbra1n CMS") for managing site settings, maintenance mode, and system diagnostics.
-  - **AI Integration**: Integrated `GeminiService` for future AI-powered content generation and features.
 
-- **LAB: Digital Workshop**: [lab.jasonbrain.com](https://lab.jasonbrain.com) | [View Case Study](https://jasonbrain.com/web-developer/lab-project.php) | An open-source creative sandbox.
-  - **Architecture**: Single-Page Application (SPA) with a hybrid dual-loading system (Direct Injection + Iframe Embedding).
-  - **Tech**: Built with pure HTML5, CSS3 (Glassmorphism UI), and Vanilla JavaScript (ES6+).
-  - **Features**: Modular toolset organized into 5 pillars (Work, Learn, Rest, Play, Info) with dark/light mode accessibility.
+For a detailed breakdown of my flagship software projects, please see the **[Project Showcase](./docs/PROJECTS.md)**.
 
-- **DJ Brain**: [View Repository](https://github.com/BrainAV/The-DJ-Brain) | The flagship product of **[BrainAV](https://github.com/BrainAV)**.
-  - **Concept**: A "self-hosted" AI DJ Co-Pilot designed to manage music queues intelligently for parties and venues.
-  - **Architecture**: Dockerized stack with PHP Slim API, Python AI engine, and Vanilla JS frontend.
-  - **Features**: Multi-room audio, BYOM (Bring Your Own Music), and intelligent gap-filling.
-  - **Development**: Built exclusively with Google's "Antigravity" coding app and Gemini Code Assist.
-
-- **AI Co-Producer**: [View Repository](https://github.com/BrainAV/ai-coproducer) | [View Case Study](https://jasonbrain.com/web-developer/ai-coproducer-project.php) | An open-source AI assistant for Ableton Live.
-  - **Concept**: Acts as an "Executive Producer" inside the DAW, using natural language to compose and arrange music via OSC.
-  - **Tech**: Python bridge, AbletonOSC, and Local/Cloud LLM inference (Gemini/Ollama).
-
-- **Web Development**: [jasonbrain.com/web-developer](https://jasonbrain.com/web-developer/) | AI-powered and creative web solutions. 🌐
-- **Home Automation**: Smart home setups using Home Assistant and IoT integration 🏡
-- **3D Printing & Rapid Prototyping**: Custom design and fabrication using FDM printers.
-  - **Tech**: Creality Ender 3/CR series running Klipper firmware via Raspberry Pi (Fluidd interface).
-  - **Capabilities**: Functional prototypes, custom equipment mounts, and replacement parts using PLA, PETG, and TPU.
-- **DIY Electronics**: Raspberry Pi, ESP32, Arduino projects, and laser engraving ⚡
- - **Music Production & DJ Services**: [jasonbrain.com](https://jasonbrain.com) | While shifting focus to tech, I continue to maintain my legacy in audio production and event entertainment.
-- **Geometric & Cosmic Observations**: Exploring patterns in nature, music, and the universe ✨
 
 ## 🏆 Best Practices & Project Standards
 This repository is managed with professional-grade documentation and standards to ensure quality and maintainability.

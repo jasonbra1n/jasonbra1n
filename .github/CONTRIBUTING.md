@@ -1,5 +1,13 @@
 # Contributing Guide
 
+> **Repository Purpose Notice**
+>
+> As of late 2025, this repository has pivoted to become the central portfolio hub and special README repository for the `jasonbra1n` GitHub user account. It serves as a public-facing resume and documentation center.
+>
+> The active development of the `jasonbrain.com` website's backend and CMS now occurs in a separate, private repository (`BrainAV/core-cms`). The architectural and coding standards documentation below is preserved for portfolio and historical context but may not reflect the current development workflow of this specific repository, which is now primarily focused on Markdown content.
+
+---
+
 Thank you for your interest in contributing to the jasonbrain.com website! This guide provides instructions for developers (both human and AI) to ensure consistency, quality, and alignment with the project's vision.
 
 ## Project Persona & Voice
@@ -63,10 +71,11 @@ We follow a clean, best-practice directory structure to separate concerns:
 - **`.github/`**: GitHub-specific files (Workflows, `CONTRIBUTING.md`, `ROADMAP.md`, `STYLE_GUIDE.md`).
 - **`docs/releases/`**: Detailed release notes linked from the Changelog.
 - **`database/`**: SQL schema definitions and migration scripts.
-- **`workspace/`**: A local directory for referencing external repositories (e.g., `workspace/BrainAV/brainav.ca`). The structure follows `workspace/<organization>/<repository>`. This directory is included in `.gitignore` by default but can be temporarily commented out for cross-project work.
+- **`workspace/`**: A local directory for referencing external repositories (e.g., `workspace/jasonbra1n/JasonBra1n-CMS`). The structure follows `workspace/<organization>/<repository>`. This directory is included in `.gitignore` by default but can be temporarily commented out for cross-project work.
 - **`docs/`**: Project documentation. See `docs/database.md` for database management instructions.
 - **`public/`**: The web root containing the deployable site (`index.php`, assets, `src/`, `config.php`).
 - **`index.html` (root)**: A static landing page for the repository's GitHub Pages site, acting as a project hub.
+- **Note**: As this repository is now a portfolio hub, the `public/` directory and its contents have been removed. The active codebase is developed in the private `BrainAV/core-cms` repository. This documentation is preserved for historical context.
 
 ### Site Architecture
 - **Multi-Page Structure**: The site is moving from a single-page, anchor-link-heavy design to a more robust multi-page architecture. New top-level sections should be created in their own subdirectories (e.g., `/about/`, `/contact/`, `/resume/`) with an `index.php` file. This improves SEO, maintainability, and user navigation.
@@ -164,13 +173,11 @@ Follow the Conventional Commits specification. This helps in automating changelo
 
 ## Release Process
 
-When preparing a new version for release (e.g., `v1.2.0`), follow these steps:
+> **Note on Releases**
+> As this repository now serves as a portfolio hub, formal GitHub "Releases" are no longer created. The `CHANGELOG.md` remains the source of truth for versioned changes. The process below is preserved for historical context regarding the original website project.
 
-1.  **Update the Changelog**: Move all items from the `[Unreleased]` section of `CHANGELOG.md` to a new version heading (e.g., `[1.2.0] - YYYY-MM-DD`).
-2.  **Create a Release Description**: Create a new markdown file named after the version (e.g., `v1.2.0.md`). This file should summarize the key changes, new features, and bug fixes included in the release. Use previous release descriptions as a template.
-3.  **Tag the Release**: Once the changes are merged into the main branch, create a new Git tag for the version.
-    ```bash
-    git tag -a v1.2.0 -m "Release v1.2.0"
-    git push origin v1.2.0
-    ```
-4.  **Create GitHub Release**: Use the content from the release description markdown file to create a new release on GitHub, attaching the tag you just created.
+When a new version was prepared for release (e.g., `v1.2.0`), the process was:
+
+1.  **Update the Changelog**: Move all items from the `[Unreleased]` section of `CHANGELOG.md` to a new version heading.
+2.  **Tag the Release**: Create a new Git tag for the version.
+3.  **Create GitHub Release**: Create a new release on GitHub.
