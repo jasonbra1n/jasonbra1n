@@ -3,6 +3,8 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/jasonbra1n/jasonbra1n?style=for-the-badge&color=8146ff)](https://github.com/jasonbra1n/jasonbra1n/commits/main)
 [![License: MIT](https://img.shields.io/github/license/jasonbra1n/jasonbra1n?style=for-the-badge&color=8146ff)](https://github.com/jasonbra1n/jasonbra1n/blob/main/LICENSE)
 
+[![GitHub Streak](https://streak-stats.demolab.com/?user=jasonbra1n)](https://git.io/streak-stats)
+
 # Hi there, I'm Jason Brain (jasonbra1n) 👋
 
 Welcome to my GitHub profile! I am a **Creative Professional and Technologist** who leverages a deep technical background to build innovative digital and physical experiences. With formal education in **Computer Programming** and **Systems Analysis**, combined with decades of success in the entertainment industry, I bridge the gap between code and culture.
